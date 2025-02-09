@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Gfe2010GfeCharge" table="ElliGfe2010GfeCharge" dynamic-update="true">
+    <id name="Id" column="ElliGfe2010GfeChargeId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Gfe2010Page" column="ElliGfe2010PageId" />
+    <property name="Gfe2010GfeChargeIndex" not-null="true"/>
+    <property name="ChargeBelow10Indicator"/>
+    <property name="GfeCharge" />
+    <property name="HudCharge" />
+    <property name="Description" type="StringClob" />
+    <property name="Line" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\ServiceInterface.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1625DEDE-3AB7-4C75-8ADA-D99022956DFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>ServiceInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="EMLoanUtils15">
+      <HintPath>lib\EMLoanUtils15.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.BusinessRules">
+      <HintPath>lib\Elli.BusinessRules.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Common">
+      <HintPath>lib\Elli.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Domain">
+      <HintPath>lib\Elli.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.ElliEnum">
+      <HintPath>lib\Elli.ElliEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Service.Common">
+      <HintPath>lib\Elli.Service.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EllieMae\EMLite\ServiceInterface\SessionIdentity.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\TPOLoginInfo.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\UserIdentity.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IServiceContext.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\Ownership.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\OrgType.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IConditionService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IDocumentService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IEdmPlatformService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IExternalCompanyService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IFieldSearchService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\FileStreamInfoMediaType.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\CreateAttachmentsReasonType.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IFileAttachmentService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IHealthCheck.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IMessageQueueEventService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\ILoanHistoryService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IMessageQueueProcessor.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IOrganizationSettingsService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\ILockComparisonFieldService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\ITemplateSettingService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IWorkflowService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IAuthenticationService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\EncompassServices.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IContextBoundObject.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IConfigurationSettingService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IFeatureAclService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\ILoanFolderService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\ILoanService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IServicePrincipal.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IPipelineService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IProductPricingSettingService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IServerSettingService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\ISessionService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\IUserSettingService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\Services\LoanCalculateOption.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\Services\ILocationLookupService.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\Services\LoanProcessOption.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\Services\ServerStatus.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\Results\DraftLoanGetResult.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\Results\LoanGetResult.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\Results\LoanSaveResult.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\Repositories\IQueueMessageRepository.cs" />
+    <Compile Include="EllieMae\EMLite\ServiceInterface\Repositories\ISessionCacheRepository.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\Constants.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\AttachmentsCreateRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\AttachmentsCreateResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\AttachmentsDeleteRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\AttachmentsDeleteResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\AttachmentsGetRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\AttachmentsGetResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\PreliminaryConditionsSaveRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\CoversheetCreateRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\CoversheetCreateResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\DocumentAttachmentsAssignRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\DocumentAttachmentsAssignResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\DocumentsCreateRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\DocumentsCreateResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\DocumentsGetRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\DocumentsGetResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\DocumentsSaveRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\DocumentsSaveResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\DocumentTemplatesGetRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\DocumentTemplatesGetResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\ConditionCommentsCreateRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\ConditionCommentsCreateResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\ConditionDocumentsAssignRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\ConditionDocumentsAssignResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\DocumentCommentsCreateRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\DocumentCommentsCreateResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\PreliminaryConditionsSaveResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\UnassignedAttachmentsGetRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\UnassignedAttachmentsGetResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\PreliminaryConditionsCreateRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\PreliminaryConditionsCreateResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\PreliminaryConditionsGetRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\PreliminaryConditionsGetResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\FileStreamInfoGetRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\FileStreamInfoGetResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\UnderwritingConditionsCreateRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\UnderwritingConditionsCreateResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\UnderwritingConditionsGetRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\UnderwritingConditionsGetResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\UnderwritingConditionsSaveRequest.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\SoapMessages\UnderwritingConditionsSaveResponse.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\AttachmentReferenceContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\AttachmentReferenceCreateContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\AttachmentReferenceGetContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\CommentContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\CommentCreateContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\CommentGetContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\ConditionReferenceContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\ConditionReferenceCreateContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\ConditionReferenceGetContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\DocumentContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\DocumentCreateContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\DocumentSaveContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\DocumentGetContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\DocumentTemplateGetContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\AttachmentContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\AttachmentCreateContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\AttachmentGetContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\UnassignedAttachmentGetContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\DocumentTemplateMapper.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\AttachmentMapper.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\MapperCommon.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\MapperExtensions.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\PageAnnotationContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\PageImageContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\PageThumbnailContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\PreliminaryConditionContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\PreliminaryConditionCreateContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\PreliminaryConditionGetContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\PreliminaryConditionSaveContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\EntityContractBase.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\DocumentMapper.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\ConditionMapper.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\RoleContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\RoleGetContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\DocumentReferenceContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\DocumentReferenceCreateContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\DocumentReferenceGetContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\UnderwritingConditionContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\UnderwritingConditionCreateContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\UnderwritingConditionGetContract.cs" />
+    <Compile Include="Elli\EncompassPlatform\Common\DataContracts\UnderwritingConditionSaveContract.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

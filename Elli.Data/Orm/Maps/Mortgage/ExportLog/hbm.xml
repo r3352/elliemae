@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="ExportLog" extends="LogRecord" dynamic-update="true" discriminator-value="42">
+    <join table="ElliExportLog">
+      <key column="ElliLogRecordId" />
+      <property name="ExportedBy" />
+      <property name="ExportedByFullName" />
+      <property name="Category" />
+      <property name="ServiceTypesXml" type="StringClob" />
+    </join>
+  </subclass>
+</hibernate-mapping>

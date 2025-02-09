@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Scenario" table="ElliScenario" dynamic-update="true">
+    <id name="Id" column="ElliScenarioId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Correspondent" column="ElliCorrespondentId" />
+    <property name="EffectivePropValue" />
+    <property name="SubordinateFinancingAmount" />
+    <property name="QualFico" />
+    <property name="BaseLoanAmount" />
+    <property name="TotalLoanAmount" />
+    <property name="SecondMortgagePandI" />
+    <property name="QualifyingRate" />
+    <property name="BaseIncome" />
+    <property name="OtherIncome" />
+    <property name="PositiveCashFlow" />
+    <property name="TotalInsurance" />
+    <property name="TotalTaxes" />
+    <property name="TotalInsuranceScenarioData" />
+    <property name="TotalTaxesScenarioData" />
+    <property name="MortgageInsurance" />
+    <property name="HoaFees" />
+    <property name="LeaseOrGroundRent" />
+    <property name="OtherHousingExpenses" />
+    <property name="NegativeCashFlow" />
+    <property name="AllOtherMonthlyPayments" />
+    <property name="MonthlyPaymentTotal" />
+    <property name="Required" />
+    <property name="VerifiedAssets" />
+    <property name="VerifiedAssetsScenarioData" />
+    <property name="InterestedPartyContribution" />
+    <property name="ScenarioName" />
+    <property name="CreatedBy" />
+    <property name="Comments" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24BE2BDE-A06C-4B4F-A9F1-E53AFF2F1BF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Elli.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Elli.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.ElliEnum">
+      <HintPath>lib\Elli.ElliEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Interface">
+      <HintPath>lib\Elli.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Log">
+      <HintPath>lib\Elli.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Encompass.Diagnostics">
+      <HintPath>lib\Encompass.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Encompass.Security">
+      <HintPath>lib\Encompass.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp">
+      <HintPath>lib\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector">
+      <HintPath>lib\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Memory">
+      <HintPath>lib\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IRestServiceContext.cs" />
+    <Compile Include="EmList`1.cs" />
+    <Compile Include="IDeferrableTransactionContext.cs" />
+    <Compile Include="ISecurityContext.cs" />
+    <Compile Include="ValidationUtil.cs" />
+    <Compile Include="XmlUtil.cs" />
+    <Compile Include="IServiceSessionContext.cs" />
+    <Compile Include="WorkflowState\StateMachine`2.cs" />
+    <Compile Include="WorkflowState\Enforce.cs" />
+    <Compile Include="WorkflowState\ParameterConversion.cs" />
+    <Compile Include="Serialization\JsonSerializer`1.cs" />
+    <Compile Include="Serialization\SerializableField.cs" />
+    <Compile Include="Serialization\SerializableMember.cs" />
+    <Compile Include="Serialization\SerializableProperty.cs" />
+    <Compile Include="Serialization\AttributeReader.cs" />
+    <Compile Include="Serialization\AttributeWriter.cs" />
+    <Compile Include="Serialization\ElementWriter.cs" />
+    <Compile Include="Serialization\IXSerializable.cs" />
+    <Compile Include="Serialization\ListSerializer`1.cs" />
+    <Compile Include="Serialization\XList`1.cs" />
+    <Compile Include="Serialization\XmlHelper.cs" />
+    <Compile Include="Serialization\XmlSerializationAttribute.cs" />
+    <Compile Include="Serialization\XmlSerializationDefaultsAttribute.cs" />
+    <Compile Include="Serialization\XmlSerializer.cs" />
+    <Compile Include="Security\PasswordEncryptor.cs" />
+    <Compile Include="Security\Rijndael256Util.cs" />
+    <Compile Include="ModelPaths\Parsing\ApplicationLookupData.cs" />
+    <Compile Include="ModelPaths\Parsing\CustomFieldlookupData.cs" />
+    <Compile Include="ModelPaths\Parsing\FragmentIndexToken.cs" />
+    <Compile Include="ModelPaths\Parsing\FragmentIndexType.cs" />
+    <Compile Include="ModelPaths\Parsing\FragmentIndexTypeExtensions.cs" />
+    <Compile Include="ModelPaths\Parsing\FragmentToken.cs" />
+    <Compile Include="ModelPaths\Parsing\IModelPath.cs" />
+    <Compile Include="ModelPaths\Parsing\IModelPathBuilder`2.cs" />
+    <Compile Include="ModelPaths\Parsing\IncompleteModelPathParseException.cs" />
+    <Compile Include="ModelPaths\Parsing\ModelPath.cs" />
+    <Compile Include="ModelPaths\Parsing\ModelPathBuilder.cs" />
+    <Compile Include="ModelPaths\Parsing\ModelPathLite.cs" />
+    <Compile Include="ModelPaths\Parsing\ModelPathParseException.cs" />
+    <Compile Include="ModelPaths\Parsing\ModelPathParser.cs" />
+    <Compile Include="ModelPaths\Parsing\QualifierToken.cs" />
+    <Compile Include="ModelPaths\Parsing\QualifierValueType.cs" />
+    <Compile Include="ModelFields\IModelFieldPathTraverser.cs" />
+    <Compile Include="ModelFields\ModelFieldPath.cs" />
+    <Compile Include="ModelFields\ModelFieldPathExpression.cs" />
+    <Compile Include="ModelFields\ModelFieldPathQualifier.cs" />
+    <Compile Include="Loan\LoanAction.cs" />
+    <Compile Include="Globalization\DateTimeConverter.cs" />
+    <Compile Include="InversionOfControl\IoC.cs" />
+    <Compile Include="Diagnostics\LoanProcessErrorLogger.cs" />
+    <Compile Include="Diagnostics\LoanProcessLogger.cs" />
+    <Compile Include="Diagnostics\DebugLogger.cs" />
+    <Compile Include="Diagnostics\LogCategory.cs" />
+    <Compile Include="Diagnostics\LogConfiguration.cs" />
+    <Compile Include="Diagnostics\LogEventId.cs" />
+    <Compile Include="Diagnostics\Logger.cs" />
+    <Compile Include="Diagnostics\LogPriority.cs" />
+    <Compile Include="Diagnostics\LogPropertyDictionary.cs" />
+    <Compile Include="Diagnostics\PerformanceLogger.cs" />
+    <Compile Include="Diagnostics\MethodPerformanceLogger.cs" />
+    <Compile Include="Data\StorageSettings.cs" />
+    <Compile Include="Data\SqlCmdUtility.cs" />
+    <Compile Include="Data\ErrorMode.cs" />
+    <Compile Include="Fields\FieldModelPath.cs" />
+    <Compile Include="Fields\EncompassField.cs" />
+    <Compile Include="Fields\EncompassFieldData.cs" />
+    <Compile Include="Fields\EncompassFieldOption.cs" />
+    <Compile Include="Fields\EncompassFieldReader.cs" />
+    <Compile Include="Fields\EncompassFieldUtils.cs" />
+    <Compile Include="Fields\RangeChecker.cs" />
+    <Compile Include="Extensions\TaskExtensions.cs" />
+    <Compile Include="Extensions\XElementExtensions.cs" />
+    <Compile Include="Extensions\ByteExtensions.cs" />
+    <Compile Include="Extensions\ShortExtensions.cs" />
+    <Compile Include="Extensions\LongExtensions.cs" />
+    <Compile Include="Extensions\IntExtensions.cs" />
+    <Compile Include="Extensions\DecimalExtensions.cs" />
+    <Compile Include="Extensions\BoolExtensions.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TypeHelperExtensionMethods.cs" />
+    <Compile Include="Contact\ISmptClient.cs" />
+    <Compile Include="Contact\ContactUtils.cs" />
+    <Compile Include="ComponentRegistration\ComponentRegistrationBase.cs" />
+    <Compile Include="ComponentRegistration\ITypedKey`1.cs" />
+    <Compile Include="ComponentRegistration\TypedKey`1.cs" />
+    <Compile Include="Aspects\LogPerformanceAttribute.cs" />
+    <Compile Include="Aspects\Cache\Cacheable.cs" />
+    <Compile Include="Aspects\Cache\DateWrapper`1.cs" />
+    <Compile Include="Aspects\Cache\IDataCacheable.cs" />
+    <Compile Include="Aspects\Cache\CacheSettings.cs" />
+    <Compile Include="Aspects\Cache\KeyBuilder.cs" />
+    <Compile Include="Aspects\Cache\IgnoreAttribute.cs" />
+    <Compile Include="Aspects\Cache\UsePropertyAttribute.cs" />
+    <Compile Include="Aspects\Cache\Cache.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fields\EncompassFields.xml" />
+    <EmbeddedResource Include="PostSharp\ImplementationDetails_e8afc894.Aspects1" />
+    <EmbeddedResource Include="PostSharp\ImplementationDetails_e8afc894.EnhancedByPostSharp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

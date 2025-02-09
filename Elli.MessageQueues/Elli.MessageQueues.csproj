@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.MessageQueues.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16C1AAFB-457C-4BD0-A2F4-817F425DE086}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Elli.MessageQueues</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Elli.MessageQueues</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Metrics">
+      <HintPath>lib\Metrics.dll</HintPath>
+    </Reference>
+    <Reference Include="Metrics.NET.SignalFX">
+      <HintPath>lib\Metrics.NET.SignalFX.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly">
+      <HintPath>lib\Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>lib\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsyncSubscriptionOption`1.cs" />
+    <Compile Include="IConsumerDisposeTimeoutPolicy.cs" />
+    <Compile Include="ConsumerDisposeTimeoutPolicy.cs" />
+    <Compile Include="IServiceFactory`1.cs" />
+    <Compile Include="ConsumerDisposeTimeoutPolicyFactory.cs" />
+    <Compile Include="IDistributedMutexPolicy.cs" />
+    <Compile Include="DefaultDistributedMutexPolicy.cs" />
+    <Compile Include="DefaultDistributedMutexPolicyFactory.cs" />
+    <Compile Include="IFaultHandler.cs" />
+    <Compile Include="DefaultFaultHandler.cs" />
+    <Compile Include="DefaultFaultHandlerFactory.cs" />
+    <Compile Include="IHaConnectionRoundRobinPolicy.cs" />
+    <Compile Include="HaConnectionRoundRobinPolicy.cs" />
+    <Compile Include="HaConnectionRoundRobinPolicyFactory.cs" />
+    <Compile Include="IDistributedMutexObject.cs" />
+    <Compile Include="DistributedMutex.cs" />
+    <Compile Include="CircuitBreakerPolicyException.cs" />
+    <Compile Include="IPasswordPolicy.cs" />
+    <Compile Include="IRoundRobinList`1.cs" />
+    <Compile Include="MessageQueueType.cs" />
+    <Compile Include="DefaultRetryPolicyFactory.cs" />
+    <Compile Include="MessageDeliverEventArgs.cs" />
+    <Compile Include="MessageUnhandledEventArgs.cs" />
+    <Compile Include="PlainTextPasswordPolicy.cs" />
+    <Compile Include="PlainTextPasswordPolicyFactory.cs" />
+    <Compile Include="PollyBrokenCircuitEventArgs.cs" />
+    <Compile Include="BrokenCircuitExceptionHandler.cs" />
+    <Compile Include="PollyCircuitBreakerConfig.cs" />
+    <Compile Include="ITunnel.cs" />
+    <Compile Include="IMessage.cs" />
+    <Compile Include="ISubscription.cs" />
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="IRouteFinder.cs" />
+    <Compile Include="ConstantRouteFinder.cs" />
+    <Compile Include="ConsumerStatus.cs" />
+    <Compile Include="DefaultTaskCreationOptionProvider.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="ICorrelationIdGenerator.cs" />
+    <Compile Include="ISerializer.cs" />
+    <Compile Include="IRetryPolicy.cs" />
+    <Compile Include="DefaultRetryPolicy.cs" />
+    <Compile Include="DefaultRouteFinder.cs" />
+    <Compile Include="RoundRobinList`1.cs" />
+    <Compile Include="SafeSemaphore.cs" />
+    <Compile Include="MessageQueueFramework.cs" />
+    <Compile Include="StandardMessage.cs" />
+    <Compile Include="ITypeNameSerializer.cs" />
+    <Compile Include="ITopicExchangeRouteFinder.cs" />
+    <Compile Include="SubscriptionOption`1.cs" />
+    <Compile Include="Loggers\ConsoleLoggerFactory.cs" />
+    <Compile Include="Loggers\ILogger.cs" />
+    <Compile Include="Loggers\ConsoleLogger.cs" />
+    <Compile Include="Metrics\IMetricsCollector.cs" />
+    <Compile Include="Metrics\ISignalFxPolicy.cs" />
+    <Compile Include="Metrics\SignalFxCollectorFactory.cs" />
+    <Compile Include="Metrics\SignalFxNetCollector.cs" />
+    <Compile Include="Metrics\SignalFxPolicy.cs" />
+    <Compile Include="Metrics\SignalFxPolicyFactory.cs" />
+    <Compile Include="Rmq\ChannelManager.cs" />
+    <Compile Include="Rmq\MessageUtility.cs" />
+    <Compile Include="Rmq\RmqQueueingBasicConsumer.cs" />
+    <Compile Include="Rmq\RouteProvisionerFactory.cs" />
+    <Compile Include="Rmq\RmqSetup.cs" />
+    <Compile Include="Rmq\RouteProvisioner.cs" />
+    <Compile Include="Rmq\RmqConsumer.cs" />
+    <Compile Include="Rmq\IMessageHandler.cs" />
+    <Compile Include="Rmq\DefaultMessageHandler`1.cs" />
+    <Compile Include="Rmq\IMessageHandlerFactory.cs" />
+    <Compile Include="Rmq\DefaultMessageHandlerFactory.cs" />
+    <Compile Include="Rmq\IConsumerErrorHandler.cs" />
+    <Compile Include="Rmq\IConsumerManager.cs" />
+    <Compile Include="Rmq\IDurableConnection.cs" />
+    <Compile Include="Rmq\MessageHandlingEvent.cs" />
+    <Compile Include="Rmq\MessageWasNotHandledEvent.cs" />
+    <Compile Include="Rmq\RmqError.cs" />
+    <Compile Include="Rmq\BasicPropertiesWrapper.cs" />
+    <Compile Include="Rmq\ConsumerErrorHandler.cs" />
+    <Compile Include="Rmq\ConsumerManager.cs" />
+    <Compile Include="Rmq\IRmqTunnel.cs" />
+    <Compile Include="Rmq\RmqTunnel.cs" />
+    <Compile Include="Rmq\Subscription.cs" />
+    <Compile Include="Rmq\TunnelFactory.cs" />
+    <Compile Include="Rmq\Connections\HaRoundRobinList.cs" />
+    <Compile Include="Rmq\Connections\DurableConnection.cs" />
+    <Compile Include="Rmq\Connections\HaConnection.cs" />
+    <Compile Include="Rmq\Connections\ConnectionEstablished.cs" />
+    <Compile Include="Rmq\Connections\ManagedConnectionFactory.cs" />
+    <Compile Include="Provision\IRouteProvisioner.cs" />
+    <Compile Include="Setup\ExchangeSetupData.cs" />
+    <Compile Include="Setup\QueueSetupData.cs" />
+    <Compile Include="Setup\RouteSetupData.cs" />
+    <Compile Include="Serializers\BinaryMessageSerializer.cs" />
+    <Compile Include="Serializers\JsonMessageSerializer.cs" />
+    <Compile Include="Serializers\JavaScriptMessageSerializer.cs" />
+    <Compile Include="Serializers\JsonMessageSerializerFactory.cs" />
+    <Compile Include="Serializers\TypeNameSerializer.cs" />
+    <Compile Include="Utils\SimpleCorrelationIdGenerator.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

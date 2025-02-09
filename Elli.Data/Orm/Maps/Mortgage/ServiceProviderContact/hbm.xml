@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="ServiceProviderContact" table="ElliServiceProviderContact" dynamic-update="true">
+    <id name="Id" column="ElliServiceProviderContactId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Loan" column="ElliLoanId" />
+    <property name="ServiceProviderId" />
+    <property name="ProviderIndex" />
+    <property name="Address" />
+    <property name="City" />
+    <property name="Cost" />
+    <property name="LineItemNumber" />
+    <property name="Phone" />
+    <property name="PostalCode" />
+    <property name="ProviderName" />
+    <property name="Relationship" />
+    <property name="ServiceProvided" />
+    <property name="ServiceType" />
+    <property name="State" />
+    <property name="WebUrl" />
+    <property name="ShopFor" />
+    <property name="ContactName" />
+    <property name="Email" />
+    <property name="Fax" />
+    <property name="FeeDesc1" />
+    <property name="FeeAmt1" />
+    <property name="FeeDesc2" />
+    <property name="FeeAmt2" />
+    <property name="FeeDesc3" />
+    <property name="FeeAmt3" />
+    <property name="FeeDesc4" />
+    <property name="FeeAmt4" />
+    <property name="FeeDesc5" />
+    <property name="FeeAmt5" />
+    <property name="FeeDesc6" />
+    <property name="FeeAmt6" />
+    <property name="FeeDesc7" />
+    <property name="FeeAmt7" />
+    <property name="FeeDesc8" />
+    <property name="FeeAmt8" />
+    <property name="FeeDesc9" />
+    <property name="FeeAmt9" />
+    <property name="FeeDesc10" />
+    <property name="FeeAmt10" />
+    <property name="AltId" />
+  </class>
+</hibernate-mapping>

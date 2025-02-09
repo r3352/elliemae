@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="ServicingPrintLog" extends="LogRecord" dynamic-update="true" discriminator-value="43">
+    <join table="ElliServicingPrintLog">
+      <key column="ElliLogRecordId" />
+      <property name="FieldListsXml" type="StringClob" />
+    </join>
+  </subclass>
+</hibernate-mapping>

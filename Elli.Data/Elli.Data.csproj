@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Data.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FE88A26-0788-4841-962B-A549ABB35F4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Elli.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Elli.Data</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Common">
+      <HintPath>lib\Elli.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Domain">
+      <HintPath>lib\Elli.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>lib\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="log4net">
+      <HintPath>lib\log4net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UserTypes\NADecimalUserType.cs" />
+    <Compile Include="UserTypes\XmlUserType.cs" />
+    <Compile Include="Orm\MultitenentTraceAppender.cs" />
+    <Compile Include="Orm\OrmUtility.cs" />
+    <Compile Include="Orm\UnitOfWork.cs" />
+    <Compile Include="Orm\UtcDateTime.cs" />
+    <Compile Include="Repositories\DraftLoanRepository.cs" />
+    <Compile Include="Repositories\NullArchiveRepository.cs" />
+    <Compile Include="Repositories\AuthenticationRepository.cs" />
+    <Compile Include="Repositories\LoanRepository.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Orm\Maps\Domain\AuthenticationClient\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Domain\AuthenticationClientToken\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\AdditionalLoan\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\AdditionalRequests\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\AdditionalStateDisclosure\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Aiq\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\AlertChangeCircumstance\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\AntiSteeringLoanOption\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Application\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Asset\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ATRQMBorrower\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ATRQMCommon\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\AUSTrackingLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Borrower\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Buydown\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ClosingCost\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ClosingDisclosure1\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ClosingDisclosure2\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ClosingDisclosure3\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ClosingDisclosure4\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ClosingDisclosure5\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ClosingDocument\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ClosingEntity\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\CollateralTracking\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\CommitmentTerms\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ConditionLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ConstructionManagement\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Contact\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ConversationLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Correspondent\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\CorrOtherInsurance\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\CreditReport\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\CrmLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\CustomField\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\DataTracLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Disaster\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Disclosure\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\DisclosureNotices\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\DisclosureTracking2015Log\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\DisclosureTrackingLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\DocumentLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\DocumentTracking\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\DownloadLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\DownPayment\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\EClose\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ECloseLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\EdmLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\EmailTriggerLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\EmDocument\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\EmDocumentInvestor\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\EmDocumentLender\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Employment\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\EncompassToEncompassLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\EnergyEfficientMortgageItem\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ExportLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ExtraPayment\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\FannieMae\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\FannieServiceDuLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\FannieServiceEcLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Fee\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\FeeVariance\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\FeeVarianceOther\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\FhaVaLoan\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\FreddieMac\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\FreddieServiceLpaLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\FreddieServiceLqaLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Funding\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Gfe\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Gfe2010\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Gfe2010Fee\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Gfe2010FwbcFwsc\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Gfe2010GfeCharge\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Gfe2010Page\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Gfe2010Section\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Gfe2010WholePoc\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\GfeFee\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\GfeLien\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\GfePayment\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\GfePayoff\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\GiftGrant\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\GoodFaithFeeVarianceCureLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\GSETracker\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\HelocHistoricalIndexYearSetting\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\HelocRepaymentDrawPeriod\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Hmda\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\HomeCounselingProvider\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\HtmlEmailLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Hud1Es\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Hud1EsDate\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Hud1EsDueDate\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Hud1EsItemize\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Hud1EsPayTo\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Hud1EsSetup\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\HudLoanData\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Income\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\InterimServicing\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\InterimServicingTransaction\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\InvestorDeliveryLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Liability\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Loan\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LoanActionLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LoanEstimate1\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LoanEstimate2\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LoanEstimate3\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LoanProductData\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LoanProgram\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LoanSubmission\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LoanSubmissionFee\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LockCancellationLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LockConfirmLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LockDenialLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LockRemovedLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LockRequestBorrower\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LockRequestLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LockValidationLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LockVoidLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LOCompensation\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LogEntryLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\LogRecord\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Mcaw\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\MilestoneFreeRoleLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\MilestoneHistoryLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\MilestoneLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\MilestoneTaskLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\MilestoneTemplateLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\MilitaryService\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Miscellaneous\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\MIVendorsServiceArchLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\MIVendorsServiceMgicLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\MIVendorsServiceRadianLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\NetTangibleBenefit\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\NewYorkFee\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\NewYorkPrimaryLender\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\NonBorrowingOwner\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\NonVol\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\OCREarlyCheck\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\OCRValuation\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\OtherAsset\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\OtherIncomeSource\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\OtherLiability\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\PostClosingConditionLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\PreliminaryConditionLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\PrepaymentPenalty\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Prequalification\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\PrequalificationScenario\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\PreviousVaLoan\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\PriceAdjustment\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\PrintLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\PrivacyPolicy\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ProfitManagement\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ProfitManagementItem\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Property\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\PropertyValuation\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ProvidedDocument\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\PurchaseAdvicePayout\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\PurchaseConditionLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\PurchaseCredit\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\RateLock\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\RateLockBuydown\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\RegistrationLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\RegulationZ\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\RegulationZInterestRatePeriod\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\RegulationZPayment\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ReoProperty\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Residence\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\RespaHudDetail\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Rider\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Scenario\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\SecondaryFinancingProvider\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Section32\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\SelectedHomeCounselingProvider\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\SelfEmployedIncome\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ServiceProviderContact\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ServicingDisclosure\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ServicingPrintLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\SettlementServiceCharge\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Shipping\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\ShippingContact\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\SpecialFeatureCode\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\StateDisclosure\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\StateLicense\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\StatementCreditDenial\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\StatusOnlineLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Tax4506\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\TPO\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\TQL\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\TQLComplianceAlert\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\TQLDocument\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\TQLFraudAlert\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\TQLReportInformation\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\TrustAccount\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\TrustAccountItem\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Tsum\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\UCDDetail\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Uldd\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\UnderwriterSummary\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\UnderwritingConditionLog\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\URLAAlternateName\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\Usda\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\UsdaHouseholdIncome\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\VaLoanData\hbm.xml" />
+    <EmbeddedResource Include="Orm\Maps\Mortgage\VerificationLog\hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

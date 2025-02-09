@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Application" table="ElliApplication" dynamic-update="true">
+    <id name="Id" column="ElliApplicationId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <list name="assets" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <index column="AssetIndex"  />
+      <one-to-many class="Asset"/>
+    </list>
+    <list name="borrowers" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <index column="BorrowerIndex" />
+      <one-to-many class="Borrower"/>
+    </list>
+    <bag name="income" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <one-to-many class="Income"/>
+    </bag>
+    <list name="liabilities" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <index column="LiabilityIndex"  />
+      <one-to-many class="Liability"/>
+    </list>  
+    <bag name="employment" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <one-to-many class="Employment"/>
+    </bag>
+    <bag name="residences" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <one-to-many class="Residence"/>
+    </bag>
+    <bag name="giftsGrants" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <one-to-many class="GiftGrant"/>
+    </bag>
+    <bag name="otherIncomeSources" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <one-to-many class="OtherIncomeSource"/>
+    </bag>
+    <bag name="urlaAlternateNames" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <one-to-many class="URLAAlternateName"/>
+    </bag>
+    <bag name="selfEmployedIncomes" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <one-to-many class="SelfEmployedIncome"/>
+    </bag>
+    <list name="reoProperties" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <index column="ReoPropertyIndex"  />
+      <one-to-many class="ReoProperty"/>
+    </list>
+    <bag name="tax4506s" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <one-to-many class="Tax4506"/>
+    </bag>
+    <list name="ausTrackingLogs" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <index column="AUSTrackingLogIndex" />
+      <one-to-many class="AUSTrackingLog" />
+    </list>
+    <list name="atrQmBorrowers" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <index column="ATRQMBorrowerIndex" />
+      <one-to-many class="ATRQMBorrower" />
+    </list>
+    <bag name="tqlReports" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <one-to-many class="TQLReportInformation"/>
+    </bag>
+    <list name="otherAssets" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <index column="OtherAssetIndex"  />
+      <one-to-many class="OtherAsset"/>
+    </list>
+    <list name="otherLiabilities" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <index column="OtherLiabilityIndex"  />
+      <one-to-many class="OtherLiability"/>
+    </list>
+    <list name="additionalLoans" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliApplicationId" />
+      <index column="AdditionalLoanIndex"  />
+      <one-to-many class="AdditionalLoan"/>
+    </list>
+    <list name="providedDocuments" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+        <key column="ElliApplicationId" />
+        <index column="ProvidedDocumentIndex"  />
+        <one-to-many class="ProvidedDocument"/>
+    </list>      
+    <many-to-one name="Loan" column="ElliLoanId" not-null="true" />
+    <property name="ApplicationIndex" not-null="true" />
+    <property name="ApplicationSignedDate" />
+    <property name="JointAssetLiabilityReportingIndicator" />    
+    <property name="RentAmount" />
+    <property name="FirstMortgagePrincipalAndInterestAmount" />  
+    <property name="PresentSupplementalPropertyInsuranceAmount" />
+    <property name="OtherMortgagePrincipalAndInterestAmount" />
+    <property name="HazardInsuranceAmount" />
+    <property name="RealEstateTaxAmount" />
+    <property name="MortgageInsuranceAmount" />
+    <property name="HomeownersAssociationDuesAndCondoFeesAmount" />
+    <property name="OtherHousingExpenseAmount" />
+    <property name="CreditReportReferenceIdentifier" />
+    <property name="IncomeOfBorrowersSpouseUsedIndicator" />
+    <property name="IncomeOtherThanBorrowerUsedIndicator" />
+    <property name="TotalBaseIncomeAmount" />
+    <property name="TotalIncomeAmount" />
+    <property name="GrossBaseIncomeAmount" />
+    <property name="TotalGrossMonthlyIncomeAmount" />
+    <property name="TopRatioPercent" />
+    <property name="BottomRatioPercent" />
+    <property name="TotalEmploymentAmount" />
+    <property name="TotalOvertimeAmount" />
+    <property name="GrossOtherIncomeAmount" />
+    <property name="TotalBonusAmount" />
+    <property name="TotalCommissionsAmount" />
+    <property name="TotalDividendsInterestAmount" />
+    <property name="TotalOther1Amount" />
+    <property name="TotalOther2Amount" />
+    <property name="TotalNetRentalIncomeAmount" />
+    <property name="TotalAssetsAmount" />
+    <property name="NetWorthAmount" />
+    <property name="AssetsAvailableAmount" />
+    <property name="TotalMonthlyPaymentAmount" />
+    <property name="TotalMortgagesMonthlyPaymentAmount" />
+    <property name="TotalMortgagesBalanceAmount" />
+    <property name="CreditAliasName1" />
+    <property name="CreditorName1" />
+    <property name="AccountNumber1" />
+    <property name="CreditAliasName2" />
+    <property name="CreditorName2" />
+    <property name="AccountNumber2" />
+    <property name="ReoTotalMortgagesAndLiensAmount" />
+    <property name="ReoTotalMortgagePaymentsAmount" />
+    <property name="ReoTotalNetRentalIncomeAmount" />
+    <property name="ReoTotalGrossRentalIncomeAmount" />
+    <property name="ReoTotalMaintenanceAmount" />
+    <property name="ReoTotalMarketValueAmount" />
+    <property name="TotalFixedPaymentAmount" />
+    <property name="MonthlyHousingExpenseAmount" />
+    <property name="MonthlyInstallmentExpenseAmount" />
+    <property name="MonthlyNegativeRealEstateAmount" />
+    <property name="MonthlySecondHomeAmount" />
+    <property name="McawTotalFixedPaymentForPurchaseAmount" />
+    <property name="McawTotalFixedPaymentForRefinanceAmount" />
+    <property name="McawTotalMortgagePaymentAmount" />
+    <property name="McawGrossMonthlyIncomeAmount" />
+    <property name="McawMortgagePaymentToIncome1Amount" />
+    <property name="McawTotalFixedPaymentToIncome1Amount" />
+    <property name="McawMortgagePaymentToIncome2Amount" />
+    <property name="McawTotalFixedPaymentToIncome2Amount" />
+    <property name="McawBorrowerOtherMonthlyIncomeAmount" />
+    <property name="McawCoborrowerOtherMonthlyIncomeAmount" />
+    <property name="McawTotalMonthlyPaymentsAmount" />
+    <property name="McawOtherAmount" />
+    <property name="McawOtherDebtsAndObligationsAmount" />
+    <property name="TotalPrimaryHousingExpenseAmount" />
+    <property name="TotalPaymentsAmount" />
+    <property name="AllOtherPaymentsAmount" />
+    <property name="GrossNegativeCashFlow" />
+    <property name="TotalUserDefinedIncome" />
+    <property name="UserDefinedIncomeDescription" />
+    <property name="ProposedFirstMortgageAmount" />
+    <property name="ProposedGroundRentAmount" />
+    <property name="ProposedOtherMortgagesAmount" />
+    <property name="ProposedHazardInsuranceAmount" />
+    <property name="ProposedRealEstateTaxesAmount" />
+    <property name="ProposedMortgageInsuranceAmount" />
+    <property name="ProposedDuesAmount" />
+    <property name="ProposedOtherAmount" />
+    <property name="FreDebtToHousingGapRatio" />
+    <property name="PropertyUsageType" />
+    <property name="SupplementalInsuranceAmount" />
+    <!--[RT] - Moved to borrower
+      <property name="No3rdPartyEmailIndicator" />-->
+    <property name="GrossPositiveCashFlow" />
+    <property name="LiquidAssetsComortSet" />
+    <property name="PresentHousingExpComortSet" />
+    <property name="PrimaryResidenceComortSet" />
+    <property name="MonthlyExpenseComortSet" />
+    <property name="TotalDeposit" />
+    <property name="FreddieMacCreditReportReferenceIdentifier" />
+    <property name="FreddieMacOccupantHousingRatio" />
+    <property name="FreddieMacOccupantDebtRatio" />    
+    <property name="GrossIncomeForComortSet" />
+    <!--FHA VA Borrower information-->
+    <property name="BalanceAvailableFamilySupportGuideline" />
+    <property name="BrwCoBrwTotalTaxDeductions" />
+    <property name="FhaVaTotalEstimatedMonthlyShelterExpenseAmount" />
+    <property name="FhaVaTotalNetTakeHomePayAmount" />
+    <property name="FhaVaTotalNetIncomeAmount" />
+    <property name="FhaVaTotalNetEffectiveIncomeAmount" />
+    <property name="FhaVaDebtIncomeRatio" />
+    <property name="FhaVaFamilySupportAmount" />
+    <property name="FhaVaTotalOtherNetIncome" />
+    <property name="OtherItemsDeducted" />
+    <property name="PastCreditRecord" />
+    <property name="VACreditStandards" />
+    <property name="SpouseIncomeConsider" />
+    <property name="VaSummaryTotalMonthlyGrossIncomeAmount" />
+    <property name="VaSummarySpouseIncomeAmount" />
+    <!-- Credit Info for State Disclosure-->
+    <property name="EquifaxModel" />
+    <property name="EquifaxScoreRangeFrom" />
+    <property name="EquifaxScoreRangeTo" />
+    <property name="EquifaxAddress" />
+    <property name="EquifaxCity" />
+    <property name="EquifaxFax" />
+    <property name="EquifaxName" />
+    <property name="EquifaxPhone" />
+    <property name="EquifaxPostalCode" />
+    <property name="EquifaxState" />
+    <property name="EquifaxWebsite" />
+    <property name="ExperianModel" />
+    <property name="ExperianScoreRangeFrom" />
+    <property name="ExperianScoreRangeTo" />
+    <property name="ExperianAddress" />
+    <property name="ExperianCity" />
+    <property name="ExperianFax" />
+    <property name="ExperianName" />
+    <property name="ExperianPhone" />
+    <property name="ExperianPostalCode" />
+    <property name="ExperianState" />
+    <property name="ExperianWebsite" />
+    <property name="TransUnionModel" />
+    <property name="TransUnionScoreRangeFrom" />
+    <property name="TransUnionScoreRangeTo" />
+    <property name="TransUnionAddress" />
+    <property name="TransUnionCity" />
+    <property name="TransUnionFax" />
+    <property name="TransUnionName" />
+    <property name="TransUnionPhone" />
+    <property name="TransUnionPostalCode" />
+    <property name="TransUnionState" />
+    <property name="TransUnionWebsite" />
+    <!-- HUD Home Improvement-->
+    <property name="HudAutoLienHolderName1" />
+    <property name="HudAutoLoanAmount1" />
+    <property name="HudAutoMonthlyPayment1" />
+    <property name="HudAutoPresentBalance1" />
+    <property name="HudAutoYearAndMake1" />
+    <property name="HudAutoLienHolderName2" />
+    <property name="HudAutoLoanAmount2" />
+    <property name="HudAutoMonthlyPayment2" />
+    <property name="HudAutoPresentBalance2" />
+    <property name="HudAutoYearAndMake2" />
+    <property name="HudLoanAmount1" />
+    <property name="HudLoanAmount2" />
+    <property name="HudLoanAmount3" />
+    <property name="HudLoanAmount4" />
+    <property name="HudLoanAmount5" />
+    <property name="HudLoanAmount6" />
+    <property name="HudLoanAmount7" />
+    <property name="HudLoanAmount8" />
+    <property name="HudLoanAmount9" />
+    <property name="HudLoanAmount10" />
+    <property name="HudLoanAmount11" />
+    <property name="HudRealEstateFhaInsured1" />
+    <property name="HudRealEstateLienHolder1" />
+    <property name="HudRealEstateLoanAmount1" />
+    <property name="HudRealEstateMonthlyPayment1" />
+    <property name="HudRealEstatePresentBalance1" />
+    <property name="HudRealEstateFhaInsured2" />
+    <property name="HudRealEstateLienHolder2" />
+    <property name="HudRealEstateLoanAmount2" />
+    <property name="HudRealEstateMonthlyPayment2" />
+    <property name="HudRealEstatePresentBalance2" />
+
+    <!-- BORROWER#/EllieMae/PAIR/STATEMENT_DENIAL -->
+    <property name="SofDBorrowerAddressType" />
+    <property name="SofDBorrowerAddress" />
+    <property name="SofDBorrowerAddressCity" />
+    <property name="SofDBorrowerAddressState" />
+    <property name="SofDBorrowerAddressZipcode" />
+    <property name="SofDCoBorrowerAddressType" />
+    <property name="SofDCoBorrowerAddress" />
+    <property name="SofDCoBorrowerAddressCity" />
+    <property name="SofDCoBorrowerAddressState" />
+    <property name="SofDCoBorrowerAddressZipcode" />    
+    <property name ="TotalAdditionalAssetsAmount" />
+    <property name ="TotalURLA2020AssetsAmount" />
+    <property name ="TotalAdditionalOtherAssetsAmount" />
+    <property name ="TotalOtherAssetsAmount" />
+    <property name ="OtherTotalIncome" />
+    <property name ="TotalAdditionalLoansAmount" />
+    <property name ="TotalAppliedToDownpayment" />
+    <property name ="BorrowerPairId" />
+    <property name ="ClosingDisclosureBorDeliveryDate" />
+    <property name ="ClosingDisclosureBorReceivedDate" />
+	  <property name ="LoanEstimateDeliveryDate" />
+    <property name ="RescissionDate" />
+    <property name ="RescissionNoteSignedDate" />
+    <property name ="SofDBorrForeignAddressIndicator" />
+    <property name ="SofDBorrCountry" />
+    <property name ="SofDCoBorrForeignAddressIndicator" />
+    <property name ="SofDCoBorrCountry" />
+    <property name ="PrequalCreditReportIndicator" />
+    <property name ="PreApprovalCreditReport" />
+
+    <property name ="SigningMode" />
+    <property name ="NotifyOnReceiptIndicator" />
+    <property name ="NotifyWhenNotReceivedDate" />
+    <property name ="FulfillmentEnabledIndicator" />
+    <property name ="ScheduledFulfillmentDate" />
+    
+  </class>
+</hibernate-mapping>

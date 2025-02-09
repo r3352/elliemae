@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Prequalification" table="ElliPrequalification" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="DownPaymentAmount" />
+    <property name="MaxLoanLimit" />
+    <property name="MaxPropValue" />
+    <property name="QualificationStatus" />
+    <property name="TotalOtherExpenses" />
+    <property name="WithinLimits1" />
+    <property name="WithinLimits2" />
+    <property name="WithinLimits3" />
+    <property name="WithinLimits4" />
+    <property name="WithinLimits5" />
+    <property name="WithinLimits6" />
+    <property name="WithinLimits7" />
+    <property name="WithinLimits8" />
+    <property name="WithinLimits9" />
+    <property name="AfterTaxOwnMoSavings" />
+    <property name="AfterTaxRentMoSavings" />
+    <property name="AnnualHomeMaintenance" />
+    <property name="AvgMoPmtSavings" />
+    <property name="BeforeTaxOwnMoPmt" />
+    <property name="BeforeTaxRentMoPmt" />
+    <property name="CombinedGain" />
+    <property name="FavorableOption" />
+    <property name="HomeSellingPriceAfterYears" />
+    <property name="CostIncreasePerYear" />
+    <property name="InvestmentGain" />
+    <property name="MinusDownPmtAndClosingCosts" />
+    <property name="MinusLoanBalance" />
+    <property name="MonthlyBenefit" />
+    <property name="MonthlyHomeAppreciation" />
+    <property name="MonthlyHomeEquity" />
+    <property name="MonthlyIncomeTax" />
+    <property name="MonthlyInvestmentInterest" />
+    <property name="NumberOfMonths" />
+    <property name="PercentAnnualHomeMaint" />
+    <property name="PercentOfHomeAppreciation" />
+    <property name="PercentOfIncomeTax" />
+    <property name="PercentOfInvestmentInterest" />
+    <property name="RentalCost" />
+    <property name="RentersInsurance" />
+    <property name="TotalBenefit" />
+    <property name="TotalCashFlow" />
+    <property name="TotalGain" />
+    <property name="TotalHomeAppreciation" />
+    <property name="TotalHomeEquity" />
+    <property name="TotalHousingExpense" />
+    <property name="TotalIncomeTax" />
+    <property name="TotalInvestmentInterest" />
+    <property name="TotalOwnPmtOverYears" />
+    <property name="TotalOwnTaxSavings" />
+    <property name="TotalPmtSavings" />
+    <property name="TotalRentPmtOverYears" />
+    <property name="YearsForComparison" />
+    <property name="CashOutBalance" />
+    <property name="MonthlySavings" />
+    <property name="TotalLiabilityPayment" />
+    <property name="TotalLiabilityUnpaid" />
+    <property name="TotalLoanSavings" />
+    <property name="TotalPaidOffBalance" />
+    <property name="TotalPaidOffMonthly" />
+    <!-- Prequalification Scenarios-->
+    <bag name="prequalificationScenarios" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliPrequalificationId" />
+      <one-to-many class="PrequalificationScenario"/>
+    </bag>
+  </class>
+</hibernate-mapping>

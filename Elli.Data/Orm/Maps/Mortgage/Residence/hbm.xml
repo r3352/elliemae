@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Residence" table="ElliResidence" dynamic-update="true">
+    <id name="Id" column="ElliResidenceId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Application" column="ElliApplicationId" />
+    <property name="AddressCity" />
+    <property name="AddressPostalCode" />
+    <property name="AddressState" />
+    <property name="AddressStreetLine1" />
+    
+    <property name="AddressUnitDesignatorType"/>
+    <property name="AddressUnitIdentifier"/>
+    <property name="CountryCode"/>
+    <property name="URLA2020StreetAddress"/>    
+    <property name="DoesNotApplyIndicator"/>
+    <property name="AddressCounty" />
+    <property name="DurationTermYears" />
+    <property name="DurationTermMonths" />
+    <property name="ResidencyBasisType" />
+    <property name="ResidencyType" />
+    <property name="MailingAddressIndicator" />
+    <property name="AccountName" />
+    <property name="ApplicantType" />
+    <property name="TitleFax" />
+    <property name="TitlePhone" />
+    <property name="Title" />
+    <property name="PrintUserNameIndicator" />
+    <property name="PrintUserJobTitleIndicator" />
+    <property name="NoLinkToDocTrackIndicator" />
+    <property name="PrintAttachmentIndicator" />
+    <property name="AltId" />
+    <property name="Rent" />    
+    <property name="County" />
+    <property name="RequestDate" />
+    <property name="LandlordComments" />
+    <property name="LandlordEmail" />
+    <property name="LandlordFax" />
+    <property name="LandlordPhone" />
+    <property name="LandlordPostalCode" />
+    <property name="LandlordState" />
+    <property name="LandlordCity" />
+    <property name="LandlordStreet" />
+    <property name="LandlordAttention" />
+    <property name="LandlordName" />
+    <property name="LandlordCountry" />
+    <property name="LandlordForeignAddressIndicator" />
+    <property name="ForeignAddressIndicator" />
+    <property name="Country" />
+  </class>
+</hibernate-mapping>
+

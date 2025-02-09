@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Tsum" table="ElliTsum" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="AboveOrBelowRatePercent" />
+    <property name="CommunityLendingAfordableHousingInitiative" />
+    <property name="CpmProjectId" />
+    <property name="FormNumber" />
+    <property name="HomeBuyersOwnershipEducationCertificateInFile" />
+    <property name="LevelOfPropertyReviewType" />
+    <property name="MortgageOriginator" />
+    <property name="NoteDate" />
+    <property name="NoteRateType" />
+    <property name="OriginalAmountOfFirstMortgage" />
+    <property name="ProjectName" />
+    <property name="PropertyType" />
+    <property name="UnpaidBalance" />
+    <property name="InterestedPartyContributions" />
+    <property name="NumberOfMonthsReserves" />
+    <property name="Required" />
+    <property name="Verified" />
+    <property name="AdjustorCoverage" />
+    <property name="CertificateNumber" />
+    <property name="InsurerCode" />
+    <property name="NumberOfBorrowers" />
+    <property name="PercentageofCoverage" />
+    <property name="BedroomsUnit1" />
+    <property name="BedroomsUnit2" />
+    <property name="BedroomsUnit3" />
+    <property name="BedroomsUnit4" />
+    <property name="GrossRentUnit1" />
+    <property name="GrossRentUnit2" />
+    <property name="GrossRentUnit3" />
+    <property name="GrossRentUnit4" />
+    <property name="SpecialFeatureCode1" />
+    <property name="SpecialFeatureCode2" />
+    <property name="SpecialFeatureCode3" />
+    <property name="SpecialFeatureCode4" />
+    <property name="SpecialFeatureCode5" />
+    <property name="SpecialFeatureCode6" />
+    <property name="AusRecommendation" />
+    <property name="DuCaseIdLpAusKey" />
+    <property name="LpDocClass" />
+    <property name="OtherTypeDescription" />
+    <property name="RiskAssessmentType" />
+    <property name="CommitmentNumber" />
+    <property name="ContactTitle" />
+    <property name="ContractNumber" />
+    <property name="InvestorLoanNumber" />
+    <property name="SellerNumber" />
+    <property name="TypeOfCommitment" />
+    <property name="SellerAddress" />
+    <property name="SellerCity" />
+    <property name="SellerContactName" />
+    <property name="SellerName" />
+    <property name="SellerPhone" />
+    <property name="SellerPostalCode" />
+    <property name="SellerState" />
+    <property name="SellerCountry" />
+    <property name="SellerForeignAddressIndicator" />
+    <property name="ThirdPartyName1" />
+    <property name="ThirdPartyName2" />
+    <property name="UnderwritingComment1" type="StringClob" />
+    <property name="UnderwritingComment2" type="StringClob" />
+    <property name="UnderwritingComment3" type="StringClob" />
+    <property name="UnderwritingComment4" type="StringClob" />
+    <property name="UnderwritingComment5" type="StringClob" />
+    <property name="UnderwritingComment6" type="StringClob" />
+    <property name="UnderwritingComment7" type="StringClob" />
+    <property name="UnderwritingComment8" type="StringClob" />
+    <property name="PropertyFormType" />
+    <property name="CondoApprovedIndicator" />
+    <property name="HudCondoId" />
+    <property name="UnitsSold" />
+    <property name="ProjectReviewStatus" />
+    <property name="ProjectReviewer" />
+    <property name="ProjectDocExpirationDate" />
+    <property name="CondoEin" />
+  </class>
+</hibernate-mapping>

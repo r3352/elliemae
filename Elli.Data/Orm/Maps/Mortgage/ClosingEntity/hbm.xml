@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="ClosingEntity" table="ElliClosingEntity" dynamic-update="true">
+    <id name="Id" column="ElliClosingEntityId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="ClosingDocument" column="ElliClosingDocumentId" />
+    <property name="ClosingEntityType" />
+    <property name="City" />
+    <property name="Comments" />
+    <property name="PostalCode" />
+    <property name="State" />
+    <property name="StreetAddress" />
+    <property name="County" />
+    <property name="UnparsedName" />
+    <property name="Fax" />
+    <property name="Phone1" />
+    <property name="Phone2" />
+    <property name="RecordCity" />
+    <property name="OrganizationType" />
+    <property name="OrganizedUnderTheLawsOfJurisdictionName" />
+    <property name="Assignee" />
+    <property name="RecordableDocumentTrustDate" />
+    <property name="TrustOfficerName1" />
+    <property name="TrustOfficerTitle1" />
+    <property name="TrustOfficerName2" />
+    <property name="TrustOfficerTitle2" />
+    <property name="TaxIdentificationNumberIdentifier" />
+    <property name="Alias" />
+    <property name="Ssn" />
+    <property name="VestingType" />
+    <property name="BorrowerPair" />
+    <property name="VestingTrusteeOfType" />
+    <property name="PowerOfAttorney" />
+    <property name="Vesting" />
+    <property name="AuthorizedToSignIndicator" />
+    <property name="PoaSignatureText" />
+    <property name="VestingGuid" />
+    <property name="Phone" />
+    <property name="DateOfBirth" />
+    <property name="OccupancyStatus" />
+    <property name="OccupancyIntent" />
+    <property name="NBORecordID" />
+    <property name="TrusteeIndex" />
+  </class>
+</hibernate-mapping>

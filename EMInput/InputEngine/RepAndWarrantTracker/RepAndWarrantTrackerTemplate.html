@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rep and Warrant Tracker</title>
+    <style type="text/css">
+        body {
+            width: 900px;
+            font-size: 10pt;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        table {
+            width: 440px;
+            float: left;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid rgb(182, 181, 181);
+        }
+
+        td {
+            padding-left: 5px;
+            padding-bottom: 3px;
+        }
+
+        h3 {
+            width: 890px;
+            float: left;
+            background-color: gainsboro;
+            padding-left: 5px;
+            padding-bottom: 3px;
+        }
+
+        h4 {
+            width: 890px;
+            float: left;
+            background-color: gainsboro;
+            padding-left: 5px;
+            padding-bottom: 3px;
+            margin-top: 40px;
+            margin-bottom: -5px;
+        }
+
+        h5 {
+            width: 445px;
+            float: left;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            font-size: 10pt;
+        }
+
+        img {
+            vertical-align: -3px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Rep and Warrant Tracker</h3>
+    </div>
+    <div>
+        <table style="width: 890px; ">
+            <tr style="font-weight: 700;">
+                <td style="border: 0px; width: 120px;">Loan Number</td>
+                <td style="border: 0px; width: 250px;">Borrower Name</td>
+                <td style="border: 0px; width: 250px;">Coborrower Name</td>
+                <td style="border: 0px; width: 120px;">Loan Amount</td>
+            </tr>
+            <tr style="height: 25px;">
+                <td style="padding-left: 3px;">{364}</td>
+                <td style="padding-left: 3px;">{4000}</td>
+                <td style="padding-left: 3px;">{4004}</td>
+                <td style="padding-left: 3px;">{1109}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h4>Submission Statuses</h4>
+    </div>
+    <div>
+        <h5>Fannie Mae</h5>
+        <h5>Freddie Mac</h5>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td style="width: 170px;">DU Recommendation</td>
+                <td style="width: 120px;">{TQL.X66}</td>
+                <td style="width: 150px;">{TQLGSE1603}</td>
+            </tr>
+            <tr>
+                <td>UCDP Status</td>
+                <td>{MORNET.X93}</td>
+                <td>{TQLGSE1604}</td>
+            </tr>
+            <tr>
+                <td>CU Risk Score</td>
+                <td>{MORNET.X92}</td>
+                <td>{TQLGSE1703}</td>
+            </tr>
+            <tr>
+                <td>EC Status (1003)</td>
+                <td>{MORNET.X94}</td>
+                <td>{TQLGSE1704}</td>
+            </tr>
+            <tr>
+                <td>EC Status (ULDD)</td>
+                <td>{MORNET.X95}</td>
+                <td>{TQLGSE1803}</td>
+            </tr>
+            <tr>
+                <td>UCD Collection Status</td>
+                <td>{MORNET.X96}</td>
+                <td>{TQLGSE1804}</td>
+            </tr>
+        </table>
+        <table style="margin-left: 10px;">
+            <tr>
+                <td style="width: 170px;">LPA Risk Class</td>
+                <td style="width: 120px;">{CASASRN.X34}</td>
+                <td style="width: 150px;">{TQLGSE1903}</td>
+            </tr>
+            <tr>
+                <td>LPA Purchase Eligibility</td>
+                <td>{AUS.X120}</td>
+                <td>{TQLGSE1904}</td>
+            </tr>
+            <tr>
+                <td>Documentation Level</td>
+                <td>{AUS.X118}</td>
+                <td>{TQLGSE2003}</td>
+            </tr>
+            <tr>
+                <td>UCDP Status</td>
+                <td>{TQL.X87}</td>
+                <td>{TQLGSE2004}</td>
+            </tr>
+            <tr>
+                <td>Collateral Risk Score</td>
+                <td>{TQL.X88}</td>
+                <td>{TQLGSE2103}</td>
+            </tr>
+            <tr>
+                <td>LQA Purchase Eligibility</td>
+                <td>{AUS.X182}</td>
+                <td>{TQLGSE2104}</td>
+            </tr>
+            <tr>
+                <td>LQA Risk Assessment</td>
+                <td>{AUS.X181}</td>
+                <td>{TQLGSE2203}</td>
+            </tr>
+            <tr>
+                <td>LCLA UCD Requirement</td>
+                <td>{AUSF.X70}</td>
+                <td>{TQLGSE2204}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h4>Rep and Warrant Status</h4>
+    </div>
+    <div>
+        <h5>Fannie Mae</h5>
+        <h5>Freddie Mac</h5>
+    </div>
+    <div>
+        <table>
+            <tr style="font-weight: 700; background-color: rgb(241, 239, 239); ">
+                <td style="width: 200px; text-align: center; ">Status Type</td>
+                <td style="width: 220px; text-align: center; ">Loan Level Close By Date</td>
+                <td style="width: 30px; text-align: center; "><img src="data:image/png;base64,{MessageImageData}"></td>
+            </tr>
+            <tr>
+                <td>Value Rep & Warrant</td>
+                <td><img src="data:image/png;base64,{MORNET.X102}"> N/A</td>
+                <td style="text-align: center;">{FnmVrwMsgCnt}</td>
+            </tr>
+            <tr>
+                <td>Asset Rep & Warrant</td>
+                <td><img src="data:image/png;base64,{MORNET.X103}"> {TQLGSE0303}</td>
+                <td style="text-align: center;">{FnmArwMsgCnt}</td>
+            </tr>
+        </table>
+        <table style="margin-left: 10px;">
+            <tr style="font-weight: 700; background-color: rgb(241, 239, 239); ">
+                <td style="width: 220px; text-align: center; ">Status Type</td>
+                <td style="width: 200px; text-align: center; ">Loan Level Expiration Date</td>
+                <td style="width: 30px;text-align: center; "><img src="data:image/png;base64,{MessageImageData}"></td>
+            </tr>
+            <tr>
+                <td>Collateral Rep & Warrant</td>
+                <td><img src="data:image/png;base64,{AUSF.X61}"> {TQLGSE1303}</td>
+                <td style="text-align: center;">{FreCrwMsgCnt}</td>
+            </tr>
+            <tr>
+                <td>Asset Rep & Warrant</td>
+                <td><img src="data:image/png;base64,{AUSF.X62}"> {TQLGSE1403}</td>
+                <td style="text-align: center;">{FreArwMsgCnt}</td>
+            </tr>
+            <tr>
+                <td>Income Rep & Warrant</td>
+                <td><img src="data:image/png;base64,{AUSF.X63}"> N/A</td>
+                <td style="text-align: center;">{FreIrwMsgCnt}</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div>
+        <table style="width: 440px; margin-top: 20px; ">
+
+            <!-- Fannie VOEs-->
+            <tr style="font-weight: 700; background-color: rgb(241, 239, 239); ">
+                <td style="width: 180px; text-align: center; ">Employment Verification</td>
+                <td style="width: 110px; text-align: center; ">Borrower Close By Date</td>
+                <td style="width: 110px; text-align: center; ">Co-Borrower Close By Date</td>
+                <td style="width: 30px; text-align: center; "><img src="data:image/png;base64,{MessageImageData}"></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;"> {TQLGSE1601}</td>
+                <td><img src="data:image/png;base64,{MORNET.X129}"> {TQLGSE0403}</td>
+                <td></td>
+                <td style="text-align: center;">{FnmVoe1Bor1MsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">{TQLGSE1602}</td>
+                <td></td>
+                <td><img src="data:image/png;base64,{MORNET.X141}"> {TQLGSE0404}</td>
+                <td style="text-align: center;">{FnmVoe1Bor2MsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">{TQLGSE1701}</td>
+                <td><img src="data:image/png;base64,{TQLGSE2301}"> {TQLGSE2303}</td>
+                <td></td>
+                <td style="text-align: center;">{FnmVoe2Bor1MsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">{TQLGSE1702}</td>
+                <td></td>
+                <td><img src="data:image/png;base64,{TQLGSE2302}"> {TQLGSE2304}</td>
+                <td style="text-align: center;">{FnmVoe2Bor2MsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">{TQLGSE1801}</td>
+                <td><img src="data:image/png;base64,{TQLGSE2401}"> {TQLGSE2403}</td>
+                <td></td>
+                <td style="text-align: center;">{FnmVoe3Bor1MsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">{TQLGSE1802}</td>
+                <td></td>
+                <td><img src="data:image/png;base64,{TQLGSE2402}"> {TQLGSE2404}</td>
+                <td style="text-align: center;">{FnmVoe3Bor2MsgCnt}</td>
+            </tr>
+        </table>
+
+        <table style="width: 440px; margin-top: 20px; margin-left: 10px;">
+            
+            <!-- Freddie VOEs-->
+            <tr style="font-weight: 700; background-color: rgb(241, 239, 239); ">
+                <td style="width: 180px; text-align: center; ">Employment Verification</td>
+                <td style="width: 110px; text-align: center; ">Borrower Expiration Date</td>
+                <td style="width: 110px; text-align: center; ">Co-Borrower Expiration Date</td>
+                <td style="width: 30px; text-align: center; "><img src="data:image/png;base64,{MessageImageData}"></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">{TQLGSE1901}</td>
+                <td><img src="data:image/png;base64,{TQLGSE2501}"> {TQLGSE2503}</td>
+                <td></td>
+                <td style="text-align: center;">{FreVoe1Bor1MsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">{TQLGSE1902}</td>
+                <td></td>
+                <td><img src="data:image/png;base64,{TQLGSE2502}"> {TQLGSE2504}</td>
+                <td style="text-align: center;">{FreVoe1Bor2MsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">{TQLGSE2001}</td>
+                <td><img src="data:image/png;base64,{TQLGSE2601}"> {TQLGSE2603}</td>
+                <td></td>
+                <td style="text-align: center;">{FreVoe2Bor1MsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">{TQLGSE2002}</td>
+                <td></td>
+                <td><img src="data:image/png;base64,{TQLGSE2602}"> {TQLGSE2604}</td>
+                <td style="text-align: center;">{FreVoe2Bor2MsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">{TQLGSE2101}</td>
+                <td><img src="data:image/png;base64,{TQLGSE2701}"> {TQLGSE2703}</td>
+                <td></td>
+                <td style="text-align: center;">{FreVoe3Bor1MsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">{TQLGSE2102}</td>
+                <td></td>
+                <td><img src="data:image/png;base64,{TQLGSE2702}"> {TQLGSE2704}</td>
+                <td style="text-align: center;">{FreVoe3Bor2MsgCnt}</td>
+            </tr>
+            <tr>
+                <td colspan=100 style="padding-left: 10px;">* Subject to 10 day verification.</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table style="width: 440px; margin-top: 20px;">
+
+            <!-- Fannie VOIs-->
+            <tr style="font-weight: 700; background-color: rgb(241, 239, 239); ">
+                <td style="width: 180px; text-align: center; ">Income Verification</td>
+                <td style="width: 110px; text-align: center; ">Borrower Close By Date</td>
+                <td style="width: 110px; text-align: center; ">Co-Borrower Close By Date</td>
+                <td style="width: 30px; text-align: center; "><img src="data:image/png;base64,{MessageImageData}"></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Base Income</td>
+                <td><img src="data:image/png;base64,{MORNET.X105}"> {TQLGSE0503}</td>
+                <td><img src="data:image/png;base64,{MORNET.X119}"> {TQLGSE0504}</td>
+                <td style="text-align: center;">{FnmVoiBiMsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Bonus</td>
+                <td><img src="data:image/png;base64,{MORNET.X106}"> {TQLGSE0603}</td>
+                <td><img src="data:image/png;base64,{MORNET.X120}"> {TQLGSE0604}</td>
+                <td style="text-align: center;">{FnmVoiBoMsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Overtime</td>
+                <td><img src="data:image/png;base64,{MORNET.X107}"> {TQLGSE0703}</td>
+                <td><img src="data:image/png;base64,{MORNET.X121}"> {TQLGSE0704}</td>
+                <td style="text-align: center;">{FnmVoiOvMsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Commission</td>
+                <td><img src="data:image/png;base64,{MORNET.X108}"> {TQLGSE0803}</td>
+                <td><img src="data:image/png;base64,{MORNET.X122}"> {TQLGSE0804}</td>
+                <td style="text-align: center;">{FnmVoiCoMsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Social Security</td>
+                <td><img src="data:image/png;base64,{MORNET.X109}"> {TQLGSE0903}</td>
+                <td><img src="data:image/png;base64,{MORNET.X123}"> {TQLGSE0904}</td>
+                <td style="text-align: center;">{FnmVoiSsMsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Retirement</td>
+                <td><img src="data:image/png;base64,{MORNET.X127}"> {TQLGSE1003}</td>
+                <td><img src="data:image/png;base64,{MORNET.X139}"> {TQLGSE1004}</td>
+                <td style="text-align: center;">{FnmVoiReMsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Self-Employed</td>
+                <td><img src="data:image/png;base64,{MORNET.X110}"> {TQLGSE1103}</td>
+                <td><img src="data:image/png;base64,{MORNET.X124}"> {TQLGSE1104}</td>
+                <td style="text-align: center;">{FnmVoiSeMsgCnt}</td>
+            </tr>
+        </table>
+
+        <table style="width: 440px; margin-top: 20px; margin-left: 10px;">
+
+            <!-- Freddie VOIs-->
+            <tr style="font-weight: 700; background-color: rgb(241, 239, 239); ">
+                <td style="width: 180px; text-align: center; ">Income Verification</td>
+                <td style="width: 110px; text-align: center; ">Borrower Expiration Date</td>
+                <td style="width: 110px; text-align: center; ">Co-Borrower Expiration Date</td>
+                <td style="width: 30px; text-align: center; "><img src="data:image/png;base64,{MessageImageData}"></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Payroll (Base, Bonues, etc)</td>
+                <td><img src="data:image/png;base64,{TQLGSE2801}"> {TQLGSE2803}</td>
+                <td><img src="data:image/png;base64,{TQLGSE2802}"> {TQLGSE2804}</td>
+                <td style="text-align: center;">{FreVoiPaMsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Pension</td>
+                <td><img src="data:image/png;base64,{TQLGSE2901}"> {TQLGSE2903}</td>
+                <td><img src="data:image/png;base64,{TQLGSE2902}"> {TQLGSE2904}</td>
+                <td style="text-align: center;">{FreVoiPeMsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Social Security</td>
+                <td><img src="data:image/png;base64,{TQLGSE3001}"> {TQLGSE3003}</td>
+                <td><img src="data:image/png;base64,{TQLGSE3002}"> {TQLGSE3004}</td>
+                <td style="text-align: center;">{FreVoiSsMsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">VA Benefits</td>
+                <td><img src="data:image/png;base64,{TQLGSE3101}"> {TQLGSE3103}</td>
+                <td><img src="data:image/png;base64,{TQLGSE3102}"> {TQLGSE3104}</td>
+                <td style="text-align: center;">{FreVoiVaMsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Military</td>
+                <td><img src="data:image/png;base64,{TQLGSE3201}"> {TQLGSE3203}</td>
+                <td><img src="data:image/png;base64,{TQLGSE3202}"> {TQLGSE3204}</td>
+                <td style="text-align: center;">{FreVoiMiMsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Child Support/Alimony</td>
+                <td><img src="data:image/png;base64,{TQLGSE3301}"> {TQLGSE3303}</td>
+                <td><img src="data:image/png;base64,{TQLGSE3302}"> {TQLGSE3304}</td>
+                <td style="text-align: center;">{FreVoiAlMsgCnt}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Self-Employed</td>
+                <td><img src="data:image/png;base64,{TQLGSE3401}"> {TQLGSE3403}</td>
+                <td><img src="data:image/png;base64,{TQLGSE3402}"> {TQLGSE3404}</td>
+                <td style="text-align: center;">{FreVoiSeMsgCnt}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="clear: both; width: 100%; ">
+
+        <h4 style="margin-bottom: 10px; ">Fannie Mae Comments</h4>
+        <div style="word-wrap: break-word;">
+            <!--
+            <p style="padding-left: 10px; font-weight: bold; ">Appraisal Waiver Offered</p>
+            <ul>
+              <li>MsgID01 - This case does not meet Fannie Mae's requirements</li>
+              <li>MsgID02 - This case does not meet Fannie Mae's requirements</li>
+            </ul>
+            <p style="padding-left: 10px;">Value Rep & Warrant</p>
+            <ul>
+              <li>MsgID01 - This case does not meet Fannie Mae's requirements</li>
+              <li>MsgID02 - This case does not meet Fannie Mae's requirements</li>
+            </ul>
+            -->
+            {FannieComments}
+
+        </div>
+
+        <h4 style="margin-bottom: 10px; ">Freddie Mac Comments</h4>
+        <div style="word-wrap: break-word;">
+            <!--
+            <p style="padding-left: 10px; font-weight: bold; ">Collateral Rep & Warrant</p>
+            <ul>
+              <li>MsgID01 - This case does not meet Fannie Mae's requirements</li>
+              <li>MsgID02 - This case does not meet Fannie Mae's requirements</li>
+            </ul>
+            <p style="padding-left: 10px;">Asset Rep & Warrant</p>
+            <ul>
+              <li>MsgID01 - This case does not meet Freddie's requirements</li>
+              <li>MsgID02 - This case does not meet Freddie's requirements</li>
+            </ul>
+            -->
+            {FreddieComments}
+
+        </div>
+    </div>
+    <br>
+    <br>
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Gfe2010Fee" table="ElliGfe2010Fee" dynamic-update="true">
+    <id name="Id" column="ElliGfe2010FeeId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Gfe2010" column="ElliGfe2010Id" />
+    <property name="Gfe2010FeeIndex" not-null="true"/>
+    <property name="Gfe2010FeeParentType"/>
+    <property name="Gfe2010FeeType"/>
+    <property name="Amount" />
+    <property name="Description" type="StringClob" />
+    <property name="PaidByType" />
+    <property name="PocPtcIndicator" />
+    <property name="FinancedIndicator" />
+    <property name="TitleServiceSelectIndicator" />
+    <property name="AdditionalAmount" />
+    <property name="AprIndicator" />
+    <property name="BorPaidAmount" />
+    <property name="BorrowerSelectIndicator" />
+    <property name="Rate" />
+    <property name="GfeAmount" />
+    <property name="PaidToName" />
+    <property name="PtbType" />
+    <property name="SelPaidAmount" />
+    <property name="WholePoc" />
+    <property name="WholePocPaidByType" />
+    <property name="TotalFeeAmount2015" />
+    <property name="TotalFeePercentage2015" />
+    <property name="LastDisclosedLoanEstimate2015" />
+    <property name="LastDisclosedClosingDisclosure2015" />
+    <property name="BorrowerFinanced2015" />
+    <property name="BorrowerPTC2015" />
+    <property name="BorrowerPAC2015" />
+    <property name="BorrowerPOC2015" />
+    <property name="BorrowerAmountPaid2015" />
+    <property name="SellerPAC2015" />
+    <property name="SellerPOC2015" />
+    <property name="SellerAmountPaid2015" />
+    <property name="BrokerPAC2015" />
+    <property name="BrokerPOC2015" />
+    <property name="BrokerAmountPaid2015" />
+    <property name="LenderPAC2015" />
+    <property name="LenderPOC2015" />
+    <property name="LenderAmountPaid2015" />
+    <property name="OtherPAC2015" />
+    <property name="OtherPOC2015" />
+    <property name="OtherAmountPaid2015" />
+    <property name="TotalPaidByBLO2015" />
+    <property name="BorrowerCanShopForIndicator2015" /> 
+    <property name="BorrowerDidShopForIndicator2015" />
+    <property name="SellerCreditIndicator2015" />
+    <property name="SellerObligatedIndicator2015" />
+    <property name="SellerObligatedAmount2015" />
+    <property name="Sec32PointsAndFees2015" />
+    <property name="RetainedAmount2015" />
+    <property name="OptionalIndicator2015" />
+    <property name="NumberOfMonths" />
+    <property name="MonthlyPayment" />
+    <property name="InsuranceIndicator2015" />
+    <property name="TaxesIndicator2015" />
+    <property name="PropertyIndicator2015" />
+    <property name="EscrowedIndicator2015" />
+    <property name="SimultaneousIssuanceIndicator2015" />
+    <property name="UndiscountedInsurance2015" />
+    <property name="CollectedPostConsummationIndicator2015" />
+    <property name="LenderObligatedIndicator2015" />
+  </class>
+</hibernate-mapping>
+

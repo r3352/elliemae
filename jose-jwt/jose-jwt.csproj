@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\jose-jwt.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4957C4C-16E4-45CB-9B26-B4104184F811}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>jose-jwt</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>1.8.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Jose</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AesGcm.cs" />
+    <Compile Include="AesKeyWrap.cs" />
+    <Compile Include="RsaOaep.cs" />
+    <Compile Include="Arrays.cs" />
+    <Compile Include="Base64Url.cs" />
+    <Compile Include="Compact.cs" />
+    <Compile Include="ConcatKDF.cs" />
+    <Compile Include="IKeyManagement.cs" />
+    <Compile Include="AesGcmKeyWrapManagement.cs" />
+    <Compile Include="AesKeyWrapManagement.cs" />
+    <Compile Include="EcdhKeyManagement.cs" />
+    <Compile Include="EcdhKeyManagementWithAesKeyWrap.cs" />
+    <Compile Include="Pbse2HmacShaKeyManagementWithAesKeyWrap.cs" />
+    <Compile Include="PBKDF2.cs" />
+    <Compile Include="RsaPss.cs" />
+    <Compile Include="Ensure.cs" />
+    <Compile Include="IJsonMapper.cs" />
+    <Compile Include="JSSerializerMapper.cs" />
+    <Compile Include="AesCbcHmacEncryption.cs" />
+    <Compile Include="AesGcmEncryption.cs" />
+    <Compile Include="ICompression.cs" />
+    <Compile Include="DeflateCompression.cs" />
+    <Compile Include="DirectKeyManagement.cs" />
+    <Compile Include="RsaKeyManagement.cs" />
+    <Compile Include="IJwsAlgorithm.cs" />
+    <Compile Include="EcdsaUsingSha.cs" />
+    <Compile Include="HmacUsingSha.cs" />
+    <Compile Include="Plaintext.cs" />
+    <Compile Include="RsaPssUsingSha.cs" />
+    <Compile Include="RsaUsingSha.cs" />
+    <Compile Include="JwsAlgorithm.cs" />
+    <Compile Include="JweAlgorithm.cs" />
+    <Compile Include="JweEncryption.cs" />
+    <Compile Include="JweCompression.cs" />
+    <Compile Include="JWT.cs" />
+    <Compile Include="JoseException.cs" />
+    <Compile Include="IntegrityException.cs" />
+    <Compile Include="EncryptionException.cs" />
+    <Compile Include="InvalidAlgorithmException.cs" />
+    <Compile Include="jwe\IJweAlgorithm.cs" />
+    <Compile Include="native\BCrypt.cs" />
+    <Compile Include="native\NCrypt.cs" />
+    <Compile Include="Security\Cryptography\EccKey.cs" />
+    <Compile Include="Security\Cryptography\RsaKey.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

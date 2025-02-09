@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Loan" table="ElliLoan" dynamic-update="true">
+    <id name="Id" column="ElliLoanId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <one-to-one name="LoanProductData" constrained="true" />
+    <one-to-one name="Property" constrained="true" />
+    <one-to-one name="RateLock" constrained="true" />
+    <one-to-one name="ClosingDocument" constrained="true" />
+    <one-to-one name="EmDocument" constrained="true" />
+    <one-to-one name="EmDocumentInvestor" constrained="true" />
+    <one-to-one name="EmDocumentLender" constrained="true" />
+    <one-to-one name="AdditionalRequests" constrained="true" />
+    <one-to-one name="ClosingCost" constrained="true" />
+    <one-to-one name="FhaVaLoan" constrained="true" />
+    <one-to-one name="HudLoanData" constrained="true" />
+    <one-to-one name="VaLoanData" constrained="true" />
+    <one-to-one name="StatementCreditDenial" constrained="true" />
+    <one-to-one name="Tsum" constrained="true" />
+    <one-to-one name="DisclosureNotices" constrained="true" />
+    <one-to-one name="FannieMae" constrained="true" />
+    <one-to-one name="FreddieMac" constrained="true" />
+    <one-to-one name="Funding" constrained="true" />
+    <one-to-one name="Gfe" constrained="true" />
+    <one-to-one name="Hmda" constrained="true" />
+    <one-to-one name="Hud1Es" constrained="true" />
+    <one-to-one name="InterimServicing" constrained="true" />
+    <one-to-one name="LoanSubmission" constrained="true" />
+    <one-to-one name="Mcaw" constrained="true" />
+    <one-to-one name="NetTangibleBenefit" constrained="true" />
+    <one-to-one name="Prequalification" constrained="true" />
+    <one-to-one name="PrivacyPolicy" constrained="true" />
+    <one-to-one name="RegulationZ" constrained="true" />
+    <one-to-one name="Section32" constrained="true" />
+    <one-to-one name="ServicingDisclosure" constrained="true" />
+    <one-to-one name="Shipping" constrained="true" />
+    <one-to-one name="StateDisclosure" constrained="true" />
+    <one-to-one name="Uldd" constrained="true" />
+    <one-to-one name="Usda" constrained="true" />
+    <one-to-one name="Miscellaneous" constrained="true" />
+    <one-to-one name="CommitmentTerms" constrained="true" />
+    <one-to-one name="ProfitManagement" constrained="true" />
+    <one-to-one name="TrustAccount" constrained="true" />
+    <one-to-one name="UnderwriterSummary" constrained="true" />
+    <one-to-one name="LOCompensation" constrained="true" />
+    <one-to-one name="TQL" constrained="true" />
+	  <one-to-one name="ATRQMCommon" constrained="true" />
+    <one-to-one name="TPO" constrained="true" />
+    <one-to-one name="DownPayment" constrained="true" />
+    <one-to-one name="CollateralTracking" constrained="true" />
+    <one-to-one name="Correspondent" constrained="true" />
+    <one-to-one name="SelectedHomeCounselingProvider" constrained="true" />
+    <one-to-one name="ConstructionManagement" constrained="true" />
+    <one-to-one name="Aiq" constrained="true" />
+    <one-to-one name="EClose" constrained="true" />
+
+    <list name="applications" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <index column="ApplicationIndex" />
+      <one-to-many class="Application"/>
+    </list>
+
+    <bag name="fees" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="Fee"/>
+    </bag>
+    <bag name="contacts" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="Contact"/>
+    </bag>
+    <bag name="analyzers" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="Analyzer"/>
+    </bag>
+    <bag name="purchaseCredits" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="PurchaseCredit"/>
+    </bag>
+    <bag name="crmLogs" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="CrmLog"/>
+    </bag>
+    <bag name="loanPrograms" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="LoanProgram"/>
+    </bag>
+    <bag name="propertyValuations" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="PropertyValuation"/>
+    </bag>
+    <bag name="specialFeatureCodes" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="SpecialFeatureCode"/>
+    </bag>
+    <list name="serviceProviderContacts" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <index column="ProviderIndex" />
+      <one-to-many class="ServiceProviderContact"/>
+    </list>
+    <bag name="customFields" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="CustomField"/>
+    </bag>
+    <bag name="homeCounselingProviders" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="HomeCounselingProvider"/>
+    </bag>
+    <bag name="nonVol" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="NonVol"/>
+    </bag>
+    <bag name="nonBorrowingOwners" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="NonBorrowingOwner"/>
+    </bag>
+    <bag name="alertChangeCircumstances" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="AlertChangeCircumstance"/>
+    </bag>
+    <bag name="investorDeliveryLogs" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="InvestorDeliveryLog"/>
+    </bag>
+    <bag name="encompassToEncompassLogs" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="EncompassToEncompassLog"/>
+    </bag>
+    <bag name="disasters" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="Disaster"/>
+    </bag>
+    <!--Log Tables-->
+    <list name="logRecords" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <index column="LogRecordIndex" />
+      <one-to-many class="LogRecord"/>
+    </list>
+    <!--eMae Catch All-->
+    <property name="EncompassId" not-null="true" />
+    <property name="EmXmlVersionId" />
+    <property name="LoanNumber" />
+    <property name="AdverseActionDate" />
+    <property name="BiweeklyPaymentAmount" />
+    <property name="BuydownIndicator" />
+    <property name="TemporaryBuydown" />
+    <property name="BuydownMonthlyPaymentAmount" />
+    <property name="PaymentScheduleCalcRequiredIndicator" />
+    <property name="Channel" />
+    <property name="ClosedEndPrimaryMortgageLoanAmount" />
+    <property name="ClosedEndSubordinateMortgageLoanAmount" />
+    <property name="ClosingCostProgram" />
+    <property name="ClosingBillingDate" />
+    <property name="BillingCategory" />
+    <property name="ClosingDocsStackingOrder" />
+    <property name="CollateralManagerScore" />
+    <property name="CombinedLtv" />
+    <property name="CopyBrokerToLenderIndicator" />
+    <property name="CopyLoanNumLenderCaseNum" />
+    <property name="CreditScoreToUse" />
+    <property name="AprDisclosureDate" />
+    <property name="DoNotCheckEmail" />
+    <property name="DoNotPrintCompensationFees" />
+    <property name="DownPaymentPercent" />
+    <property name="UnderwritingEscrowIndicator" />
+    <property name="FirstSubordinateLienAmount" />
+    <property name="FirstTimeHomebuyersIndicator" />
+    <property name="FraudScore" />
+    <property name="HcltvHtltv" />
+    <property name="InsuranceAuthorizationIndicator" />
+    <property name="ContactUpdatedIndicator" />
+    <property name="LeadSource" />
+    <property name="LeadSourceID" />
+    <property name="LenderInvestorCode" />
+    <property name="LenderChannel" />
+    <property name="LifeInsuranceCoverageAmount" />
+    <property name="LifeInsuranceEstimatedMonthlyAmount" />
+    <property name="LifeInsuranceTotalProtectedMonthlyAmount" />
+    <property name="LinkId" />
+    <property name="LoanCreatedDateUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+    <property name="LoanImportStatusIndicator" />
+    <property name="ExportLoanNumber" />
+    <property name="LoanProgramName" />
+    <property name="LoanSource" />
+    <property name="Ltv" />
+    <property name="MaturityDate" />
+    <property name="MaxBackRatio" />
+    <property name="MaxFrontRatio" />
+    <property name="MersNumber" />
+    <property name="MersNumberRegistrationDate" />
+    <property name="MipPaidInCashAmount" />
+    <property name="MipBorrowerPaidInCashAmount" />
+    <property name="PrincipalAndInterestMonthlyPaymentAmount" />
+    <property name="MilestoneApprovedDate" />
+    <property name="MilestoneApprovedDueDate" />
+    <property name="MilestoneCompletedDate" />
+    <property name="MilestoneCompletedDueDate" />
+    <property name="MilestoneDocSignedDate" />
+    <property name="MilestoneDocSignedDueDate" />
+    <property name="MilestoneFundedDate" />
+    <property name="MilestoneFundedDueDate" />
+    <property name="MilestoneDuration" />
+    <property name="MilestoneProcessedDate" />
+    <property name="MilestoneFileStartedDate" />
+    <property name="MilestoneCurrentName" />
+    <property name="MilestoneCurrentDateUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+    <property name="MilestoneSubmittedDate" />
+    <property name="MilestoneSubmittedDueDate" />
+    <property name="OccupancyType" />
+    <property name="OpeningDocsInvestorCode" />
+    <property name="OpeningDocsLoanProgramType" />
+    <property name="OpeningDocsPlanDescription" />
+    <property name="OpeningDocsPlanId" />
+    <property name="OpeningDocsProgramCode" />
+    <property name="OpeningDocsStackingOrder" />
+    <property name="OrganizationCode" />
+    <property name="OriginationDate" />
+    <property name="SubjectPropertyOccupancyPercent" />
+    <property name="Print2003Application" />
+    <property name="LtvPropertyValue" />
+    <property name="ProposedHousingExpenseTotal" />
+    <property name="ReferralAddress" />
+    <property name="ReferralCity" />
+    <property name="ReferralFeeAmount" />
+    <property name="ReferralPostalCode" />
+    <property name="ReferralSource" />
+    <property name="ReferralState" />
+    <property name="SecondSubordinateAmount" />
+    <property name="MilestoneStage" />
+    <property name="SubjectPropertyGrossRentalIncomeAmount" />
+    <property name="HelocTeaserRate" />
+    <property name="TilApplicationDate" />
+    <property name="Tltv" />
+    <property name="BLTV" />
+    <property name="TwelveMonthMortgageRentalHistoryIndicator" />
+    <property name="UndiscountedRate" />
+    <property name="UrlPage4Comments" type="StringClob" />
+    <property name="UseNewHudIndicator" />
+    <property name="WebsiteId" />
+    <property name="MortgageInsurancePremiumFHARefundAmount" />
+    <property name="CurrentApplicationIndex" />
+    <property name ="StartingAdjRate" />
+    <property name ="StartingAdjPrice" />
+    <property name ="NoClosingCostOption" />
+    <property name ="CommitmentNumber" />
+    <property name ="MasterCommitmentNumber" />
+    <property name="UseNew2015FormsIndicator" />
+    <property name="InterviewerEmail" />
+    <property name="MonthlyPIPaymentAmountForLE1andCD1" />
+    <property name="IsRequiredInterestReserveCompoundInterest" />
+    <property name="IsCreditorProhibitsBorrower" />
+    <property name="EstimatedConstructionInterest" />
+    <property name="UnimprovedEstimatedValue" />
+    <property name="UnimprovedAppraisedValue" />
+    <property name="ConsumerConnectSiteID" />
+    <property name="InitialInterestRate" />
+    <property name="InitialInterestRateUI" />
+    <property name="SystemIdGuid" />
+    <property name="Use2018DiIndicator" />
+    <property name="BorrowerPairCount" />
+    <property name="TPOMigrationDone" />
+    <property name="ValuationUsed" />
+    <property name="ExistingLiensAndDrawUsed" />
+    <property name="ExistingLiensUsed" />
+    <property name="TargetCLTV" />
+    <property name="TargetHCLTV" />
+    <property name="CalculatedDrawAmount" />
+    <property name="CalculatedLoanAmount" />
+    <property name="UseEnhancedConditionIndicator" />
+    <property name="WorkFlowId" />
+    <property name="MersOrgId" />
+    <property name="Mom" />
+    <property name="SettlementAgentDisbursedFundsDate" />
+    <property name="EnoteLenderName" />
+    <property name="EnoteMersMinNumber" />
+    <property name="EnoteRegisteredDateTime" />
+    <property name="EnoteAuthoritativeCopy" />
+    <property name="EnoteControllerOrgId" />
+    <property name="EnoteControllerOrgName" />
+    <property name="EnoteLocationOrgId" />
+    <property name="EnoteLocationOrgName" />
+    <property name="EnoteMasterServiceOrgId" />
+    <property name="EnoteMasterServiceOrgName" />
+    <property name="EnoteSubservicerOrgId" />
+    <property name="EnoteSubservicerOrgName" />
+    <property name="EnoteSecuredPartyOrgId" />
+    <property name="EnoteSecuredPartyOrgName" />
+    <property name="EnoteSecuredPartyDelagateeOrgId" />
+    <property name="EnoteSecuredPartyDelagateeOrgName" />
+    <property name="EnoteDelagateeForTransferOrgId" />
+    <property name="EnoteDelagateeForTransferOrgName" />
+    <property name="EnoteTransferEffectiveDate" />
+    <property name="EnoteTransferStatus" />
+    <property name="IsLoanAmountRounding" />
+    <property name="Archived" />
+    <!--Disclosures-->
+    <property name="HasAbusinessRelationshipWith" />
+    <property name="NotRequiredForPurchaseSaleOrRefinance" />
+    <property name="NotRequiredForSettlementOfYourLoan" />
+    <property name="PercentageOfOwnership" />
+    <property name="PercentageOwnershipInterest" />
+    <property name="SetForSettlementServicesOfAnAttorney" />
+    <property name="SetForTheSettlementServicesListed" />
+    <bag name="settlementServiceCharges" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="SettlementServiceCharge"/>
+    </bag>
+    <!--Mortgage Terms-->
+    <property name="BaseLoanAmount" />
+    <property name="RequestedInterestRatePercent" />
+    <property name="RequestedInterestRatePercentUI" />
+    <property name="LoanAmortizationTermMonths" />
+    <property name="ArmTypeDescription" />
+    <property name="LenderCaseIdentifier" />
+    <property name="UCDCaseFileID" />      
+    <property name="LoanAmortizationType" />
+    <property name="OtherAmortizationTypeDescription" />
+    <property name="AgencyCaseIdentifier" />
+    <property name="OtherMortgageTypeDescription" />
+    <property name="BorrowerRequestedLoanAmount" />
+    <property name="MortgageType" />
+    <property name="ConformingJumbo" />
+    <property name="PmiIndicator" />
+    <property name="UsdaGovernmentLoanType" />
+    <property name="UCDFNMACasefileStatusType" />
+    <property name="UCDFNMACasefileWarningIndicator" />
+    <property name="UCDSubmissionDate" />
+    <property name="UCDOrigSubmissionDate" />
+    <property name="UCDLoanCLSMatchStatusType" />
+    <!--Proposed Housing Expenses-->
+    <property name="ProposedHazardInsuranceAmount" />
+    <property name="ProposedRealEstateTaxesAmount" />
+    <property name="ProposedFirstMortgageAmount" />
+    <property name="ProposedOtherMortgagesAmount" />
+    <property name="ProposedDuesAmount" />
+    <property name="ProposedOtherAmount" />
+    <property name="ProposedGroundRentAmount" />
+    <property name="ProposedMortgageInsuranceAmount" />
+    <property name="TitleHolderName1" />
+    <property name="TitleHolderName2" />
+    <!--Government Loan-->
+    <property name="GovernmentLoanLenderIdentifier" />
+    <property name="GovernmentLoanSponsorIdentifier" />
+    <property name="LoanUnderwriterCHUMSIdentifier" />
+    <property name="MortgageInsurancePremiumUpfrontFactorPercent" precision="19" scale="6" />
+    <property name="FhaMiPremiumRefundAmount" />
+    <property name="SectionOfActType" />
+    <property name="FHAVALoanOriginatorIdentifier" />
+    <property name="BorrowerPaidFHAVAClosingCostsAmount" />
+    <property name="GovernmentMortgageCreditCertificateAmount" />
+    <property name="BorrowerCoBorrowerMarriedIndicator" />
+    <property name="VAEntitlementAmount" />
+    <property name="HouseholdSizeCount" />
+    <property name="LoanTotalProposedMonthlyMaintenanceAmount" />
+    <property name="LoanVAResidualIncomeAmount" />
+    <property name="LoanTotalProposedMonthlyUtilitiesAmount" />
+    <property name="LoanPurposeOfRefinanceType" />
+    <property name="LoanVARateReductionInitialComputationTotalAmount" />
+    <property name="PropertyEnergyEfficientHomeIndicator" />
+    <property name="LoanVALoanProcedureType" />
+    <property name="SimpleRefinanceType"/>
+    <property name="LesserAppraisedValueOrSalesPrice"/>
+    <!--Interviewer Information-->
+    <property name="ApplicationTakenMethodType" />
+    <property name="InverviewerName" />
+    <property name="InterviewerApplicationSignedDate" />
+    <property name="InterviewerPhoneNumber" />
+    <property name="InterviewerLicenseIdentifier" />
+    <property name="NmlsLoanOriginatorId" />
+    <property name="InterviewersId" />
+    <property name ="InterviewersCompanyStateLicense" />
+    <!--Transaction Details-->
+    <property name="PurchasePriceAmount" />
+    <property name="EstimatedClosingCostsAmount" />
+    <property name="EstimatedPrepaidItemsAmount" />
+    <property name="SubordinateLienAmount" />
+    <property name="CashFromToBorrowerAmount" />
+    <property name="SellerPaidClosingCostsAmount" />
+    <property name="AlterationsImprovementsOrRepairsAmount" />
+    <property name="LandIfAcquiredSeperatelyAmount" />
+    <property name="MiAndFundingFeeTotalAmount" />
+    <property name="DiscountPoint" />
+    <property name="MiAndFundingFeeFinancedAmount" />
+    <property name="TotalFeesCostAmount" />
+    <property name="RefinanceIncludingDebtsToBePaidOffAmount" />
+    <property name="BorrowerPaidDiscountPointsAmount" />
+    <property name="TotalFeesCreditAmount" />
+    <property name="NewFirstMortgageAmount" />
+    <property name="ClosingCostsAndPrepaidsFromOtherLienAmount" />
+    <property name="ClosingCostsPaidByOthersAmount" />
+    <property name="TotalPaidToBrokerAmount" />
+    <property name="TotalDeductionsAmount" />
+    <property name="TotalWireTransferAmount" />
+    <property name="OverwireAmount" />
+    <property name="BrokerPaidClosingCostsAmount" />
+    <property name="BorrowerPaidClosingCostsAmount" />
+    <property name="LenderPaidClosingCostsAmount" />
+    <property name="LenderPaidClosignCostsDotAmount" />
+    <property name="SalesConcessionAmount" />
+    <property name="OtherPaidClosingCostsAmount" />
+    <property name="TotalNonborrowerPaidClosingCostsAmount" />
+    <property name="TotalClosingCostsAmount" />
+    <property name="TotalPaidOutsideClosingAmount" />
+    <property name="DeductOverwireAmountIndicator" />
+    <property name="FundingDeductionList" type="StringClob" />
+    <property name="FundingFeeList" type="StringClob" />
+    <property name="RepurchaseDate" />
+    <property name="RepurchaseCostAmount" />
+    <property name="IncludeUSDAFeeInClosing" />
+    <property name="ContractSellerCreditAmount" />
+    <property name="EnforceCountyLoanLimit" />
+    <!--Transmittal Data -->
+    <property name="BelowMarketSubordinateFinancingIndicator" />
+    <property name="BuydownRatePercent" />
+    <property name="CurrentFirstMortgageHolderType" />
+    <property name="PropertyAppraisedValueAmount" />
+    <property name="PropertyEstimatedValueAmount" />
+    <!--Affordable Lending -->
+    <property name="FnmCommunityLendingProductName" />
+    <property name="FnmCommunitySecondsIndicator" />
+    <property name="FnmNeighborsMortgageEligibilityIndicator" />
+    <property name="HudIncomeLimitAdjustmentFactor" />
+    <property name="HudLendingIncomeLimitAmount" />
+    <property name="HudMedianIncomeAmount" />
+    <property name="MsaIdentifier" />
+    <property name="DocEngine" />
+    <property name="DisableKeyPricingAlert" />
+    <property name="LoanIdNumber" />
+    <property name="FieldLockData" type="StringClob" />
+    <!-- TSUM -->
+    <property name="FirstAdjustmentMinimum" />
+    <!--Attachments-->
+    <property name="FormXml" type="StringClob" />
+    <!-- Alert -->
+    <property name="DisableESignConsentAlert" />
+    <!-- Service Settlement Providers -->
+    <property name="ServiceProviderAdditionalInfo" />
+    <property name="ServiceProviderDateIssued" />
+    <!-- Default Home Counseling Providers Data -->
+    <property name="HomeCounselingProvidersServiceNames" />
+    <property name="HomeCounselingProvidersLanguageNames" />
+    <property name="HomeCounselingProvidersDistance" />
+    <!-- Lender Credits in Funding -->
+    <property name="LenderCreditsInFunding" />
+
+    <property name="IsLSSecondaryFile" />
+    <property name="LoanLinkSyncType" />
+    <property name="IsEmployeeLoan" />
+    <property name="AlertChangeCircumstanceApplyLECD" />
+    <property name="EncompassVersion" />
+    <property name="LinkedBorrowerRequestedLoanAmount" />
+    <property name="ServerDateTimeDDMApplied" />
+    <property name="EDeliveryVersion" />
+
+    <!-- URLA 2020-->
+    <property name="PrintULIonURLA" />
+    <property name="URLALoanIdentifier" />
+    <property name="BorrowerRequestedLoanAmountURLA" />
+    <property name="RentalIncomeSectionIndicator" />
+    <property name="RentalEstimatedNetMonthlyRentAmount" />
+    <property name="OriginatorFirstName" />
+    <property name="OriginatorMiddleName" />
+    <property name="OriginatorLastName" />
+    <property name="OriginatorSuffixName" />
+    <property name="NewMortgageCreditorName" />
+    <property name="NewMortgageMonthlyPayment" />
+    <property name="NewSubordinateCreditorName" />
+    <property name="NewSubordinateMonthlyPayment" />
+    <property name="NewHELOCCreditorName" />
+    <property name="NewHELOCMonthlyPayment" />
+    <property name="OriginatorAddressLineText" />
+    <property name="OriginatorAddressUnitDesignatorType" />
+    <property name="OriginatorAddressUnitIdentifier" /> 
+	<property name="ExpectedBorrowerCount" />  
+    <property name="BorrowerCount" />
+    <!-- URLA 2020 Lender fields-->
+    <property name="BorrCommunityPropertyStateResidentIndicator" />
+    <property name="CommunityPropertyStateResidentIndicator" />
+    <property name="ConversionOfContractForDeedIndicator" />
+    <property name="RenovationLoanIndicator" />
+    <property name="ConstructionLoanIndicator" />
+    <property name="ConstructionToPermanentClosingType" />
+    <property name="PropertyExistingCleanEnergyLienIndicator" />
+    <property name="TitleWillBeFullName" />
+    <property name="TitleHolderFullName" />
+    <property name="RelationshipVestingType" />
+    <property name="RelationshipVestingTypeOtherDescription" />
+    <property name="TrustClassificationType" />
+    <property name="NativeAmericanLandsType" />
+    <property name="NativeAmericanLandsTypeOtherDescription" />
+    <property name="ProductDescription" />
+    <property name="TotalNonSubjectPropertyDebtsToBePaidOffAmount" />
+    <property name="BorrEstimatedClosingCostsAmount" />
+    <property name="TotalSubordinateFinancingAmount" />
+    <property name="URLATotalMortgageLoansAmount" />
+    <property name="URLATotalOtherCreditsAmount" />
+    <property name="URLATotalCreditsAmount" />
+    <property name="HousingCounselingAgency" />
+    <property name="OwnershipCompletedDate" />
+    <property name="BorrowerFullName" />
+    <property name="HousingCounselingAgencyFullName" />
+    <property name="CounselingCompletedDate" />
+    <property name="CounselingBorrowerFullName" />
+    <property name="RefinanceCashOutDeterminationType" />
+    <property name="GovernmentRefinanceType" />
+    <property name="GovernmentRefinanceTypeOtherDescription" />
+    <property name="ProjectLegalStructureType" />
+    <property name="CondominiumIndicator" />
+    <property name="CooperativeIndicator" />
+    <property name="PUDIndicator" />
+    <property name="NotInProjectIndicator" />
+    <property name="SupplementalPropertyInsuranceAmount" />
+    <property name="TotalOfGiftsGrants" />
+    <property name="TotalOtherAssetToLoan" />
+    <property name="PaymentDeferredFirstFiveYears" />
+    <property name="AffordableLoan" />
+    <property name="TotalAdditionalMortgages" />
+    <property name="PrintLenderPages" />
+    <property name="LotAcquiredDate" />
+    <property name="AdditionalLoanDoesNotApply" />
+
+    <property name="PrintULIAndLoanNoURLA" />
+    <property name="NegativeAmortization" />
+    <property name="PrepaymentPenaltyTerm" />
+    <property name="TemporaryOrInitialInterestRateBuydown" />
+    <property name="LoanFeaturesOtherIndicator" />
+    <property name="ComplianceReviewType" />
+      
+    <property name="AverageRepresentativeCreditScore" />
+    <property name="EnergyImprovementAmount" />
+    <property name="PaceLoanPayoffAmount" />
+
+    <property name="ConsumerHomeInsuranceOrderEligible" />
+    <property name="NewVestingNboAlert" />
+    <property name="NonSpecificLenderCredit" />
+    <property name="NonSpecificSellerCredit" />
+    <property name="UseItemizedCredits" />
+    <property name="FhaHudReoTotalAmount" />
+
+    <property name="AverageRepresentativeCreditScoreNotApplicable" />
+    <property name="ArmIndexPrecision" />
+
+    <property name="AffordableHousingEligibleIndicator" />
+    <property name="AffordableHousingPurchasePriceLimit" />
+    <property name="AffordableHousingAreaMedianIncomeYear" />
+    <property name="AffordableHousingAreaMedianIncome80Perc" />
+    <property name="AffordableHousingAreaMedianIncome50Perc" />
+    <property name="AffordableHousingAreaMedianIncomePercent" />
+    <property name="AffordableHousingAreaMedianIncomeLimit" />
+    <property name="AffordableHousingAreaMedianIncomeManualYear" />
+    <property name="AffordableHousingMedianFamilyIncomeManualYear" />
+    <property name="DisasterDeclared" />
+    <property name="CommunityLandTrustLessorName" />
+    <property name="SendToThirdPartyIndicator" />
+    <property name ="ThreeDayReadyForDisclosureDate" />
+    <property name ="AtLockReadyForDisclosureDate" />
+    <property name ="AtApplicationReadyForDisclosureDate" />
+    <property name ="ChangeCircumstanceReadyForDisclosureDate" />
+    <property name="MsaName" />
+    <property name="ActualMfiYear" />
+    <property name="EstimatedMfiYear" />
+    <property name="ActualMfiHundredPercent" />
+    <property name="EstimatedMfiHundredPercent" />
+    <property name="IncomeImportDate" />
+    <property name="MiRateQuoteId" />
+    <property name="MiProductDescription" />
+	  <property name="PricingProvider" />
+	  <property name="AnalyzerOverallExpirationDate" />
+    <property name="BusinessAssociationExceptionCount" />
+	<property name="AssessedValue" />
+  </class>
+    
+  <sql-query name="loan-delete">
+    DECLARE @ElliLoanId uniqueidentifier, @AltId uniqueidentifier
+    SELECT @ElliLoanId = ElliLoanId FROM [ElliLoan] WHERE EncompassId = :AltId
+    DELETE [ElliResidence] FROM [ElliResidence] R INNER JOIN [ElliApplication] A ON A.ElliApplicationId = R.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliLiability] FROM [ElliLiability] L INNER JOIN [ElliApplication] A ON A.ElliApplicationId = L.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliAUSTrackingLog] FROM [ElliAUSTrackingLog] AUS INNER JOIN [ElliApplication] A ON A.ElliApplicationId = AUS.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliATRQMBorrower] FROM [ElliATRQMBorrower] ATRQMBor INNER JOIN [ElliApplication] A ON A.ElliApplicationId = ATRQMBor.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliIncome] FROM [ElliIncome] I INNER JOIN [ElliApplication] A ON A.ElliApplicationId = I.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliSelfEmployedIncome] FROM [ElliSelfEmployedIncome] I INNER JOIN [ElliApplication] A ON A.ElliApplicationId = I.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliReoProperty] FROM [ElliReoProperty] RP INNER JOIN [ElliApplication] A ON A.ElliApplicationId = RP.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliEmployment] FROM [ElliEmployment] E INNER JOIN [ElliApplication] A ON A.ElliApplicationId = E.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliCreditReport] FROM [ElliCreditReport] CR INNER JOIN [ElliBorrower] B ON B.ElliBorrowerId = CR.ElliBorrowerId INNER JOIN [ElliApplication] A ON A.ElliApplicationId = B.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliBorrower] FROM [ElliBorrower] B INNER JOIN [ElliApplication] A ON A.ElliApplicationId = B.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliAsset] FROM [ElliAsset] A INNER JOIN [ElliApplication] AP ON A.ElliApplicationId = AP.ElliApplicationId WHERE AP.ElliLoanId = @ElliLoanId
+    DELETE [ElliGiftGrant] FROM [ElliGiftGrant] G INNER JOIN [ElliApplication] A ON A.ElliApplicationId = G.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliOtherIncomeSource] FROM [ElliOtherIncomeSource] O INNER JOIN [ElliApplication] A ON A.ElliApplicationId = O.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliPurchaseCredit] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliCrmLog] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliProperty] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliPrepaymentPenalty] WHERE ElliLoanProductDataId = @ElliLoanId
+    DELETE [ElliHelocRepaymentDrawPeriod] WHERE ElliLoanProductDataId = @ElliLoanId
+    DELETE [ElliBuydown] WHERE ElliLoanProductDataId = @ElliLoanId
+    DELETE [ElliLoanProductData] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliDownPayment] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliSettlementServiceCharge] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliFee] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliContact] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliAnalyzer] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliLoanProgram] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliPropertyValuation] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliSpecialFeatureCode] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliPurchaseAdvicePayout] WHERE ElliRateLockId = @ElliLoanId
+    DELETE [ElliPriceAdjustment] WHERE ElliRateLockId = @ElliLoanId
+    DELETE [ElliLockRequestBorrower] WHERE ElliRateLockId = @ElliLoanId
+    DELETE [ElliRateLock] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliAdditionalStateDisclosure] WHERE ElliClosingDocumentId = @ElliLoanId
+    DELETE [ElliClosingEntity] WHERE ElliClosingDocumentId = @ElliLoanId
+    DELETE [ElliStateLicense] WHERE ElliClosingDocumentId = @ElliLoanId
+    DELETE [ElliAntiSteeringLoanOption] WHERE ElliClosingDocumentId = @ElliLoanId
+    DELETE [ElliRespaHudDetail] WHERE ElliClosingDocumentId = @ElliLoanId
+    DELETE [ElliClosingDocument] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliEmDocument] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliEmDocumentInvestor] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliEmDocumentLender] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliSecondaryFinancingProvider] WHERE ElliHudLoanDataId = @ElliLoanId
+    DELETE [ElliHudLoanData] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliMilitaryService] WHERE ElliVaLoanDataId = @ElliLoanId
+    DELETE [ElliPreviousVaLoan] WHERE ElliVaLoanDataId = @ElliLoanId
+    DELETE [ElliVaLoanData] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliEnergyEfficientMortgageItem] WHERE ElliFhaVaLoanId = @ElliLoanId
+    DELETE [ElliFhaVaLoan] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliGfe2010Fee] WHERE ElliGfe2010Id = @ElliLoanId
+    DELETE [ElliGfe2010WholePOC] WHERE ElliGfe2010Id = @ElliLoanId
+    DELETE [ElliGfe2010GfeCharge] WHERE ElliGfe2010PageId = @ElliLoanId
+    DELETE [ElliGfe2010FwbcFwsc] WHERE ElliGfe2010PageId = @ElliLoanId
+    DELETE [ElliGfe2010Page] WHERE ElliClosingCostId = @ElliLoanId
+    DELETE [ElliGfe2010Section] WHERE ElliClosingCostId = @ElliLoanId
+    DELETE [ElliGfe2010] WHERE ElliClosingCostId = @ElliLoanId
+    DELETE [ElliAdditionalRequests] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliClosingCost] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliStatementCreditDenial] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliTsum] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliFannieMae] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliFreddieMac] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliNewYorkFee] WHERE ElliStateDisclosureId = @ElliLoanId
+    DELETE [ElliNewYorkPrimaryLender] WHERE ElliStateDisclosureId = @ElliLoanId
+    DELETE [ElliRegulationZInterestRatePeriod] WHERE ElliRegulationZId = @ElliLoanId
+    DELETE [ElliRegulationZPayment] WHERE ElliRegulationZId = @ElliLoanId
+    DELETE [ElliRegulationZ] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliStateDisclosure] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliUldd] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliDisclosureNotices] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliFunding] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliGfeFee] WHERE ElliGfeId = @ElliLoanId
+    DELETE [ElliGfeLien] WHERE ElliGfeId = @ElliLoanId
+    DELETE [ElliGfePayment] WHERE ElliGfeId = @ElliLoanId
+    DELETE [ElliGfePayoff] WHERE ElliGfeId = @ElliLoanId
+    DELETE [ElliGfe] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliHmda] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliHud1EsDate] WHERE ElliHud1EsId = @ElliLoanId
+    DELETE [ElliHud1EsDueDate] WHERE ElliHud1EsId = @ElliLoanId
+    DELETE [ElliHud1EsPayTo] WHERE ElliHud1EsId = @ElliLoanId
+    DELETE [ElliHud1EsSetup] WHERE ElliHud1EsId = @ElliLoanId
+    DELETE [ElliHud1EsItemize] WHERE ElliHud1EsId = @ElliLoanId
+    DELETE [ElliHud1Es] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliInterimServicingTransaction] WHERE ElliInterimServicingId = @ElliLoanId
+    DELETE [ElliInterimServicing] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliLoanSubmissionFee] WHERE ElliLoanSubmissionId = @ElliLoanId
+    DELETE [ElliLoanSubmission] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliLogRecord] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliMcaw] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliNetTangibleBenefit] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliPrequalificationScenario] WHERE ElliPrequalificationId = @ElliLoanId
+    DELETE [ElliPrequalification] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliPrivacyPolicy] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliSection32] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliServicingDisclosure] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliServiceProviderContact] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliShippingContact] WHERE ElliShippingId = @ElliLoanId
+    DELETE [ElliShipping] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliUsdaHouseholdIncome] WHERE ElliUsdaId = @ElliLoanId
+    DELETE [ElliUsda] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliMiscellaneous] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliCommitmentTerms] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliProfitManagementItem] WHERE ElliProfitManagementId = @ElliLoanId
+    DELETE [ElliProfitManagement] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliTrustAccountItem] WHERE ElliTrustAccountId = @ElliLoanId
+    DELETE [ElliTrustAccount] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliUnderwriterSummary] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliLOCompensation] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliTQLFraudAlert] WHERE ElliTQLId = @ElliLoanId
+    DELETE [ElliTQLComplianceAlert] WHERE ElliTQLId = @ElliLoanId
+    DELETE [ElliTQLDocument] WHERE ElliTQLId = @ElliLoanId
+    DELETE [ElliTQL] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliATRQMCommon] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliTPO] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliApplication] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliCustomField] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliLoan] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliLoanEstimate1] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliLoanEstimate2] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliLoanEstimate3] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliClosingDisclosure1] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliClosingDisclosure2] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliClosingDisclosure3] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliClosingDisclosure4] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliClosingDisclosure5] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliFeeVariance] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliFeeVarianceOther] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliCollateralTracking] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliOCRValuation] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliOCREarlyCheck] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliCorrOtherInsurance] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliScenario] WHERE ElliCorrespondentId = @ElliLoanId
+    DELETE [ElliOCRRider] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliDisclosure] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliCorrespondent] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliSelectedHomeCounselingProvider] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliHomeCounselingProvider] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliConstructionManagement] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliExtraPayment] WHERE ElliRateLockId = @ElliLoanId
+    DELETE [ElliNonVol] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliNonBorrowingOwners] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliAlertChangeCircumstance] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliInvestorDeliveryLog] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliEncompassToEncompassLog] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliDisaster] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliURLAAlternateName] FROM [ElliURLAAlternateName] U INNER JOIN [ElliApplication] A ON A.ElliApplicationId = U.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliOtherAsset] FROM [ElliOtherAsset] OA INNER JOIN [ElliApplication] A ON A.ElliApplicationId = OA.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliOtherLiability] FROM [ElliOtherLiability] OL INNER JOIN [ElliApplication] A ON A.ElliApplicationId = OL.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliAdditionalLoan] FROM [ElliAdditionalLoan] AL INNER JOIN [ElliApplication] A ON A.ElliApplicationId = AL.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliHelocHistoricalIndexYearSetting] WHERE ElliLoanProductDataId = @ElliLoanId
+    DELETE [ElliRateLockBuydown] WHERE ElliRateLockId = @ElliLoanId
+    DELETE [ElliProvidedDocument] FROM [ElliProvidedDocument] PD INNER JOIN [ElliApplication] A ON A.ElliApplicationId = PD.ElliApplicationId WHERE A.ElliLoanId = @ElliLoanId
+    DELETE [ElliAiq] WHERE ElliLoanId = @ElliLoanId
+    DELETE [ElliEClose] WHERE ElliLoanId = @ElliLoanId
+  </sql-query>
+</hibernate-mapping>

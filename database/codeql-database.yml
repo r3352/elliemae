@@ -1,0 +1,41 @@
+---
+sourceLocationPrefix: /Users/matthewzamat/Documents/BugBounty/08_ICE/newdll
+baselineLinesOfCode: 0
+unicodeNewlines: false
+columnKind: utf8
+primaryLanguage: cpp
+inProgress:
+  primaryLanguage: cpp
+  installedExtractors:
+    go:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/go
+    python:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/python
+    java:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/java
+    html:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/html
+    xml:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/xml
+    properties:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/properties
+    cpp:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/cpp
+    swift:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/swift
+    csv:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/csv
+    actions:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/actions
+    yaml:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/yaml
+    csharp:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/csharp
+    javascript:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/javascript
+    ruby:
+     - /opt/homebrew/Caskroom/codeql/2.20.4/codeql/ruby
+creationMetadata:
+  cliVersion: 2.20.4
+  creationTime: 2025-02-09T02:22:34.547881Z
+finalised: false

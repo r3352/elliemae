@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="StatementCreditDenial" table="ElliStatementCreditDenial" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="AdditionalStatement" />
+    <property name="CreditReportObtainedFromConsumerReportingAgency" />
+    <property name="DenialDate" />
+    <property name="DenialMailedOn" />
+    <property name="DeniedBy" />
+    <property name="DenialDescription" type="StringClob" />
+    <property name="DescriptionofAccount1" type="StringClob" />
+    <property name="DescriptionofAccount2" type="StringClob" />
+    <property name="DescriptionofAccount3" type="StringClob" />
+    <property name="DescriptionofActionTaken1" type="StringClob" />
+    <property name="DescriptionofActionTaken2" type="StringClob" />
+    <property name="InformationObtainedFromOutsideSource" />
+    <property name="InformationObtainedInReportFromCra" />
+    <property name="Bankruptcy" />
+    <property name="DelinquentCreditObligations" />
+    <property name="ExcessiveObligations" />
+    <property name="Garnishment" />
+    <property name="GarnishmentOrAttachment" />
+    <property name="ForeclosureOrRepossession" />
+    <property name="CollectionActionOrJudgment" />
+    <property name="InformationFromAConsumerReportingAgency" />
+    <property name="InsufficientCreditFile" />
+    <property name="InsufficientCreditReference" />
+    <property name="InsufficientIncomeForTotalObligations" />
+    <property name="LackOfCashReserves" />
+    <property name="NoCreditFile" />
+    <property name="UnableToVerifyCreditReferences" />
+    <property name="UnacceptablePaymentRecordOnPreviousMtg" />
+    <property name="EcoaAddress" />
+    <property name="EcoaAddress2" />
+    <property name="EcoaCity" />
+    <property name="EcoaName" />
+    <property name="EcoaPhone" />
+    <property name="EcoaPostalCode" />
+    <property name="EcoaState" />
+    <property name="LengthOfEmployment" />
+    <property name="TemporaryOrIrregularEmployment" />
+    <property name="UnableToVerifyEmployment" />
+    <property name="InsufficientStabilityOfIncome" />
+    <property name="UnableToVerifyIncome" />
+    <property name="ExcessiveObligationsToIncome" />
+    <property name="DeniedByHud" />
+    <property name="DeniedByVa" />
+    <property name="DeniedByFhlmc" />
+    <property name="DeniedByFnma" />
+    <property name="DeniedByOther" />
+    <property name="OtherDescription" type="StringClob" />
+    <property name="CreditApplicationIncomplete" />
+    <property name="InadequateCollateral" />
+    <property name="InsufficientData" />
+    <property name="InsufficientFundsToCloseLoan" />
+    <property name="DenialOther1" />
+    <property name="DenialOther2" />
+    <property name="DenialOtherDesc1" />
+    <property name="DenialOtherDesc2" />
+    <property name="UnacceptableAppraisal" />
+    <property name="UnacceptableLeaseholdEstate" />
+    <property name="UnacceptableProperty" />
+    <property name="WeDoNotGrantCredit" />
+    <property name="WithdrawnByApplicant" />
+    <property name="TemporaryResidence" />
+    <property name="ToShortPeriodOfResidence" />
+    <property name="UnableToVerifyResidence" />
+    <property name="UnacceptableCreditReferencesProvided" />
+    <property name="PoorCreditPerformance" />
+    <property name="NumberRecentInquiriesCredit" />
+    <property name="CollateralNotSufficient" />
+    <property name="LenderInvestorName" />
+    <property name="LenderInvestorAddress" />
+    <property name="LenderInvestorCity" />
+    <property name="LenderInvestorState" />
+    <property name="LenderInvestorPostalCode" />
+    <property name="LenderInvestorPhone" />
+  </class>
+</hibernate-mapping>

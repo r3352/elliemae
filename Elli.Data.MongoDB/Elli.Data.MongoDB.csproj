@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Data.MongoDB.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7EABA5B-825B-4805-8661-E0632221F50F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Elli.Data.MongoDB</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Elli.Data.MongoDB</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Common">
+      <HintPath>lib\Elli.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Domain">
+      <HintPath>lib\Elli.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Metrics">
+      <HintPath>lib\Elli.Metrics.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel">
+      <HintPath>lib\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>lib\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>lib\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core">
+      <HintPath>lib\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceInterface">
+      <HintPath>lib\ServiceInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArchiveRepository.cs" />
+    <Compile Include="Collections.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="LoanBatchRepository.cs" />
+    <Compile Include="DraftLoanRepository.cs" />
+    <Compile Include="InputFormAssetRepository.cs" />
+    <Compile Include="InputFormRepository.cs" />
+    <Compile Include="DecimalPlace.cs" />
+    <Compile Include="CustomDecimalSerializer.cs" />
+    <Compile Include="CustomNaSerializer`1.cs" />
+    <Compile Include="LATRepository.cs" />
+    <Compile Include="LoanRepository.cs" />
+    <Compile Include="MongoInitializer.cs" />
+    <Compile Include="MongoUnitOfWork.cs" />
+    <Compile Include="OrderRatesRepository.cs" />
+    <Compile Include="PipelineRepository.cs" />
+    <Compile Include="SiteRepository.cs" />
+    <Compile Include="SiteSettingRepository.cs" />
+    <Compile Include="TPORecoverCodeSettingRepository.cs" />
+    <Compile Include="MigrationScript\DefaultMigrationScript.cs" />
+    <Compile Include="MigrationScript\IMigrationScript.cs" />
+    <Compile Include="MigrationScript\ScriptProcessor.cs" />
+    <Compile Include="Mapping\AdditionalRequestsMap.cs" />
+    <Compile Include="Mapping\AdditionalStateDisclosureMap.cs" />
+    <Compile Include="Mapping\AffiliatedBusinessArrangementMap.cs" />
+    <Compile Include="Mapping\AntiSteeringLoanOptionMap.cs" />
+    <Compile Include="Mapping\ApplicationMap.cs" />
+    <Compile Include="Mapping\AssetMap.cs" />
+    <Compile Include="Mapping\ATRQMBorrowerMap.cs" />
+    <Compile Include="Mapping\ATRQMCommonMap.cs" />
+    <Compile Include="Mapping\AuditAlertMap.cs" />
+    <Compile Include="Mapping\AUSTrackingLogMap.cs" />
+    <Compile Include="Mapping\BorrowerMap.cs" />
+    <Compile Include="Mapping\BuydownMap.cs" />
+    <Compile Include="Mapping\ClosingCostMap.cs" />
+    <Compile Include="Mapping\ClosingDisclosure1Map.cs" />
+    <Compile Include="Mapping\ClosingDisclosure2Map.cs" />
+    <Compile Include="Mapping\ClosingDisclosure3Map.cs" />
+    <Compile Include="Mapping\ClosingDisclosure4Map.cs" />
+    <Compile Include="Mapping\ClosingDisclosure5Map.cs" />
+    <Compile Include="Mapping\ClosingDocumentMap.cs" />
+    <Compile Include="Mapping\ClosingEntityMap.cs" />
+    <Compile Include="Mapping\CommitmentTermsMap.cs" />
+    <Compile Include="Mapping\ComplianceTestLogMap.cs" />
+    <Compile Include="Mapping\CompressedLoanFileMap.cs" />
+    <Compile Include="Mapping\ContactMap.cs" />
+    <Compile Include="Mapping\ConversationLogMap.cs" />
+    <Compile Include="Mapping\CorrespondentMap.cs" />
+    <Compile Include="Mapping\CrmLogMap.cs" />
+    <Compile Include="Mapping\CustomFieldMap.cs" />
+    <Compile Include="Mapping\DataTracLogMap.cs" />
+    <Compile Include="Mapping\DisclosureFormMap.cs" />
+    <Compile Include="Mapping\DisclosureNoticesMap.cs" />
+    <Compile Include="Mapping\DisclosureTracking2015LogMap.cs" />
+    <Compile Include="Mapping\DisclosureTrackingLogMap.cs" />
+    <Compile Include="Mapping\DisclosureTrackingSnapshotMap.cs" />
+    <Compile Include="Mapping\DocumentAuditMap.cs" />
+    <Compile Include="Mapping\DocumentFieldSettingMap.cs" />
+    <Compile Include="Mapping\DocumentLogAttachmentsMap.cs" />
+    <Compile Include="Mapping\DocumentLogMap.cs" />
+    <Compile Include="Mapping\DocumentOrderLogMap.cs" />
+    <Compile Include="Mapping\DocumentOrderSnapshotMap.cs" />
+    <Compile Include="Mapping\DocumentSettingsMap.cs" />
+    <Compile Include="Mapping\DownloadLogMap.cs" />
+    <Compile Include="Mapping\DownPaymentMap.cs" />
+    <Compile Include="Mapping\EdmDocumentMap.cs" />
+    <Compile Include="Mapping\EdmLogMap.cs" />
+    <Compile Include="Mapping\ElliCustomAlertMap.cs" />
+    <Compile Include="Mapping\ElliCustomAlertStatusMap.cs" />
+    <Compile Include="Mapping\ElliLOCompensationMap.cs" />
+    <Compile Include="Mapping\EmailTriggerLogMap.cs" />
+    <Compile Include="Mapping\EmDocumentInvestorMap.cs" />
+    <Compile Include="Mapping\EmDocumentLenderMap.cs" />
+    <Compile Include="Mapping\EmDocumentMap.cs" />
+    <Compile Include="Mapping\EmploymentMap.cs" />
+    <Compile Include="Mapping\EnergyEfficientMortgageItemMap.cs" />
+    <Compile Include="Mapping\EnergyEfficientMortgageMap.cs" />
+    <Compile Include="Mapping\EntityReferenceMap.cs" />
+    <Compile Include="Mapping\EscrowDisbursementTransactionMap.cs" />
+    <Compile Include="Mapping\EscrowInterestTransactionMap.cs" />
+    <Compile Include="Mapping\FannieMaeMap.cs" />
+    <Compile Include="Mapping\FeeMap.cs" />
+    <Compile Include="Mapping\FeeVarianceMap.cs" />
+    <Compile Include="Mapping\FeeVarianceOtherMap.cs" />
+    <Compile Include="Mapping\FhaVaLoanMap.cs" />
+    <Compile Include="Mapping\FileAttachmentReferenceMap.cs" />
+    <Compile Include="Mapping\FormMap.cs" />
+    <Compile Include="Mapping\FreddieMacMap.cs" />
+    <Compile Include="Mapping\FundingMap.cs" />
+    <Compile Include="Mapping\Gfe2010FeeMap.cs" />
+    <Compile Include="Mapping\Gfe2010FwbcFwscMap.cs" />
+    <Compile Include="Mapping\Gfe2010GfeChargeMap.cs" />
+    <Compile Include="Mapping\Gfe2010Map.cs" />
+    <Compile Include="Mapping\Gfe2010PageMap.cs" />
+    <Compile Include="Mapping\Gfe2010SectionMap.cs" />
+    <Compile Include="Mapping\Gfe2010WholePocMap.cs" />
+    <Compile Include="Mapping\GfeFeeMap.cs" />
+    <Compile Include="Mapping\GfeLienMap.cs" />
+    <Compile Include="Mapping\GfeMap.cs" />
+    <Compile Include="Mapping\GfePaymentMap.cs" />
+    <Compile Include="Mapping\GfePayoffMap.cs" />
+    <Compile Include="Mapping\GffVAlertTriggerFieldMap.cs" />
+    <Compile Include="Mapping\GoodFaithFeeVarianceCureLogMap.cs" />
+    <Compile Include="Mapping\HelocRepaymentDrawPeriodMap.cs" />
+    <Compile Include="Mapping\HmdaMap.cs" />
+    <Compile Include="Mapping\HomeCounselingProviderMap.cs" />
+    <Compile Include="Mapping\HomeCounselingProviderSelectedMap.cs" />
+    <Compile Include="Mapping\HtmlEmailLogMap.cs" />
+    <Compile Include="Mapping\Hud1EsDateMap.cs" />
+    <Compile Include="Mapping\Hud1EsDueDateMap.cs" />
+    <Compile Include="Mapping\Hud1EsItemizeMap.cs" />
+    <Compile Include="Mapping\Hud1EsMap.cs" />
+    <Compile Include="Mapping\Hud1EsPayToMap.cs" />
+    <Compile Include="Mapping\Hud1EsSetupMap.cs" />
+    <Compile Include="Mapping\HudLoanDataMap.cs" />
+    <Compile Include="Mapping\IncomeMap.cs" />
+    <Compile Include="Mapping\InterimServicingMap.cs" />
+    <Compile Include="Mapping\InterimServicingTransactionMap.cs" />
+    <Compile Include="Mapping\LiabilityMap.cs" />
+    <Compile Include="Mapping\LoanAssociateMap.cs" />
+    <Compile Include="Mapping\LoanEstimate1Map.cs" />
+    <Compile Include="Mapping\LoanEstimate2Map.cs" />
+    <Compile Include="Mapping\LoanEstimate3Map.cs" />
+    <Compile Include="Mapping\LoanHistoryEntryMap.cs" />
+    <Compile Include="Mapping\LoanHistoryMap.cs" />
+    <Compile Include="Mapping\LoanMap.cs" />
+    <Compile Include="Mapping\LoanProductDataMap.cs" />
+    <Compile Include="Mapping\LoanProgramMap.cs" />
+    <Compile Include="Mapping\LoanPurchaseTransactionMap.cs" />
+    <Compile Include="Mapping\LoanSubmissionFeeMap.cs" />
+    <Compile Include="Mapping\LoanSubmissionMap.cs" />
+    <Compile Include="Mapping\LockCancellationLogMap.cs" />
+    <Compile Include="Mapping\LockConfirmLogMap.cs" />
+    <Compile Include="Mapping\LockDenialLogMap.cs" />
+    <Compile Include="Mapping\LockRequestBorrowerMap.cs" />
+    <Compile Include="Mapping\LockRequestLogMap.cs" />
+    <Compile Include="Mapping\LockRequestSnapshotMap.cs" />
+    <Compile Include="Mapping\LogAlertMap.cs" />
+    <Compile Include="Mapping\LogCommentMap.cs" />
+    <Compile Include="Mapping\LogConditionMap.cs" />
+    <Compile Include="Mapping\LogEntryLogMap.cs" />
+    <Compile Include="Mapping\LogRecordMap.cs" />
+    <Compile Include="Mapping\LogSnapshotFieldMap.cs" />
+    <Compile Include="Mapping\MarginIndexLogMap.cs" />
+    <Compile Include="Mapping\McawMap.cs" />
+    <Compile Include="Mapping\MilestoneFreeRoleLogMap.cs" />
+    <Compile Include="Mapping\MilestoneHistoryLogMap.cs" />
+    <Compile Include="Mapping\MilestoneLogMap.cs" />
+    <Compile Include="Mapping\MilestoneTaskContactMap.cs" />
+    <Compile Include="Mapping\MilestoneTaskLogMap.cs" />
+    <Compile Include="Mapping\MilestoneTemplateLogMap.cs" />
+    <Compile Include="Mapping\MilitaryServiceMap.cs" />
+    <Compile Include="Mapping\MiscellaneousMap.cs" />
+    <Compile Include="Mapping\NetTangibleBenefitMap.cs" />
+    <Compile Include="Mapping\NewYorkFeeMap.cs" />
+    <Compile Include="Mapping\NewYorkPrimaryLenderMap.cs" />
+    <Compile Include="Mapping\OptimalBlueSnapshotMap.cs" />
+    <Compile Include="Mapping\OrderedDocumentMap.cs" />
+    <Compile Include="Mapping\OrderedDocumentOverflowMap.cs" />
+    <Compile Include="Mapping\OtherTransactionMap.cs" />
+    <Compile Include="Mapping\PaymentReversalTransactionMap.cs" />
+    <Compile Include="Mapping\PaymentTransactionMap.cs" />
+    <Compile Include="Mapping\PostClosingConditionLogMap.cs" />
+    <Compile Include="Mapping\PreliminaryConditionLogMap.cs" />
+    <Compile Include="Mapping\PrepaymentPenaltyMap.cs" />
+    <Compile Include="Mapping\PrequalificationMap.cs" />
+    <Compile Include="Mapping\PrequalificationScenarioMap.cs" />
+    <Compile Include="Mapping\PreviousVaLoanMap.cs" />
+    <Compile Include="Mapping\PriceAdjustmentMap.cs" />
+    <Compile Include="Mapping\PrintFormMap.cs" />
+    <Compile Include="Mapping\PrintLogMap.cs" />
+    <Compile Include="Mapping\PrivacyPolicyMap.cs" />
+    <Compile Include="Mapping\ProfitManagementItemMap.cs" />
+    <Compile Include="Mapping\ProfitManagementMap.cs" />
+    <Compile Include="Mapping\PropertyMap.cs" />
+    <Compile Include="Mapping\PurchaseAdvicePayoutMap.cs" />
+    <Compile Include="Mapping\PurchaseCreditMap.cs" />
+    <Compile Include="Mapping\RateLockMap.cs" />
+    <Compile Include="Mapping\RegistrationLogMap.cs" />
+    <Compile Include="Mapping\RegulationZInterestRatePeriodMap.cs" />
+    <Compile Include="Mapping\RegulationZMap.cs" />
+    <Compile Include="Mapping\RegulationZPaymentMap.cs" />
+    <Compile Include="Mapping\ReoPropertyMap.cs" />
+    <Compile Include="Mapping\ResidenceMap.cs" />
+    <Compile Include="Mapping\RespaHudDetailMap.cs" />
+    <Compile Include="Mapping\SchedulePaymentTransactionMap.cs" />
+    <Compile Include="Mapping\SecondaryFinancingProviderMap.cs" />
+    <Compile Include="Mapping\Section32Map.cs" />
+    <Compile Include="Mapping\SelfEmployedIncomeMap.cs" />
+    <Compile Include="Mapping\ServiceProviderContactMap.cs" />
+    <Compile Include="Mapping\ServicingDisclosureMap.cs" />
+    <Compile Include="Mapping\SettlementServiceChargeMap.cs" />
+    <Compile Include="Mapping\ShippingContactMap.cs" />
+    <Compile Include="Mapping\ShippingMap.cs" />
+    <Compile Include="Mapping\StateDisclosureMap.cs" />
+    <Compile Include="Mapping\StateLicenseMap.cs" />
+    <Compile Include="Mapping\StatementCreditDenialMap.cs" />
+    <Compile Include="Mapping\StatusOnlineEventMap.cs" />
+    <Compile Include="Mapping\StatusOnlineLogMap.cs" />
+    <Compile Include="Mapping\Tax4506Map.cs" />
+    <Compile Include="Mapping\TPOMap.cs" />
+    <Compile Include="Mapping\TQLComplianceAlertMap.cs" />
+    <Compile Include="Mapping\TQLDocumentMap.cs" />
+    <Compile Include="Mapping\TQLFraudAlertMap.cs" />
+    <Compile Include="Mapping\TQLMap.cs" />
+    <Compile Include="Mapping\TQLReportInformationMap.cs" />
+    <Compile Include="Mapping\TrustAccountItemMap.cs" />
+    <Compile Include="Mapping\TrustAccountMap.cs" />
+    <Compile Include="Mapping\TsumMap.cs" />
+    <Compile Include="Mapping\UlddMap.cs" />
+    <Compile Include="Mapping\UnderwriterSummaryMap.cs" />
+    <Compile Include="Mapping\UnderwritingConditionLogMap.cs" />
+    <Compile Include="Mapping\UsdaHouseholdIncomeMap.cs" />
+    <Compile Include="Mapping\UsdaMap.cs" />
+    <Compile Include="Mapping\VaLoanDataMap.cs" />
+    <Compile Include="Mapping\VerificationLogMap.cs" />
+    <Compile Include="Functions\PartialUpdate.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

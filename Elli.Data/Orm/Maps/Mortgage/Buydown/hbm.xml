@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Buydown" table="ElliBuydown" dynamic-update="true">
+    <id name="Id" column="ElliBuydownId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="LoanProductData" column="ElliLoanProductDataId" />
+    <property name="BuydownRatePercent" />
+    <property name="ChangeFrequencyMonthsCount" />
+    <property name="FundBalanceAmount" />
+    <property name="FundTotalAmount" />
+    <property name="IncreaseRatePercent" />
+    <property name="RemainingMonthsCount" />
+    <property name="SubsidyAmount" />
+    <property name="DurationMonthsCount" />
+    <property name="NonBorrowerChangeFrequencyMonthsCount" />
+    <property name="NonBorrowerIncreaseRatePercent"/>
+  </class>
+</hibernate-mapping>

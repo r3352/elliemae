@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="ProfitManagementItem" table="ElliProfitManagementItem" dynamic-update="true">
+    <id name="Id" column="ElliProfitManagementItemId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="ProfitManagement" column="ElliProfitManagementId" />
+    <property name="ProfitManagementItemIndex" />
+    <property name="AtPercent" />
+    <property name="Description" type="StringClob" />
+    <property name="PlusAmount" />
+    <property name="Total" />
+    <property name="Type" />
+  </class>
+</hibernate-mapping>

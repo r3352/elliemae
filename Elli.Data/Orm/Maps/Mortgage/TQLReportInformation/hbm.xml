@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="TQLReportInformation" table="ElliTQLReportInformation" dynamic-update="true">
+    <id name="Id" column="ElliTQLReportInformationId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Application" column="ElliApplicationId" />
+    <property name="AltId" />
+    <property name="UserID" />
+    <property name="OrderDate" />
+    <property name="CompletedDate" />
+    <property name="OrderStatus" />
+    <property name="OrderNumber" />
+    <property name="Investor" />
+    <property name="ProductsOrdered" />
+    <property name="TranscriptType" />
+    <property name="ReportYear1" />
+    <property name="BorrowerID1" />
+    <property name="TotalIncome1" />
+    <property name="PercentVariance1" />
+    <property name="ReportYear2" />
+    <property name="BorrowerID2" />
+    <property name="TotalIncome2" />
+    <property name="PercentVariance2" />
+    <property name="ReportYear3" />
+    <property name="BorrowerID3" />
+    <property name="TotalIncome3" />
+    <property name="PercentVariance3" />
+    <property name="ReportYear4" />
+    <property name="BorrowerID4" />
+    <property name="TotalIncome4" />
+    <property name="PercentVariance4" />
+  </class>
+</hibernate-mapping>

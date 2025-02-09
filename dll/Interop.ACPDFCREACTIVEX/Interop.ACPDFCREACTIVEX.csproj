@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\Ellie Mae\Encompass\Interop.ACPDFCREACTIVEX.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43E97B72-1A58-49BD-849A-1B6CF8ED4828}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Interop.ACPDFCREACTIVEX</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationVersion>3.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>ACPDFCREACTIVEX</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="stdole" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_IPDFCreactiveXEvents.cs" />
+    <Compile Include="IacObject.cs" />
+    <Compile Include="IacScript.cs" />
+    <Compile Include="IacEvaluator.cs" />
+    <Compile Include="IacContainer.cs" />
+    <Compile Include="PDFCreactiveXClass.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_Event.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_BeforeDeleteEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_PrintPageEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_SavePageEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ClickHyperlinkEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_RefreshEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_SelectedObjectChangeEventHan.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ObjectTextChangeEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ContextSensitiveMenuEventHan.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_MouseDownEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_MouseMoveEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_MouseUpEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_NewObjectEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ActivateObjectEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_LoadPageEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_EvaluateExpressionEventHandl.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ProcessingProgressEventHandl.cs" />
+    <Compile Include="PDFCreactiveX.cs" />
+    <Compile Include="IPDFCreactiveX.cs" />
+    <Compile Include="ReportViewConstants.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0028.cs" />
+    <Compile Include="ReportStateConstants.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0029.cs" />
+    <Compile Include="GridViewConstants.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0030.cs" />
+    <Compile Include="ObjectTypeConstants.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0031.cs" />
+    <Compile Include="CommandToolConstants.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0034.cs" />
+    <Compile Include="CommandToolStatusConstants.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0035.cs" />
+    <Compile Include="FileSaveOptionConstants.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0032.cs" />
+    <Compile Include="IacBookmark.cs" />
+    <Compile Include="ReachTextOptionConstants.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0040.cs" />
+    <Compile Include="acHtmlExportOptions.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0043.cs" />
+    <Compile Include="acRtfExportOptions.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0048.cs" />
+    <Compile Include="acXPSExportOptions.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0042.cs" />
+    <Compile Include="acEmbedFontOptions.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0046.cs" />
+    <Compile Include="acExcelExportOptions.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0047.cs" />
+    <Compile Include="acScaleConstants.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0049.cs" />
+    <Compile Include="acPageNumbersPositions.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0050.cs" />
+    <Compile Include="RotatePageConstants.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0037.cs" />
+    <Compile Include="IacExternalObject.cs" />
+    <Compile Include="IacDC.cs" />
+    <Compile Include="IacAttribute.cs" />
+    <Compile Include="acRefreshEventReasons.cs" />
+    <Compile Include="__MIDL_IacPDFCreactiveXConst_0051.cs" />
+    <Compile Include="IacPlugin.cs" />
+    <Compile Include="IacPluginMenu.cs" />
+    <Compile Include="tagMSG.cs" />
+    <Compile Include="_RemotableHandle.cs" />
+    <Compile Include="__MIDL_IWinTypes_0009.cs" />
+    <Compile Include="tagPOINT.cs" />
+    <Compile Include="IPersistStreamInit.cs" />
+    <Compile Include="IPersist.cs" />
+    <Compile Include="IStream.cs" />
+    <Compile Include="ISequentialStream.cs" />
+    <Compile Include="_LARGE_INTEGER.cs" />
+    <Compile Include="_ULARGE_INTEGER.cs" />
+    <Compile Include="tagSTATSTG.cs" />
+    <Compile Include="_FILETIME.cs" />
+    <Compile Include="acContainerClass.cs" />
+    <Compile Include="acContainer.cs" />
+    <Compile Include="acScriptClass.cs" />
+    <Compile Include="acScript.cs" />
+    <Compile Include="acEvaluatorClass.cs" />
+    <Compile Include="acEvaluator.cs" />
+    <Compile Include="acBookmarkClass.cs" />
+    <Compile Include="acBookmark.cs" />
+    <Compile Include="acObjectClass.cs" />
+    <Compile Include="acObject.cs" />
+    <Compile Include="acAttributeClass.cs" />
+    <Compile Include="acAttribute.cs" />
+    <Compile Include="acEnumAttributesClass.cs" />
+    <Compile Include="acEnumAttributes.cs" />
+    <Compile Include="acPluginClass.cs" />
+    <Compile Include="acPlugin.cs" />
+    <Compile Include="acPluginMenuClass.cs" />
+    <Compile Include="acPluginMenu.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_SinkHelper.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_EventProvider.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

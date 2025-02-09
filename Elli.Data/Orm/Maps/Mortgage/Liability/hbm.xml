@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Liability" table="ElliLiability" dynamic-update="true">
+    <id name="Id" column="ElliLiabilityId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Application" column="ElliApplicationId" />
+    <property name="LiabilityIndex" not-null="true" />
+    <property name ="AccountIndicator" />
+    <property name="AccountIdentifier" />
+    <property name="Description" type="StringClob" />
+    <property name="ExclusionIndicator" />
+    <property name="HolderAddressCity" />
+    <property name="HolderAddressPostalCode" />
+    <property name="HolderAddressState" />
+    <property name="HolderAddressStreetLine1" />
+    <property name="HolderName" />
+    <property name="LiabilityType" />
+    <property name="MonthlyPaymentAmount" />
+    <property name="Owner" />
+    <property name="PayoffStatusIndicator" />
+    <property name="RemainingTermMonths" />
+    <property name="SubjectLoanResubordinationIndicator" />
+    <property name="SubjectPropertyIndicator" />
+    <property name="CurrentLienPosition" />
+    <property name="ProposedLienPosition" />
+    <property name="BankLiabilityConsideredIndicator" />
+    <property name="CreditLimit" />
+    <property name="MortgageType" />
+    <property name="UnpaidBalanceAmount" />
+    <property name="PrepaymentPenaltyAmount" />
+    <property name="ToBePaidOffAmount" />
+    <property name="NameInAccount" />
+    <property name="TitleFax" />
+    <property name="TitlePhone" />
+    <property name="HolderComments" />
+    <property name="HolderEmail" />
+    <property name="HolderFax" />
+    <property name="HolderPhone" />
+    <property name="Attention" />
+    <property name="Date" />
+    <property name="NoLinkToDocTrackIndicator" />
+    <property name="Title" />
+    <property name="PrintAttachmentIndicator" />
+    <property name="PrintUserNameIndicator" />
+    <property name="PrintUserJobTitleIndicator" />
+    <property name="ReoId" />
+    <property name="RequestId" />
+    <property name="MonthsToExclude" />
+    <property name="Lates12Month30Day" />
+    <property name="Lates24Month30Day" />
+    <property name="Lates25Month30Day" />
+    <property name="Lates12Month60Day" />
+    <property name="Lates24Month60Day" />
+    <property name="Lates25Month60Day" />
+    <property name="Lates12Month90Day" />
+    <property name="Lates24Month90Day" />
+    <property name="Lates25Month90Day" />
+    <property name="Lates12Month120Day" />
+    <property name="Lates24Month120Day" />
+    <property name="Lates25Month120Day" />
+    <property name="Lates12Month150Day" />
+    <property name="Lates24Month150Day" />
+    <property name="Lates25Month150Day" />
+    <property name="DescriptionOfPurpose" />
+    <property name="IsDebtNotSecuredToSubjectPropertyIndicator"/>
+    <property name="UCDPayoffType" />
+    <property name="PayoffIncludedIndicator"/>
+    <property name="OtherDescription"/>
+    <property name="IncludeTaxesAndInsuranceIndicator"/>
+    <property name="AltId" />
+    <property name="Country" />
+    <property name="ForeignAddressIndicator" />
+    <property name="EnergyEfficientDebts" />
+  </class>
+</hibernate-mapping>

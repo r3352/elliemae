@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+    <class name="CorrOtherInsurance" table="ElliCorrOtherInsurance" dynamic-update="true">
+        <id name="Id" column="ElliCorrOtherInsuranceId" unsaved-value="00000000-0000-0000-0000-000000000000">
+            <generator class="guid.comb" />
+        </id>
+        <version name="Version" />
+        <many-to-one name="Correspondent" column="ElliLoanId" />
+
+        <property name="AltId" />
+        <property name="IncludedInMasterPolicyFlag" />
+        <property name="CompanyName" />
+        <property name="StreetAddress" />
+        <property name="City" />
+        <property name="State" />
+        <property name="ZipCode" />
+        <property name="ContactName" />
+        <property name="Phone" />
+        <property name="Fax" />
+        <property name="PolicyType" />
+        <property name="PolicyTypeOtherDesc" />
+        <property name="PremiumAmount" />
+        <property name="PremiumDueDate" />
+        <property name="ReplacementValue" />
+        <property name="EscrowedFlag" />
+        <property name="AddlCoverageAmount" />
+        <property name="PropertyValueUsed" />
+        <property name="GuaranteedReplacementCostFlag" />
+        <property name="InsuranceEstimatorFlag" />
+        <property name="MaxDeductiblePerc" />
+        <property name="MaxDeductibleAmount" />
+        <property name="PolicyNumber" />
+        <property name="EffectiveDate" />
+        <property name="ExpirationDate" />
+        <property name="CoverageAmount" />
+        <property name="Comments" />
+
+    </class>
+</hibernate-mapping>

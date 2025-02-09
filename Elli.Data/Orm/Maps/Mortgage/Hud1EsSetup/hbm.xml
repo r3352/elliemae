@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Hud1EsSetup" table="ElliHud1EsSetup" dynamic-update="true">
+    <id name="Id" column="ElliHud1EsSetupId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Hud1Es" column="ElliHud1EsId" />
+    <property name="Hud1EsSetupIndex" />
+    <property name="AnnualFeePrepaid" />
+    <property name="AnnualFees" />
+    <property name="Date" />
+    <property name="FloodInsDisb" />
+    <property name="FloodInsPrepaid" />
+    <property name="HazInsDisb" />
+    <property name="HazInsPrepaid" />
+    <property name="MtgInsDisb" />
+    <property name="MtgInsPrepaid" />
+    <property name="SchoolTaxes" />
+    <property name="SchoolTaxesPrepaid" />
+    <property name="TaxDisb" />
+    <property name="TaxPrepaid" />
+    <property name="UserDefined1" />
+    <property name="UserDefined2" />
+    <property name="UserDefined3" />
+    <property name="UserDefinedPrepaid1" />
+    <property name="UserDefinedPrepaid2" />
+    <property name="UserDefinedPrepaid3" />
+  </class>
+</hibernate-mapping>

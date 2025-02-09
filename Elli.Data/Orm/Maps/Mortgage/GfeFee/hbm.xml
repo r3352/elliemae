@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="GfeFee" table="ElliGfeFee" dynamic-update="true">
+    <id name="Id" column="ElliGfeFeeId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Gfe" column="ElliGfeId" />
+    <property name="GfeFeeIndex" not-null="true"/>
+    <property name="GfeFeeType"/>
+    <property name="Description" type="StringClob" />
+    <property name="AmountDescription" />
+    <property name="BrokerAmount" />
+    <property name="OtherAmount" />
+    <property name="Rate" />
+  </class>
+</hibernate-mapping>
+

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="UnderwritingConditionLog" extends="LogRecord" dynamic-update="true" discriminator-value="22">
+    <join table="ElliUnderwritingConditionLog">
+      <key column="ElliLogRecordId" />
+      <property name="Category" />
+      <property name="PriorTo" />
+      <property name="ForRoleId" />
+      <property name="AllowToClearIndicator" />
+      <property name="IsInternalIndicator" />
+      <property name="IsExternalIndicator" />
+      <property name="DateFulfilledUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="FulfilledBy" />
+      <property name="DateReceivedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="ReviewedBy" />
+      <property name="DateReviewedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="DateRejectedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="RejectedBy" />
+      <property name="DateClearedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="ClearedBy" />
+      <property name="DateWaivedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="WaivedBy" />
+      <property name="ExpiresIndicator" />
+      <property name="DateExpiredUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+
+      <property name="Title" type="StringClob" />
+      <property name="Description" type="StringClob" />
+      <property name="Details" type="StringClob" />
+      <property name="PairId" />
+      <property name="DaysTillDue" />
+      <property name="RequestedFrom" />
+      <property name="DateAddedUtc"  type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="AddedBy" />
+      <property name="Source" type="StringClob" />
+      <property name="DateExpected" />
+      <property name="DateRequestedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="RequestedBy" />
+      <property name="DateRerequestedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="RerequestedBy" />
+      <property name="DateReceived" />
+      <property name="ReceivedBy" />
+    </join>
+  </subclass>
+</hibernate-mapping>

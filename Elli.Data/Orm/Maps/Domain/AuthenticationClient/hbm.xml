@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Security">
+  <class name="AuthenticationClient" table="ElliAuthClient" dynamic-update="true">
+    <id name="ServiceClientId" column="ServiceClientId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <property name="Name" />
+    <property name="UserId" />
+    <property name="SessionKey" />
+    <property name="Key" column="[Key]" />
+    <property name="Enabled" />
+    <property name="IssuedDate" />
+    <property name="ExpirationDate" />
+  </class>
+</hibernate-mapping>

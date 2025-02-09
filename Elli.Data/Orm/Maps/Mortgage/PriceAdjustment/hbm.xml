@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="PriceAdjustment" table="ElliPriceAdjustment" dynamic-update="true">
+    <id name="Id" column="ElliPriceAdjustmentId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="RateLock" column="ElliRateLockId" />
+    <property name="Description" type="StringClob" />
+    <property name="Rate" precision="19" scale="10" />
+    <property name="RateLockAdjustmentType" />
+    <property name="PriceAdjustmentType" />
+    <property name="AdjustmentType" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Encompass.Diagnostics.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44B596A0-C24C-4E84-B268-4059670CE7C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Encompass.Diagnostics</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Encompass.Diagnostics</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory">
+      <HintPath>lib\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Unity.Abstractions">
+      <HintPath>lib\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container">
+      <HintPath>lib\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception">
+      <HintPath>lib\Unity.Interception.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArgumentChecks.cs" />
+    <Compile Include="DiagUtility.cs" />
+    <Compile Include="ExceptionExtensions.cs" />
+    <Compile Include="InstanceUtils.cs" />
+    <Compile Include="RestrictedQueue`1.cs" />
+    <Compile Include="PII\MaskPIIJsonTextWriter.cs" />
+    <Compile Include="PII\MaskUtilities.cs" />
+    <Compile Include="Metrics\DisabledMetricRecorder.cs" />
+    <Compile Include="Metrics\IMetricRecorder.cs" />
+    <Compile Include="Metrics\IMetricSampler.cs" />
+    <Compile Include="Metrics\LogMetricRecorder.cs" />
+    <Compile Include="Metrics\RecorderState.cs" />
+    <Compile Include="Metrics\MetricTimer.cs" />
+    <Compile Include="Metrics\TimerState.cs" />
+    <Compile Include="Metrics\SampledLogMetricRecorder.cs" />
+    <Compile Include="Logging\ClientScopeProvider.cs" />
+    <Compile Include="Logging\ThreadStaticScopeProvider`1.cs" />
+    <Compile Include="Logging\LoggerScope.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\ILoggerScopeBuilder.cs" />
+    <Compile Include="Logging\ILoggerScope.cs" />
+    <Compile Include="Logging\ILoggerScopeProvider.cs" />
+    <Compile Include="Logging\ILogManager.cs" />
+    <Compile Include="Logging\LogLevel.cs" />
+    <Compile Include="Logging\LogLevelExtensions.cs" />
+    <Compile Include="Logging\LogLevelFilter.cs" />
+    <Compile Include="Logging\LogEventIds.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\LogManager.cs" />
+    <Compile Include="Logging\TraceLevelExtensions.cs" />
+    <Compile Include="Logging\Utils\RemoteLoggerUtil.cs" />
+    <Compile Include="Logging\Targets\CloudLogTarget.cs" />
+    <Compile Include="Logging\Targets\IRemotingLogConsumer.cs" />
+    <Compile Include="Logging\Targets\AsyncTargetQueueDefaults.cs" />
+    <Compile Include="Logging\Targets\IAsyncTargetWrapperFactory.cs" />
+    <Compile Include="Logging\Targets\AsyncTargetWrapperFactory.cs" />
+    <Compile Include="Logging\Targets\RemotingLogConsumer.cs" />
+    <Compile Include="Logging\Targets\RemotingLogTarget.cs" />
+    <Compile Include="Logging\Targets\TraceLogTarget.cs" />
+    <Compile Include="Logging\Targets\ArchivingFileLogTarget.cs" />
+    <Compile Include="Logging\Targets\EventLogTargetFactory.cs" />
+    <Compile Include="Logging\Targets\FileLogTargetFactory.cs" />
+    <Compile Include="Logging\Targets\ILogTarget.cs" />
+    <Compile Include="Logging\Targets\EventLogTarget.cs" />
+    <Compile Include="Logging\Targets\FileLogRolloverFrequency.cs" />
+    <Compile Include="Logging\Targets\FileLogTarget.cs" />
+    <Compile Include="Logging\Targets\ILogTargetFactory.cs" />
+    <Compile Include="Logging\Targets\LogTargetFactoryBase.cs" />
+    <Compile Include="Logging\Targets\RollingFileLogTarget.cs" />
+    <Compile Include="Logging\Listeners\LogListenerCollection.cs" />
+    <Compile Include="Logging\Listeners\ILogListener.cs" />
+    <Compile Include="Logging\Listeners\DefaultLogListener.cs" />
+    <Compile Include="Logging\Schema\LogFields.cs" />
+    <Compile Include="Logging\Schema\Log.cs" />
+    <Compile Include="Logging\Schema\ILogField.cs" />
+    <Compile Include="Logging\Schema\LogFieldName`1.cs" />
+    <Compile Include="Logging\Schema\LogBatch.cs" />
+    <Compile Include="Logging\Schema\LogErrorData.cs" />
+    <Compile Include="Logging\Schema\LogEventType.cs" />
+    <Compile Include="Logging\Schema\CustomLevelLog.cs" />
+    <Compile Include="Logging\Schema\RemotingClientLog.cs" />
+    <Compile Include="Logging\Schema\TransactionId.cs" />
+    <Compile Include="Logging\Formatters\LoggingContractResolver.cs" />
+    <Compile Include="Logging\Formatters\LogAttrKeyConverter.cs" />
+    <Compile Include="Logging\Formatters\LogConverter.cs" />
+    <Compile Include="Logging\Formatters\PrettyLegacyJsonLogFormatter.cs" />
+    <Compile Include="Logging\Formatters\LegacyLogLevel.cs" />
+    <Compile Include="Logging\Formatters\LegacyLog.cs" />
+    <Compile Include="Logging\Formatters\LegacyJsonLogFormatter.cs" />
+    <Compile Include="Logging\Formatters\PrettyJsonLogFormatter.cs" />
+    <Compile Include="Logging\Formatters\TransactionIdConverter.cs" />
+    <Compile Include="Logging\Formatters\ExceptionConverter.cs" />
+    <Compile Include="Logging\Formatters\JsonLogFormatter.cs" />
+    <Compile Include="Logging\Formatters\LogLevelConverter.cs" />
+    <Compile Include="Logging\Formatters\LogFormat.cs" />
+    <Compile Include="Logging\Formatters\PlainTextWithInstanceFormatter.cs" />
+    <Compile Include="Logging\Formatters\PlainTextFormatter.cs" />
+    <Compile Include="Logging\Formatters\ILogFormatter.cs" />
+    <Compile Include="Logging\Filters\LevelBasedFilter.cs" />
+    <Compile Include="Logging\Filters\ILogFilter.cs" />
+    <Compile Include="Events\ApplicationEventHandler.cs" />
+    <Compile Include="Events\IApplicationEventHandler.cs" />
+    <Compile Include="Config\ConfigDataSection.cs" />
+    <Compile Include="Config\ConfigOverrideHandler.cs" />
+    <Compile Include="Config\ConfigValueOverrideAttribute.cs" />
+    <Compile Include="Config\DiagConfig`1.cs" />
+    <Compile Include="Config\DictionaryConverter.cs" />
+    <Compile Include="Config\IConfigDataSection.cs" />
+    <Compile Include="Config\IDiagConfigChangeHandler`1.cs" />
+    <Compile Include="Config\LogLevelFilterConverter.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="PurchaseConditionLog" extends="StandardConditionLog" dynamic-update="true" discriminator-value="44">
+    <join table="ElliPurchaseConditionLog">
+      <key column="ElliLogRecordId" />
+      <property name="Category" />
+      <property name="PriorTo" />
+      <property name="ForRoleId" />
+      <property name="AllowToClearIndicator" />
+      <property name="IsInternalIndicator" />
+      <property name="IsExternalIndicator" />
+      <property name="DateFulfilledUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="FulfilledBy" />
+      <property name="ReviewedBy" />
+      <property name="DateReviewedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="DateRejectedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="RejectedBy" />
+      <property name="DateClearedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="ClearedBy" />
+      <property name="DateWaivedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="WaivedBy" />
+      <property name="DateExpiredUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+    </join>
+  </subclass>
+</hibernate-mapping>

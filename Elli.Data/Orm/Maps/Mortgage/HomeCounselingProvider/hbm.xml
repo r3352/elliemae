@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="HomeCounselingProvider" table="ElliHomeCounselingProvider" dynamic-update="true">
+    <id name="Id" column="ElliHomeCounselingProviderId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Loan" column="ElliLoanId" />
+    <property name="HomeCounselingProviderIndex" />
+    <property name="SelectedIndicator" />
+    <property name="AgencyName" />
+    <property name="AgencyAddress" />
+    <property name="AgencyAddressCity" />
+    <property name="AgencyAddressState" />
+    <property name="AgencyAddressPostalCode" />
+    <property name="AgencyPhoneDirect" />
+    <property name="AgencyPhoneTollFree" />
+    <property name="AgencyFax" />
+    <property name="AgencyEmail" />
+    <property name="AgencyWebAddress" />
+    <property name="LanguagesSupported" />
+    <property name="CounselingServicesProvided" />
+    <property name="AgencyAffiliationIndicator"/>
+    <property name="AgencyAffiliationDescription" />
+    <property name="AgencySource" />
+    <property name="DistanceMiles" />
+    <property name="AgencyId" />
+    <property name="HomeCounselingProviderId" />
+    <property name="AltId" />
+  </class>
+</hibernate-mapping>

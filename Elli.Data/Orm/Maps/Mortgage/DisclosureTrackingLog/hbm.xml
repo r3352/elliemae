@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="DisclosureTrackingLog" extends="LogRecord" dynamic-update="true" discriminator-value="4">
+    <join table="ElliDisclosureTrackingLog">
+      <key column="ElliLogRecordId" />
+      <property name="DisclosedBy" />
+      <property name="DisclosedByFullName" />
+      <property name="DisclosedMethod" />
+      <property name="IsDisclosed" />
+      <property name="IsLocked" />
+      <property name="BorrowerPairId" />
+      <property name="ReceivedDate" />
+      <property name="DisclosureCreatedDttmUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="ContainGfe" />
+      <property name="ContainTil" />
+      <property name="ContainSafeHarbor" />
+      <property name="ManuallyCreated" />
+      <property name="EDisclosureBorrowerAcceptConsentDate" />
+      <property name="EDisclosureBorrowereSignedDate" />
+      <property name="EDisclosureBorrowerRejectConsentDate" />
+      <property name="EDisclosureBorrowerViewConsentDate" />
+      <property name="EDisclosureBorrowerViewMessageDate" />
+      <property name="EDisclosureBorrowerWetSignedDate" />
+      <property name="EDisclosureCoBorrowerAcceptConsentDate" />
+      <property name="EDisclosureCoBorrowereSignedDate" />
+      <property name="EDisclosureCoBorrowerRejectConsentDate" />
+      <property name="EDisclosureCoBorrowerViewConsentDate" />
+      <property name="EDisclosureCoBorrowerViewMessageDate" />
+      <property name="EDisclosureCoBorrowerWebSignedDate" />
+      <property name="EDisclosurePackageId" />
+      <property name="FulfillmentOrderedBy" />
+      <property name="EDisclosureManuallyFulfilledBy" />
+      <property name="EDisclosureManualFulfillmentDate" />
+      <property name="EDisclosureManualFulfillmentMethod" />
+      <property name="EDisclosureManualFulfillmentComment" />
+      <property name="EDisclosurePackageCreatedDate" />
+      <property name="FullfillmentProcessedDate" />
+      <property name="EDisclosurePackageViewableFile" />
+      <property name="EDisclosureApplicationPackageIndicator" />
+      <property name="EDisclosureThreeDayPackageIndicator" />
+      <property name="EDisclosureLockPackageIndicator" />
+      <property name="EDisclosureApprovalPackageIndicator" />
+      <property name="IsWetSignedIndicator" />
+      <property name="IsDisclosedAprLocked" />
+      <property name="IsDisclosedByLocked" />
+      <property name="IsDisclosedFinanceChargeLocked" />
+      <property name="IsDisclosedReceivedDateLocked" />
+      <property name="LockedDisclosedAprField" />
+      <property name="LockedDisclosedByField" />
+      <property name="LockedDisclosedFinanceChargeField" />
+      <property name="LockedDisclosedReceivedDate" />
+      <property name="EDisclosureDisclosedMessage" type="StringClob" />
+      <property name="EDisclosureConsentPdf" />
+      <property name="SnapshotXml" type="StringClob" />
+      <property name="FormsXml" type="StringClob" />
+    </join>
+  </subclass>
+</hibernate-mapping>

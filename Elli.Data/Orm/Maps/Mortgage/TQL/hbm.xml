@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="TQL" table="ElliTQL" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="CurrentInvestorPublishingStatus" />
+    <property name="LastInvestorPublishingStatusChangeDate" />
+    <property name="LastInvestorPublishingInvestor" />
+    <property name="LastInvestorPublishingUserWhoChangeStatus" />
+    
+    <property name="LastFraudOrderCompletedDate" />
+    <property name="LastFraudOrderProduct" />
+    <property name="LastFraudOrderAlerts" />    
+    
+    <!-- TQLFraudAlert -->
+    <bag name="tqlFraudAlerts" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliTQLId" />
+      <one-to-many class="TQLFraudAlert"/>
+    </bag>
+    
+    <property name="LastUserIDWhoOrderedFraudOrder" />
+    <property name="LastFraudReportID" />
+    
+    <property name="LastCCVPCompletedDate" />
+    <property name="LastCCVPReportOrdered" />
+    <property name="LastCCVPConfidenceScore" />
+    <property name="LastCCVPForecastDeviationScore" />
+    <property name="LastCCVPEstimatedValue" />
+    <property name="LastCCVPResultsReportReturned" />
+    <property name="LastCCVPReportPassResult" />
+    <property name="LastCCVPReportHistoryProResult" />
+    <property name="LastUserIDWhoOrderedCCVP" />
+    <property name="LastCCVPReportID" />
+    
+    <property name="LastComplianceCompletedDate" />
+    <property name="LastComplianceProductNameReportOrdered" />
+    <property name="LastComplianceOrderType" />
+    <property name="LastComplianceNumberOfAlertMessages" />
+    <property name="LastComplianceNumberOfFailMessages" />
+    <property name="LastComplianceNumberOfPassMessages" />
+    <property name="LastComplianceNumberOfWarningMessages" />
+    <property name="LastComplianceNumberOfErrorMessages" />
+    <property name="LastComplianceReportID" />
+    <!-- Fields to store TQL report alerts -->
+    <property name="WellsFargo4506TBaselineReportRequired" />
+    <property name="WellsFargoFraudBaselineReportRequired" />
+    <property name="WellsFargoComplianceBaselineReportRequired" />
+    <property name="WellsFargoFloodBaselineReportRequired" />
+    <property name="CitibankCCVPBaselineReportRequired" />
+    <property name="CitibankFraudBaselineReportRequired" />
+    <property name="CitibankComplianceBaselineReportRequired" />
+    <property name="Citibank4506TBaselineReportRequired" />
+    <property name="CitibankFloodBaselineReportRequired" />
+    <property name="Homeward4506TBaselineReportRequired" />
+    <property name="HomewardFraudBaselineReportRequired" />
+    <property name="HomewardComplianceBaselineReportRequired" />
+    <property name="HomewardFloodBaselineReportRequired" />
+    <property name="Stonegate4506TBaselineReport" />
+    <property name="StonegateFraudBaselineReportRequired" />
+    <property name="StonegateComplianceBaselineReportRequired" />
+    <property name="StonegateFloodBaselineReportRequired" />
+    <property name="PHH4506TBaselineReportRequired" />
+    <property name="PHHFraudBaselineReportRequired" />
+    <property name="PHHComplianceBaselineReportRequired" />
+    <property name="PHHFloodBaselineReportRequired" />
+    <property name="TQLFraudAlertsTotal" />
+    <property name="TQLFraudAlertsTotalHigh" />
+    <property name="TQLFraudAlertsTotalMedium" />
+    <property name="TQLFraudAlertsTotalLow" />
+    <property name="TQLFraudAlertsTotalHighUnaddressed" />
+    <property name="TQLFraudAlertsTotalMediumUnaddressed" />
+    <property name="TQLFraudAlertsTotalLowUnaddressed" />
+    <property name="DriveScore" />
+    <property name="DriveStatus" />
+    <property name="DriveIDVerifyScore" />
+    <property name="DriveAppVerifyScore" />
+    <property name="DrivePropertyVerifyScore" />
+    <property name="MIVendorsArchAutoOrderIndicator" />
+    <property name="MIVendorsRadianAutoOrderIndicator" />
+    <property name="MIVendorsMgicAutoOrderIndicator" />
+
+    <property name="LPAppraisalWaiverOffered" />
+    <property name="LPAppraisalWaiverMessage" />
+    <property name="LPDocumentationLevel" />
+    <property name="LPDocumentationLevelMessage" />
+    <property name="LPAPurchaseEligibility" />
+    <property name="LPCollateralRepWarrantyMessage" />
+    <property name="LPAssetRepWarrantyIndicator" />
+    <property name="LPAssetRepWarrantyMessage" />
+    <property name="LPIncomeRepWarrantyIndicator" />
+    <property name="LPIncomeRepWarrantyMessage" />
+    <property name="DUPropertyDataID" />
+    <property name="DUPropertyDataMessage" />
+    <property name="DUFindingsMessageDateTime" />
+    <property name="FloodTransactionType" />
+    <property name="FloodProductType" />
+    <property name="FloodStatus" />
+    <property name="FloodOrderDate" />
+    <property name="FloodReceivedDate" />
+    <property name="LomaOrLomrIndicator" />
+    <property name="LomaOrLomrDate" />
+    <property name="LomaOrLomrCaseNumber" />
+    <property name="FloodProgramCode" />
+    
+    <property name="DuRecommendationDate" />
+    <property name="FannieUcdpStatusDate" />
+    <property name="CuRiskScoreDate" />
+    <property name="EcStatus1003Date" />
+    <property name="EcStatusUlddDate" />
+    <property name="UcdCollectionDate" />
+    <property name="LpaRiskClassDate" />
+    <property name="LpaPurchEligDate" />
+    <property name="DocumentationLevelDate" />
+    <property name="FreddieUcdpStatusDate" />
+    <property name="CollRiskScoreDate" />
+    <property name="LqaPurchEligDate" />
+    <property name="LqaRiskAssessmentDate" />
+    <property name="LclaUcdReqDate" />
+    <property name="FannieApprWaiverOfferedDate" />
+    <property name="FannieValueRepAndWarrantDate" />
+    <property name="FannieAssetRepAndWarrantDate" />
+    <property name="FannieMiscDate1" />
+    <property name="FannieMiscDate2" />
+    <property name="FreddieApprWaiverOfferedDate" />
+    <property name="FreddieColRepAndWarrantDate" />
+    <property name="FreddieAssetRepAndWarrantDate" />
+    <property name="FreddieIncomeRepAndWarrantDate" />
+    <property name="FreddieMiscDate1" />
+    <property name="FreddieMiscDate2" />
+    <property name="RwtMisc1" />
+    <property name="RwtMisc2" />
+    <property name="RwtMisc3" />
+    <property name="RwtMiscDate1" />
+    <property name="RwtMiscDate2" />
+    <property name="RwtMiscDate3" />
+    <property name="AcePdrOfferedComments" />
+    <property name="AcePdrOfferedLoanLevel" />
+    <property name="AcePdrOfferedExpirationDate" />
+    <property name="FreAceOfferedComments" />
+    <property name="FreAceOffered" />
+    <property name="FreAceOfferedCloseByDate" />
+    <property name="FreHybridAppraisalOfferedComments" />
+    <property name="FreHybridAppraisalOffered" />
+    <property name="FreHybridAppraisalOfferedCloseByDate" />
+    <property name="FreDesktopAppraisalOfferedComments" />
+    <property name="FreDesktopAppraisalOffered" />
+    <property name="FreDesktopAppraisalOfferedCloseByDate" />
+    <property name="FreTraditionalAppraisalOfferedComments" />
+    <property name="FreTraditionalAppraisalOffered" />
+    <property name="FreTraditionalAppraisalOfferedCloseByDate" />
+    <property name="FrePositiveCashFlowComments" />
+    <property name="FrePositiveCashFlowLoanLevel" />
+    <property name="FrePositiveCashFlowCloseByDate" />
+    <property name="FrePositiveRentPaymentHistoryComments" />
+    <property name="FrePositiveRentPaymentHistoryLoanLevel" />
+    <property name="FrePositiveRentPaymentHistoryCloseByDate" />
+    <property name="FnmaAcceptanceAndPropertyOfferedComments" />
+    <property name="FnmaAcceptanceAndPropertyOffered" />
+    <property name="FnmaAcceptanceAndPropertyOfferedCloseByDate" />
+    <property name="FnmaHybridAppraisalOfferedComments" />
+    <property name="FnmaHybridAppraisalOffered" />
+    <property name="FnmaHybridAppraisalOfferedCloseByDate" />
+    <property name="FnmaDesktopAppraisalOfferedComments" />
+    <property name="FnmaDesktopAppraisalOffered" />
+    <property name="FnmaDesktopAppraisalOfferedCloseByDate" />
+    <property name="FnmaTraditionalAppraisalOfferedComments" />
+    <property name="FnmaTraditionalAppraisalOffered" />
+    <property name="FnmaTraditionalAppraisalOfferedCloseByDate" />
+    <property name="FnmaPositiveCashFlowComments" />
+    <property name="FnmaPositiveCashFlowLoanLevel" />
+    <property name="FnmaPositiveCashFlowCloseByDate" />
+    <property name="FnmaPositiveRentPaymentHistoryComments" />
+    <property name="FnmaPositiveRentPaymentHistoryLoanLevel" />
+    <property name="FnmaPositiveRentPaymentHistoryCloseByDate" />
+    
+    <property name="FannieMaeDoRecommendation" />
+    <property name="FreddieMacLpaRiskClassComments" />
+    <property name="FannieMaeMissionScore" />
+    <property name="FannieMaeMissionScoreComments" />
+    <property name="FreddieMacMissionIndex" />
+    <property name="FreddieMacMissionIndexComments" />
+    
+    <!-- End Fields to store TQL report alerts -->
+    <!-- TQLComplianceAlert -->
+    <bag name="tqlComplianceAlerts" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliTQLId" />
+      <one-to-many class="TQLComplianceAlert"/>
+    </bag>
+    <!-- TQLDocument -->
+    <bag name="tqlDocuments" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliTQLId" />
+      <one-to-many class="TQLDocument"/>
+    </bag>
+    <!-- GSETracker -->
+    <bag name="gseTrackers" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliTQLId" />
+      <one-to-many class="GSETracker"/>
+    </bag>
+    
+    <property name="LastUserIDWhoOrderedCompliance" />
+  </class>
+</hibernate-mapping>
+

@@ -1,0 +1,38 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: EllieMae.EMLite.RemotingServices.ExtractProgressEventArgs
+// Assembly: EMCommon, Version=1.5.1.0, Culture=neutral, PublicKeyToken=d11ef57bba4acf91
+// MVID: 6DB77CFB-E43D-49C6-9F8D-D9791147D23A
+// Assembly location: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\EMCommon.dll
+
+#nullable disable
+namespace EllieMae.EMLite.RemotingServices
+{
+  public class ExtractProgressEventArgs
+  {
+    private string entryName;
+    private int percentCompleted;
+    private bool cancel;
+
+    public ExtractProgressEventArgs(string entryName, int percentCompleted)
+    {
+      this.entryName = entryName;
+      this.percentCompleted = percentCompleted;
+    }
+
+    public ExtractProgressEventArgs(string entryName, int remainingCount, int totalCount)
+    {
+      this.entryName = entryName;
+      this.percentCompleted = (totalCount - remainingCount) * 100 / totalCount;
+    }
+
+    public string EntryName => this.entryName;
+
+    public int PercentCompleted => this.percentCompleted;
+
+    public bool Cancel
+    {
+      get => this.cancel;
+      set => this.cancel = value;
+    }
+  }
+}

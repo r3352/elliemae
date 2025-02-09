@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="LockCancellationLog" extends="LogRecord" dynamic-update="true" discriminator-value="24">
+    <join table="ElliLockCancellationLog">
+      <key column="ElliLogRecordId" />
+      <property name="TimeCancelled" column="TimeCancelled" />
+      <property name="CancelledBy" column="CancelledBy" />
+      <property name="CancelledById" column="CancelledById" />
+      <property name="RequestGuid" column="RequestGuid" />
+      <property name="AlertIndicator" column="AlertIndicator" />
+    </join>
+  </subclass>
+</hibernate-mapping>

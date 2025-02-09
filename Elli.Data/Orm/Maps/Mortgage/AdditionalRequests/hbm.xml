@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="AdditionalRequests" table="ElliAdditionalRequests" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="AppraisalContactForEntry" />
+    <property name="AppraisalDateOrdered" />
+    <property name="AppraisalKeyPickUp" />
+    <property name="AppraisalLockBox" />
+    <property name="AppraisalVacant" />
+    <property name="AppraisalContactCellPhone" />
+    <property name="AppraisalContactEmail" />
+    <property name="AppraisalContactHomePhone" />
+    <property name="AppraisalContactName" />
+    <property name="AppraisalContactWorkPhone" />
+    <property name="AppraisalDescription1" type="StringClob" />
+    <property name="AppraisalDescription2" type="StringClob" />
+    <property name="AppraisalDescription3" type="StringClob" />
+    <property name="FloodInsuranceEscrowed" />
+    <property name="FloodReplacementValue" />
+    <property name="FloodDescription1" type="StringClob" />
+    <property name="FloodDescription2" type="StringClob" />
+    <property name="FloodDescription3" type="StringClob" />
+    <property name="HazardInsuranceEscrowed" />
+    <property name="HazardReplacementValue" />
+    <property name="HazardDescription1" type="StringClob" />
+    <property name="HazardDescription2" type="StringClob" />
+    <property name="HazardDescription3" type="StringClob" />
+    <property name="TitleContract" />
+    <property name="TitleMailAway" />
+    <property name="TitlePriorTitlePolicy" />
+    <property name="TitleSurvey" />
+    <property name="TitleInsRequirements" />
+    <property name="TitleTypeOfProperty" />
+    <property name="TitleWarrantyDeed" />
+    <property name="TitleDescription1" type="StringClob" />
+    <property name="TitleDescription2" type="StringClob" />
+    <property name="TitleDescription3" type="StringClob" />
+    <property name="MaximumDeductibleHazardPercentage" />
+    <property name="MaximumDeductibleHazardAmount" />
+    <property name="MaximumDeductibleFloodPercentage" />
+    <property name="MaximumDeductibleFloodAmount" />
+  </class>
+</hibernate-mapping>

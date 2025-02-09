@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Employment" table="ElliEmployment" dynamic-update="true">
+    <id name="Id" column="ElliEmploymentId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Application" column="ElliApplicationId" />
+    <property name="AddressCity" />
+    <property name="AddressState" />
+    <property name="AddressStreetLine1" />
+    <property name="AddressPostalCode" />
+    <property name="BadgeOrEmployeeID" />
+    <property name="EmployerName" />
+    <property name="CurrentEmploymentIndicator" />
+    <property name="MonthlyIncomeAmount" />
+    <property name="PhoneNumber" />
+    <property name="PositionDescription" />
+    <property name="SelfEmployedIndicator" />
+    <property name="TimeInLineOfWorkYears" />
+    <property name="TimeInLineOfWorkMonths" />
+    <property name="TimeOnJobTermMonths" />
+    <property name="TimeOnJobTermYears" />
+    <property name="StartDate" />
+    <property name="EndDate" />
+    <property name="NoLinkToDocTrackIndicator" />
+    <property name="Title" />
+    <property name="PrintAttachmentIndicator" />
+    <property name="AltId" />
+    <property name="Owner" />
+    <property name="OtherAmount" />
+    <property name="CommissionsAmount" />
+    <property name="BonusAmount" />
+    <property name="OvertimeAmount" />
+    <property name="BasePayAmount" />
+    <property name="BusinessOwnedPercent" />
+    <property name="BusinessPhone" />
+    <property name="BusinessName" />
+    <property name="VerificationRequestDate" />
+    <property name="TitleFax" />
+   
+    <property name="TitlePhone" />
+    <property name="EmployerComments" type="StringClob" />
+    <property name="Email" />
+    <property name="Fax" />
+    <property name="Attention" />
+    <property name="PrintUserNameIndicator" />
+    <property name="PrintUserJobTitleIndicator" />
+
+    <property name="DoesNotApply" />
+    <property name="EmploymentStartDate" />
+    <property name="JobTermMonths" />
+    <property name="BaseIncome" />
+    <property name="OverTime" />
+    <property name="Bonus" />
+    <property name="Commission" />
+    <property name="MilitaryEntitlement" />
+    <property name="OtherIncome" />
+    <property name="Total" />
+    <property name="SpecialEmployerRelationshipIndicator" />
+    <property name="OwnershipInterestType" />
+    <property name="EmploymentMonthlyIncomeAmount" />
+
+    <property name="UnitType" />
+    <property name="UnitNumber" />
+    <property name="URLA2020StreetAddress" />
+    <property name="CountryCode" />
+    
+    <property name="IndividualEmployer" />
+    <property name="MilitaryEmployer" />
+    
+    <property name="MilitaryCombatPay" />
+    <property name="MilitaryFlightPay" />
+    <property name="MilitaryHazardPay" />
+    <property name="MilitaryOverseasPay" />
+    <property name="MilitaryPropPay" />
+    <property name="ClothingAllowance" />
+    <property name="RationsAllowance" />
+    <property name="VariableHousingAllowance" />
+    <property name="QuartersAllowance" />
+    <property name="OtherAllowanceDescription" />
+    
+    <property name="ForeignIncome" />
+    <property name="SeasonalIncome" />
+    <property name="VerificationDate" />
+    <property name="Country" />
+    <property name="ForeignAddressIndicator" />
+    <property name="SourceOfIncomeData" />
+  </class>
+</hibernate-mapping>

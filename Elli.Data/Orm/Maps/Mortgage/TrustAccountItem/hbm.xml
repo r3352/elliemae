@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="TrustAccountItem" table="ElliTrustAccountItem" dynamic-update="true">
+    <id name="Id" column="ElliTrustAccountItemId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="TrustAccount" column="ElliTrustAccountId" />
+    <property name="TrustAccountItemIndex" />
+    <property name="Date" />
+    <property name="Description" type="StringClob" />
+    <property name="Notes" />
+    <property name="PaymentAmount" />
+    <property name="PaymentCheckNo" />
+    <property name="ReceiptAmount" />
+    <property name="ReceiptCheckNo" />
+  </class>
+</hibernate-mapping>

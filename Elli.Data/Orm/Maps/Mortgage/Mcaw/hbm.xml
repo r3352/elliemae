@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Mcaw" table="ElliMcaw" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="SixPercentOfLineA1" />
+    <property name="FhaUnderwriterChumsId" />
+    <property name="ConstructionType" />
+    <property name="Ltv1" />
+    <property name="Ltv2" />
+    <property name="PaidType1" />
+    <property name="PaidType2" />
+    <property name="RefinanceType" />
+    <property name="Remarks" type="StringClob" />
+    <property name="RoundTo50Indicator" />
+    <property name="TotalSellerContribution" />
+    <property name="Use85PercentRuleIndicator" />
+    <property name="AdequacyOfAvailableAssetsType" />
+    <property name="AdequacyOfEffectiveIncomeType" />
+    <property name="CreditCharacteristicsType" />
+    <property name="StabilityOfEffectiveIncomeType" />
+    <property name="CashReserves" />
+    <property name="GiftFundsSource" />
+    <property name="RepairsAndImprovements" />
+    <property name="SecondMortgageSource" />
+    <property name="TotalCashToClose" />
+    <property name="BorrowerPaidClosingCost" />
+    <property name="EquityToExSpouse" />
+    <property name="PrincipalBalance" />
+    <property name="RepairsRequiredByAppraiser" />
+    <property name="SeasonedSubordinateLiens" />
+    <property name="AdjustedPurchasePrice" />
+    <property name="AppraisedValue1" />
+    <property name="AppraisedValue2" />
+    <property name="CalculatedMortgageAmount" />
+    <property name="FhaMaxLoanAmount" />
+    <property name="LesserSalesPrice" />
+    <property name="MortgageAmount" />
+    <property name="MortgageAmountPercent" />
+    <property name="MortgageBasisPurchase" />
+    <property name="MortgageBasisRefinance" />
+    <property name="RequiredInvestment" />
+    <property name="RequirementAdjustment" />
+    <property name="ToBePaidAmount" />
+    <property name="TotalRequirements" />
+    <property name="ContractSalesPrice" />
+    <property name="RepairsAndImprovementsDescription" />
+    <property name="StatutoryInvestment" />
+    <property name="UnadjustedAcquisition" />
+    <property name="RepairsImprovementAmount" />
+    <property name="MaximumSellerContribution4Percent" />
+    
+  </class>
+</hibernate-mapping>

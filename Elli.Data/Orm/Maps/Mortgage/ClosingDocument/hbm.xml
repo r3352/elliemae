@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="ClosingDocument" table="ElliClosingDocument" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="PayToTheOrderOfDescription" />
+    <property name="BorrowerOrganizationType1" />
+    <property name="BorrowerOrganizedUnderTheLawsOfJurisdictionName1" />
+    <property name="BorrowerTaxIdentificationNumberIdentifier1" />
+    <property name="BorrowerTrustDateOrYear1" />
+    <property name="BorrowerTrustAmendedDateOrYear1" />
+    <property name="BorrowerUnparsedName1" />
+    <property name="BorrowerOrganizationType2" />
+    <property name="BorrowerOrganizedUnderTheLawsOfJurisdictionName2" />
+    <property name="BorrowerTaxIdentificationNumberIdentifier2" />
+    <property name="BorrowerTrustDateOrYear2" />
+    <property name="BorrowerTrustAmendedDateOrYear2" />
+    <property name="BorrowerUnparsedName2" />
+    <property name="PropertyTaxMessageDescription" />
+    <property name="TermiteReportRequiredIndicator" />
+    <property name="HoursDocumentsNeededPriorToDisbursementCount" />
+    <property name="PreliminaryTitleReportDate" />
+    <property name="SpecialFloodHazardAreaIndictor" />
+    <property name="TitleReportItemsDescription" />
+    <property name="TitleReportRequiredEndorsementsDescription" />
+    <property name="ConditionDescription" />
+    <!--EllieMae-->
+    <property name="CashCheckFromBorrower" />
+    <property name="DisbursementsToBorrower" />
+    <property name="TotalDisbursed" />
+    <property name="AlternateLender" />
+    <property name="Beneficiaries" />
+    <property name="ClosingProvider" />
+    <property name="ClosingDocsLoanProgramType" />
+    <property name="ComplianceJurisdictionCounty" />
+    <property name="CompliancePropertyIdentifiedDate" />
+    <property name="DisclosureAlternateLender" />
+    <property name="DisclosureCompanyFunction" />
+    <property name="DisclosurePlanCode" />
+    <property name="DocumentSigningDate" />
+    <property name="HUD1FileNumberIdentifier" />
+    <property name="HUD1SettlementAgentUnparsedAddress" />
+    <property name="HUD1SettlementAgentUnparsedName" />
+    <property name="HUD1SettlementDate" />
+    <property name="LastAuditDate" />
+    <property name="LastDocumentOrdered" />
+    <property name="DocReportGUID" />    
+    <property name="LoanIsLocked" />
+    <property name="MortgageType" />
+    <property name="PlanCode" />
+    <property name="SignatureDateFor1003" />
+    <property name="SyncInterestDateDisbursementDate" />
+    <property name="LegalAttached" />
+    <property name="TextDescription" type="StringClob" />
+    <property name="AdditionalSigVerbiageType" />
+    <property name="AltLenderId" />
+    <property name="InvestorCode" />
+    <property name="PlanCodeDescription" />
+    <property name="PlanCodeId" />
+    <property name="ProgramCode" />
+    <property name="ProgramSponsor" />
+    <property name="Trust2Beneficiaries" />
+    <!--Additional Disclosure-->
+    <property name="AffectedByInterest" />
+    <property name="BorrowerConsentType1" />
+    <property name="BorrowerConsentType2" />
+    <property name="BrokerAuthorizedRepresentativeTitle" />
+    <property name="BrokerCompensationMethod" />
+    <property name="BrokerFeeRefundConditions1" />
+    <property name="BrokerFeeRefundConditions2" />
+    <property name="BrokerFeeRefundConditions3" />
+    <property name="BrokerForPlacingLoan" />
+    <property name="BrokerInterestRateEffect" />
+    <property name="BrokerLenderRelationship" />
+    <property name="BrokerNameAsLicensed" />
+    <property name="BrokerWithLenders" />
+    <property name="ConflictofInterestCheck1" />
+    <property name="ConflictofInterestCheck2" />
+    <property name="ConflictofInterestCheck3" />
+    <property name="ConflictofInterestCheck4" />
+    <property name="ConflictofInterestCheck5" />
+    <property name="ConflictofInterestCheck6" />
+    <property name="EmployeeofMortgageLender" />
+    <property name="LenderAuthorizedRepresentativeTitle" />
+    <property name="LenderBrokerRepresents" />
+    <property name="LockInFeeType" />
+    <property name="NumberBrokerAgreements" />
+    <property name="NumberSuccessfulBrokerAgreements" />
+    <property name="OnlyOneEntity" />
+    <property name="ParentAffiliatedCoName" />
+    <property name="PrepaymentPenaltyDescriptions1" type="StringClob" />
+    <property name="PrepaymentPenaltyDescriptions2" type="StringClob" />
+    <property name="PrepaymentPenaltyDescriptions3" type="StringClob" />
+    <property name="ProcessingNumberDays" />
+    <property name="PropertyIsLandTrust" />
+    <property name="RateLockRefundConditions1" type="StringClob" />
+    <property name="RateLockRefundConditions2" type="StringClob" />
+    <property name="RateLockRefundConditions3" type="StringClob" />
+    <property name="RefinanceBalloonMortgageGuarantee" />
+    <property name="RMLANamePreceding10Years" />
+    <property name="RmlLenderBrokerRepresents" />
+    <property name="SuretyCompanyName" />
+    <property name="WeConductBusiness" />
+    <bag name="additionalStateDisclosures" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliClosingDocumentId" />
+      <one-to-many class="AdditionalStateDisclosure"/>
+    </bag>
+    <!--AntiSteering-->
+    <property name="IncludeSafeHaborDisclosure" />
+    <property name="LoanOption" />
+    <property name="OptionSelectedReason" type="StringClob" />
+    <property name="OtherOptionDescription" type="StringClob" />
+    <bag name="antiSteeringLoanOptions" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliClosingDocumentId" />
+      <one-to-many class="AntiSteeringLoanOption"/>
+    </bag>
+    <!--Coop Loan-->
+    <property name="CoopApartmentNumber" />
+    <property name="CoopAssignmentLeaseDate" />
+    <property name="CoopAttorneyInFact" />
+    <property name="CoopBuildingName" />
+    <property name="CoopCompanyExistsUnderTHeLawsOf" />
+    <property name="CoopCompanyName" />
+    <property name="CoopProprietaryLeaseDate" />
+    <property name="CoopSharesOwned" />
+    <property name="CoopStockCertificationNumber" />
+    <property name="CoopVacancyPercentNotification" />
+    <!--EPass-->
+    <property name="HousingIndicator" />
+    <property name="HousingProgramName" />
+
+    <property name="CLTitleOrderSentDateTime" />
+    <property name="CLClosingEscrowOrderSentDateTime" />
+    <property name="CLTitleOrderAcceptedDateTime" />
+    <property name="CLClosingEscrowOrderAcceptedDateTime" />
+    <property name="CLPayoffsRequestedDateTime" />
+    <property name="CLLastFeeQuoteRequestedDateTime" />
+    <property name="CLLastFeeQuoteReceivedDateTime" />
+    <property name="CLPrelimCommitmentReceivedByLenderDateTime" />
+    <property name="CLDraftClosingDisclosureReceivedByLenderDateTime" />
+    <property name="CLClearCloseStatusReceivedByLenderDateTime" />
+    <property name="CLFinalCDSentDateTime" />
+    <property name="CLProviderDisburseFundsDateTime" />
+    <property name="CLFinalTitlePolicyDateTime" />
+    <property name="AppraisalOrderSent" />
+    <property name="AppraisalOrderAccepted" />
+    <property name="AppraiserSentDocForReview" />
+    <property name="AppraiserSentDataForReview" />
+    <property name="TitleClosingAgentSentDocForReview" />
+    <property name="TitleClosingAgentSentDataForReview" />
+    <property name="DocOrMessageByLenderDateTime" />
+
+    <!-- State Licenses-->
+    <bag name="stateLicenses" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliClosingDocumentId" />
+      <one-to-many class="StateLicense"/>
+    </bag>
+    <!-- Respa Hud Detail-->
+    <bag name="respaHudDetails" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliClosingDocumentId" />
+      <one-to-many class="RespaHudDetail"/>
+    </bag>
+    <!-- Manufactured Home -->
+    <property name="MfgHomeAnchored" />
+    <property name="MfgHomeCertificateOfTitleIdentifier" />
+    <property name="MfgHomeCertificateOfTitleType" />
+    <property name="MfgHomeDescription" type="StringClob" />
+    <property name="MfgHomeHUDCertificationLabelIdentifier" />
+    <property name="MfgHomeLengthFeetCount" />
+    <property name="MfgHomeMakeIdentifier" />
+    <property name="MfgHomeManufacturer" />
+    <property name="MfgHomeManufactureYear" />
+    <property name="MfgHomeModelIdentifier" />
+    <property name="MfgHomeNewOrUsed" />
+    <property name="MfgHomeSerialNumberIdentifier" />
+    <property name="MfgHomeWidthFeetCount" />
+    <property name="LienHolderName" />
+    <property name="LienHolderAddress" />
+    <property name="LienHolderAddressCity" />
+    <property name="LienHolderAddressState" />
+    <property name="LienHolderAddressPostalCode" />
+    <property name="OriginalPincipalAmountSecured" />
+    <property name="AdditionalLienHolderName" />
+    <property name="AdditionalLienHolderAddress" />
+    <property name="AdditionalLienHolderAddressCity" />
+    <property name="AdditionalLienHolderAddressState" />
+    <property name="AdditionalLienHolderAddressPostalCode" />
+    <property name="AdditionalOriginalPincipalAmountSecured" />      
+    <property name="MineralRightsDescription" type="StringClob" />
+    <property name="RenewalExtensionDescription" type="StringClob" />
+    <property name="ClosingState" />
+    <property name="DrawCity" />
+    <property name="DrawCounty" />
+    <property name="DrawState" />
+    <!--Closing Entities-->
+    <bag name="closingEntities" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliClosingDocumentId" />
+      <one-to-many class="ClosingEntity"/>
+    </bag>
+    <!--Loan Details-->
+    <property name="DisbursementDate" />
+    <property name="DocumentPreparationDate" />
+    <property name="RescissionDate" />
+    <property name="PerDiemCalculationMethodType" />
+    <!--Mortgage Broker-->
+    <property name="BrokerLicenseNumberIdentifier" />
+    <property name="BrokerTaxIdentificationNumberIdentifier" />
+    <!--Recordable Document-->
+    <property name="AssociatedDocumentNumber" />
+    <property name="OfficeOfRecordationName" />
+    <property name="RecordingJurisdictionName" />
+    <property name="FinalVestingDescription" type="StringClob" />
+    <!--Respa Servicing-->
+    <property name="AreAbleToServiceIndicator" />
+    <property name="ExpectToAssignSellOrTransferPercent" />
+    <property name="FirstTransferYear" />
+    <property name="FirstTransferYearValue" />
+    <property name="SecondTransferYear" />
+    <property name="SecondTransferYearValue" />
+    <property name="ThirdTransferYear" />
+    <property name="ThirdTransferYearValue" />
+    <property name="RefinanceRightOfRescissionExemptFlag" />
+    <property name="CustomOtherRiderDescription" />
+    <property name="MfgHomeManufacturerAddress" />
+    <property name="MfgHomeManufacturerCity" />
+    <property name="MfgHomeManufacturerState" />
+    <property name="MfgHomeManufacturerPostalCode" />
+    <property name="MfgHomeManufacturerPhoneNumber" />
+	  <property name="PrintTrustNameIndicator" />
+    <property name="eCloseClosingType" />
+    <property name="Print2001UniformInstrumentsIndicator" />
+
+    <property name="RescissionWaivedFlag" />
+    <property name="ActualRescindedDate" />
+    <property name="RescindedBy" />
+    <property name="RescissionMethodType" />
+    <property name="RescissionReceiptType" />
+    <property name="PartnerId" />
+    <property name="PartnerName" />
+    
+  </class>
+</hibernate-mapping>

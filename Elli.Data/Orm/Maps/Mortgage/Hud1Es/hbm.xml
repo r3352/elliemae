@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Hud1Es" table="ElliHud1Es" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="AnnualCityTax" />
+    <property name="AnnualFloodInsurance" />
+    <property name="AnnualHazardInsurance" />
+    <property name="AnnualMortgageInsurance" />
+    <property name="AnnualTax" />
+    <property name="AnnualUserEscrow1" />
+    <property name="AnnualUserEscrow2" />
+    <property name="AnnualUserEscrow3" />
+    <property name="EndingBalance" />
+    <property name="EscrowPayment" />
+    <property name="Hud1EsItemizesTotalLines" />
+    <property name="Hud1EsItemizesUseItemizeEscrowIndicator" />
+    <property name="MtgInsCushionTerminationIndicator" />
+    <property name="SingleLineAnalysis" />
+    <property name="StartingBalance" />
+    <property name="TotalEscrowReserves" />
+    <property name="UsdaAnnualFee" />
+    <property name="YearlyMortgageInsurance" />
+    <property name="YearlyUsdaFee" />
+    <property name="EscrowFirstPaymentDate" />
+    <property name="EscrowFirstPaymentDateType" />
+    <!-- Cushion -->
+    <property name="AnnualFeeCushion" />
+    <property name="FloodInsDisbCushion" />
+    <property name="HazInsDisbCushion" />
+    <property name="MtgInsDisbCushion" />
+    <property name="SchoolTaxesCushion" />
+    <property name="TaxDisbCushion" />
+    <property name="UserDefinedCushion1" />
+    <property name="UserDefinedCushion2" />
+    <property name="UserDefinedCushion3" />
+    <!-- Biweekly -->
+    <property name="BiweeklyPITI" />
+    <property name="BiweeklyCountyTaxes" />
+    <property name="BiweeklyHazardInsurance" />
+    <property name="BiweeklyMortgageInsurance" />
+    <property name="BiweeklyFloodInsurance" />
+    <property name="BiweeklyCityPropertyTaxes" />
+    <property name="BiweeklyUserDefinedEscrowFee1" />
+    <property name="BiweeklyUserDefinedEscrowFee2" />
+    <property name="BiweeklyUserDefinedEscrowFee3" />
+    <property name="BiweeklyUSDAFee" />
+    <property name="BiweeklyTotalBiweeklyPayment" />
+    <property name="BiweeklyTotalBiweeklyPaymentToEscrow" />
+    <!-- Servicer -->
+    <property name="ServicerAddress" />
+    <property name="ServicerCity" />
+    <property name="ServicerContactName" />
+    <property name="ServicerPhone" />
+    <property name="ServicerPostalCode" />
+    <property name="ServicerState" />
+    <!-- CITYPROPERTYTAX -->
+    <property name="CityPropertyTaxAddress" />
+    <property name="CityPropertyTaxAmountLastPay" />
+    <property name="CityPropertyTaxAmountNextDue" />
+    <property name="CityPropertyTaxCity" />
+    <property name="CityPropertyTaxContactName" />
+    <property name="CityPropertyTaxDatePaid" />
+    <property name="CityPropertyTaxDelinquentDate" />
+    <property name="CityPropertyTaxEmail" />
+    <property name="CityPropertyTaxFax" />
+    <property name="CityPropertyTaxName" />
+    <property name="CityPropertyTaxNextDueDate" />
+    <property name="CityPropertyTaxPaymentSchedule" />
+    <property name="CityPropertyTaxPhone" />
+    <property name="CityPropertyTaxPostalCode" />
+    <property name="CityPropertyTaxState" />
+    <!-- REALESTATETAX -->
+    <property name="RealEstateTaxAddress" />
+    <property name="RealEstateTaxAmountLastPay" />
+    <property name="RealEstateTaxAmountNextDue" />
+    <property name="RealEstateTaxCity" />
+    <property name="RealEstateTaxContactName" />
+    <property name="RealEstateTaxDatePaid" />
+    <property name="RealEstateTaxDelinquentDate" />
+    <property name="RealEstateTaxEmail" />
+    <property name="RealEstateTaxFax" />
+    <property name="RealEstateTaxName" />
+    <property name="RealEstateTaxNextDueDate" />
+    <property name="RealEstateTaxPaymentSchedule" />
+    <property name="RealEstateTaxPhone" />
+    <property name="RealEstateTaxPostalCode" />
+    <property name="RealEstateTaxState" />
+    <!-- Hud1EsDate -->
+    <bag name="hud1EsDates" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliHud1EsId" />
+      <one-to-many class="Hud1EsDate"/>
+    </bag>
+    <!-- Hud1EsDueDate -->
+    <bag name="hud1EsDueDates" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliHud1EsId" />
+      <one-to-many class="Hud1EsDueDate"/>
+    </bag>
+    <!-- Hud1EsPayTo -->
+    <bag name="hud1EsPayTos" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliHud1EsId" />
+      <one-to-many class="Hud1EsPayTo"/>
+    </bag>
+    <!-- Hud1EsSetup -->
+    <bag name="hud1EsSetups" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliHud1EsId" />
+      <one-to-many class="Hud1EsSetup"/>
+    </bag>
+    <!-- Hud1EsItemize -->
+    <bag name="hud1EsItemizes" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliHud1EsId" />
+      <one-to-many class="Hud1EsItemize"/>
+    </bag>
+  </class>
+</hibernate-mapping>

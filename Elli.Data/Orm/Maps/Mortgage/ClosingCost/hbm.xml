@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="ClosingCost" table="ElliClosingCost" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <one-to-one name="Gfe2010" class="Gfe2010" />
+    <one-to-one name="Gfe2010Page" class="Gfe2010Page" />
+    <one-to-one name="Gfe2010Section" class="Gfe2010Section" />
+    <one-to-one name="LoanEstimate1" class="LoanEstimate1" />
+    <one-to-one name="LoanEstimate2" class="LoanEstimate2" />
+    <one-to-one name="LoanEstimate3" class="LoanEstimate3" />
+    <one-to-one name="ClosingDisclosure1" class="ClosingDisclosure1" />
+    <one-to-one name="ClosingDisclosure2" class="ClosingDisclosure2" />
+    <one-to-one name="ClosingDisclosure3" class="ClosingDisclosure3" />
+    <one-to-one name="ClosingDisclosure4" class="ClosingDisclosure4" />
+    <one-to-one name="ClosingDisclosure5" class="ClosingDisclosure5" />
+    <one-to-one name="FeeVarianceOther" class="FeeVarianceOther" />
+    <property name="AdjustmentFactor" />
+    <property name="BorrowerPaidDiscountPointsTotalAmount" />
+    <property name="ClosingCostProgram" />
+    <property name="DisclosedSalesPrice" />
+    <property name="EscrowCompanyName" />
+    <property name="EscrowTableDesc1" />
+    <property name="EscrowTableDesc2" />
+    <property name="EscrowTableDesc3" />
+    <property name="EscrowTableDesc4" />
+    <property name="EscrowTableDesc5" />
+    <property name="EscrowTableFee" />
+    <property name="EscrowTableFee1" />
+    <property name="EscrowTableFee2" />
+    <property name="EscrowTableFee3" />
+    <property name="EscrowTableFee4" />
+    <property name="EscrowTableFee5" />
+    <property name="EscrowTableName" />
+    <property name="ProposedMonthlyHazardInsurance" />
+    <property name="ProposedMonthlyMortgageInsurance" />
+    <property name="TitleCompanyName" />
+    <property name="TitleTable2010Name" />
+    <property name="TitleTableName" />
+    <property name="AggregateAdjustmentFwbc" />
+    <property name="BrokerCommissionBasedPrice" />
+    <property name="BrokerCommissionBasedUnitPercentage" />
+    <property name="BrokerCommissionBasedUnitPrice" />
+    <property name="ImpoundHazInsRate" />
+    <property name="ImpoundMortgInsPremRate" />
+    <property name="ImpoundMortgInsPremYearlyBasis" />
+    <property name="ImpoundTaxesRate" />
+    <property name="ImpoundType1" />
+    <property name="ImpoundType2" />
+    <property name="ImpoundType3" />
+    <property name="ImpoundType4" />
+    <property name="Section1000SellerPaidTotalAmount" />
+    <property name="Section1000BorrowerPaidTotalAmount" />
+    <property name="SettlementClosingFeeNewHudBorPaidAmount" />
+    <property name="SettlementClosingFeeNewHudSelPaidAmount" />
+    <property name="TitleExaminationNewHudSelPaidAmount" />
+    <property name="TotalForBorPaid1" />
+    <property name="TotalForSellerPaid1" />
+    <property name="TotalForBorPaid2" />
+    <property name="TotalForSellerPaid2" />
+    <property name="TotalForBorPaid3" />
+    <property name="TotalForSellerPaid3" />
+    <property name="TotalForBorPaid4" />
+    <property name="TotalForSellerPaid4" />
+    <property name="TotalForBorPaid5" />
+    <property name="TotalForSellerPaid5" />
+    <property name="TotalForBorPaid6" />
+    <property name="TotalForSellerPaid6" />
+    <property name="ClosingCostScenarioXml" type="StringClob" />
+    <!-- Fee Variance -->
+    <bag name="feeVariances" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanId" />
+      <one-to-many class="FeeVariance"/>
+    </bag>
+  </class>
+</hibernate-mapping>

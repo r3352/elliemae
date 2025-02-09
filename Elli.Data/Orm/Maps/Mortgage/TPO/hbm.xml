@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="TPO" table="ElliTPO" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+
+    <property name="SITEID" />
+    <property name="RegisterDate" />
+    <property name="SubmitDate" />
+    <property name="UnderwriterReviewed" />
+    <property name="FeeReviewStatus" />
+    <property name="Archived" />
+    <property name="ImportSource" />
+    <property name="DocumentsReadyDate" />
+    <property name="FeeReviewStatusDate" />
+    <property name="FeeReviewComments" type="StringClob" />
+    <property name="LEIssuedBy" />
+    <property name="WholesaleWithdrawalDate" />
+    <property name="LoanEstimateRequestedDate" />
+    <property name="ImportSourceLastUpdatedDate" />
+
+    <property name="CompanyName" />
+    <property name="CompanyID" />
+    <property name="CompanyOrganizationID" />
+    <property name="CompanyLegalName" />
+    <property name="CompanyAddress" />
+    <property name="CompanyCity" />
+    <property name="CompanyState" />
+    <property name="CompanyZip" />
+    <property name="CompanyPhone" />
+    <property name="CompanyFax" />
+    <property name="CompanyDBAName" />
+    <property name="CompanyRating" />
+    <property name="CompanyManagerName" />
+    <property name="CompanyManagerEmail" />
+    <property name="CompanyAEName" />
+    <property name="CompanyAEUserName" />
+
+    <property name="BranchName" />
+    <property name="BranchID" />
+    <property name="BranchOrganizationID" />
+    <property name="BranchLegalName" />
+    <property name="BranchAddress" />
+    <property name="BranchCity" />
+    <property name="BranchState" />
+    <property name="BranchZip" />
+    <property name="BranchPhone" />
+    <property name="BranchFax" />
+    <property name="BranchDBAName" />
+    <property name="BranchRating" />
+    <property name="BranchManagerName" />
+    <property name="BranchManagerEmail" />
+    <property name="BranchAEName" />
+    <property name="BranchAEUserName" />
+
+    <property name="LOName" />
+    <property name="LOID" />
+    <property name="LOEmail" />
+    <property name="LOStatus" />
+    <property name="LOBusinessPhone" />
+    <property name="LOBusinessFax" />
+    <property name="LOCellPhone" />
+    <property name="LOAddress" />
+    <property name="LOCity" />
+    <property name="LOState" />
+    <property name="LOZip" />
+    <property name="LONotes" type="StringClob" />
+    <property name="LOAEName" />
+    <property name="LOAEUserName" />
+
+    <property name="LPName" />
+    <property name="LPID" />
+    <property name="LPEmail" />
+    <property name="LPStatus" />
+    <property name="LPBusinessPhone" />
+    <property name="LPBusinessFax" />
+    <property name="LPCellPhone" />
+    <property name="LPAddress" />
+    <property name="LPCity" />
+    <property name="LPState" />
+    <property name="LPZip" />
+    <property name="LPNotes" type="StringClob" />
+    <property name="LPAEName" />
+    <property name="LPAEUserName" />
+
+    <property name="WatchListFlag" />
+    <property name="WatchListReason" type="StringClob" />
+    <property name="UnderwritingDelegated" />
+    <property name="InitialApplicationDate" />
+    <property name="InitialSubmitDate" />
+    <property name="TestAccountField" />
+    <property name="ReadytoDiscloseDateUtc" />
+    <property name="PurchaseStipsReviewed" />
+    <property name="PurchaseStipsReadyDate" />
+
+    <property name="CFCName" />
+    <property name="CFCUserID" />
+    <property name="CFCEmail" />
+    <property name="CFCStatus" />
+    <property name="CFCBusinessPhone" />
+    <property name="CFCBusinessFax" />
+    <property name="CFCCellPhone" />
+    <property name="CFCAddress" />
+    <property name="CFCCity" />
+    <property name="CFCState" />
+    <property name="CFCZip" />
+    <property name="CFCNotes" />
+    <property name="CFCRepAE" />
+    <property name="CFCSRAEUserName" />
+    <property name="EligibilityPackageSubmissionDate" />
+    <property name="CompleteLoanPackageSubmissionDate" />
+    <property name="TitleFeesRequestedDate" />
+    <property name="LeOrDisclosuresGeneratedDate" />
+    <property name="AppraisalOrderedDate" />
+    <property name="AusOrderedDate" />
+    <property name="PreferredAus" />
+    <property name="LoanEstimateRequestComments" />
+  </class>
+</hibernate-mapping>

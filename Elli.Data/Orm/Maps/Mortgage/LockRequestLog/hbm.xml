@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="LockRequestLog" extends="LogRecord" dynamic-update="true" discriminator-value="12">
+    <join table="ElliLockRequestLog">
+      <key column="ElliLogRecordId" />
+      <property name="TimeRequested" column="TimeRequested" />
+      <property name="RequestedBy" column="RequestedBy" />
+      <property name="RequestedName" column="RequestedName" />
+      <property name="RequestedStatus" column="RequestedStatus" />
+      <property name="RequestedOldStatus" column="RequestedOldStatus" />
+      <property name="BuySideExpirationDate" column="BuySideExpirationDate" />
+      <property name="SellSideExpirationDate" column="SellSideExpirationDate" />
+      <property name="SellSideDeliveryDate" column="SellSideDeliveryDate" />
+      <property name="HideLogIndicator" column="HideLogIndicator" />
+      <property name="IsFakeRequestIndicator" column="IsFakeRequestIndicator" />
+      <property name="IsLockExtensionIndicator" column="IsLockExtensionIndicator" />
+      <property name="IsLockCancellationIndicator" column="IsLockCancellationIndicator" />
+      <property name="IsReLockIndicator" column="IsReLockIndicator" />
+      <property name="NumDayLocked" column="NumDayLocked" />
+      <property name="SellSideDeliveredBy" column="SellSideDeliveredBy" />
+      <property name="BuySideNumDayExtended" column="BuySideNumDayExtended" />
+      <property name="BuySideNewLockExtensionDate" column="BuySideNewLockExtensionDate" />
+      <property name="BuySideNumDayLocked" column="BuySideNumDayLocked" />
+      <property name="CumulatedDaystoExtend" column="CumulatedDaystoExtend" />
+      <property name="InvestorName" column="InvestorName" />
+      <property name="SellSideNumDayExtended" column="SellSideNumDayExtended" />
+      <property name="SellSideNewLockExtensionDate" column="SellSideNewLockExtensionDate" />
+      <property name="ParentLockGuid" column="ParentLockGuid" />
+      <property name="ReLockSequenceNumberForInactiveLock" column="ReLockSequenceNumberForInactiveLock" />
+      <property name="RateLockAction" column="RateLockAction" />
+      <property name="ReviseAction" column="ReviseAction" />
+      <property name="SnapshotXml" column="SnapshotXml" type="StringClob" />
+      <property name="Voided" column="Voided" />
+      <property name="PriceConcessionIndicator" column="PriceConcessionIndicator" />
+      <property name="LockExtensionIndicator" column="LockExtensionIndicator" />
+      <property name="PriceConcessionRequestStatus" column="PriceConcessionRequestStatus" />
+    </join>
+  </subclass>
+</hibernate-mapping>

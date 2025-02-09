@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="ECloseLog" extends="LogRecord" dynamic-update="true" discriminator-value="50">
+    <join table="ElliECloseLog">
+      <key column="ElliLogRecordId" />
+      <property name="UserId" column="UserId" />
+      <property name="OrderId" column="OrderId" />
+      <property name="CreatedDate" column="CreatedDate" />
+      <property name="CreatedBy" column="CreatedBy" />
+      <property name="PartiesXml" column="PartiesXml" type="StringClob" />
+      <property name="DocumentsXml" column="DocumentsXml" type="StringClob" />
+      <component name="Audit">
+        <property name="AuditTime" column="AuditTime" />
+        <property name="FileKey" column="AuditFileKey" />
+        <property name="AlertsXml" column="AlertsXml" type="StringClob" />
+      </component>
+    </join>
+  </subclass>
+</hibernate-mapping>

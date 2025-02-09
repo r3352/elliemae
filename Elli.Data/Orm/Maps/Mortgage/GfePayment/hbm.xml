@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="GfePayment" table="ElliGfePayment" dynamic-update="true">
+    <id name="Id" column="ElliGfePaymentId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Gfe" column="ElliGfeId" />
+    <property name="GfePaymentIndex" not-null="true"/>
+    <property name="FixedRate"/>
+    <property name="IndexRate" />
+    <property name="IsBalanceReduced" />
+    <property name="LoanTypeExplanation" />
+    <property name="MarginRate" />
+    <property name="MaximumDifference" />
+    <property name="MaximumRate" />
+    <property name="MinimumDifference" />
+    <property name="MinimumMonthlyPayment" />
+    <property name="MonthlyPaymentYear1" />
+    <property name="MonthlyPaymentYear6" />
+    <property name="MonthlyPaymentYear6Change" />
+    <property name="MonthlyPaymentYear6MaxChange" />
+    <property name="NotOfferedIndicator" />
+    <property name="OwedAfter5Years" />
+    <property name="RateInMonth2" />
+    <property name="ReducedLoanBalance" />
+    <property name="ReducedStatus" />
+  </class>
+</hibernate-mapping>
+

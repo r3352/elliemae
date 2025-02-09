@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\AdminToolsUI.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D19461D-2329-440F-B23E-7B153AD69900}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>AdminToolsUI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>24.3.0.5</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EllieMae.EMLite</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Client">
+      <HintPath>lib\Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientCommon">
+      <HintPath>lib\ClientCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientSession">
+      <HintPath>lib\ClientSession.dll</HintPath>
+    </Reference>
+    <Reference Include="ContactUI">
+      <HintPath>lib\ContactUI.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="EMLoanUtils15">
+      <HintPath>lib\EMLoanUtils15.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Server.Remoting">
+      <HintPath>lib\Elli.Server.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Web.Host">
+      <HintPath>lib\Elli.Web.Host.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Encompass.Diagnostics">
+      <HintPath>lib\Encompass.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Environment">
+      <HintPath>lib\Environment.dll</HintPath>
+    </Reference>
+    <Reference Include="HelpAPI">
+      <HintPath>lib\HelpAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Reporting">
+      <HintPath>lib\Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportingDbUtils">
+      <HintPath>lib\ReportingDbUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="SetupUI">
+      <HintPath>lib\SetupUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIElements">
+      <HintPath>lib\UIElements.dll</HintPath>
+    </Reference>
+    <Reference Include="VersionInterface15">
+      <HintPath>lib\VersionInterface15.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminTools\AdminTools.cs" />
+    <Compile Include="AdminTools\AdminToolsSC.cs" />
+    <Compile Include="AdminTools\ChangeDBPassword.cs" />
+    <Compile Include="AdminTools\LoginFormFactory.cs" />
+    <Compile Include="AdminTools\MFAEnabledProducts.cs" />
+    <Compile Include="AdminTools\DbDiagnosticsDialog.cs" />
+    <Compile Include="AdminTools\DbManager.cs" />
+    <Compile Include="AdminTools\DbServerManager.cs" />
+    <Compile Include="AdminTools\ERDBPromptForSaPwd.cs" />
+    <Compile Include="AdminTools\ERDBRegistrationForm.cs" />
+    <Compile Include="AdminTools\EventManager.cs" />
+    <Compile Include="AdminTools\IIsServerManager.cs" />
+    <Compile Include="AdminTools\IPAddressesForm.cs" />
+    <Compile Include="AdminTools\IpAddressForm.cs" />
+    <Compile Include="AdminTools\IPRangeFinder.cs" />
+    <Compile Include="AdminTools\IPRestrictionForm.cs" />
+    <Compile Include="AdminTools\LoanBatchUpdates.cs" />
+    <Compile Include="AdminTools\LoanUpdateCondition.cs" />
+    <Compile Include="AdminTools\LoanUpdateToolMainForm.cs" />
+    <Compile Include="AdminTools\LoanXDBCompareDialog.cs" />
+    <Compile Include="AdminTools\LoanXDBFieldDialog.cs" />
+    <Compile Include="AdminTools\LoanXDBFieldListUpdateDialog.cs" />
+    <Compile Include="AdminTools\LoanXDBManager.cs" />
+    <Compile Include="AdminTools\LoanXDBNMLSReportFieldDialog.cs" />
+    <Compile Include="AdminTools\LoanXDBPopulateOptionsDialog.cs" />
+    <Compile Include="AdminTools\LoanXDBRecreateOptionsDialog.cs" />
+    <Compile Include="AdminTools\LoginForm.cs" />
+    <Compile Include="AdminTools\LoginType.cs" />
+    <Compile Include="AdminTools\LogManager.cs" />
+    <Compile Include="AdminTools\NetworkServerManager.cs" />
+    <Compile Include="AdminTools\NewDBSettings.cs" />
+    <Compile Include="AdminTools\PreferencesDialog.cs" />
+    <Compile Include="AdminTools\ServerMajorUpdateForm.cs" />
+    <Compile Include="AdminTools\SettingChangedEventHandler.cs" />
+    <Compile Include="AdminTools\ServerSettingsEditor.cs" />
+    <Compile Include="AdminTools\ServerSettingsManager.cs" />
+    <Compile Include="AdminTools\SystemManager.cs" />
+    <Compile Include="AdminTools\TPOMgrDataCompare.cs" />
+    <Compile Include="AdminTools\TPOMigrationManager.cs" />
+    <Compile Include="AdminTools\VersionManager.cs" />
+    <Compile Include="AdminTools\UpdateInfoBase.cs" />
+    <Compile Include="AdminTools\ServerHotUpdateInfo.cs" />
+    <Compile Include="AdminTools\ServerMajorUpdateInfo.cs" />
+    <Compile Include="AdminTools\VersionManagerNotification.cs" />
+    <Compile Include="AdminTools\VersionManagerSC.cs" />
+    <Compile Include="AdminTools\VersionTestUserDialog.cs" />
+    <Compile Include="AdminTools\Properties\Resources.cs" />
+    <Compile Include="AdminTools\SCTLoanBatchUpdates\SCTLoanBatchUpdates.cs" />
+    <Compile Include="AdminTools\SCTLoanBatchUpdates\SCTLoanUpdateCondition.cs" />
+    <Compile Include="AdminTools\SCTLoanBatchUpdates\SCTLoanUpdateToolMainForm.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\EnhancedConditionsSelector.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\IEnhancedConditionsProvider.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\DummyProvider.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\DefaultProvider.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\MainForm.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\EstimatingProgressDialog.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\Exerciser.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\ExportablePackage.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\PackageValidator.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\ValidationError.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\SourceModeSelector.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\JsonFile`1.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\RestApiHelper.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\StandardConditionsConverter.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\SyncProgressManager.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\Ratio.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\SyncStatus.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\SyncResult.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\SyncError.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\SyncResultViewer.cs" />
+    <Compile Include="AdminTools\EnhancedConditionsTool\ValidationViewer.cs" />
+    <Compile Include="RemotingServices\DbAccessManager.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminTools\AdminTools.resx" />
+    <EmbeddedResource Include="AdminTools\ChangeDBPassword.resx" />
+    <EmbeddedResource Include="AdminTools\DbDiagnosticsDialog.resx" />
+    <EmbeddedResource Include="AdminTools\DbManager.resx" />
+    <EmbeddedResource Include="AdminTools\DbServerManager.resx" />
+    <EmbeddedResource Include="AdminTools\EnhancedConditionsTool\EnhancedConditionsSelector.resx" />
+    <EmbeddedResource Include="AdminTools\EnhancedConditionsTool\MainForm.resx" />
+    <EmbeddedResource Include="AdminTools\EnhancedConditionsTool\SourceModeSelector.resx" />
+    <EmbeddedResource Include="AdminTools\EnhancedConditionsTool\StandardConditionsConverter.resx" />
+    <EmbeddedResource Include="AdminTools\EnhancedConditionsTool\SyncResultViewer.resx" />
+    <EmbeddedResource Include="AdminTools\EnhancedConditionsTool\ValidationViewer.resx" />
+    <EmbeddedResource Include="AdminTools\ERDBPromptForSaPwd.resx" />
+    <EmbeddedResource Include="AdminTools\ERDBRegistrationForm.resx" />
+    <EmbeddedResource Include="AdminTools\EventManager.resx" />
+    <EmbeddedResource Include="AdminTools\IIsServerManager.resx" />
+    <EmbeddedResource Include="AdminTools\IPAddressesForm.resx" />
+    <EmbeddedResource Include="AdminTools\IpAddressForm.resx" />
+    <EmbeddedResource Include="AdminTools\IPRestrictionForm.resx" />
+    <EmbeddedResource Include="AdminTools\LoanUpdateToolMainForm.resx" />
+    <EmbeddedResource Include="AdminTools\LoanXDBCompareDialog.resx" />
+    <EmbeddedResource Include="AdminTools\LoanXDBFieldDialog.resx" />
+    <EmbeddedResource Include="AdminTools\LoanXDBFieldListUpdateDialog.resx" />
+    <EmbeddedResource Include="AdminTools\LoanXDBManager.resx" />
+    <EmbeddedResource Include="AdminTools\LoanXDBNMLSReportFieldDialog.resx" />
+    <EmbeddedResource Include="AdminTools\LoanXDBPopulateOptionsDialog.resx" />
+    <EmbeddedResource Include="AdminTools\LoanXDBRecreateOptionsDialog.resx" />
+    <EmbeddedResource Include="AdminTools\LoginForm.resx" />
+    <EmbeddedResource Include="AdminTools\LogManager.resx" />
+    <EmbeddedResource Include="AdminTools\MFAEnabledProducts.resx" />
+    <EmbeddedResource Include="AdminTools\NetworkServerManager.resx" />
+    <EmbeddedResource Include="AdminTools\NewDBSettings.resx" />
+    <EmbeddedResource Include="AdminTools\Properties\Resources.resx" />
+    <EmbeddedResource Include="AdminTools\SCTLoanBatchUpdates\SCTLoanUpdateToolMainForm.resx" />
+    <EmbeddedResource Include="AdminTools\ServerMajorUpdateForm.resx" />
+    <EmbeddedResource Include="AdminTools\ServerSettingsEditor.resx" />
+    <EmbeddedResource Include="AdminTools\ServerSettingsManager.resx" />
+    <EmbeddedResource Include="AdminTools\SystemManager.resx" />
+    <EmbeddedResource Include="AdminTools\TPOMgrDataCompare.resx" />
+    <EmbeddedResource Include="AdminTools\VersionManager.resx" />
+    <EmbeddedResource Include="AdminTools\VersionManagerNotification.resx" />
+    <EmbeddedResource Include="AdminTools\VersionManagerSC.resx" />
+    <EmbeddedResource Include="AdminTools\VersionTestUserDialog.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

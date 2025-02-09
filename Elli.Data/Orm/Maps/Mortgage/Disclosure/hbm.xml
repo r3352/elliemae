@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Disclosure" table="ElliDisclosure" dynamic-update="true">
+    <id name="Id" column="ElliDisclosureId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Correspondent" column="ElliCorrespondentId" />
+    <property name ="DisclosureIndex" />
+    <property name="LeOriginationCharges" />
+    <property name="CdOriginationCharges" />
+    <property name="PcOriginationCharges" />
+    <property name="LeNonShoppableServices" />
+    <property name="CdNonShoppableServices" />
+    <property name="PcNonShoppableServices" />
+    <property name="LeShoppableServices" />
+    <property name="CdShoppableServices" />
+    <property name="PcShoppableServices" />
+    <property name="LeTaxesGovtFees" />
+    <property name="CdTaxesGovtFees" />
+    <property name="PcTaxesGovtFees" />
+    <property name="LeLoanDiscountFee" />
+    <property name="CdLoanDiscountFee" />
+    <property name="PcLoanDiscountFee" />
+    <property name="LeCreditReportFee" />
+    <property name="CdCreditReportFee" />
+    <property name="PcCreditReportFee" />
+    <property name="LeAppraisalFee" />
+    <property name="CdAppraisalFee" />
+    <property name="PcAppraisalFee" />
+  </class>
+</hibernate-mapping>

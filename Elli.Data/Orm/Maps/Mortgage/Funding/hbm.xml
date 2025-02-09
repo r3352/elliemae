@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Funding" table="ElliFunding" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="CollateralSentDate" />
+    <property name="FunderName" />
+    <property name="FunderUrl" />
+    <property name="FundingClearedBy" />
+    <property name="FundingCloseDate" />
+    <property name="FundingOrderDate" />
+    <property name="FundingType" />
+    <property name="FundsReleasedDate" />
+    <property name="FundsReleaseNumber" />
+    <property name="FundsSentDate" />
+    <property name="FundsWireTo" />
+    <property name="SentToFunderDate" />
+    <property name="WiredToForCreditTo1" />
+    <property name="WiredToForFurtherCreditTo1" />
+    <property name="WiredToForCreditTo2" />
+    <property name="WiredToForFurtherCreditTo2" />
+    <property name="WiredToAbaNumber" />
+    <property name="WiredToAccountNumber" />
+    <property name="WiredToForCreditTo" />
+    <property name="FundingFees" type="StringClob"/>
+    <property name="WireAmount" />
+  </class>
+</hibernate-mapping>

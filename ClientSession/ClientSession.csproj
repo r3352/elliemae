@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\ClientSession.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6A96A60-9FF4-41D6-937C-2A9E7089AEBA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>ClientSession</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.5.1.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EllieMae.EMLite</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Client">
+      <HintPath>lib\Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="EMLoanUtils15">
+      <HintPath>lib\EMLoanUtils15.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Metrics">
+      <HintPath>lib\Elli.Metrics.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Server.Remoting">
+      <HintPath>lib\Elli.Server.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Server">
+      <HintPath>lib\Server.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="UIElements">
+      <HintPath>lib\UIElements.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RemotingServices\ACL.cs" />
+    <Compile Include="RemotingServices\EnhancedConditionsAclManager.cs" />
+    <Compile Include="RemotingServices\FeatureConfigsAclManager.cs" />
+    <Compile Include="RemotingServices\FeaturesAclManager.cs" />
+    <Compile Include="RemotingServices\FieldAccessAclManager.cs" />
+    <Compile Include="RemotingServices\InputFormsAclManager.cs" />
+    <Compile Include="RemotingServices\MilestoneFreeRoleAclManager.cs" />
+    <Compile Include="RemotingServices\MilestonesAclManager.cs" />
+    <Compile Include="RemotingServices\PipelineViewAclManager.cs" />
+    <Compile Include="RemotingServices\AIQAnalyzerHelper.cs" />
+    <Compile Include="RemotingServices\AutoLockExclusionRulesBpmManager.cs" />
+    <Compile Include="RemotingServices\AutomatedEnhancedConditionBpmManager.cs" />
+    <Compile Include="RemotingServices\AutomatedConditionBpmManager.cs" />
+    <Compile Include="RemotingServices\AutomatedPurchaseConditionBpmManager.cs" />
+    <Compile Include="RemotingServices\BPM.cs" />
+    <Compile Include="RemotingServices\BpmManager.cs" />
+    <Compile Include="RemotingServices\DDMDataPopTimingBpmManager.cs" />
+    <Compile Include="RemotingServices\DDMDataTableBpmManager.cs" />
+    <Compile Include="RemotingServices\DDMDataTableFieldBpmManager.cs" />
+    <Compile Include="RemotingServices\DDMFeeRulesBpmManager.cs" />
+    <Compile Include="RemotingServices\DDMFeeRuleScenariosBpmManager.cs" />
+    <Compile Include="RemotingServices\DDMFieldRulesBpmManager.cs" />
+    <Compile Include="RemotingServices\DDMFieldRuleScenariosBpmManager.cs" />
+    <Compile Include="RemotingServices\LoanActionAccessBpmManager.cs" />
+    <Compile Include="RemotingServices\LoanActionCompletionRulesBpmManager.cs" />
+    <Compile Include="RemotingServices\DocumentAccessRuleManager.cs" />
+    <Compile Include="RemotingServices\FieldAccessBpmManager.cs" />
+    <Compile Include="RemotingServices\FieldRulesBpmManager.cs" />
+    <Compile Include="RemotingServices\InputFormsBpmManager.cs" />
+    <Compile Include="RemotingServices\LoanAccessBpmManager.cs" />
+    <Compile Include="RemotingServices\LoanFolderRuleManager.cs" />
+    <Compile Include="RemotingServices\ManagerBase.cs" />
+    <Compile Include="RemotingServices\MilestoneRulesBpmManager.cs" />
+    <Compile Include="RemotingServices\MilestoneTemplatesBpmManager.cs" />
+    <Compile Include="RemotingServices\PrintFormsBpmManager.cs" />
+    <Compile Include="RemotingServices\PrintSelectionBpmManager.cs" />
+    <Compile Include="RemotingServices\TriggersBpmManager.cs" />
+    <Compile Include="RemotingServices\WorkflowManager.cs" />
+    <Compile Include="RemotingServices\CacheControlEventHandler.cs" />
+    <Compile Include="RemotingServices\CacheControlEventArgs.cs" />
+    <Compile Include="RemotingServices\AddCSRequest.cs" />
+    <Compile Include="RemotingServices\CSManagementDialog.cs" />
+    <Compile Include="RemotingServices\CSUserProfile.cs" />
+    <Compile Include="RemotingServices\EditCSAccess.cs" />
+    <Compile Include="RemotingServices\RequestAck.cs" />
+    <Compile Include="RemotingServices\RequestCSDialog.cs" />
+    <Compile Include="RemotingServices\AddContactDialog.cs" />
+    <Compile Include="RemotingServices\AddContactRequest.cs" />
+    <Compile Include="RemotingServices\AddGroupDialog.cs" />
+    <Compile Include="RemotingServices\ChatWindow.cs" />
+    <Compile Include="RemotingServices\ContactMessengerProfile.cs" />
+    <Compile Include="RemotingServices\DenyRequestDialog.cs" />
+    <Compile Include="RemotingServices\EncompassMessenger.cs" />
+    <Compile Include="RemotingServices\RequestDenied.cs" />
+    <Compile Include="RemotingServices\SessionSelectionDialog.cs" />
+    <Compile Include="RemotingServices\ReconnectForm.cs" />
+    <Compile Include="RemotingServices\ServerMajorUpdateForm.cs" />
+    <Compile Include="RemotingServices\ServerSessionEventHandler.cs" />
+    <Compile Include="RemotingServices\ServerSessionEventArgs.cs" />
+    <Compile Include="RemotingServices\SettingsManager.cs" />
+    <Compile Include="RemotingServices\Session.cs" />
+    <Compile Include="RemotingServices\Sessions.cs" />
+    <Compile Include="RemotingServices\Acl\ExportServicesAclManager.cs" />
+    <Compile Include="RemotingServices\Acl\InvestorServicesAclManager.cs" />
+    <Compile Include="RemotingServices\Acl\LoanDuplicationAclManager.cs" />
+    <Compile Include="RemotingServices\Acl\LoanFoldersAclManager.cs" />
+    <Compile Include="RemotingServices\Acl\LoConnectServiceAclManager.cs" />
+    <Compile Include="RemotingServices\Acl\ManagerBase.cs" />
+    <Compile Include="RemotingServices\Acl\ServicesAclManager.cs" />
+    <Compile Include="RemotingServices\Acl\StandardWebFormAclManager.cs" />
+    <Compile Include="RemotingServices\Acl\ToolsAclManager.cs" />
+    <Compile Include="RemotingServices\Bpm\TemporaryBuydownTypeBpmManager.cs" />
+    <Compile Include="RemotingServices\Properties\Resources.cs" />
+    <Compile Include="RemotingServices\CS\ListViewTextSort.cs" />
+    <Compile Include="RemotingServices\CS\ListViewShortCircuitSort.cs" />
+    <Compile Include="RemotingServices\CS\ListViewTextCaseInsensitiveSort.cs" />
+    <Compile Include="RemotingServices\CS\ListViewMilestoneSort.cs" />
+    <Compile Include="RemotingServices\CS\ListViewFileSystemEntrySort.cs" />
+    <Compile Include="RemotingServices\CS\ListViewDateSort.cs" />
+    <Compile Include="RemotingServices\CS\ListViewInt32Sort.cs" />
+    <Compile Include="RemotingServices\CS\ListViewInt64Sort.cs" />
+    <Compile Include="RemotingServices\CS\ListViewDoubleSort.cs" />
+    <Compile Include="RemotingServices\CS\ListViewCurrencySort.cs" />
+    <Compile Include="RemotingServices\CS\ListViewSortManager.cs" />
+    <Compile Include="Common\IMainScreen.cs" />
+    <Compile Include="Common\ISetup.cs" />
+    <Compile Include="Common\UI\AuditModalOptionsModel.cs" />
+    <Compile Include="Common\UI\AuditMessage.cs" />
+    <Compile Include="Common\UI\AuditMessageField.cs" />
+    <Compile Include="Common\UI\AuditMessageData.cs" />
+    <Compile Include="Common\UI\Entity.cs" />
+    <Compile Include="Common\UI\DataAuditResult.cs" />
+    <Compile Include="Common\UI\AuditRuleMessage.cs" />
+    <Compile Include="Common\UI\ComplianceReviewResult.cs" />
+    <Compile Include="Common\UI\ComplianceReport.cs" />
+    <Compile Include="Common\UI\LoanFormPrintRuleResult.cs" />
+    <Compile Include="Common\UI\LoanForm.cs" />
+    <Compile Include="Common\UI\Reason.cs" />
+    <Compile Include="Common\UI\IApplicationScreen.cs" />
+    <Compile Include="Common\UI\IBizContacts.cs" />
+    <Compile Include="Common\UI\IBorrowerContacts.cs" />
+    <Compile Include="Common\UI\ICalendar.cs" />
+    <Compile Include="Common\UI\ICampaigns.cs" />
+    <Compile Include="Common\UI\IConfigurableWorkFlow.cs" />
+    <Compile Include="Common\UI\IEFolder.cs" />
+    <Compile Include="Common\UI\IEncompassApplication.cs" />
+    <Compile Include="Common\UI\IHomePage.cs" />
+    <Compile Include="Common\UI\INormalizedBidTapeTemplate.cs" />
+    <Compile Include="Common\UI\ILockComparisonConsole.cs" />
+    <Compile Include="Common\UI\ILoanServices.cs" />
+    <Compile Include="Common\UI\IMenuProvider.cs" />
+    <Compile Include="Common\UI\IReportConsole.cs" />
+    <Compile Include="Common\UI\IStatusDisplay.cs" />
+    <Compile Include="Common\UI\IEPass.cs" />
+    <Compile Include="Common\UI\ILoanConsole.cs" />
+    <Compile Include="Common\UI\ILoanEditor.cs" />
+    <Compile Include="Common\UI\IPipeline.cs" />
+    <Compile Include="Common\UI\ITaskList.cs" />
+    <Compile Include="Common\UI\TradeManagementScreen.cs" />
+    <Compile Include="Common\UI\ITradeConsole.cs" />
+    <Compile Include="Common\UI\OpenModalOptionsModel.cs" />
+    <Compile Include="Common\UI\ModalData.cs" />
+    <Compile Include="Common\UI\EncompassActivity.cs" />
+    <Compile Include="Common\UI\TipContinueEventHandler.cs" />
+    <Compile Include="Common\UI\TipContinueEventArgs.cs" />
+    <Compile Include="Common\UI\TipControl.cs" />
+    <Compile Include="Common\UI\TipParameters.cs" />
+    <Compile Include="WebServices\JobService.cs" />
+    <Compile Include="WebServices\PluginService.cs" />
+    <Compile Include="WebServices\AuthorizeFormCompletedEventHandler.cs" />
+    <Compile Include="WebServices\AuthorizeFormCompletedEventArgs.cs" />
+    <Compile Include="WebServices\AuthorizePluginCompletedEventHandler.cs" />
+    <Compile Include="WebServices\AuthorizePluginCompletedEventArgs.cs" />
+    <Compile Include="JobService\JobHandler.cs" />
+    <Compile Include="JobService\StateChangedEventHandler.cs" />
+    <Compile Include="JobService\ConnectedJobParameters.cs" />
+    <Compile Include="JobService\JobState.cs" />
+    <Compile Include="ClientSession\Dashboard\DashboardLayout.cs" />
+    <Compile Include="ClientSession\Dashboard\DashboardLayoutCollection.cs" />
+    <Compile Include="ClientSession\Dashboard\DashboardReport.cs" />
+    <Compile Include="ClientSession\Dashboard\DashboardReportCollection.cs" />
+    <Compile Include="ClientSession\Dashboard\DashboardView.cs" />
+    <Compile Include="ClientSession\Dashboard\DashboardViewCollection.cs" />
+    <Compile Include="ClientSession\Dashboard\DashboardViewList.cs" />
+    <Compile Include="AsyncTaskManager\StatusState.cs" />
+    <Compile Include="AsyncTaskManager\AsyncTaskBase.cs" />
+    <Compile Include="AsyncTaskManager\ReportTaskProgressEventHandler.cs" />
+    <Compile Include="AsyncTaskManager\TaskCompletedEventHandler.cs" />
+    <Compile Include="AsyncTaskManager\AsyncTaskManager.cs" />
+    <Compile Include="AsyncTaskManager\ReportTaskProgressEventArgs.cs" />
+    <Compile Include="AsyncTaskManager\TaskCompletedEventArgs.cs" />
+    <Compile Include="AsyncTaskManager\CampaignRefreshStartedEventHandler.cs" />
+    <Compile Include="AsyncTaskManager\CampaignRefreshCompletedEventHandler.cs" />
+    <Compile Include="AsyncTaskManager\CampaignRefreshTask.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AsyncTaskManager\AsyncTaskManager.resx" />
+    <EmbeddedResource Include="Common\UI\TipControl.resx" />
+    <EmbeddedResource Include="RemotingServices\AddContactDialog.resx" />
+    <EmbeddedResource Include="RemotingServices\AddContactRequest.resx" />
+    <EmbeddedResource Include="RemotingServices\AddCSRequest.resx" />
+    <EmbeddedResource Include="RemotingServices\AddGroupDialog.resx" />
+    <EmbeddedResource Include="RemotingServices\ChatWindow.resx" />
+    <EmbeddedResource Include="RemotingServices\ContactMessengerProfile.resx" />
+    <EmbeddedResource Include="RemotingServices\CSManagementDialog.resx" />
+    <EmbeddedResource Include="RemotingServices\CSUserProfile.resx" />
+    <EmbeddedResource Include="RemotingServices\DenyRequestDialog.resx" />
+    <EmbeddedResource Include="RemotingServices\EditCSAccess.resx" />
+    <EmbeddedResource Include="RemotingServices\EncompassMessenger.resx" />
+    <EmbeddedResource Include="RemotingServices\Properties\Resources.resx" />
+    <EmbeddedResource Include="RemotingServices\ReconnectForm.resx" />
+    <EmbeddedResource Include="RemotingServices\RequestAck.resx" />
+    <EmbeddedResource Include="RemotingServices\RequestCSDialog.resx" />
+    <EmbeddedResource Include="RemotingServices\RequestDenied.resx" />
+    <EmbeddedResource Include="RemotingServices\ServerMajorUpdateForm.resx" />
+    <EmbeddedResource Include="RemotingServices\SessionSelectionDialog.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

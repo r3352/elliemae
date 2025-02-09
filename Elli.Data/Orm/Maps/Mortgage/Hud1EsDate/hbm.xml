@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Hud1EsDate" table="ElliHud1EsDate" dynamic-update="true">
+    <id name="Id" column="ElliHud1EsDateId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Hud1Es" column="ElliHud1EsId" />
+    <property name="Hud1EsDateIndex" />
+    <property name="AggrMthDisb" />
+    <property name="AnnualFee" />
+    <property name="Balance" />
+    <property name="Date" />
+    <property name="FloodInsDisb" />
+    <property name="HazInsDisb" />
+    <property name="MtgInsDisb" />
+    <property name="SchoolTaxes" />
+    <property name="TaxDisb" />
+    <property name="UserDefined1" />
+    <property name="UserDefined2" />
+    <property name="UserDefined3" />
+  </class>
+</hibernate-mapping>

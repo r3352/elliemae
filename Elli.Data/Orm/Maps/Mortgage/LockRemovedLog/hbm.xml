@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="LockRemovedLog" extends="LogRecord" dynamic-update="true" discriminator-value="32">
+    <join table="ElliLockRemovedLog">
+      <key column="ElliLogRecordId" />
+      <property name="TimeRemoved" column="TimeRemoved" />
+      <property name="RemovedBy" column="RemovedBy" />
+      <property name="RemovedById" column="RemovedByID" />
+      <property name="RequestGUID" column="RequestGuid" />
+      <property name="AlertIndicator" column="AlertIndicator" />
+    </join>
+  </subclass>
+</hibernate-mapping>

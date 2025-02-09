@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Gfe" table="ElliGfe" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="AgregateAdjustment" />
+    <property name="GfeProvidedByBrokerIndicator" />
+    <property name="PocPaid1" />
+    <property name="PocPaid2" />
+    <property name="PocPaid3" />
+    <property name="TotalClosingCostWithDiscount" />
+    <property name="TotalPrepaidClosingCost" />
+    <property name="TotalSettlementCharges" />
+    <property name="FundingAmount" />
+    <property name="LockField" />
+    <property name="Address" />
+    <property name="BrokerLicense" />
+    <property name="BrokerName" />
+    <property name="BrokerRepresentative" />
+    <property name="City" />
+    <property name="CompensationFromLenderAmount" />
+    <property name="CompensationFromLenderPercentage" />
+    <property name="CompensationFromLenderTotalAmount" />
+    <property name="CreditLifeOrDisabilityPremium" />
+    <property name="EstimatedCashAtClosing" />
+    <property name="EstimatedDueDate" />
+    <property name="FinalBalloonPayment" />
+    <property name="FirstChangePayment" />
+    <property name="FirstChangePercent" />
+    <property name="HasPrepaymentPenaltyIndicator" />
+    <property name="InitialFixedOrArmType" />
+    <property name="LoanFromBrokerControledFundsType" />
+    <property name="MaxLifePayment" />
+    <property name="MaxPaymentAfterMonth" />
+    <property name="MonthlyPaymentAndEscrow" />
+    <property name="MortgageBrokerComissionFee" />
+    <property name="MortgageBrokerComissionFeePaidToName" />
+    <property name="PaymentOfPrincipleIndicator" />
+    <property name="PaymentOfPrincipleType" />
+    <property name="PenaltyNotToExceedMonths" />
+    <property name="PostalCode" />
+    <property name="PrepaymentOtherDescription" />
+    <property name="PrepaymentOtherTypeIndicator" />
+    <property name="PrepaymentPenaltyAmount" />
+    <property name="PrepaymentPenaltyIndicator" />
+    <property name="PrepaymentPenaltyPeriod" />
+    <property name="PurchasePayOff" />
+    <property name="RepresentativeLicense" />
+    <property name="SourcesDeemedReliableIndicator" />
+    <property name="State" />
+    <property name="SubtotalOfAllDeductions" />
+    <property name="TotalOfInitialFees" />
+    <property name="TotalTaxAndInsurance" />
+    <property name="YearlyFloodInsurance" />
+    <property name="YearlyInsurance" />
+    <property name="YearlyMortgageInsurance" />
+    <property name="YearlyOtherInsurance" />
+    <property name="YearlyOtherInsuranceDescription" />
+    <property name="YearlyTax" />
+    <property name="Re882AdditionalCompensation" />
+    <property name="BrokerCommission" />
+    <property name="CreditToBorrowerAmount" />
+    <property name="EstimatedCashToBorrower" />
+    <property name="HasAdditionalCompensationIndicator" />
+    <property name="HasLateChargesIndicator" />
+    <property name="LenderOriginationFee" />
+    <property name="NatureLien1Description" />
+    <property name="NatureLien1PayoffDescription" />
+    <property name="NatureLien2Description" />
+    <property name="NatureLien2PayoffDescription" />
+    <property name="NatureLien3Description" />
+    <property name="NatureLien3PayoffDescription" />
+    <property name="PrincipalAmount" />
+    <property name="ReceivedFromLenderAmount" />
+    <property name="TotalBrokerCompensationAmount" />
+    <property name="TotalCostsExpenses" />
+    <property name="TotalMaximumCostsExpenses" />
+    <!-- Gfe Fees-->
+    <bag name="gfeFees" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliGfeId" />
+      <one-to-many class="GfeFee"/>
+    </bag>
+    <!-- Gfe Liens-->
+    <bag name="gfeLiens" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliGfeId" />
+      <one-to-many class="GfeLien"/>
+    </bag>
+    <!-- Gfe Payment-->
+    <bag name="gfePayments" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliGfeId" />
+      <one-to-many class="GfePayment"/>
+    </bag>
+    <!-- Gfe Payoff-->
+    <bag name="gfePayoffs" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliGfeId" />
+      <one-to-many class="GfePayoff"/>
+    </bag>
+  </class>
+</hibernate-mapping>

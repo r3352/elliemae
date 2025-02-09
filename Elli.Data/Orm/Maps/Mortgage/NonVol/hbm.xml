@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="NonVol" table="ElliNonVol" dynamic-update="true">
+    <id name="Id" column="ElliNonVolId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Loan" column="ElliLoanId" />
+    <property name="NonVolIndex" />
+    <property name="NonVolId" />
+    <property name="AdjustmentType" />
+    <property name="AdjustmentDescription" />
+    <property name="AdjustmentOtherDescription" />
+    <property name="AdjustmentAmount" />
+    <property name="IncludedIndicator" />
+    <property name="POCIndicator"/>
+    <property name="PaidBy"/>
+    <property name="PrincipalCureAddendum"/>
+    <property name="PaidTo"/>
+    <property name="AltId" />
+  </class>
+</hibernate-mapping>

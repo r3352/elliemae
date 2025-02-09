@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Service.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4382DB3-8EFD-44AD-A3FD-73380885778D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Elli.Service.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Elli</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elli.Common">
+      <HintPath>lib\Elli.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SimpleInjector">
+      <HintPath>lib\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EncompassPlatform\Common\DataContracts\SecurityContextContract.cs" />
+    <Compile Include="Service\Common\IAsyncRequestDispatcher.cs" />
+    <Compile Include="Service\Common\AsyncRequestDispatcher.cs" />
+    <Compile Include="Service\Common\IAsyncRequestDispatcherFactory.cs" />
+    <Compile Include="Service\Common\AsyncRequestDispatcherFactory.cs" />
+    <Compile Include="Service\Common\AsyncRequestDispatcherFactoryStub.cs" />
+    <Compile Include="Service\Common\AsyncRequestDispatcherStub.cs" />
+    <Compile Include="Service\Common\ClientConfiguration.cs" />
+    <Compile Include="Service\Common\IConventions.cs" />
+    <Compile Include="Service\Common\IMessage.cs" />
+    <Compile Include="Service\Common\RestServiceContextContract.cs" />
+    <Compile Include="Service\Common\Disposable.cs" />
+    <Compile Include="Service\Common\EnableClientResponseCachingAttribute.cs" />
+    <Compile Include="Service\Common\EnableServiceResponseCachingAttribute.cs" />
+    <Compile Include="Service\Common\ExceptionInfo.cs" />
+    <Compile Include="Service\Common\ExceptionType.cs" />
+    <Compile Include="Service\Common\IAsyncRequestProcessor.cs" />
+    <Compile Include="Service\Common\IEnableResponseCachingAttribute.cs" />
+    <Compile Include="Service\Common\IRequestHandlerInterceptor.cs" />
+    <Compile Include="Service\Common\IRequestProcessor.cs" />
+    <Compile Include="Service\Common\OneWayRequest.cs" />
+    <Compile Include="Service\Common\ProcessRequestsAsyncCompletedArgs.cs" />
+    <Compile Include="Service\Common\ReceivedResponses.cs" />
+    <Compile Include="Service\Common\Request.cs" />
+    <Compile Include="Service\Common\IRequestDispatcher.cs" />
+    <Compile Include="Service\Common\RequestDispatcher.cs" />
+    <Compile Include="Service\Common\IRequestDispatcherFactory.cs" />
+    <Compile Include="Service\Common\RequestDispatcherFactory.cs" />
+    <Compile Include="Service\Common\RequestDispatcherFactoryStub.cs" />
+    <Compile Include="Service\Common\RequestDispatcherStub.cs" />
+    <Compile Include="Service\Common\RequestProcessingContext.cs" />
+    <Compile Include="Service\Common\Response.cs" />
+    <Compile Include="Service\Common\ResponseReceiver.cs" />
+    <Compile Include="Service\Common\StandardMessage.cs" />
+    <Compile Include="Service\Common\WCF\AsyncRequestProcessorProxy.cs" />
+    <Compile Include="Service\Common\WCF\IAsyncWcfRequestProcessor.cs" />
+    <Compile Include="Service\Common\WCF\IWcfRequestProcessor.cs" />
+    <Compile Include="Service\Common\WCF\IWcfRestJsonRequestProcessor.cs" />
+    <Compile Include="Service\Common\WCF\IWcfRestXmlRequestProcessor.cs" />
+    <Compile Include="Service\Common\WCF\KnownTypeProvider.cs" />
+    <Compile Include="Service\Common\WCF\RequestProcessorProxy.cs" />
+    <Compile Include="Service\Common\InversionOfControl\IoC.cs" />
+    <Compile Include="Service\Common\Interceptors\ConventionBasedInterceptor.cs" />
+    <Compile Include="Service\Common\Conventions\BasicConventions.cs" />
+    <Compile Include="Service\Common\Configuration\IRequestHandlerRegistry.cs" />
+    <Compile Include="Service\Common\Configuration\RequestHandlerRegistry.cs" />
+    <Compile Include="Service\Common\Configuration\IRequestTypeRegistry.cs" />
+    <Compile Include="Service\Common\Configuration\WcfKnownTypesBasedRequestTypeRegistry.cs" />
+    <Compile Include="Service\Common\Caching\CacheConfiguration.cs" />
+    <Compile Include="Service\Common\Caching\ServiceCacheConfiguration.cs" />
+    <Compile Include="Service\Common\Caching\ClientCacheConfiguration.cs" />
+    <Compile Include="Service\Common\Caching\ICacheManager.cs" />
+    <Compile Include="Service\Common\Caching\CacheManager.cs" />
+    <Compile Include="Service\Common\Caching\ICache.cs" />
+    <Compile Include="Service\Common\Caching\ICacheProvider.cs" />
+    <Compile Include="Service\Common\Caching\InMemoryCache.cs" />
+    <Compile Include="Service\Common\Caching\InMemoryCacheProvider.cs" />
+    <Compile Include="Service\Common\Caching\RequestCacheConfiguration.cs" />
+    <Compile Include="Service\Common\Caching\Timers\ITimer.cs" />
+    <Compile Include="Service\Common\Caching\Timers\ITimerProvider.cs" />
+    <Compile Include="Service\Common\Caching\Timers\TimerProvider.cs" />
+    <Compile Include="Service\Common\Caching\Timers\TimerWrapper.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

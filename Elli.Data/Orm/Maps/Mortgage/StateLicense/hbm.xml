@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="StateLicense" table="ElliStateLicense" dynamic-update="true">
+    <id name="Id" column="ElliStateLicenseId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="ClosingDocument" column="ElliClosingDocumentId" />
+    <property name="StateLicenseType" />
+    <property name="AK" />
+    <property name="AL" />
+    <property name="AR" />
+    <property name="AZ" />
+    <property name="CA" />
+    <property name="CO" />
+    <property name="CT" />
+    <property name="DC" />
+    <property name="DE" />
+    <property name="FL" />
+    <property name="GA" />
+    <property name="GU" />
+    <property name="HI" />
+    <property name="IA" />
+    <property name="Idaho" column="ID" />
+    <property name="IL" />
+    <property name="IN" column="`IN`" />
+    <property name="KS" />
+    <property name="KY" />
+    <property name="LA" />
+    <property name="MA" />
+    <property name="MD" />
+    <property name="ME" />
+    <property name="MI" />
+    <property name="MN" />
+    <property name="MO" />
+    <property name="MS" />
+    <property name="MT" />
+    <property name="NC" />
+    <property name="ND" />
+    <property name="NE" />
+    <property name="NH" />
+    <property name="NJ" />
+    <property name="NM" />
+    <property name="NV" />
+    <property name="NY" />
+    <property name="OH" />
+    <property name="OK" />
+    <property name="OR" column="`OR`" />
+    <property name="PA" />
+    <property name="PR" />
+    <property name="RI" />
+    <property name="SC" />
+    <property name="SD" />
+    <property name="TN" />
+    <property name="TX" />
+    <property name="UT" />
+    <property name="VA" />
+    <property name="VI" />
+    <property name="VT" />
+    <property name="WA" />
+    <property name="WI" />
+    <property name="WV" />
+    <property name="WY" />
+  </class>
+</hibernate-mapping>

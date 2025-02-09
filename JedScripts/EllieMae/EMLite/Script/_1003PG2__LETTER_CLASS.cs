@@ -1,0 +1,195 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: JedScripts.EllieMae.EMLite.Script._1003PG2__LETTER_CLASS
+// Assembly: JedScripts, Version=19.3.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 0C1FAB5C-E085-4229-8A3F-9EA3E2E6B3AA
+// Assembly location: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\JedScripts.dll
+// XML documentation location: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\JedScripts.xml
+
+using EllieMae.EMLite.DataEngine;
+using EllieMae.EMLite.JedScript;
+using Microsoft.VisualBasic.CompilerServices;
+using System.Collections.Specialized;
+
+#nullable disable
+namespace JedScripts.EllieMae.EMLite.Script
+{
+  public class _1003PG2__LETTER_CLASS
+  {
+    public NameValueCollection RunScript(LoanData loan)
+    {
+      NameValueCollection nameValueCollection = new NameValueCollection();
+      string empty = string.Empty;
+      string str1 = JS.GetStr(loan, "315");
+      nameValueCollection.Add("315", str1);
+      string str2 = JS.GetStr(loan, "101");
+      nameValueCollection.Add("101", str2);
+      string str3 = JS.GetStr(loan, "102");
+      nameValueCollection.Add("102", str3);
+      string str4 = JS.GetStr(loan, "103");
+      nameValueCollection.Add("103", str4);
+      string str5 = JS.GetStr(loan, "104");
+      nameValueCollection.Add("104", str5);
+      string str6 = JS.GetStr(loan, "105");
+      nameValueCollection.Add("105", str6);
+      string str7 = JS.GetStr(loan, "106");
+      nameValueCollection.Add("106", str7);
+      string str8 = JS.GetStr(loan, "107");
+      nameValueCollection.Add("107", str8);
+      string str9 = JS.GetStr(loan, "108");
+      nameValueCollection.Add("108", str9);
+      string str10 = JS.GetStr(loan, "910");
+      nameValueCollection.Add("910", str10);
+      string str11 = JS.GetStr(loan, "110");
+      nameValueCollection.Add("110", str11);
+      string str12 = JS.GetStr(loan, "111");
+      nameValueCollection.Add("111", str12);
+      string str13 = JS.GetStr(loan, "112");
+      nameValueCollection.Add("112", str13);
+      string str14 = JS.GetStr(loan, "113");
+      nameValueCollection.Add("113", str14);
+      string str15 = JS.GetStr(loan, "114");
+      nameValueCollection.Add("114", str15);
+      string str16 = JS.GetStr(loan, "115");
+      nameValueCollection.Add("115", str16);
+      string str17 = JS.GetStr(loan, "116");
+      nameValueCollection.Add("116", str17);
+      string str18 = JS.GetStr(loan, "117");
+      nameValueCollection.Add("117", str18);
+      string str19 = JS.GetStr(loan, "911");
+      nameValueCollection.Add("911", str19);
+      string str20 = JS.GetStr(loan, "901");
+      nameValueCollection.Add("901", str20);
+      string str21 = JS.GetStr(loan, "902");
+      nameValueCollection.Add("902", str21);
+      string str22 = JS.GetStr(loan, "903");
+      nameValueCollection.Add("903", str22);
+      string str23 = JS.GetStr(loan, "904");
+      nameValueCollection.Add("904", str23);
+      string str24 = JS.GetStr(loan, "905");
+      nameValueCollection.Add("905", str24);
+      string str25 = JS.GetStr(loan, "906");
+      nameValueCollection.Add("906", str25);
+      string str26 = JS.GetStr(loan, "907");
+      nameValueCollection.Add("907", str26);
+      string str27 = JS.GetStr(loan, "908");
+      nameValueCollection.Add("908", str27);
+      string str28 = JS.GetStr(loan, "736");
+      nameValueCollection.Add("736", str28);
+      string str29 = JS.GetStr(loan, "119");
+      nameValueCollection.Add("119", str29);
+      string str30 = JS.GetStr(loan, "120");
+      nameValueCollection.Add("120", str30);
+      string str31 = JS.GetStr(loan, "121");
+      nameValueCollection.Add("121", str31);
+      string str32 = JS.GetStr(loan, "122");
+      nameValueCollection.Add("122", str32);
+      string str33 = JS.GetStr(loan, "123");
+      nameValueCollection.Add("123", str33);
+      string str34 = JS.GetStr(loan, "124");
+      nameValueCollection.Add("124", str34);
+      string str35 = JS.GetStr(loan, "125");
+      nameValueCollection.Add("125", str35);
+      string str36 = JS.GetStr(loan, "126");
+      nameValueCollection.Add("126", str36);
+      string str37 = JS.GetStr(loan, "737");
+      nameValueCollection.Add("737", str37);
+      string str38 = "";
+      nameValueCollection.Add("dum3", str38);
+      string str39 = JS.GetStr(loan, "228");
+      nameValueCollection.Add("228", str39);
+      string str40 = JS.GetStr(loan, "229");
+      nameValueCollection.Add("229", str40);
+      string str41 = JS.GetStr(loan, "230");
+      nameValueCollection.Add("230", str41);
+      string str42 = JS.GetStr(loan, "1405");
+      nameValueCollection.Add("1405", str42);
+      string str43 = JS.GetStr(loan, "232");
+      nameValueCollection.Add("232", str43);
+      string str44 = JS.GetStr(loan, "233");
+      nameValueCollection.Add("233", str44);
+      string str45 = JS.GetStr(loan, "234");
+      nameValueCollection.Add("234", str45);
+      string str46 = JS.GetStr(loan, "912");
+      nameValueCollection.Add("912", str46);
+      string str47 = JS.GetStr(loan, "144");
+      nameValueCollection.Add("144", str47);
+      string str48 = JS.GetStr(loan, "146");
+      nameValueCollection.Add("146", str48);
+      string str49 = JS.GetStr(loan, "147");
+      nameValueCollection.Add("147", str49);
+      string str50 = JS.GetStr(loan, "149");
+      nameValueCollection.Add("149", str50);
+      string str51 = JS.GetStr(loan, "150");
+      nameValueCollection.Add("150", str51);
+      string str52 = JS.GetStr(loan, "152");
+      nameValueCollection.Add("152", str52);
+      string str53 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "145"), "Unemployment", false) == 0, "Unemployment/Welfare", Jed.BF(Operators.CompareString(JS.GetStr(loan, "145"), "Pension", false) == 0, "Pension/Retirement Income", Jed.BF(Operators.CompareString(JS.GetStr(loan, "145"), "SocialSecurity", false) == 0, "Social Security/Disability Income", Jed.BF(Operators.CompareString(JS.GetStr(loan, "145"), "Trust", false) == 0, "Trust Income", JS.GetStr(loan, "145")))));
+      nameValueCollection.Add("145", str53);
+      string str54 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "148"), "Unemployment", false) == 0, "Unemployment/Welfare", Jed.BF(Operators.CompareString(JS.GetStr(loan, "148"), "Pension", false) == 0, "Pension/Retirement Income", Jed.BF(Operators.CompareString(JS.GetStr(loan, "148"), "SocialSecurity", false) == 0, "Social Security/Disability Income", Jed.BF(Operators.CompareString(JS.GetStr(loan, "148"), "Trust", false) == 0, "Trust Income", JS.GetStr(loan, "148")))));
+      nameValueCollection.Add("148", str54);
+      string str55 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "151"), "Unemployment", false) == 0, "Unemployment/Welfare", Jed.BF(Operators.CompareString(JS.GetStr(loan, "151"), "Pension", false) == 0, "Pension/Retirement Income", Jed.BF(Operators.CompareString(JS.GetStr(loan, "151"), "SocialSecurity", false) == 0, "Social Security/Disability Income", Jed.BF(Operators.CompareString(JS.GetStr(loan, "151"), "Trust", false) == 0, "Trust Income", JS.GetStr(loan, "151")))));
+      nameValueCollection.Add("151", str55);
+      string str56 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "181"), "Jointly", false) == 0, "X");
+      nameValueCollection.Add("181_Joint", str56);
+      string str57 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "181"), "NotJointly", false) == 0, "X");
+      nameValueCollection.Add("181_NotJoint", str57);
+      string str58 = JS.GetStr(loan, "182");
+      nameValueCollection.Add("182", str58);
+      string str59 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "183"), "", false) != 0 & Operators.CompareString(JS.GetStr(loan, "183"), "0.00", false) != 0, Jed.NF(Jed.S2N(JS.GetStr(loan, "183")), (byte) 18, 0));
+      nameValueCollection.Add("183", str59);
+      string str60 = JS.GetStr(loan, "1715");
+      nameValueCollection.Add("1715", str60);
+      string str61 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "1716"), "", false) != 0 & Operators.CompareString(JS.GetStr(loan, "1716"), "0.00", false) != 0, Jed.NF(Jed.S2N(JS.GetStr(loan, "1716")), (byte) 18, 0));
+      nameValueCollection.Add("1716", str61);
+      string str62 = JS.GetStr(loan, "FL0102");
+      nameValueCollection.Add("FL0102", str62);
+      string str63 = JS.GetStr(loan, "FL0103");
+      nameValueCollection.Add("FL0103", str63);
+      string str64 = JS.GetStr(loan, "FL0104");
+      nameValueCollection.Add("FL0104", str64);
+      string str65 = JS.GetStr(loan, "FL0105") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0106"), "", false) != 0, ", ") + JS.GetStr(loan, "FL0106") + " " + JS.GetStr(loan, "FL0107");
+      nameValueCollection.Add("FL0105_FL0106_FL0107", str65);
+      string str66 = JS.GetStr(loan, "FL0110");
+      nameValueCollection.Add("FL0110", str66);
+      string str67 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0118"), "Y", false) == 0, "*") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0117"), "Y", false) == 0, "(") + JS.GetStr(loan, "FL0111") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0117"), "Y", false) == 0, ")");
+      nameValueCollection.Add("FL0111", str67);
+      string str68 = JS.GetStr(loan, "FL0112");
+      nameValueCollection.Add("FL0112", str68);
+      string str69 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0118"), "Y", false) == 0, "*") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0117"), "Y", false) == 0, "(") + JS.GetStr(loan, "FL0113") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0117"), "Y", false) == 0, ")");
+      nameValueCollection.Add("FL0113", str69);
+      string str70 = JS.GetStr(loan, "FL0202");
+      nameValueCollection.Add("FL0202", str70);
+      string str71 = JS.GetStr(loan, "FL0203");
+      nameValueCollection.Add("FL0203", str71);
+      string str72 = JS.GetStr(loan, "FL0204");
+      nameValueCollection.Add("FL0204", str72);
+      string str73 = JS.GetStr(loan, "FL0205") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0206"), "", false) != 0, ", ") + JS.GetStr(loan, "FL0206") + " " + JS.GetStr(loan, "FL0207");
+      nameValueCollection.Add("FL0205_FL0206_FL0207", str73);
+      string str74 = JS.GetStr(loan, "FL0210");
+      nameValueCollection.Add("FL0210", str74);
+      string str75 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0218"), "Y", false) == 0, "*") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0217"), "Y", false) == 0, "(") + JS.GetStr(loan, "FL0211") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0217"), "Y", false) == 0, ")");
+      nameValueCollection.Add("FL0211", str75);
+      string str76 = JS.GetStr(loan, "FL0212");
+      nameValueCollection.Add("FL0212", str76);
+      string str77 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0218"), "Y", false) == 0, "*") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0217"), "Y", false) == 0, "(") + JS.GetStr(loan, "FL0213") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0217"), "Y", false) == 0, ")");
+      nameValueCollection.Add("FL0213", str77);
+      string str78 = JS.GetStr(loan, "FL0302");
+      nameValueCollection.Add("FL0302", str78);
+      string str79 = JS.GetStr(loan, "FL0303");
+      nameValueCollection.Add("FL0303", str79);
+      string str80 = JS.GetStr(loan, "FL0304");
+      nameValueCollection.Add("FL0304", str80);
+      string str81 = JS.GetStr(loan, "FL0305") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0306"), "", false) != 0, ", ") + JS.GetStr(loan, "FL0306") + " " + JS.GetStr(loan, "FL0307");
+      nameValueCollection.Add("FL0305_FL0306_FL0307", str81);
+      string str82 = JS.GetStr(loan, "FL0310");
+      nameValueCollection.Add("FL0310", str82);
+      string str83 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0318"), "Y", false) == 0, "*") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0317"), "Y", false) == 0, "(") + JS.GetStr(loan, "FL0311") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0317"), "Y", false) == 0, ")");
+      nameValueCollection.Add("FL0311", str83);
+      string str84 = JS.GetStr(loan, "FL0312");
+      nameValueCollection.Add("FL0312", str84);
+      string str85 = Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0318"), "Y", false) == 0, "*") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0317"), "Y", false) == 0, "(") + JS.GetStr(loan, "FL0313") + Jed.BF(Operators.CompareString(JS.GetStr(loan, "FL0317"), "Y", false) == 0, ")");
+      nameValueCollection.Add("FL0313", str85);
+      return nameValueCollection;
+    }
+  }
+}

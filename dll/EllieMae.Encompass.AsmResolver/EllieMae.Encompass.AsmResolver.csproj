@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\Ellie Mae\Encompass\EllieMae.Encompass.AsmResolver.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{032ADEF8-8E2D-40FE-8FFC-BFF1A5FA486A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>EllieMae.Encompass.AsmResolver</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EllieMae.Encompass.AsmResolver</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Administration" />
+    <Reference Include="System" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CICDAssemblyAttributes\AssemblyType.cs" />
+    <Compile Include="CICDAssemblyAttributes\CICDAssemblyTypeAttribute.cs" />
+    <Compile Include="CICDAssemblyAttributes\ExcludeInEncompassAttribute.cs" />
+    <Compile Include="SCAppMgr\AppMgrRemoteObject.cs" />
+    <Compile Include="AppFileInfo.cs" />
+    <Compile Include="AppSuiteInfo.cs" />
+    <Compile Include="AppFileGroupInfo.cs" />
+    <Compile Include="AsmFileInfo.cs" />
+    <Compile Include="AssemblyResolver.cs" />
+    <Compile Include="AuthenticationForm.cs" />
+    <Compile Include="AuthResultCode.cs" />
+    <Compile Include="AuthenticationResult.cs" />
+    <Compile Include="ClientIDInfoForm.cs" />
+    <Compile Include="ClientIDInputForm.cs" />
+    <Compile Include="ClientIDsManagementForm.cs" />
+    <Compile Include="HashInfo.cs" />
+    <Compile Include="IDeploymentModule.cs" />
+    <Compile Include="InstallationUrlBrowserControl.cs" />
+    <Compile Include="InstallationUrlDialog.cs" />
+    <Compile Include="ResFileInfo.cs" />
+    <Compile Include="XmlHelperClasses\XDAppManifest.cs" />
+    <Compile Include="XmlHelperClasses\XDDeployManifest.cs" />
+    <Compile Include="XmlHelperClasses\XDConfiguration.cs" />
+    <Compile Include="XmlHelperClasses\XDManifest.cs" />
+    <Compile Include="XmlHelperClasses\XEdeploymentModule.cs" />
+    <Compile Include="XmlHelperClasses\XEdeploymentModules.cs" />
+    <Compile Include="XmlHelperClasses\XEassemblyDeployment.cs" />
+    <Compile Include="XmlHelperClasses\XEappFileGroup.cs" />
+    <Compile Include="XmlHelperClasses\XEappFileGroupList.cs" />
+    <Compile Include="XmlHelperClasses\XEassemblyIdentity.cs" />
+    <Compile Include="XmlHelperClasses\XEdependentAssembly.cs" />
+    <Compile Include="XmlHelperClasses\XEfile.cs" />
+    <Compile Include="XmlHelperClasses\XEhash.cs" />
+    <Compile Include="XmlHelperClasses\XmlDocumentBase.cs" />
+    <Compile Include="XmlHelperClasses\XmlElementBase.cs" />
+    <Compile Include="Utils\AssemblyApplicationSuiteAttribute.cs" />
+    <Compile Include="Utils\BasicUtils.cs" />
+    <Compile Include="Utils\FilePermission.cs" />
+    <Compile Include="Utils\CLRUtil.cs" />
+    <Compile Include="Utils\DeployUtils.cs" />
+    <Compile Include="Utils\FileMutex.cs" />
+    <Compile Include="Utils\FileUtil.cs" />
+    <Compile Include="Utils\WebUtil.cs" />
+    <Compile Include="Utils\Win64.cs" />
+    <Compile Include="Utils\XT.cs" />
+    <Compile Include="Utils\ResolverConsts.cs" />
+    <Compile Include="Utils\FileCompressor.cs" />
+    <Compile Include="Utils\HashAlgorithm.cs" />
+    <Compile Include="Utils\HashUtil.cs" />
+    <Compile Include="Utils\IProgressBar.cs" />
+    <Compile Include="Utils\ProgressBarForm.cs" />
+    <Compile Include="Utils\ServerUri.cs" />
+    <Compile Include="Utils\SystemUtils.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="MOTD\MessageScreen.cs" />
+    <Compile Include="MOTD\MOTDSettings.cs" />
+    <Compile Include="MOTD\MsgDisplayMgr.cs" />
+    <Compile Include="Manifests\ApplicationManifest.cs" />
+    <Compile Include="Manifests\DeploymentManifest.cs" />
+    <Compile Include="Manifests\ManifestBase.cs" />
+    <Compile Include="DeploymentHandlers\DeploymentHandler.cs" />
+    <Compile Include="DeploymentHandlers\DeploymentHandlerBase.cs" />
+    <Compile Include="DeploymentHandlers\SourceDeploymentHandler.cs" />
+    <Compile Include="DeploymentHandlers\CertificateHelper.cs" />
+    <Compile Include="DeploymentHandlers\WinCrypt.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AuthenticationForm.resx" />
+    <EmbeddedResource Include="ClientIDInfoForm.resx" />
+    <EmbeddedResource Include="ClientIDInputForm.resx" />
+    <EmbeddedResource Include="ClientIDsManagementForm.resx" />
+    <EmbeddedResource Include="InstallationUrlBrowserControl.resx" />
+    <EmbeddedResource Include="InstallationUrlDialog.resx" />
+    <EmbeddedResource Include="MOTD\MessageScreen.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="Utils\ProgressBarForm.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

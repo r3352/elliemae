@@ -1,0 +1,40 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: EllieMae.Encompass.Automation.Screen
+// Assembly: EncompassAutomation, Version=24.3.0.5, Culture=neutral, PublicKeyToken=null
+// MVID: D6A34E1A-9881-4DDD-B85D-11A8A4C40EF4
+// Assembly location: C:\SmartClientCache\Apps\Ellie Mae\Encompass\SDK\EncompassAutomation.dll
+
+using EllieMae.EMLite.Common.UI;
+using EllieMae.EMLite.RemotingServices;
+using System.Windows.Forms;
+
+#nullable disable
+namespace EllieMae.Encompass.Automation
+{
+  public class Screen
+  {
+    private EncompassScreen screenType;
+
+    internal Screen(EncompassScreen screenType) => this.screenType = screenType;
+
+    public EncompassScreen ScreenType => this.screenType;
+
+    public void MakeCurrent()
+    {
+      try
+      {
+        Cursor.Current = Cursors.WaitCursor;
+        Session.Application.GetService<IEncompassApplication>().SetCurrentActivity((EncompassActivity) this.screenType);
+      }
+      finally
+      {
+        Cursor.Current = Cursors.Default;
+      }
+    }
+
+    public bool IsCurrent()
+    {
+      return Session.Application.GetService<IEncompassApplication>().GetCurrentActivity().ToString() == this.screenType.ToString();
+    }
+  }
+}

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="HelocRepaymentDrawPeriod" table="ElliHelocRepaymentDrawPeriod" dynamic-update="true">
+    <id name="Id" column="ElliHelocRepaymentDrawPeriodId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="LoanProductData" column="ElliLoanProductDataId" />
+    <property name="Apr" />
+    <property name="IndexRatePercent" />
+    <property name="MarginRatePercent" />
+    <property name="MinimumMonthlyPaymentAmount" />
+    <property name="Year" />
+    <property name="DrawIndicator" />
+  </class>
+</hibernate-mapping>

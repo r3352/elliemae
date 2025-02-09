@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\ClientCommon.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10F25A08-F254-4983-A270-FEFA9118F8F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>ClientCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>2.0.1.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.SHDocVw">
+      <HintPath>lib\AxInterop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientSession">
+      <HintPath>lib\ClientSession.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="EMLoanUtils15">
+      <HintPath>lib\EMLoanUtils15.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Metrics">
+      <HintPath>lib\Elli.Metrics.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Outlook">
+      <HintPath>lib\Interop.Outlook.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Word">
+      <HintPath>lib\Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.Web.Services2" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SecurityManager">
+      <HintPath>lib\SecurityManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Server">
+      <HintPath>lib\Server.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIElements">
+      <HintPath>lib\UIElements.dll</HintPath>
+    </Reference>
+    <Reference Include="VersionInterface15">
+      <HintPath>lib\VersionInterface15.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>lib\itextsharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\Office\Interop\Excel\AppEvents.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\AppEvents_Event.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Application.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Range.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Sheets.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Workbook.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\WorkbookEvents.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\WorkbookEvents_Event.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Workbooks.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\_Application.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\_Workbook.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\_Worksheet.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\CustomLetterIFSExplorer.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\SignaturePointInfo.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\AuditFields.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\ContactFieldDialog.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\ContactLetterPanel.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\CustomLetterPanel.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\FieldDefinitionObj.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\ImportCustomFormUtil.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\ImportDialog.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\InsertFieldDialog.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\InsertOtherDialog.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\LetterSelectedEventArg.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\NewLetter.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\WordDlgsHandler.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\NativeWIN32.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\WordHandler.cs" />
+    <Compile Include="EllieMae\EMLite\CustomLetters\WordHandlerException.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\BizPartnerProvider.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\BizSearchContactInfoPage.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\BizSearchLoanInfoPage.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\BizSearchMorePage.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\BorrowerProvider.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\BorSearchContactInfoPage.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\BorSearchLoanInfoPage.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\ContactSearchMarketingPage.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\BorSearchMorePage.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\ClientContactSearchUtil.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\ContactSearchContext.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\ContactAdvancedSearch.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\ContactAdvancedSearchForm.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\ContactAssignment.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\ContactProvider.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\ContactQueryForm.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\ContactSearchPage.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\EMPrintSettings.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\ContactUtils.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\SMTPMailSettings.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\MailMergeEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\MailMergeEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\ContactDeletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\IBindingForm.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\MailMergeJobHandler.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\MailMergeJobParameters.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\MoreSearchForm.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\RxBusinessContact.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\SaveQueryForm.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\NewPhraseForm.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\Import\ContactImportDupOption.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\Import\ContactImportUtil.cs" />
+    <Compile Include="EllieMae\EMLite\ContactUI\Import\DupContactDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\AccessUtils.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Feature.cs" />
+    <Compile Include="EllieMae\EMLite\Common\CheckPoint.cs" />
+    <Compile Include="EllieMae\EMLite\Common\AppSecurity.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Constants.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ConventionalCountyLimitUtil.cs" />
+    <Compile Include="EllieMae\EMLite\Common\EFolderSetupFields.cs" />
+    <Compile Include="EllieMae\EMLite\Common\EMNetworkPwdMgr.cs" />
+    <Compile Include="EllieMae\EMLite\Common\IEncompassUser.cs" />
+    <Compile Include="EllieMae\EMLite\Common\IEncompassUserChannel.cs" />
+    <Compile Include="EllieMae\EMLite\Common\EncompassUserClient.cs" />
+    <Compile Include="EllieMae\EMLite\Common\NGSetupFields.cs" />
+    <Compile Include="EllieMae\EMLite\Common\CountyLimitUtil.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Messages.cs" />
+    <Compile Include="EllieMae\EMLite\Common\IHelp.cs" />
+    <Compile Include="EllieMae\EMLite\Common\IWorkArea.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ClientCommonUtils.cs" />
+    <Compile Include="EllieMae\EMLite\Common\VersionCompatibilityResult.cs" />
+    <Compile Include="EllieMae\EMLite\Common\VersionControl.cs" />
+    <Compile Include="EllieMae\EMLite\Common\WebLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\LastInputInfo.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Win32API.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Win64.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Properties\Resources.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Diagnostics\DiagnosticDetailForm.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Contact\CategoryCustomFieldsControl.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Contact\NoContextMenuTextBox.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Contact\RxBorrowerContact.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Contact\RxBorrowerSSN.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Contact\RxBorrowerSync.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\OutlookServices.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\BinaryObjectDownloader.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LockValidationStatusDropdownBox.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ThinThickBrowser.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ExplorerColumnSortOrder.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\SwitchedDatePicker.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\SwitchedStateZip.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FieldFilterEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FieldFilterEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ContactAdvancedSearchControl.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\RelatedLoanMatchDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ViewAdvSearchDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ContactGroupDropdownBox.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ContactGroupItem.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ContactInfoEditorH.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LockExtensionDropdownBox.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ExplorerColumn.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ExplorerListItem.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FileSystemBase.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FileFolderAction.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FileSystemEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FileSystemEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\CancelableFileSystemEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\CancelableFileSystemEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ExplorerFileFolderEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ExplorerFileFolderEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ExplorerListItemEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ExplorerListItemEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FileSystemExplorer.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ExplorerComboItem.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\SwitchedYesNo.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LinkedGUIDLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LockValidationStatusLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\EnhancedConditionOptionSelector.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FieldValuePicker.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FolderSelectionDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\IFileSystem.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\IFSExplorer.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\IFSExplorerBase.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ObjectTypeDropdownBox.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\SaveViewTemplateDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\CustomFieldEditor.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\AlertMessageLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ContactEmailLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ContactPhoneLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LoanAssociateLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LoanFolderLabel.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LockLabel.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LogRecordLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ObjectTypeEnum.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ObjectTypeLabel.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\PipelineAlertLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\PipelineMessageLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\EPassMessageDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LinkedLoanDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LoanXDBFieldDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\MessageDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\MessageDialogButtons.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\AsynchronousProcess2.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\IProgressFeedback2.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ProgressDialog2.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\StatusReport.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\StatusTrackingSelectorDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\EncompassLoginBrowser.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ThinThickForm.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\UpdateEmailAddress.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\VirtualFieldSelectForm.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\AdvanceSelect.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\InstanceSelectorDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\AlertMessageLabel.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ContactInfoEditor.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LayoutOrientation.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\CursorView.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\PopulateItemEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\SortItemsEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\PopulateItemEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\SortItemsEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\EMFormMenu.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FSExplorer.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\CmbBoxItem.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\AddEditFilterDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\AddParenthesisDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FieldFilterEditor.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\AdvancedSearchControl.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ReportFieldSelector.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\AddEditLoanFieldDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FindLoanFieldDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LoanFieldSelection.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LoanFieldSelectionControl.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\MilestoneDropdownBox.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\RateLockDropdownBox.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\CustomFieldsEditor.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\CustomFieldsEditorDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\BorrowerLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ContactGroupsLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FieldIDElement.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\MilestoneLabel.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\PipelineElement.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\PipelineElementData.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\PipelineImageLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\PropertyLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\RateLockLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\UserLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FileSystemEntryListItem.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\AlertDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ChangePasswordDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\CompileExceptionDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\DownloadManager.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\DownloadResult.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\DownloadStatus.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ErrorDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\RolePicker.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\TableLayoutColumnSelector.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\AsynchronousProcess.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\IProgressFeedback.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ProgressDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\TemplateSelectorForm.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\SimpleTemplateSelector.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\UserPicker.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\VersionUpdateResult.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\VersionUpdateForm.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ViewManagementDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ViewNameSelector.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\WebViewer.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\CursorGVDataProvider.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\PopulateGVItemEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\PopulateGVItemEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ZipcodeSelector.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ZipcodeSelectorDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\GridViewDataManager.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\GridViewFilterControlType.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\GridViewFilterManager.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\GridViewLayoutHelper.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\GridViewLayoutManager.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\GridViewReportFilterManager.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\IPrint.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\IRefreshContents.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewLayoutManager.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewProgressBar.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewCascadingSort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewTextSort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewShortCircuitSort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewTextCaseInsensitiveSort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewFieldIDSort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewMilestoneSort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewFileSystemEntrySort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewDateSort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewInt32Sort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewEnumSort`1.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewInt64Sort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewDoubleSort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewCurrencySort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewImageIndexSort.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ListViewSortManager.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\PipelineViewList.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\BizPartnerLoanReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\BizPartnerReportFieldFlags.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\BizPartnerReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\BorrowerLoanReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\BorrowerReportFieldFlags.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\BorrowerReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\GSECommitmentReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\CorrespondentTradeReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\CorrespondentMasterReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\MasterContractReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ReportFieldClientExtension.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\TpoSettingsReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\LoanReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\MbsPoolReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\SecurityTradeReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\TradeReportFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ZipCodeCityStateFormatter.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FileSystemEntryFormatter.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\FormProperties.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ReportFieldDefinitions\TradeAssignedGSECmtFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ReportFieldDefinitions\TradeAssignedMbsPoolFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ReportFieldDefinitions\TradeAssignedLoanFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ReportFieldDefinitions\TradeAssignedLoanTradeFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\ReportFieldDefinitions\TradeAssignedSecurityTradeFieldDefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Wizard\WizardBase.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Wizard\WizardItem.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Wizard\WizardItemWithHeader.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Forms\ProgressStatus.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Forms\AsynchronousProcessReport.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Forms\IProgressReportFeedback.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Forms\ProgressReportDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Controls\LoanSaveProgressDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Controls\ProgressImage.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Controls\RegionProgressBar.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Controls\EMWebBrowser.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Controls\EMHelpLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Controls\ThinThick\ThinThickBrowserManager.cs" />
+    <Compile Include="EllieMae\EMLite\Common\UI\Controls\ThinThick\ThinInThickCommand.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Trading\TradeManagementUtils.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\CommandBase.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\CommandContext.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\CommandFactory.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\ErrorCodes.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\IBrowser.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\ICommand.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\IRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\IResponse.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\PageRegistry.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\RequestBase.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\ResponseBase.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\ScriptRegistry.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\ThinPipelineInfo.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Responses\OpDialogResponse.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Responses\OpSessionIdGetResponse.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Responses\OpSimpleResponse.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Responses\OpFieldDialogResponse.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Responses\OpRxContactInfoResponse.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\OpMenuStateRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\MenuState.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\OpExportRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\OpSimpleRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\OpXmlRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Trading\OpCurrentOrArchivedRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Trading\CurrentOrArchived.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Trading\OpIdsSetRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Trading\OpRxContactInfoRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Trading\OpTradingScreenSetRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Pipeline\OpDuplicateLoanRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Pipeline\OpExcelHandlerRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Pipeline\OpMenuStatesRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Pipeline\MenuState.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Pipeline\OpOpenLoanFormRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Pipeline\OpPipelineViewRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Pipeline\OpProcessEPassUrlRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Pipeline\OpRebuildLoanRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Pipeline\OpServiceRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Pipeline\OpContactGuidRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Pipeline\OpStartConversationRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Pipeline\OpThinPipelineInfosRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Interaction\OpBusinessRuleFindFieldDialogShowDialogRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Interaction\OpCloseDialogRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Interaction\OpFieldSearchRuleOpenEditorRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Interaction\OpLoggingRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Requests\Interaction\OpSetHelpRequest.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Operation\IOperation.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Operation\OperationBase.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Operation\Location\IOperationLocator.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Operation\Location\OperationLocator.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Operation\Interfaces\IOpCommon.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Operation\Interfaces\IOpHelp.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Operation\Interfaces\IOpFieldSearchRuleEditor.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Operation\Interfaces\IOpLogging.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Operation\Interfaces\IOpPipeline.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Operation\Interfaces\IOpSessionManager.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Operation\Interfaces\IOpTrading.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Operation\Interfaces\IOpBusinessRuleFindFieldDialog.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Commands\CloseDialogCommand.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Commands\FindRulesCommand.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ThinThick\Commands\OpenDialogCommand.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ProductPricing\LoanLockUtils.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ProductPricing\ExternalAction.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ProductPricing\ProductPricingParser.cs" />
+    <Compile Include="EllieMae\EMLite\Common\ProductPricing\ProductPricingUtils.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Login\LoginContext.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Login\AppName.cs" />
+    <Compile Include="EllieMae\EMLite\Common\Login\LoginUtil.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\DeepLinkLauncher.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\DeepLinkType.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\DeepLinkFactory.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\LoanDefaultPage.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Opportunities.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Prospects.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\UnderwriterCenter.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Constants.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\DeepLinkHelper.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\DeepLinkURLHelper.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Extensions.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Contract\BaseDeepLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Contract\IDeepLink.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Context\AUSTrackingToolContext.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Context\LoanPageContext.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Context\PipelineContext.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Context\PipelineLoanContext.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Context\RepAndWarrantyTrackerContext.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Context\Contract\BaseLoanContext.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Context\Contract\IDeepLinkContext.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Activity\CloseLoanActivity.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Activity\PipelineCloseLoanActivity.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Activity\PreDeepLinkActivityFactory.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DeepLinking\Activity\Contract\IPreDeepLinkActivity.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\CreateTransactionRequestBody.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\Product.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\EntityRef.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\ClientEntity.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\DeliveryAction.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\DeliveryStatus.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\SubmissionType.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\AuditMessageStyle.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\DataDocsConstants.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\DataDocsServiceHelper.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\GetSubmissionsRequestBody.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\Filter.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\Term.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\SortOrderIndicator.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\Options.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\InvestorFields.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\Provider.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\CustomDataField.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\Loan.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\EntityRefs.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\CreateInvestorPackageRequestBody.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\PartnerPreferencesResponseBody.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\DelivertArtifact.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\DocumentSet.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\PartnerCollectionResponseBody.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\PartnerResponseBody.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\StackingTemplatesResponseBody.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\SubmissionStatus.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\SystemOptionsValidator.cs" />
+    <Compile Include="EllieMae\EMLite\Common\DataDocs\SystemOptionsValidatorResponse.cs" />
+    <Compile Include="EllieMae\EMLite\DataEngine\UnlockLoanDialog.cs" />
+    <Compile Include="EllieMae\EMLite\InputEngine\IFormScreen.cs" />
+    <Compile Include="EllieMae\EMLite\MainUI\LoanPropertiesDialog.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\EVaultRetrieve.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\PPEservice.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\Partner.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetPartnersCompletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetPartnersCompletedEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\DiagnosticsService.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\PerformanceSettings.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\PostDiagnosticsCompletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\PostDiagnosticsCompletedEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\PostPerformanceDataCompletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetPerformanceSettingsCompletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetPerformanceSettingsCompletedEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\EVaultRetrieveCredentials.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\SignedDocument.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\PackageDetails.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\LoanDetails.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\LoanCenterDocument.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetSignedDocumentListCompletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetSignedDocumentListCompletedEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetSignedDocumentCompletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetSignedDocumentCompletedEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetAuditDataCompletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetAuditDataCompletedEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\UpdateService.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\ReleaseInfo.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetUpdateVersionInfoCompletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetUpdateVersionInfoCompletedEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetUpdateVersionInfoExCompletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetUpdateVersionInfoExCompletedEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\ValidateUpdateCompletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetVersionHotfixesCompletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetVersionHotfixesCompletedEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetReleaseInfoCompletedEventHandler.cs" />
+    <Compile Include="EllieMae\EMLite\WebServices\GetReleaseInfoCompletedEventArgs.cs" />
+    <Compile Include="EllieMae\EMLite\Diagnostics\DDMDiagnosticsMode.cs" />
+    <Compile Include="EllieMae\EMLite\Diagnostics\DDMDiagnosticSession.cs" />
+    <Compile Include="EllieMae\EMLite\Diagnostics\DiagnosticsEnablementForm.cs" />
+    <Compile Include="EllieMae\EMLite\Diagnostics\DiagnosticsMode.cs" />
+    <Compile Include="EllieMae\EMLite\Diagnostics\DiagnosticSession.cs" />
+    <Compile Include="EllieMae\EMLite\Diagnostics\DiagnosticSubmissionForm.cs" />
+    <Compile Include="EllieMae\EMLite\Diagnostics\DiagnosticSubmissionProcess.cs" />
+    <Compile Include="EllieMae\EMLite\Diagnostics\DiagnosticSubmissionResultsForm.cs" />
+    <Compile Include="EllieMae\EMLite\Diagnostics\PerformancePublisher.cs" />
+    <Compile Include="EllieMae\EMLite\Diagnostics\PerformancePublisherDOCS.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\Amyuni.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\FieldQuickEditForm.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\FieldQuickEditorMode.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\FieldQuickEditor.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\QuickFieldDef.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\OutputFormNameMap.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\SecurityUtil.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\ConfirmDialog.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\EMListBox.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\IStructuredContentProvider.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\ITreeContentProvider.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\UserFormGroups.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\AIQCapsilon\AIQButtonHelper.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\AIQCapsilon\AIQValidationMessages.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\AIQCapsilon\AIQDecryptor.cs" />
+    <Compile Include="EllieMae\EMLite\ClientCommon\AIQCapsilon\AIQSoftwareInstall.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EllieMae\EMLite\ClientCommon\ConfirmDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ClientCommon\EMListBox.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ClientCommon\FieldQuickEditForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ClientCommon\FieldQuickEditor.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\Contact\CategoryCustomFieldsControl.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\Contact\NoContextMenuTextBox.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\Contact\RxBorrowerContact.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\Contact\RxBorrowerSSN.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\Contact\RxBorrowerSync.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\Diagnostics\DiagnosticDetailForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\Properties\Resources.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\AddEditFilterDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\AddEditLoanFieldDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\AddParenthesisDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\AdvancedSearchControl.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\AlertDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ChangePasswordDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\CompileExceptionDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ContactAdvancedSearchControl.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ContactInfoEditor.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ContactInfoEditorH.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\Controls\ThinThick\encompass\error.html" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\Controls\ThinThick\encompass\interaction.js" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\Controls\ThinThick\SamplePages\encompass\interaction.html" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\Controls\ThinThick\SamplePages\encompass\pipeline.html" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\Controls\ThinThick\SamplePages\encompass\trading.html" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\CursorView.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\CustomFieldEditor.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\CustomFieldsEditor.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\CustomFieldsEditorDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\DownloadManager.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\EMFormMenu.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\EncompassLoginBrowser.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\EnhancedConditionOptionSelector.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\EPassMessageDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ErrorDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\FieldFilterEditor.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\FieldValuePicker.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\FileSystemExplorer.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\FindLoanFieldDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\FolderSelectionDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\Forms\ProgressReportDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\FSExplorer.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\InstanceSelectorDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\LinkedLoanDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\LoanFieldSelectionControl.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\LoanXDBFieldDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\LockExtensionDropdownBox.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\LockValidationStatusDropdownBox.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\MessageDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\MilestoneDropdownBox.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ObjectTypeDropdownBox.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ProgressDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ProgressDialog2.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\RateLockDropdownBox.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\RelatedLoanMatchDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ReportFieldSelector.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\RolePicker.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\SaveViewTemplateDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\StatusReport.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\StatusTrackingSelectorDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\SwitchedDatePicker.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\SwitchedStateZip.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\TableLayoutColumnSelector.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\TemplateSelectorForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ThinThickBrowser.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ThinThickForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\UpdateEmailAddress.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\UserPicker.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\VersionUpdateForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ViewAdvSearchDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ViewManagementDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ViewNameSelector.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\VirtualFieldSelectForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\WebViewer.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\Wizard\WizardBase.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\Wizard\WizardItem.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\Wizard\WizardItemWithHeader.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Common\UI\ZipcodeSelectorDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\BizSearchContactInfoPage.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\BizSearchLoanInfoPage.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\BizSearchMorePage.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\BorSearchContactInfoPage.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\BorSearchLoanInfoPage.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\BorSearchMorePage.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\ContactAdvancedSearch.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\ContactAdvancedSearchForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\ContactAssignment.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\ContactQueryForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\ContactSearchMarketingPage.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\ContactSearchPage.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\Import\DupContactDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\MoreSearchForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\NewPhraseForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\RxBusinessContact.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\ContactUI\SaveQueryForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\CustomLetters\AuditFields.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\CustomLetters\ContactFieldDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\CustomLetters\ContactLetterPanel.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\CustomLetters\CustomLetterPanel.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\CustomLetters\ImportDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\CustomLetters\InsertFieldDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\CustomLetters\InsertOtherDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\CustomLetters\NewLetter.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\DataEngine\UnlockLoanDialog.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Diagnostics\DiagnosticsEnablementForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Diagnostics\DiagnosticSubmissionForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\Diagnostics\DiagnosticSubmissionResultsForm.resx" />
+    <EmbeddedResource Include="EllieMae\EMLite\MainUI\LoanPropertiesDialog.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

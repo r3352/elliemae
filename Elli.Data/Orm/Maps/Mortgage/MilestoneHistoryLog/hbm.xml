@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="MilestoneHistoryLog" extends="LogRecord" dynamic-update="true" discriminator-value="25">
+    <join table="ElliMilestoneHistoryLog">
+      <key column="ElliLogRecordId" />
+    <property name="MilestoneTemplate" />
+    <property name="DateAddedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+    <property name="AddedByUserId" />
+    <property name ="ChangeReason" />
+      <property name="RecordXML" type="Elli.Data.UserTypes.XmlUserType, Elli.Data" />
+    </join>
+  </subclass>
+</hibernate-mapping>
+

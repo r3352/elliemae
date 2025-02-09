@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\Ellie Mae\Encompass\Interop.CDIntfEx.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C40C894-4A6D-4BBE-87CB-CFD51ABB1C05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Interop.CDIntfEx</AssemblyName>
+    <ApplicationVersion>2.1.0.0</ApplicationVersion>
+    <RootNamespace>CDIntfEx</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="stdole" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="acRtfExportOptions.cs" />
+    <Compile Include="acHtmlExportOptions.cs" />
+    <Compile Include="acExcelExportOptions.cs" />
+    <Compile Include="acJPegExportOptions.cs" />
+    <Compile Include="ICDIntfEx.cs" />
+    <Compile Include="_DCDIntfEvents.cs" />
+    <Compile Include="CDIntfExClass.cs" />
+    <Compile Include="_DCDIntfEvents_Event.cs" />
+    <Compile Include="_DCDIntfEvents_StartDocPreEventHandler.cs" />
+    <Compile Include="_DCDIntfEvents_StartDocPostEventHandler.cs" />
+    <Compile Include="_DCDIntfEvents_EndDocPreEventHandler.cs" />
+    <Compile Include="_DCDIntfEvents_EndDocPostEventHandler.cs" />
+    <Compile Include="_DCDIntfEvents_StartPageEventHandler.cs" />
+    <Compile Include="_DCDIntfEvents_EndPageEventHandler.cs" />
+    <Compile Include="_DCDIntfEvents_EnabledPreEventHandler.cs" />
+    <Compile Include="CDIntfEx.cs" />
+    <Compile Include="IDIDocument.cs" />
+    <Compile Include="DocumentClass.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="_DCDIntfEvents_SinkHelper.cs" />
+    <Compile Include="_DCDIntfEvents_EventProvider.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

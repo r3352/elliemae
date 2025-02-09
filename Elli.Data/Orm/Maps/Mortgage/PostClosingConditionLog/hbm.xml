@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="PostClosingConditionLog" extends="LogRecord" dynamic-update="true" discriminator-value="17">
+    <join table="ElliPostClosingConditionLog">
+      <key column="ElliLogRecordId" />
+      <property name="Recipient" />
+      <property name="DateSentUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="SentBy" />
+      <property name="DateClearedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="ClearedBy" />
+
+      <property name="Title" type="StringClob" />
+      <property name="Description" type="StringClob" />
+      <property name="Details" type="StringClob" />
+      <property name="PairId" />
+      <property name="DaysTillDue" />
+      <property name="RequestedFrom" />
+      <property name="DateAddedUtc"  type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="AddedBy" />
+      <property name="Source" type="StringClob" />
+      <property name="DateExpected" />
+      <property name="DateRequestedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="RequestedBy" />
+      <property name="DateRerequestedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="RerequestedBy" />
+      <property name="DateReceived" />
+      <property name="ReceivedBy" />
+      <property name="IsInternalIndicator" />
+      <property name="IsExternalIndicator" />
+    </join>
+  </subclass>
+</hibernate-mapping>

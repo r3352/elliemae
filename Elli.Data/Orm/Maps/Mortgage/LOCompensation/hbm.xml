@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="ElliLOCompensation" table="ElliLOCompensation" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="WhoPaidCompensation" />
+    <property name="LoanOriginatorName" />
+    <property name="PlanName" />
+    <property name="TriggerField" />
+    <property name="PlanDate" />
+    <property name="BasePlanRateForBroker" />
+    <property name="BasePlanAdditonalAmountForBroker" />
+    <property name="BasePlanAmountForBroker" />
+    <property name="BasePlanMinimumAmountForBroker" />
+    <property name="BasePlanMaximumAmountForBroker" />
+    <property name="AdjustedPlanRateForBroker" />
+    <property name="AdjustedPlanAdditonalAmountForBroker" />
+    <property name="AdjustedPlanAmountForBroker" />
+    <property name="NetAdjustedAmountForBroker" />
+    <property name="AdjustmentDescription" />
+    <property name="RoundingMethod" />
+    <property name="LoanAmountType" />
+    <property name="LoanOriginatorID" />
+    <property name="LoanOriginatorNameForOfficer" />
+    <property name="PlanNameForOfficer" />
+    <property name="RoundingMethodForOfficer" />
+    <property name="LoanAmountTypeForOfficer" />
+    <property name="BasePlanRateForOfficer" />
+    <property name="BasePlanAdditonalAmountForOfficer" />
+    <property name="BasePlanAmountForOfficer" />
+    <property name="BasePlanMinimumAmountForOfficer" />
+    <property name="BasePlanMaximumAmountForOfficer" />
+    <property name="BonusCompRate" />
+    <property name="BonusCompAdditonalAmount" />
+    <property name="BonusCompAmount" />
+    <property name="AdjustedPlanRateForOfficer" />
+    <property name="AdjustedPlanAdditonalAmountForOfficer" />
+    <property name="AdjustedPlanAmountForOfficer" />
+    <property name="NetAdjustedAmountForOfficer" />
+    <property name="AdjustmentDescriptionForOfficer" />
+    <property name="LoanOriginatorIDForOfficer" />
+    <property name="LastAppliedDate" />
+    <property name="LastAppliedDateTime" />
+  </class>
+</hibernate-mapping>

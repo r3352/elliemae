@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="LoanProductData" table="ElliLoanProductData" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <bag name="prepaymentPenalties" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanProductDataId" />
+      <one-to-many class="PrepaymentPenalty"/>
+    </bag>
+    <!--arm-->
+    <property name="ApplyLifeCapLowIndicator" />
+    <property name="FloorVerbiage" />
+    <property name="IndexCurrentValuePercent" />
+    <property name="IndexDate" />
+    <property name="IndexMarginPercent" />
+    <property name="IndexMarginPercentUI" />
+    <property name="ArmIndexType" />
+    <property name="QualifyingRatePercent" />
+    <property name="RateAdjustmentLifetimeCapPercent" />
+    <property name="FloorBasis" />
+    <property name="IndexLookbackPeriod" />
+    <!--Buydown-->
+    <bag name="buydowns" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanProductDataId" />
+      <one-to-many class="Buydown"/>
+    </bag>
+    <property name="RemainingBuydownAmount" />
+    <property name="TotalSubsidyAmount" />
+    <!--Heloc-->
+    <bag name="helocRepaymentDrawPeriods" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliLoanProductDataId" />
+      <one-to-many class="HelocRepaymentDrawPeriod"/>
+    </bag>
+	<bag name="helocHistoricalIndexYearSettings" cascade="all-delete-orphan" inverse="true" access="field">
+		  <key column="ElliLoanProductDataId" />
+		  <one-to-many class="HelocHistoricalIndexYearSetting"/>
+	</bag>
+    <property name="DrawPeriodMonthsCount" />
+    <property name="InitialAdvanceAmount" />
+    <property name="MinimumAdvanceAmount" />
+    <property name="MinimumPaymentAmount" />
+    <property name="MinimumPaymentPercent" />
+    <property name="MinimumPaymentUpbPercent" />
+    <property name="MinimumPaymentUpbAmount" />
+    <property name="MinimumPaymentLessThanAmount" />
+    <property name="MinimumRepayPeriodPaymentPercent" />
+    <property name="MinimumDrawPeroidPaymentPercent" />    
+    <property name="OverLimitCharge" />
+    <property name="OverLimitReturnCharge" />
+    <property name="ReleaseRecoringCharge" />
+    <property name="RepayPeriodMonthsCount" />
+    <property name="ReturnedCheckCharge" />
+    <property name="ReturnedCheckChargeRatePercent" />
+    <property name="ReturnedCheckMaxCharge" />
+    <property name="ReturnedCheckMinCharge" />
+    <property name="StopPaymentCharge" />
+    <property name="TerminationFeeAmount" />
+    <property name="TerminationPeriodMonthsCount" />
+    <property name="WireFee" />
+    <property name="AnnualFeeNeededAmount" />
+    <property name="HelocPeriodTemplateName" />
+    <property name="MinimumAllowableApr" />
+    <property name="Discounted" />
+    <property name="DiscountedRate" />
+    <property name="ThirdPartyFeeFromAmount" />
+    <property name="ThirdPartyFeeToAmount" />
+    <property name="HelocPaymentBasis" />
+    <property name="HelocPaymentBasisType" />
+    <property name="HelocRate" />
+    <property name="HelocCalcSign" />
+    <property name="HelocPercent" />
+    <property name="HelocInterestOnly" />
+    <property name="HelocFractionBalancedividend" />
+    <property name="HelocFractionBalancedivisor" />
+    <property name="HelocPercentageofBalance" />
+    <property name="HelocQualifyingBalance" />
+    <property name="HelocQualifyingTerm" />
+    <property name="HelocForceMinimumPayment" />
+
+
+    <property name="HelocInitialPaymentBasis" />
+    <property name="HelocInitialPaymentBasisType" />
+    <property name="HelocInitialRate" />
+    <property name="HelocInitialCalcSign" />
+    <property name="HelocInitialPercent" />
+    <property name="HelocInitialPI" />
+    <property name="HelocInitialFractionBalancedividend" />
+    <property name="HelocInitialFractionBalancedivisor" />
+    <property name="HelocInitialPercentageofBalance" />
+    <property name="HelocInitialBalanceUsed" />
+    <property name="HelocInitialTerm" />
+    <property name="HelocInitialForceMinimumPayment" />
+    <property name="HelocNewFinancingNotLinkedDrawAmount" />
+    <property name="HelocNewFinancingNotLinkedCreditLimit"/>
+    <property name="HelocInitPerDiemCalculationMethodType"/>
+    <property name="AmountApplyToDownPayment"/>
+    <property name="HELOCLienPosition"/>
+
+	<property name="HelocDailyPeriodicRate" />
+  <property name="HelocOmit366DayLeapYearIndicator" />
+	<property name="HelocMonthlyPeriodicRate" />
+	<property name="HelocPeriodicRateIndicator" />
+	<property name="HelocMinimumInitialAdvanceRequiredIndicator" />
+	<property name="HelocMinimumInitialAdvancePercent" />
+	<property name="HelocMinimumSubsequentAdvanceAmount" />
+	<property name="HelocMinimumSubsequentAdvancePercent" />
+	<property name="HelocEscrowAccountIndicator" />
+	<property name="HelocInstallmentLoanOptionIndicator" />
+	<property name="HelocDrawPaymentBasis" />
+	<property name="HelocDrawPaymentBasisType" />
+	<property name="HelocDrawFractionBalancedividend" />
+	<property name="HelocDrawFractionBalancedivisor" />
+	<property name="HelocDrawExtensionMonths" />
+	<property name="HelocRepaymentBasis" />
+	<property name="HelocRepaymentBasisType" />
+	<property name="HelocRepaymentInterestOnlyIndicator" />
+	<property name="HelocRepaymentFractionBalancedividend" />
+	<property name="HelocRepaymentFractionBalancedivisor" />
+	<property name="HelocRepaymentMinPayment" />
+	<property name="HelocMinInstallmentLoanAmount" />
+	<property name="HelocMaxOpenInstallmentLoans" />
+	<property name="HelocInstallmentLoanTermYearFrom" />
+	<property name="HelocInstallmentLoanTermYearTo" />
+	<property name="HelocInstallmentLoanFinanceCharge" />
+	<property name="HelocInstallmentLoanMargin" />
+	<property name="HelocInstallmentLoanMaxAPR" />
+	<property name="HelocInstallmentLoanMinAPR" />
+	<property name="HelocInstallmentLoanAPR" />
+	<property name="HelocAutoDebitFeature" />
+	<property name="HelocAutoDebitDiscount" />
+	<property name="HelocPaperBillingFee" />
+	<property name="HelocPhotocopyFee" />
+	<property name="HelocResearchFee" />
+	<property name="HelocRefundableFee" />
+	<property name="HelocHistoricalTableName" />
+	<property name="HelocStandardHistoricalTableIndicator" />	  
+	  
+	  
+	<property name="HelocTARepaymentTermEndBy" />
+	<property name="HelocTAAPRCharged" />
+	<property name="HelocTAFeesCharged" />
+	<property name="HelocTAIntroRateAppliedOn" />
+	<property name="HelocTAOverLimitChargeOption" />  
+	<property name="HelocTADrawCheckIndicator" /> 
+	<property name="HelocTARequestByPhoneIndicator" />  
+	<property name="HelocTAWrittenAuthorizationIndicator" />  
+	<property name="HelocTACreditCardIndicator" />  
+	<property name="HelocTAOverdraftProtectionIndicator" />  
+	<property name="HelocTARequestAdvanceInPersonIndicator" />  
+	<property name="HelocTARequestAdvanceViaInternetIndicator" />  
+	<property name="HelocTARequestAdvanceInPersonLocation" />  
+	<property name="HelocTARequestAdvanceViaInternetURL" />  
+	<property name="HelocTAAPPRoundingOption" />  
+	<property name="HelocTADailyBalanceType" />  
+	<property name="HelocTAIndexRefDateOption" type="StringClob"/>  
+	<property name="HelocTAPeriodicRateAdjDayOption" type="StringClob"/>  
+	<property name="HelocTAAPPChangeOption" />  
+	<property name="HelocTAPeriodicCapAppliedToAdvancePeriod" />  
+	<property name="HelocTAPeriodicCapAppliedToRepaymentPeriod" />  
+	<property name="HelocTADailyRateRoundingOption" />  
+	<property name="HelocTAInstallmentLoanPeriodicRateRoundingPercent" />  
+	<property name="HelocTAInstallmentLoanDiscountedAPRIndicator" />  
+	<property name="HelocTAInstallmentLoanDiscountWord" />  
+	<property name="HelocTAInstallmentIndexRefDateOption" type="StringClob"/>  
+	<property name="HelocTAInstallmentLoanTerminationMethod" type="StringClob"/>  
+	<property name="HelocTAInstallmentLoanPaymentAppliedMethod" type="StringClob"/>  
+	<property name="HelocTARequireRepayIndicator" />  
+	<property name="HelocTALenderToPay3rdPartyCost" type="StringClob"/>  
+	<property name="HelocTARightToSetoffIndicator" />  
+	<property name="HelocTAALNonDepositoryIndicator" />  
+	<property name="HelocTACreditCardMisuseNotificationAddr" />  
+	<property name="HelocTACreditCardMisuseNotificationPhoneNumber" />
+	<property name="HelocTACreditCardMisuseNotificationWebAddr" />  
+	<property name="HelocTACreditCardMisuseNotificationEmailAddr" />
+	<property name="HelocHistoricalTableDayIndex" />
+  <property name="HelocHistoricalTableMonthIndex" />
+	<property name="HelocHistoricalTableDefaultMargin" />
+  <property name="HelocHistoricalTableUseAlternateSchedule" />
+  <property name="HelocHistoricalTableIndexRatePrecision" />
+  <property name="HelocPropertyInsuranceIndicator" />
+  <property name="HelocCollectInterimInterestIndicator" />
+  <property name ="AgreementAmmendsRestatesIndicator" />
+	  
+    <!--LoanFeatures-->
+    <property name="BalloonIndicator" />
+    <property name="BalloonLoanMaturityTermMonthsCount" />
+    <property name="EscrowWaiverIndicator" />
+    <property name="FnmProductPlanIdentifier" />
+    <property name="FreOfferingIdentifier" />
+    <property name="FullPrepaymentPenaltyOptionType" />
+    <property name="GseProjectClassificationType" />
+    <property name="GsePropertyType" />
+    <property name="LienPriorityType" />
+    <property name="LoanDocumentationType" />
+    <property name="LoanRepaymentType" />
+    <property name="LoanScheduledClosingDate" />
+    <property name="BorrowerEstimatedClosingDate" />
+    <property name="MiCoveragePercent" />
+    <property name="NegativeAmortizationLimitPercent" />
+    <property name="PaymentFrequencyType" />
+    <property name="PrepaymentPenaltyIndicator" />
+    <property name="PrepaymentPenaltyVerbiage" />
+    <property name="ProductName" />
+    <property name="ScheduledFirstPaymentAdjustmentDate" />
+    <property name="ScheduledFirstPaymentDate" />
+    <property name="TimelyPaymentRateReductionPercent" />
+    <property name="TimelyPaymentRewards" />
+    <property name="LenderRepresentative" />
+    <property name="LenderRepresentativeFirstLastName" />
+    <property name="LenderRepresentativeEmailAddress" />
+    <property name="LenderRepresentativeWorkPhone" />
+    <property name="LenderRepresentativeCellPhone" />
+    <property name="LenderRepresentativeRoleId" />
+    <property name="LenderRepresentativeUserId" />
+    <property name="LenderRepresentativeJobTitle" />
+    <property name="LenderRepresentativeUserType" />
+    <!--nmls-->
+    <property name="BranchManagerNmlsId" />
+    <property name="BranchLocationNmlsId" />
+    <property name="NmlsLoanType" />
+    <property name="NmlsFirstMortgageType" />
+    <property name="NmlsDocumentationType" />
+    <property name="NmlsOptionARMIndicator" />
+    <property name="NmlsPiggyBackOrFundedHELOCIndicator" />
+    <property name="NmlsRefinancePurposeType" />
+    <property name="NmlsProductionSoldToType" />
+    <property name="NmlsReverseMortgageType" />
+    <!--Prepayment Penalty-->
+    <property name="PrepaymentPenaltyPercent" />
+    <property name="PrepaymentPenaltyTermMonthsCount" />
+    <property name="MonthsAppliedToPrepaymentPenaltyFeeCount" />
+    <property name="PrepaymentPenaltyBasedOn" />
+    <property name="HardPrepaymentPenaltyMonths" />
+    <!--Adjustments-->
+    <property name="PaymentAdjustmentDurationMonthsCount" />
+    <property name="PaymentAdjustmentPeriodicCapPercent" />
+    <property name="RateAdjustmentDurationMonthsCount" />
+    <property name="RateAdjustmentPercent" />
+    <property name="RateAdjustmentPercentUI" />
+    <property name="RateAdjustmentSubsequentCapPercent" />
+    <property name="RateAdjustmentSubsequentCapPercentUI" />
+    <property name="SubsequentRateAdjustmentMonthsCount" />
+    <!--REG Z-->
+    <property name="ArmDisclosureType" />
+    <property name="FloorPercent" />
+    <property name="FloorPercentUI" />
+    <property name="RoundPercent" />
+    <property name="RoundType" />
+    <property name="MaxLifeInterestCapPercent" />
+    <property name="MaxLifeInterestCapPercentUI" />
+    <!--NewHud-->
+    <property name="MaximumMonthlyPayment" />
+    <!--FREDDIE_MAC-->
+    <property name="ConvertibleIndicator" />
+    <property name="FreddieMacArmIndexType" />
+    <property name="ParticipationFees" />
+    <property name="TransactionFees" />
+    <!--nmls-->
+    <property name="InitialApplicationAmount" />
+    <property name="NetInitialAndFinal" />
+    <property name="InquiryOrPreQualificationIndicator" />
+    <property name="OralRequestForExtensionOfCreditIndicator" />
+    <property name="ExcludeLoanFromNMLSReportIndicator" />
+    <property name="NmlsPropertyType" />
+    <property name="NmlsLienStatus" />
+
+    <property name="LoanOriginatorRepresentative" />
+    <property name="LoanOriginatorCurrentAssignedTitle" />
+    <property name="LoanOriginatorCurrentAssignedUserId" />
+    <property name="LoanOriginatorCurrentAssignedCellPhone" />
+    <property name="LenderEsignerRepresentative" />
+    <property name="LenderEsignerCurrentAssignedUserId" />
+    <property name="LenderEsignerCurrentAssignedCellPhone" />
+    <property name="BrokerRepresentative" />
+    <property name="BrokerCurrentAssignedUserId" />
+    <property name="UsdaEsignerRepresentative" />
+    <property name="UsdaCurrentAssignedEmail" />
+    <property name="UsdaCurrentAssignedUserId" />
+    <property name="FhaVaEsignerRepresentative" />
+    <property name="FhaVaEsignerCurrentAssignedEmail" />
+    <property name="FhaVaEsignerCurrentAssignedUserId" />
+    <property name="FhaVaEsignerCurrentAssignedCellPhone" />
+    <property name="FhaVaMortgageEsignerRepresentative" />
+    <property name="FhaVaMortgageEsignerCurrentAssignedEmail" />
+    <property name="FhaVaMortgageEsignerCurrentAssignedTitle" />
+    <property name="FhaVaMortgageEsignerCurrentAssignedUserId" />
+    <property name="FhaVaMortgageEsignerCurrentAssignedWorkPhone" />
+    <property name="FhaVaMortgageEsignerCurrentAssignedCellPhone" />
+    <property name="CommitmentIssuedByEsignerRepresentative" />
+    <property name="CommitmentIssuedByEsignerCurrentAssignedEmail" />
+    <property name="CommitmentIssuedByEsignerCurrentAssignedTitle" />
+    <property name="CommitmentIssuedByEsignerCurrentAssignedUserId" />
+    <property name="CommitmentIssuedByEsignerCurrentAssignedWorkPhone" />
+    <property name="CommitmentIssuedByEsignerCurrentAssignedCellPhone" />
+
+    <property name="LenderRepresentativeCustomizeIndicator" />
+    <property name="LoanOriginatorEsignerCustomizeIndicator" />
+    <property name="LenderEsignerCustomizeIndicator" />
+    <property name="BrokerEsignerCustomizeIndicator" />
+    <property name="UsdaEsignerCustomizeIndicator" />
+    <property name="FhaVaEsignerCustomizeIndicator" />
+    <property name="FhaVaMortgageeEsignerCustomizeIndicator" />
+    <property name="CommitmentIssuedByEsignerCustomizeIndicator" />
+    <property name="UsdaEsignerCurrentAssignedWorkPhone" />
+    <property name="UsdaEsignerCurrentAssignedCellPhone" />
+    <property name="LoanOriginatorEsignerRoleId" />
+    <property name="LenderEsignerRoleId" />
+    <property name="BrokerEsignerRoleId" />
+    <property name="UsdaEsignerRoleId" />
+    <property name="FhaVaEsignerRoleId" />
+    <property name="FhaVaMortgageeEsignerRoleId" />
+    <property name="CommitmentIssuedByEsignerRoleId" />
+    <property name="LoanOriginatorEsignerUserType" />
+    <property name="LenderEsignerUserType" />
+    <property name="BrokerEsignerUserType" />
+    <property name="UsdaEsignerUserType" />
+    <property name="FhaVaEsignerUserType" />
+    <property name="FhaVaMortgageeEsignerUserType" />
+    <property name="CommitmentIssuedByEsignerUserType" />
+    <property name="HelocQualifyingPaymentAmount" /> 
+	  <property name="MnStatutesIndicator" />
+    
+  </class>
+</hibernate-mapping>
+

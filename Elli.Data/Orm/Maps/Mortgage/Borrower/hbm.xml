@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Borrower" table="ElliBorrower" dynamic-update="true">
+    <id name="Id" column="ElliBorrowerId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Application" column="ElliApplicationId" not-null="true" />
+    <property name="BorrowerIndex" not-null="true" />
+    <property name="AgeAtApplicationYearsCount" />
+    <property name="AltId" />
+    <property name="ApplicantType" />
+    <property name="BirthDate" />
+    <property name="CaivrsIdentifier" />
+    <property name="DependentsAgesDescription" />
+    <property name="DependentCount" />
+    <property name="EmailAddressText" />
+    <property name="FirstName" />
+    <property name="ApplicationTakenMethodType" />
+    <property name="IsEthnicityBasedOnVisual" />
+    <property name="IsRaceBasedOnVisual" />
+    <property name="IsSexBasedOnVisual" />
+    <property name="HmdaOtherHispanicLatinoOrigin" />
+    <property name="HmdaAmericanIndianTribe" />
+    <property name="HmdaOtherAsianRace" />
+    <property name="HmdaOtherPacificIslanderRace" />
+    <property name="HmdaNoCoApplicantIndicator" />
+    <property name="HmdaGenderType" />
+    <property name="HmdaEthnicityType" />
+    <property name="HmdaRefusalIndicator" />
+    <property name="HmdaAmericanIndianIndicator" />
+    <property name="HmdaAsianIndicator" />
+    <property name="HmdaAfricanAmericanIndicator" />
+    <property name="HmdaPacificIslanderIndicator" />
+    <property name="HmdaWhiteIndicator" />
+    <property name="HmdaNotProvidedIndicator" />
+    <property name="HmdaNotApplicableIndicator" />
+    <property name="HmdaMexicanIndicator" />
+    <property name="HmdaPuertoRicanIndicator" />
+    <property name="HmdaCubanIndicator" />
+    <property name="HmdaHispanicLatinoOtherOriginIndicator" />
+    <property name="HmdaAsianIndianIndicator" />
+    <property name="HmdaChineseIndicator" />
+    <property name="HmdaFilipinoIndicator" />
+    <property name="HmdaJapaneseIndicator" />
+    <property name="HmdaKoreanIndicator" />
+    <property name="HmdaVietnameseIndicator" />
+    <property name="HmdaAsianOtherRaceIndicator" />
+    <property name="HmdaNativeHawaiianIndicator" />
+    <property name="HmdaGuamanianOrChamorroIndicator" />
+    <property name="HmdaSamoanIndicator" />
+    <property name="HmdaPacificIslanderOtherIndicator" />
+    <property name="Hmda2003OtherRaceNationalOriginDescription" />
+    <property name="Hmda2003RaceNationalOriginType" />
+    <property name="HomePhoneNumber" />
+    <property name="WorkPhoneNumber" />
+    <property name="LastName" />
+    <property name="MiddleName" />
+    <property name="FirstNameWithMiddleName" />
+    <property name="LastNameWithSuffix" />
+    <property name="FullNameWithSuffix" />
+    <property name="Fannie_FirstName" />
+    <property name="Fannie_MiddleName" />
+    <property name="MaritalStatusType" />
+    <property name="SchoolingTermYears" />
+    <property name="SuffixToName" />
+    <property name="TaxIdentificationIdentifier" />
+    <property name="MobilePhone" />
+    <property name="TransactionPurposeDescription" />
+    <property name="ValidDaysForConsentCount" />
+    <property name="ExperianCreditScore" />
+    <property name="MiddleFicoScore" />
+    <property name="TransUnionScore" />
+    <property name="EquifaxScore" />
+    <property name="MinFicoScore" />
+    <property name="TotalMonthlyIncomeAmount" />
+    <property name="BaseMonthlyIncomeAmount" />
+    <property name="OtherMonthlyIncomeAmount" />
+    <property name="OtherSumAmount" />
+    <property name="PersonIncomeFrequencyType" />
+    <property name="PersonIncomeAmount" />
+    <property name="PersonMonthlyIncome" />
+    <property name="PersonHoursPerWeek" />
+    <property name="LpdGsa" />
+    <property name="MailingAddressSameAsPresentIndicator" />
+    <property name="AliasName" type="StringClob" />
+    <property name="URLAAliasName" type="StringClob"  />
+    <property name="PowerOfAttorneyName" />
+    <property name="AuthorizedToSignIndicator" />
+    <property name="PowerOfAttorneyTitleDescription" />
+    <property name="PersonFaxNumber" />
+    <property name="PositiveCashFlow" />
+    <property name="WorkEmailAddress" />
+    <property name="NoCoApplicantIndicator" />
+    <property name="NoCoApplicantEthnicityIndicator" />
+    <property name="NoCoApplicantSexIndicator" />
+    <property name="BorrowerType" />
+    <property name="No3rdPartyEmailIndicator" />
+    <property name="BorrowerConsentRequestDate" />
+    <property name="HmdaGendertypeFemaleIndicator" />
+    <property name="HmdaGendertypeMaleIndicator" />
+    <property name="HmdaGendertypeDoNotWishIndicator" />
+    <property name="HmdaGendertypeNotApplicableIndicator" />
+    <property name="HmdaEthnicityDoNotWishIndicator" />
+    <property name="HmdaEthnicityHispanicLatinoIndicator" />
+    <property name="HmdaEthnicityNotHispanicLatinoIndicator" />
+    <property name="HmdaEthnicityNotApplicableIndicator" />
+    <property name="HmdaRaceReportedField1" />
+    <property name="HmdaRaceReportedField2" />
+    <property name="HmdaRaceReportedField3" />
+    <property name="HmdaRaceReportedField4" />
+    <property name="HmdaRaceReportedField5" />
+    <property name="HmdaEthnicityReportedField1" />
+    <property name="HmdaEthnicityReportedField2" />
+    <property name="HmdaEthnicityReportedField3" />
+    <property name="HmdaEthnicityReportedField4" />
+    <property name="HmdaEthnicityReportedField5" />
+    <property name="HmdaEthnicityReportedFields" type="StringClob" />
+    <property name="HmdaRaceReportedFields" type="StringClob" />
+    <property name="HmdaEthnicityInfoNotProvided" />
+    <property name="HmdaRaceInfoNotProvided" />
+    <property name="HmdaSexInfoNotProvided" />
+    <property name="HmdaRaceDoNotWishProvideIndicator" />
+    
+    <!--Declarations-->
+    <property name="CitizenshipResidencyType" />
+    <property name ="Urla2020CitizenshipResidencyType"/>
+    <property name="OutstandingJudgementsIndicator" />
+    <property name="BankruptcyIndicator" />
+    <property name="PropertyForeclosedPastSevenYearsIndicator" />
+    <property name="PartyToLawsuitIndicator" />
+    <property name="LoanForeclosureOrJudgementIndicator" />
+    <property name="PresentlyDelinquentIndicator" />
+    <property name="AlimonyChildSupportObligationIndicator" />
+    <property name="BorrowedDownPaymentIndicator" />
+    <property name="CoMakerEndorserOfNoteIndicator" />
+    <property name="IntentToOccupyIndicator" />
+    <property name="HomeownerPastThreeYearsIndicator" />
+    <property name="PriorPropertyUsageType" />
+    <property name="PriorPropertyTitleType" />
+    <property name="DeclarationsKIndicator" />
+    <property name="DeclarationsJIndicator" />
+    <property name="FreddieAlienStatus" />
+   
+    <!--VA / FHA Borrower-->
+    <property name="VaFederalTaxAmount" />
+    <property name="VaOtherAmount" />
+    <property name="VaRetirementAmount" />
+    <property name="VaStateTaxAmount" />
+    <property name="VaTotalIncomeDeductionsAmount" />
+    <property name="VaNetTakeHomePayAmount" />
+    <property name="VaOtherNetIncomeAmount" />
+    <property name="VaTotalNetIncomeAmount" />
+    <property name="VaMedianCreditScore" />
+    <!--Summary-->
+    <property name="TotalMonthlyIncomeMinusNetRentalAmount" />
+    <property name="TotalPresentHousingExpenseAmount" />
+    <property name="SubtotalLiquidAssetsMinusGiftAmount" />
+    <property name="TotalLiabilitiesBalanceAmount" />
+    <property name="FreddieMacPerson1" />
+    <property name="FreddieMacPerson2" />
+    <property name="PoaSignatureText" />
+    <property name="VestingTrusteeOfType" />
+    <!--HUD Home Improvement-->
+    <property name="NearestRelativeRelationship" />
+    <property name="BankAccountNumber" />
+    <property name="BankAccountType" />
+    <property name="BankContactAddress" />
+    <property name="BankContactCity" />
+    <property name="BankContactName" />
+    <property name="BankContactPostalCode" />
+    <property name="BankContactState" />
+    <property name="NearestRelativeAddress" />
+    <property name="NearestRelativeCity" />
+    <property name="NearestRelativeName" />
+    <property name="NearestRelativePhone" />
+    <property name="NearestRelativePostalCode" />
+    <property name="NearestRelativeState" />
+    <property name="NearestRelativeCountry" />
+    <property name="NearestRelativeForeignAddressIndicator" />
+    <!-- Credit Info-->
+    <property name="EquifaxCreditScoreForDisclosure" />
+    <property name="EquifaxCreditScoreRanksPercent" />
+    <property name="EquifaxDatePulled" />
+    <property name="EquifaxMaterialTermsCreditByScore" />
+    <property name="EquifaxKeyFactor1" type="StringClob" />
+    <property name="EquifaxKeyFactor2" type="StringClob" />
+    <property name="EquifaxKeyFactor3" type="StringClob" />
+    <property name="EquifaxKeyFactor4" type="StringClob" />
+    <property name="EquifaxKeyFactor5" type="StringClob" />
+    <property name="EquifaxFactorCode1" />
+    <property name="EquifaxFactorCode2" />
+    <property name="EquifaxFactorCode3" />
+    <property name="EquifaxFactorCode4" />
+    <property name="EquifaxFactorCode5" />
+    <property name="ExperianCreditScoreForDisclosure" />
+    <property name="ExperianCreditScoreRanksPercent" />
+    <property name="ExperianDatePulled" />
+    <property name="ExperianMaterialTermsCreditByScore" />
+    <property name="ExperianKeyFactor1" type="StringClob" />
+    <property name="ExperianKeyFactor2" type="StringClob" />
+    <property name="ExperianKeyFactor3" type="StringClob" />
+    <property name="ExperianKeyFactor4" type="StringClob" />
+    <property name="ExperianKeyFactor5" type="StringClob" />
+    <property name="ExperianFactorCode1" />
+    <property name="ExperianFactorCode2" />
+    <property name="ExperianFactorCode3" />
+    <property name="ExperianFactorCode4" />
+    <property name="ExperianFactorCode5" />
+    <property name="TransUnionCreditScoreForDisclosure" />
+    <property name="TransUnionCreditScoreRanksPercent" />
+    <property name="TransUnionDatePulled" />
+    <property name="TransUnionMaterialTermsCreditByScore" />
+    <property name="TransUnionKeyFactor1" type="StringClob" />
+    <property name="TransUnionKeyFactor2" type="StringClob" />
+    <property name="TransUnionKeyFactor3" type="StringClob" />
+    <property name="TransUnionKeyFactor4" type="StringClob" />
+    <property name="TransUnionKeyFactor5" type="StringClob" />
+    <property name="TransUnionFactorCode1" />
+    <property name="TransUnionFactorCode2" />
+    <property name="TransUnionFactorCode3" />
+    <property name="TransUnionFactorCode4" />
+    <property name="TransUnionFactorCode5" />
+    <property name="Tax4506TotalYearlyIncome1" />
+    <property name="Tax4506TotalYearlyIncome2" />
+    <property name="Tax4506TotalYearlyJointIncome1" />
+    <property name="Tax4506TotalYearlyJointIncome2" />
+    <property name="Tax4506TotalYearlyVarianceIncome1" />
+    <property name="Tax4506TotalYearlyVarianceIncome2" />
+    <property name="Tax4506TotalYearlyVarianceJointIncome1" />
+    <property name="Tax4506TotalYearlyVarianceJointIncome2" />
+    <property name="Tax4506LastStatus" />
+    <property name="Tax4506LastOrderNumber" />
+    <property name="Tax4506LastInvestor" />
+    <property name="Tax4506LastOrderYear1" />
+    <property name="Tax4506LastOrderYear2" />
+    <property name="Tax4506LastOrderYear3" />
+    <property name="Tax4506LastOrderYear4" />
+    <property name="Tax4506LastProductsOrdered" />
+    <property name="Tax4506LastTranscriptType" />
+    <property name="Tax4506TotalYearlyIncome3" />
+    <property name="Tax4506TotalYearlyIncome4" />
+    <property name="Tax4506TotalYearlyJointIncome3" />
+    <property name="Tax4506TotalYearlyJointIncome4" />
+    <property name="Tax4506TotalYearlyVarianceIncome3" />
+    <property name="Tax4506TotalYearlyVarianceIncome4" />
+    <property name="Tax4506TotalYearlyVarianceJointIncome3" />
+    <property name="Tax4506TotalYearlyVarianceJointIncome4" />
+    <property name="Tax4506LastUserIDWhoOrdered" />
+    <property name="BankruptcyStatus" />
+    <property name="CreditCounseling" />
+    <property name="CreditReceivedDate" />
+    <property name="CreditReportFirstIssuedDate" />
+    <property name="DateOfBankruptcy" />
+    <property name="DateOfForeclosure" />
+    <property name="ForeclosureSatisfied" />
+    <property name="ForeclosureStatus" />
+    <property name="HighestCreditLimit" />
+    <property name="MortgageOnCredit" />
+    <property name="NumberofTradelines" />
+    <property name="OpenBankruptcy2" />
+    <property name="PriorBankruptcy2" />
+    <property name="PriorForeclosure" />
+    <property name="YearsofCreditOnFile" />
+    <property name="Equifax120Days" />
+    <property name="Equifax150Days" />
+    <property name="Equifax30Days" />
+    <property name="Equifax60Days" />
+    <property name="Equifax90Days" />
+    <property name="Experian120Days" />
+    <property name="Experian150Days" />
+    <property name="Experian30Days" />
+    <property name="Experian60Days" />
+    <property name="Experian90Days" />
+    <property name="Pass120Days" />
+    <property name="Pass150Days" />
+    <property name="Pass30Days" />
+    <property name="Pass60Days" />
+    <property name="Pass90Days" />
+    <property name="TransUnion120Days" />
+    <property name="TransUnion150Days" />
+    <property name="TransUnion30Days" />
+    <property name="TransUnion60Days" />
+    <property name="TransUnion90Days" />
+    <property name="CreditScoreIndicator" />
+    <property name="DisabledIndicator" />
+    <property name="FirstTimeHomeBuyer" />
+    <property name="MiddleCreditScore" />
+    <property name="NameToObtainLoanFromRHS" />
+    <property name="ObtainLoanFromRHSIndicator" />
+    <property name="RelationshipDescription" />
+    <property name="RelationshipWithRDEmployeeIndicator" />
+    <property name="VeteranIndicator" />
+    <property name="SSA89MortgageServiceIndicator" />
+    <property name="SSA89BankingServiceIndicator" />
+    <property name="SSA89BackgroundCheckIndicator" />
+    <property name="SSA89LicenseRequirementIndicator" />
+    <property name="SSA89CreditCheckIndicator" />
+    <property name="SSA89OtherIndicator" />
+    <property name="SSA89OpenRetirementAcct" />
+    <property name="SSA89ApplyForLoan" />
+    <property name="SSA89DescriptionForOther" />
+    <property name="UserDefinedIncome" />
+    <property name="BorrowerTypeInSummary" />
+    <property name="PoaOccupancyIntent" />
+    <property name="ConfirmedCRFCIncorrect" />
+    <property name="ConfirmedCRFCEC" />
+    <property name="ConfirmedCRDIL" />
+    <property name="ConfirmedCRPFS" />
+    <property name="ConfirmedOther" />
+    <property name="ConfirmedOtherDescription" />
+    <property name="ConfirmedCRBKIncorrect"/>
+    <property name="ConfirmedCRBKEC"/>
+    <property name="ConfirmedMtgDelIncorrect"/>
+    <property name="AuthorizedCreditReportIndicator" />
+    <property name="DateAuthorizedCreditReport" />
+    <property name="CreditReportAuthorizationMethod" />
+    <property name="CommentOfCreditReport" />
+    <property name="AcountChekAssetId" />
+    <property name="IntuitReportId" />
+    <property name="HmdaAge" />
+    <property name="HmdaCreditScoreForDecisionMaking" />
+    <property name="HmdaCreditScoringModel" />
+    <property name="HmdaOtherScoringModel" />
+    <property name="Hmda2CreditScoreForDecisionMaking" />
+    <property name="Hmda2CreditScoringModel" />
+    <property name="TopRatioPercent"/>
+    <property name="BottomRatioPercent"/>
+    <property name="TotalGrossMonthlyIncomeAmount"/>
+    <property name="RhsBorrowerId" />
+    <property name="AuthorizedVoeIndicator"/>
+    <property name="VoeAuthorizedDate" />
+    <property name="AuthorizedVoiIndicator"/>
+    <property name="VoiAuthorizedDate" />
+    <property name="AuthorizedVoaIndicator"/>
+    <property name="VoaAuthorizedDate" />
+    <!-- PSA -->
+    <property name="Vendor1" />
+    <property name="Vendor2" />
+    <property name="Vendor3" />
+    <property name="Vendor4" />
+    <property name="Vendor5" />
+    <property name="Vendor6" />
+    <property name="Vendor7" />
+    <property name="Vendor8" />
+    <property name="Vendor9" />
+    <property name="Vendor10" />
+    <property name="Vendor11" />
+    <property name="Vendor12" />
+    <property name="Vendor13" />
+    <property name="Vendor14" />
+    <property name="Vendor15" />
+    <property name="Vendor16" />
+    <property name="Vendor17" />
+    <property name="Vendor18" />
+    <property name="Vendor19" />
+    <property name="Vendor20" />
+    <property name="Vendor21" />
+    <property name="Vendor22" />
+    <property name="Vendor23" />
+    <property name="Vendor24" />
+    <property name="Vendor25" />
+    <property name="Vendor26" />
+    <property name="Vendor27" />
+    <property name="Vendor28" />
+    <property name="Vendor29" />
+    <property name="Vendor30" />
+    <property name="Vendor31" />
+    <property name="Vendor32" />
+    <property name="Vendor33" />
+    <property name="Vendor34" />
+    <property name="Vendor35" />
+    <property name="Vendor36" />
+    <property name="Vendor37" />
+    <property name="Vendor38" />
+    <property name="Vendor39" />
+    <property name="Vendor40" />
+    <property name="Vendor41" />
+    <property name="Vendor42" />
+    <property name="Vendor43" />
+    <property name="Vendor44" />
+
+    <property name="DataVerify" />
+    
+    <property name="PIWMessage" />
+    <property name="ValueRepAndWarrantyMessage" />
+    <property name="IncomeRepAndWarrantyMessage" />
+    <property name="AssetRepAndWarrantyMessage" />
+    <property name="PIWAccepted" />
+    <property name="ValueRepAndWarrantyAvailable" />
+    <property name="AssetRepAndWarrantyReliefAvailable" />
+    <property name="IncomeRepAndWarrantyReliefAvailable" />
+    <property name="IsBaseIncomeAvailable" />
+    <property name="IsBonusAvailable" />
+    <property name="IsOvertimeAvailable" />
+    <property name="IsCommissionAvailable" />
+    <property name="IsSocialSecurityAvailable" />
+    <property name="IsSelfEmployed" />
+    <property name="RetirementPensionIncomeAvailable" />
+    <property name="IsTaxReturnAvailable" />
+    <property name="EmploymentVerificationAvailable" />
+    <property name="PensionRetireIncomeMessage" />
+    <property name="EmploymentVerificationMessage" />
+    <property name="BaseIncomeValidationMessage" />
+    <property name="BonusValidationMessage" />
+    <property name="OvertimeValidationMessage" />
+    <property name="CommissionValidationMessage" />
+    <property name="SSNValidationMessage" />
+    <property name="SelfEmployedValidationMessage" />
+    <property name="TaxReturnValidationMessage" />
+    <property name="AdditionalIncomeFromPrimaryEmployment" />
+    <property name="AdjustedAnnualIncome" />
+    <property name="AnnualIncome" />
+    <property name="BaseIncome" />
+    <property name="AssetIncome" />
+   
+    <!-- URLA 2020-->
+    <property name="PrintOnAdditionalBorrowerPage" />
+    <property name="JointAssetLiabilityReportingIndicator" />
+    <property name="LegalOtherThanSpouse" />
+    <property name="DomesticRelationshipType" />
+    <property name="OtherRelationshipTypeDescription" />
+    <property name="State" />
+    <property name="SelfDeclaredMilitaryServiceIndicator" />
+    <property name="ActiveDuty" />
+    <property name="Veteran" />
+    <property name="ReserveNationalGuardReserveActivated" />
+    <property name="SpousalVABenefitsEligibilityIndicator" />
+    <property name="MilitaryServiceExpectedCompletionDate" />
+    <property name="LanguagePreference" />
+    <property name="LanguageCodeOtherDescription" />
+    <property name ="TotalAssets" />
+    <property name ="OtherAssetsDoesNotApply" />
+    <property name ="TotalOtherAssets" />
+    <property name ="LiabilitiesDoesNotApply" />
+    <property name ="TotalAdditionalLiabilitiesAmount" />
+    <property name ="TotalLiabilitiesAmount" />
+    <property name ="OtherLiabilitiesDoesNotApply" />
+    <property name ="TotalOtherLiabilities" />
+    <property name ="TotalAdditionalOtherLiabilitiesAmount" />
+    <property name ="TotalOtherLiabilitiesAmount" />
+    <property name ="RealEstateDoesNotApply" />    
+    <property name="GiftsAndGrantsIndicatorBor" />
+    <property name="SpecialBorrowerSellerRelationshipIndicator" />
+    <property name="UndisclosedBorrowedFundsIndicator" />
+    <property name="UndisclosedBorrowedFundsAmount" />
+    <property name="UndisclosedMortgageApplicationIndicator" />
+    <property name="UndisclosedCreditApplicationIndicator" />
+    <property name="PropertyProposedCleanEnergyLienIndicator" />
+    <property name="UndisclosedComakerOfNoteIndicator" />
+    <property name="PresentlyDelinquentIndicatorURLA" />
+    <property name="PartyToLawsuitIndicatorURLA" />
+    <property name="PriorPropertyDeedInLieuConveyedIndicator" />
+    <property name="PriorPropertyShortSaleCompletedIndicator" />
+    <property name="PriorPropertyForeclosureCompletedIndicator" />
+    <property name="BankruptcyIndicatorChapterSeven" />
+    <property name="BankruptcyIndicatorChapterEleven" />
+    <property name="BankruptcyIndicatorChapterTwelve" />
+    <property name="BankruptcyIndicatorChapterThirteen" />
+    <property name ="AdditionalOtherIncome" />
+    <property name ="DUVerificationEmploymentIncomeIndicator" />
+    <property name ="DUVerificationEmploymentIncomeMessage" type="StringClob" />
+    <property name ="OtherSrcIncomeDoesNotApply" />
+    <property name ="CurrentEmploymentDoesNotApply" />
+    <property name ="AdditionalEmploymentDoesNotApply" />
+    <property name ="PreviousEmploymentDoesNotApply" />
+    <property name ="PriorResidenceDoesNotApply" />
+    <property name ="AdditionalInformation" type="StringClob" />
+    <property name ="SectionAExplanation" type="StringClob"/>
+    <property name ="SectionBExplanation" type="StringClob"/>
+    <property name ="SectionCExplanation" type="StringClob" />
+    <property name ="SectionDExplanation" type="StringClob"/>
+    <property name ="SectionD2Explanation" type="StringClob"/>
+    <property name ="SectionEExplanation" type="StringClob"/>
+    <property name ="SectionFExplanation" type="StringClob"/>
+    <property name ="SectionGExplanation" type="StringClob"/>
+    <property name ="SectionHExplanation" type="StringClob"/>
+    <property name ="SectionIExplanation" type="StringClob"/>
+    <property name ="SectionJExplanation" type="StringClob"/>
+    <property name ="SectionKExplanation" type="StringClob"/>
+    <property name ="SectionLExplanation" type="StringClob"/>
+    <property name ="SectionMExplanation" type="StringClob"/>
+    <property name ="HomeCounselingAgencyName" />
+    <property name ="HomeCounselingCompletionDate" />
+    <property name="JointAssetLiabilityReportingIndicator1" />
+	  <property name ="OwnershipConfirmationIndicator" />
+    <property name ="OwnershipFormatType" />
+	  <property name ="OwnershipPartyRoleIdentifier" />
+	  <property name ="CoBorrAttendedSameCounselingIndicator" />
+    <property name ="OwnershipEducationFormatType" />
+    <property name ="OwnershipEducationConfirmationIndicator" />
+    <property name ="OwnershipEducationPartyRoleIdentifier" />
+    <property name ="OwnershipEducationAgencyName" />
+    <property name ="OwnershipEducationCompletionDate" />
+    <property name ="PreviousGrossMonthlyIncome" />
+    <property name ="SectionAPrintExplanation" />
+    <property name ="SectionBPrintExplanation" />
+    <property name ="SectionCPrintExplanation" />
+    <property name ="SectionD1PrintExplanation" />
+    <property name ="SectionD2PrintExplanation" />
+    <property name ="SectionEPrintExplanation" />
+    <property name ="SectionFPrintExplanation" />
+    <property name ="SectionGPrintExplanation" />
+    <property name ="SectionHPrintExplanation" />
+    <property name ="SectionIPrintExplanation" />
+    <property name ="SectionJPrintExplanation" />
+    <property name ="SectionKPrintExplanation" />
+    <property name ="SectionLPrintExplanation" />
+    <property name ="SectionMPrintExplanation" />
+
+    <property name ="NetRentalIncome" />
+    <property name ="TotalAnnualIncome" />
+    <property name ="TotalGrossMonthlySalary" />
+    <property name ="TotalOtherIncome" />
+    <property name ="TotalOtherMonthlyLiability" />
+    <property name ="LeDeliveryMethod" />
+    <property name ="CdDeliveryMethod" />
+    <property name ="Urla2020CountryOfCitizenship" />
+    <property name ="CounselingConfirmationType" />
+    <property name ="CounselingConfirmationTypeDescription" />
+    <property name ="CounselingFormatTypeDescription" />
+    <property name ="Initial1003Provided" />
+    <property name ="Final1003Provided" />
+    <property name ="LeaveAndEarningsStatement" />
+    <property name ="VvoeWorkNumberDate" />
+
+    <!-- CBIZ-33728 -->
+    <property name ="RwtFannieVoe1Description" />
+    <property name ="RwtFannieVoe2Description" />
+    <property name ="RwtFannieVoe3Description" />
+    <property name ="RwtFannieVoe2Status" />
+    <property name ="RwtFannieVoe3Status" />
+    <property name ="RwtFannieVoe1Date" />
+    <property name ="RwtFannieVoe2Date" />
+    <property name ="RwtFannieVoe3Date" />
+    <property name ="RwtFannieVoe2Message" />
+    <property name ="RwtFannieVoe3Message" />
+    <property name ="RwtFreddieVoe1Description" />
+    <property name ="RwtFreddieVoe2Description" />
+    <property name ="RwtFreddieVoe3Description" />
+    <property name ="RwtFreddieVoe1Status" />
+    <property name ="RwtFreddieVoe2Status" />
+    <property name ="RwtFreddieVoe3Status" />
+    <property name ="RwtFreddieVoe1Date" />
+    <property name ="RwtFreddieVoe2Date" />
+    <property name ="RwtFreddieVoe3Date" />
+    <property name ="RwtFreddieVoe1Message" />
+    <property name ="RwtFreddieVoe2Message" />
+    <property name ="RwtFreddieVoe3Message" />
+    <property name ="RwtFannieVoiBaseIncomeDate" />
+    <property name ="RwtFannieVoiBonusDate" />
+    <property name ="RwtFannieVoiOvertimeDate" />
+    <property name ="RwtFannieVoiCommissionDate" />
+    <property name ="RwtFannieVoiSocialSecurityDate" />
+    <property name ="RwtFannieVoiRetirementDate" />
+    <property name ="RwtFannieVoiSelfEmployedDate" />
+    <property name ="RwtFreddieVoiPayrollStatus" />
+    <property name ="RwtFreddieVoiPensionStatus" />
+    <property name ="RwtFreddieVoiSocialSecurityStatus" />
+    <property name ="RwtFreddieVoiVaBenefitsStatus" />
+    <property name ="RwtFreddieVoiMilitaryStatus" />
+    <property name ="RwtFreddieVoiChildSupportStatus" />
+    <property name ="RwtFreddieVoiSelfEmployedStatus" />
+    <property name ="RwtFreddieVoiPayrollDate" />     
+    <property name ="RwtFreddieVoiPensionDate" />
+    <property name ="RwtFreddieVoiSocialSecurityDate" />
+    <property name ="RwtFreddieVoiVaBenefitsDate" />
+    <property name ="RwtFreddieVoiMilitaryDate" />
+    <property name ="RwtFreddieVoiChildSupportDate" />
+    <property name ="RwtFreddieVoiSelfEmployedDate" />
+    <property name ="RwtFreddieVoiPayrollMessage" />
+    <property name ="RwtFreddieVoiPensionMessage" />
+    <property name ="RwtFreddieVoiSocialSecurityMessage" />
+    <property name ="RwtFreddieVoiVaBenefitsMessage" />
+    <property name ="RwtFreddieVoiMilitaryMessage" />
+    <property name ="RwtFreddieVoiChildSupportMessage" />
+    <property name ="RwtFreddieVoiSelfEmployedMessage" />
+
+    <!-- CBIZ-52429, new Fields for Best Time & Method to Contact Borrower -->
+    <property name ="HomePhonePreferred" />
+    <property name ="WorkPhonePreferred" />
+    <property name ="CellPhonePreferred" />
+    <property name ="TextMessagePreferred" />
+    <property name ="HomeEmailPreferred" />
+    <property name ="WorkEmailPreferred" />
+    <property name ="ContactTimeZone" />
+    <property name ="ContactAnyDay" />
+    <property name ="ContactMondays" />
+    <property name ="ContactTuesdays" />
+    <property name ="ContactWednesdays" />
+    <property name ="ContactThursdays" />
+    <property name ="ContactFridays" />
+    <property name ="ContactSaturdays" />
+    <property name ="ContactSundays" />
+    <property name ="Notes" />            
+    <property name ="FirstTimeHomebuyerIndicator" />
+    <property name ="ExcludeUnmarriedAddendum" />
+	<property name ="CounselingFormat" />
+	<property name ="CounselingFormatOtherDescription" />
+	<property name ="CounselType" />
+	<property name ="CounselTypeOtherDescription" />
+
+    <property name="ChildSupportIncomeAvailable" />
+    <property name="ChildSupportIncomeComments" />
+    <property name="AlimonyIncomeAvailable" />
+    <property name="AlimonyIncomeComments" />
+    
+    <list name="creditReports" cascade="all-delete-orphan" inverse="true" access="field" batch-size="50">
+      <key column="ElliBorrowerId" />
+      <index column="CreditReportIndex"  />
+      <one-to-many class="CreditReport"/>
+    </list>
+
+  </class>
+</hibernate-mapping>

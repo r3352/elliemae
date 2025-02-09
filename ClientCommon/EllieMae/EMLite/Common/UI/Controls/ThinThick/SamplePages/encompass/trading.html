@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // DO NOT REMOVE THE NEXT LINE //
+        // $encompass.interaction.js$
+        // 
+
+        function populateCallBackResult(resp) {
+            document.getElementById("callBackResult").value = resp;
+        }
+
+        function setTradingScreen() {
+            var screen = document.getElementById("tradingScreen").value;
+            var jsonParams = "{ TradingScreen: '" + screen + "'}";
+            encompass.interaction.setTradingScreen(jsonParams, populateCallBackResult);
+
+            var idsAndViewDiv = document.getElementById("listFuncs");
+            if (screen === 'Trades' || screen === 'SecurityTrades' || screen === 'MbsPools')
+                idsAndViewDiv.disabled = false;
+            else //for other screens, this section is either under construction or not applicable
+                idsAndViewDiv.disabled = true;
+        }
+
+        function setCurrentOrArchived() {
+            var currOrArch = document.getElementById("currentOrArchivedView").value;
+            var jsonParams = "{ CurrentOrArchived: '" + currOrArch + "'}";
+            encompass.interaction.setCurrentOrArchived(jsonParams, populateCallBackResult);
+        }
+
+        function setTradingIds(callback) {
+            var jsonParams = "{ Ids: [ " + document.getElementById("tradingIds").value + " ] }";
+            encompass.interaction.setTradingIds(jsonParams, callback);
+        }
+
+        function setPipelineViewXml(callback) {
+            var jsonParams = "{ Xml: '" + document.getElementById("pipelineViewXml").value + "'}";
+            encompass.interaction.setPipelineViewXml(jsonParams, callback);
+        }
+
+        function selectBusinessContact(callback) {
+            var jsonParams = "{ Category: '" + document.getElementById("businessContactCategory").value
+                          + "', CompanyName: '" + document.getElementById("businessContactCompanyName").value
+                          + "', ContactName: '" + document.getElementById("businessContactName").value + "'}";
+            encompass.interaction.selectBusinessContact(jsonParams, callback);
+        }
+
+        function setMenuState(callback) {
+            var jsonParams = document.getElementById("menuStates").value;
+            encompass.interaction.setMenuState(jsonParams, callback);
+        }
+
+        function exportToExcel(exportAll, callback) {
+            var jsonParams = "{ ExportAll: " + exportAll + "}";
+            encompass.interaction.exportToExcel(jsonParams, callback);
+        }
+
+        function print(callback) {
+            var jsonParams = null;
+            encompass.interaction.print(jsonParams, callback);
+        }
+
+        //SCRIPTS TO BE CALLED FROM THICK CLIENT
+        function encompassInteractionMenuClicked(param) {
+            document.getElementById("menuTag").value = param;
+        }
+
+    </script>
+</head>
+<body>
+<p style="color:orange;margin-top:0;margin-bottom:0;">
+    Please run RemoveUAC.exe, if you haven't done so recently, to ensure that you are running latest and greatest version of this sample page and scripts!</p>
+<br/>    <!--- callback result --->
+    <fieldset>
+        <legend>
+            <h3 style="margin-top:0;margin-bottom:0;">Callback Result</h3>
+        </legend>
+        <input type="text" id="callBackResult" size="100" />
+    </fieldset>
+    <br/>
+<fieldset>
+    <legend>
+        <p style="color: green; margin-top: 0; margin-bottom: 0;">Common functions
+        </p>
+    </legend>
+    Menu Item with Tag <input type="text" id="menuTag" size="38" readonly/> was executed.<br/>
+    Menu State: <input type="text" id="menuStates" size="100"/><br/>
+    { MenuState: [ { MenuItemTag: "TR_New", Enabled: true, Visible: true }, { MenuItemTag: "TR_Edit", Enabled: false, Visible: false }, { MenuItemTag: "TR_Duplicate", Enabled: false, Visible: true }] }<br/>
+    <input type="button" value="Set Menu States" onclick=" setMenuState(populateCallBackResult); "/>
+    <br/>
+    <br/>
+    Category: <input type="text" id="businessContactCategory"/> Possible values: Dealer, Investor, Organization, Servicing, or just leave it empty<br/>
+    CompanyName: <input type="text" id="businessContactCompanyName"/><br/>
+    ContactName: <input type="text" id="businessContactName"/><br/>
+    <input type="button" value="Select Business Contact" onclick="selectBusinessContact(populateCallBackResult);"/><br/>
+    <br/>
+</fieldset>
+<br/>
+<br/>
+<fieldset>
+    <legend> <span style="color: green; margin-top: 0; margin-bottom: 0;">
+        Current Screen:</span>
+        <select id="tradingScreen" onchange=" setTradingScreen()">
+            <option value="Search">Search</option>
+            <option value="Trades" selected="selected">Trades</option>
+            <option value="Contracts">Contracts</option>
+            <option value="TradeEditor">TradeEditor</option>
+            <option value="SecurityTrades">SecurityTrades</option>
+            <option value="SecurityTradeEditor">SecurityTradeEditor</option>
+            <option value="MbsPools">MbsPools</option>
+            <option value="MbsPoolEditor">MbsPoolEditor</option>
+            <option value="CorrespondentMasters">CorrespondentMasters</option>
+            <option value="CorrespondentMasterEditor">CorrespondentMasterEditor</option>
+            <option value="CorrespondentTrades">CorrespondentTrades</option>
+            <option value="CorrespondentTradeEditor">CorrespondentTradeEditor</option>
+        </select>
+        <i>Just FYI: this list corresponds to TradeManagementScreen enumeration members, located in EllieMae.EMLite.Common.UI</i>
+    </legend>
+    <br/>
+
+    <fieldset id="listFuncs" >
+        <legend>===</legend>
+        Set Selected IDs:<input type="text" id="tradingIds" size="50"/><input type="button" value="Set IDs" onclick=" setTradingIds(populateCallBackResult); "/> 1, 2, 3 <i> (the integers, not the guids, and not trade names!)</i><br/>
+        Pipeline View XML:<input type="text" id="pipelineViewXml" size="100"/><br/>
+        <input type="button" value="Set Pipeline View" onclick=" setPipelineViewXml(populateCallBackResult); "/><br/>
+        <select id="currentOrArchivedView" onchange=" setCurrentOrArchived()">
+            <option value="Current" selected="selected">Current</option>
+            <option value="Archived">Archived</option>
+        </select><br/>
+        <br/>
+        Print<br/>
+        <input type="button" value="Print" onclick=" print(populateCallBackResult); "/>
+        <br/>
+        <br/>
+        Export to Excel<br/>
+        <input type="button" value="Export to Excel, Selected Only" onclick=" exportToExcel(false, populateCallBackResult); "/><br/>
+        <input type="button" value="Export to Excel, All on All Pages" onclick=" exportToExcel(true, populateCallBackResult); "/>
+        <br/>
+    </fieldset>
+    <br/>
+</fieldset>
+<br/>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="DisclosureNotices" table="ElliDisclosureNotices" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="AntiCoercionStatementIndicator" />
+    <property name="FemaCommunityName" />
+    <property name="ConsumerHandbookOnAdjustableRateMortgages" />
+    <property name="DaysToReceiveWrittenRequest" />
+    <property name="DaysToReturnToLender" />
+    <property name="DiscloseNonPublicPersonalInformation" />
+    <property name="FloodInsuranceNotificationIndicator" />
+    <property name="NFIPCommunityNumber" />
+    <property name="NFIPMapEffectiveRevisedDate" />
+    <property name="InformationDisclosureAuthorizationIndicator" />
+    <property name="LicensedMortgageBrokerUnder" />
+    <property name="LocatedInNfipIndicator" />
+    <property name="LossPayeeClause" />
+    <property name="NotLocatedInNfipIndicator" />
+    <property name="OccupancyStatementIndicator" />
+    <property name="OptOut" />
+    <property name="OptOutPhone" />
+    <property name="ReleaseBankingInformationIndicator" />
+    <property name="ReleaseEmploymentInformationIndicator" />
+    <property name="ReleaseInformationInConnectionWithCreditReportIndicator" />
+    <property name="ReleaseMortgageInformationIndicator" />
+    <property name="RightToFinancialPrivacyActIndicator" />
+    <property name="CommitmentIssuedByAddress" />
+    <property name="CommitmentIssuedByCity" />
+    <property name="CommitmentIssuedByContactName" />
+    <property name="CommitmentIssuedByName" />
+    <property name="CommitmentIssuedByPhone" />
+    <property name="CommitmentIssuedByPostalCode" />
+    <property name="CommitmentIssuedByState" />
+    <property name="EcoaAddress" />
+    <property name="EcoaAddress2" />
+    <property name="EcoaCity" />
+    <property name="EcoaName" />
+    <property name="EcoaPhone" />
+    <property name="EcoaPostalCode" />
+    <property name="EcoaState" />
+    <property name="FairLendingNoticeDescription1" />
+    <property name="FairLendingNoticeDescription2" />
+    <property name="FairLendingNoticeDescription3" />
+    <property name="FairLendingNoticeDescription4" />
+    <property name="FairLendingNoticeDescription5" />
+    <property name="FairLendingNoticeDescription6" />
+    <property name="FairLendingNoticeDescription7" />
+    <property name="FairLendingNoticeDescription8" />
+    <property name="NonFinancialCompaniesDescription1" />
+    <property name="NonFinancialCompaniesDescription2" />
+    <property name="NonFinancialCompaniesDescription3" />
+    <property name="NonFinancialCompaniesDescription4" />
+    <property name="MapPanelNumber" />
+    <property name="NFIPParticipationStatus" />
+  </class>
+</hibernate-mapping>

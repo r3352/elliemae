@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\EMCommon.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF48493B-C384-48B2-A3F7-B4DD94EAAE43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>EMCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.5.1.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EllieMae.EMLite</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Encompass.Diagnostics">
+      <HintPath>lib\Encompass.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Encompass.Security">
+      <HintPath>lib\Encompass.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="GdPicture.NET.14">
+      <HintPath>lib\GdPicture.NET.14.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Jed">
+      <HintPath>lib\Jed.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream">
+      <HintPath>lib\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel">
+      <HintPath>lib\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Administration">
+      <HintPath>lib\Microsoft.Web.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VersionInterface15">
+      <HintPath>lib\VersionInterface15.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RemotingServices\BinaryConvertibleObject.cs" />
+    <Compile Include="RemotingServices\BinaryConvertible`1.cs" />
+    <Compile Include="RemotingServices\DownloadProgressEventHandler.cs" />
+    <Compile Include="RemotingServices\BinaryObject.cs" />
+    <Compile Include="RemotingServices\DownloadProgressEventArgs.cs" />
+    <Compile Include="RemotingServices\CanceledOperationException.cs" />
+    <Compile Include="RemotingServices\BufferPool.cs" />
+    <Compile Include="RemotingServices\BufferPools.cs" />
+    <Compile Include="RemotingServices\ByteStream.cs" />
+    <Compile Include="RemotingServices\CompanyInfo.cs" />
+    <Compile Include="RemotingServices\BranchLicensing.cs" />
+    <Compile Include="RemotingServices\StateLicenseType.cs" />
+    <Compile Include="RemotingServices\BranchExtLicensing.cs" />
+    <Compile Include="RemotingServices\StateLicenseExtType.cs" />
+    <Compile Include="RemotingServices\LOLicenseInfo.cs" />
+    <Compile Include="RemotingServices\HMDAProfile.cs" />
+    <Compile Include="RemotingServices\HMDAProfileColumnName.cs" />
+    <Compile Include="RemotingServices\IBinaryObject.cs" />
+    <Compile Include="RemotingServices\UserProfileInfo.cs" />
+    <Compile Include="RemotingServices\EnCertificatePolicy.cs" />
+    <Compile Include="RemotingServices\ExtractProgressEventHandler.cs" />
+    <Compile Include="RemotingServices\ExtractProgressEventArgs.cs" />
+    <Compile Include="RemotingServices\FileCompressor.cs" />
+    <Compile Include="RemotingServices\HMDAInformation.cs" />
+    <Compile Include="RemotingServices\SettingsRptJobInfo.cs" />
+    <Compile Include="RemotingServices\ApplicationMode.cs" />
+    <Compile Include="RemotingServices\PrintEngineEnum.cs" />
+    <Compile Include="RemotingServices\SystemSettings.cs" />
+    <Compile Include="RemotingServices\UserInfo.cs" />
+    <Compile Include="RemotingServices\UserInfoSummary.cs" />
+    <Compile Include="RemotingServices\FileDownloadEventArgs.cs" />
+    <Compile Include="RemotingServices\ZipReader.cs" />
+    <Compile Include="RemotingServices\FileUploadEventArgs.cs" />
+    <Compile Include="RemotingServices\ZipWriter.cs" />
+    <Compile Include="Xml\AttributeReader.cs" />
+    <Compile Include="Xml\AttributeWriter.cs" />
+    <Compile Include="Xml\AttributeWriterOptions.cs" />
+    <Compile Include="Xml\ElementWriter.cs" />
+    <Compile Include="Xml\FastDateTimeParser.cs" />
+    <Compile Include="Xml\FastXmlDocument.cs" />
+    <Compile Include="Xml\FastXmlElement.cs" />
+    <Compile Include="Xml\ValuePairXmlWriter.cs" />
+    <Compile Include="Xml\XmlHelper.cs" />
+    <Compile Include="Serialization\IXmlSerializable.cs" />
+    <Compile Include="Serialization\XmlArrayList.cs" />
+    <Compile Include="Serialization\XmlDictionary`1.cs" />
+    <Compile Include="Serialization\XmlHashtable.cs" />
+    <Compile Include="Serialization\XmlList`1.cs" />
+    <Compile Include="Serialization\XmlSerializationInfo.cs" />
+    <Compile Include="Serialization\XmlSerializer.cs" />
+    <Compile Include="Serialization\XmlStringList.cs" />
+    <Compile Include="Serialization\XmlStringTable.cs" />
+    <Compile Include="CustomLetters\CannotOpenWordDocumentException.cs" />
+    <Compile Include="CustomLetters\NoFieldInMailMergeTemplateException.cs" />
+    <Compile Include="CustomLetters\CannotCreateMailMergeDataSourceException.cs" />
+    <Compile Include="JedScript\JedScriptException.cs" />
+    <Compile Include="JedScript\Jed.cs" />
+    <Compile Include="ContactUI\ContactFormat.cs" />
+    <Compile Include="ContactUI\ContactAccess.cs" />
+    <Compile Include="ContactUI\ContactType.cs" />
+    <Compile Include="ContactUI\ContactAccessEnumNameProvider.cs" />
+    <Compile Include="ContactUI\ContactTypeNameProvider.cs" />
+    <Compile Include="ContactUI\RxContactInfo.cs" />
+    <Compile Include="ContactUI\BorrowerNotFoundException.cs" />
+    <Compile Include="ContactUI\OutlookNotInitializedException.cs" />
+    <Compile Include="ContactUI\RowNotSelectedInDataGridException.cs" />
+    <Compile Include="ContactUI\MSWordNotAvailableException.cs" />
+    <Compile Include="Compiler\AssemblyCache.cs" />
+    <Compile Include="Compiler\CodeRegion.cs" />
+    <Compile Include="Compiler\CodeWriter.cs" />
+    <Compile Include="Compiler\CompileException.cs" />
+    <Compile Include="Compiler\CodeLanguage.cs" />
+    <Compile Include="Compiler\Compiler.cs" />
+    <Compile Include="Compiler\CompilerError.cs" />
+    <Compile Include="Compiler\CompilerErrorCollection.cs" />
+    <Compile Include="Compiler\RuntimeContext.cs" />
+    <Compile Include="Compiler\TypeDescriptor.cs" />
+    <Compile Include="Compiler\TypeIdentifier.cs" />
+    <Compile Include="Compiler\MemberAccessLevel.cs" />
+    <Compile Include="Compiler\FieldDescriptor.cs" />
+    <Compile Include="Logging\FileSystemLog.cs" />
+    <Compile Include="Logging\IApplicationLog.cs" />
+    <Compile Include="Logging\ServerLogMode.cs" />
+    <Compile Include="Logging\RollingFileSystemLog.cs" />
+    <Compile Include="ePass\Epass.cs" />
+    <Compile Include="Collections\ObservableHashtable.cs" />
+    <Compile Include="Collections\HashtableEventHandler.cs" />
+    <Compile Include="Collections\HashtableEventArgs.cs" />
+    <Compile Include="Collections\ChunkedList`1.cs" />
+    <Compile Include="Collections\IntegerList.cs" />
+    <Compile Include="Collections\ListBase.cs" />
+    <Compile Include="Collections\StringList.cs" />
+    <Compile Include="Collections\StringSearchAlgorithm.cs" />
+    <Compile Include="Cache\IDataCache.cs" />
+    <Compile Include="Cache\InProcessCache.cs" />
+    <Compile Include="ClientServer\AclResourceAccess.cs" />
+    <Compile Include="Common\AclGroup.cs" />
+    <Compile Include="Common\AppColors.cs" />
+    <Compile Include="Common\AssemblyCrawler.cs" />
+    <Compile Include="Common\AsyncLogger.cs" />
+    <Compile Include="Common\WriteErrorEventArgs.cs" />
+    <Compile Include="Common\WriteErrorEventHandler.cs" />
+    <Compile Include="Common\CustomMessageBox.cs" />
+    <Compile Include="Common\DbServerType.cs" />
+    <Compile Include="Common\EntityRef.cs" />
+    <Compile Include="Common\EntityRefType.cs" />
+    <Compile Include="Common\FastRandom.cs" />
+    <Compile Include="Common\FastGuid.cs" />
+    <Compile Include="Common\ObjectArrayHelpers.cs" />
+    <Compile Include="Common\IHashableContents.cs" />
+    <Compile Include="Common\NullHashable.cs" />
+    <Compile Include="Common\IgnorePropertyAttribute.cs" />
+    <Compile Include="Common\DDMDataTableReference.cs" />
+    <Compile Include="Common\CryptoRandom.cs" />
+    <Compile Include="Common\DDMAffectedFieldsandDataTableNames.cs" />
+    <Compile Include="Common\DTErrorLogger.cs" />
+    <Compile Include="Common\DTErrorLogHelper.cs" />
+    <Compile Include="Common\MergeParamValues.cs" />
+    <Compile Include="Common\PgReadyAttribute.cs" />
+    <Compile Include="Common\RecentLoanInfo.cs" />
+    <Compile Include="Common\RegistryAccessor.cs" />
+    <Compile Include="Common\KB.cs" />
+    <Compile Include="Common\HashAlgorithm.cs" />
+    <Compile Include="Common\HashUtil.cs" />
+    <Compile Include="Common\Bitmask.cs" />
+    <Compile Include="Common\ClientInfoS.cs" />
+    <Compile Include="Common\ArrayUtil.cs" />
+    <Compile Include="Common\CountyNameMappingUtils.cs" />
+    <Compile Include="Common\DateTimeType.cs" />
+    <Compile Include="Common\DatetimeUtils.cs" />
+    <Compile Include="Common\DaysOfWeek.cs" />
+    <Compile Include="Common\DaysOfWeekConverter.cs" />
+    <Compile Include="Common\EnAppSettings.cs" />
+    <Compile Include="Common\EnConfigurationSettings.cs" />
+    <Compile Include="Common\InstallationMode.cs" />
+    <Compile Include="Common\ServerMode.cs" />
+    <Compile Include="Common\RuntimeEnvironment.cs" />
+    <Compile Include="Common\HotfixOverrideOption.cs" />
+    <Compile Include="Common\StorageMode.cs" />
+    <Compile Include="Common\PipelineSearchMode.cs" />
+    <Compile Include="Common\EnGlobalSettings.cs" />
+    <Compile Include="Common\EPassUtils.cs" />
+    <Compile Include="Common\CancelableEventHandler.cs" />
+    <Compile Include="Common\CancelableEventArgs.cs" />
+    <Compile Include="Common\ServerFileIOException.cs" />
+    <Compile Include="Common\LocalFileIOException.cs" />
+    <Compile Include="Common\FileDownloadException.cs" />
+    <Compile Include="Common\FileUploadException.cs" />
+    <Compile Include="Common\FieldFormat.cs" />
+    <Compile Include="Common\FieldFormatEnumUtil.cs" />
+    <Compile Include="Common\FileSystem.cs" />
+    <Compile Include="Common\FileSystemEntry.cs" />
+    <Compile Include="Common\FormPrintGroupDefault.cs" />
+    <Compile Include="Common\OutputFormLocation.cs" />
+    <Compile Include="Common\GFEPrintingDefault.cs" />
+    <Compile Include="Common\IApplicationWindow.cs" />
+    <Compile Include="Common\IEnumNameProvider.cs" />
+    <Compile Include="Common\EnumUtil.cs" />
+    <Compile Include="Common\DefaultEnumNameProvider.cs" />
+    <Compile Include="Common\EnumDescriptionNameProvider.cs" />
+    <Compile Include="Common\MultiWordEnumNameProvider.cs" />
+    <Compile Include="Common\BitmaskEnumNameProvider.cs" />
+    <Compile Include="Common\CustomEnumNameProvider.cs" />
+    <Compile Include="Common\IIdentifiable.cs" />
+    <Compile Include="Common\IMap.cs" />
+    <Compile Include="Common\IPAddressRange.cs" />
+    <Compile Include="Common\IPropertyDictionary.cs" />
+    <Compile Include="Common\LoanStage.cs" />
+    <Compile Include="Common\LoanStatus.cs" />
+    <Compile Include="Common\LockRequestUtils.cs" />
+    <Compile Include="Common\MaventLicenseTypesUtils.cs" />
+    <Compile Include="Common\CoreMilestoneID.cs" />
+    <Compile Include="Common\CoreMilestoneIDEnumUtil.cs" />
+    <Compile Include="Common\Milestone.cs" />
+    <Compile Include="Common\PipelineTeamMemberDefinition.cs" />
+    <Compile Include="Common\PipelineTeamMember.cs" />
+    <Compile Include="Common\PipelineTeamMemberNameProvider.cs" />
+    <Compile Include="Common\MilestoneSettings.cs" />
+    <Compile Include="Common\MilestoneUIConfig.cs" />
+    <Compile Include="Common\NoTraceAttribute.cs" />
+    <Compile Include="Common\NumberToTextOption.cs" />
+    <Compile Include="Common\NumberToTextConverter.cs" />
+    <Compile Include="Common\OutputFormType.cs" />
+    <Compile Include="Common\PerformanceMeterMode.cs" />
+    <Compile Include="Common\PerformanceMeterEventHandler.cs" />
+    <Compile Include="Common\PerformanceMeter.cs" />
+    <Compile Include="Common\Persona.cs" />
+    <Compile Include="Common\PrintFormList.cs" />
+    <Compile Include="Common\PrintForm.cs" />
+    <Compile Include="Common\PrintGroupList.cs" />
+    <Compile Include="Common\PrintGroup.cs" />
+    <Compile Include="Common\ArchivedFormDetails.cs" />
+    <Compile Include="Common\Range`1.cs" />
+    <Compile Include="Common\RateLockRequestStatus.cs" />
+    <Compile Include="Common\RateLockAction.cs" />
+    <Compile Include="Common\RateLockEnum.cs" />
+    <Compile Include="Common\RegistryMonitor.cs" />
+    <Compile Include="Common\RegChangeNotifyFilter.cs" />
+    <Compile Include="Common\RegistryUtil.cs" />
+    <Compile Include="Common\ReportLog.cs" />
+    <Compile Include="Common\RoleSummaryInfo.cs" />
+    <Compile Include="Common\RoleInfo.cs" />
+    <Compile Include="Common\ServicesMapping.cs" />
+    <Compile Include="Common\ServiceSetting.cs" />
+    <Compile Include="Common\DictionarySet.cs" />
+    <Compile Include="Common\HashedSet.cs" />
+    <Compile Include="Common\HybridSet.cs" />
+    <Compile Include="Common\ImmutableSet.cs" />
+    <Compile Include="Common\ISet.cs" />
+    <Compile Include="Common\ListSet.cs" />
+    <Compile Include="Common\Set.cs" />
+    <Compile Include="Common\SortedSet.cs" />
+    <Compile Include="Common\SynchronizedSet.cs" />
+    <Compile Include="Common\SmartClientService.cs" />
+    <Compile Include="Common\SCPackageInfo.cs" />
+    <Compile Include="Common\ScAttribute.cs" />
+    <Compile Include="Common\NameValuePair.cs" />
+    <Compile Include="Common\ReturnResult.cs" />
+    <Compile Include="Common\ReturnCode.cs" />
+    <Compile Include="Common\GetSCPackageInfoCompletedEventHandler.cs" />
+    <Compile Include="Common\GetSCPackageInfoCompletedEventArgs.cs" />
+    <Compile Include="Common\GetClientInfoCompletedEventHandler.cs" />
+    <Compile Include="Common\GetClientInfoCompletedEventArgs.cs" />
+    <Compile Include="Common\LetEMDoUupdatesCompletedEventHandler.cs" />
+    <Compile Include="Common\LetEMDoUupdatesCompletedEventArgs.cs" />
+    <Compile Include="Common\DoUpdatesByClientCompletedEventHandler.cs" />
+    <Compile Include="Common\DoUpdatesByClientCompletedEventArgs.cs" />
+    <Compile Include="Common\InstallDotNetCompletedEventHandler.cs" />
+    <Compile Include="Common\InstallDotNetCompletedEventArgs.cs" />
+    <Compile Include="Common\UpdateSelfHostedClientInfoCompletedEventHandler.cs" />
+    <Compile Include="Common\UpdateSelfHostedClientInfoCompletedEventArgs.cs" />
+    <Compile Include="Common\UpdateClientInfoCompletedEventHandler.cs" />
+    <Compile Include="Common\UpdateClientInfoCompletedEventArgs.cs" />
+    <Compile Include="Common\UpdateClientInfo2CompletedEventHandler.cs" />
+    <Compile Include="Common\UpdateClientInfo2CompletedEventArgs.cs" />
+    <Compile Include="Common\InstallSmartClientCompletedEventHandler.cs" />
+    <Compile Include="Common\InstallSmartClientCompletedEventArgs.cs" />
+    <Compile Include="Common\GetAttributesCompletedEventHandler.cs" />
+    <Compile Include="Common\GetAttributesCompletedEventArgs.cs" />
+    <Compile Include="Common\GetAttributeCompletedEventHandler.cs" />
+    <Compile Include="Common\GetAttributeCompletedEventArgs.cs" />
+    <Compile Include="Common\ImportAttributesCompletedEventHandler.cs" />
+    <Compile Include="Common\ImportAttributesCompletedEventArgs.cs" />
+    <Compile Include="Common\DeleteAttributesCompletedEventHandler.cs" />
+    <Compile Include="Common\DeleteAttributesCompletedEventArgs.cs" />
+    <Compile Include="Common\UpsertScAttributesCompletedEventHandler.cs" />
+    <Compile Include="Common\UpsertScAttributesCompletedEventArgs.cs" />
+    <Compile Include="Common\ServiceHeader.cs" />
+    <Compile Include="Common\SmartClientUtils.cs" />
+    <Compile Include="Common\SmtpUtil.cs" />
+    <Compile Include="Common\StateCounty.cs" />
+    <Compile Include="Common\StringExtensions.cs" />
+    <Compile Include="Common\StringEnum.cs" />
+    <Compile Include="Common\StringValueAttribute.cs" />
+    <Compile Include="Common\StringPredicate.cs" />
+    <Compile Include="Common\OSVersion.cs" />
+    <Compile Include="Common\SystemUtil.cs" />
+    <Compile Include="Common\TimedStruct`1.cs" />
+    <Compile Include="Common\SystemTime.cs" />
+    <Compile Include="Common\TimeZoneID.cs" />
+    <Compile Include="Common\TimeZoneInfo.cs" />
+    <Compile Include="Common\TimeZoneStruct.cs" />
+    <Compile Include="Common\TZI.cs" />
+    <Compile Include="Common\Tracing.cs" />
+    <Compile Include="Common\TraceMessageEventArgs.cs" />
+    <Compile Include="Common\TraceTimer.cs" />
+    <Compile Include="Common\UCDXmlParser.cs" />
+    <Compile Include="Common\ShipInDarkValidation.cs" />
+    <Compile Include="Common\UrlSafeBase64Encoding.cs" />
+    <Compile Include="Common\USPS.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Common\VersionDesignator.cs" />
+    <Compile Include="Common\Win32.cs" />
+    <Compile Include="Common\XT.cs" />
+    <Compile Include="Common\ZipCodeUtils.cs" />
+    <Compile Include="Common\ZipCodeInfo.cs" />
+    <Compile Include="Common\StateInfo.cs" />
+    <Compile Include="Common\Xml\AutoMapping\IXmlMapperContext.cs" />
+    <Compile Include="Common\Xml\AutoMapping\XmlAutoMapper.cs" />
+    <Compile Include="Common\Xml\AutoMapping\XmlElementBasedMapperContext.cs" />
+    <Compile Include="Common\Version\HotfixInfo.cs" />
+    <Compile Include="Common\Version\ClientAppVersion.cs" />
+    <Compile Include="Common\Version\JedServerVersion.cs" />
+    <Compile Include="Common\Version\ServerHotUpdateInfo.cs" />
+    <Compile Include="Common\Version\VersionMatchType.cs" />
+    <Compile Include="Common\Version\VersionDownloadHistory.cs" />
+    <Compile Include="Common\Version\AffectedSystems.cs" />
+    <Compile Include="Common\Version\VersionDownloadItem.cs" />
+    <Compile Include="Common\Version\VersionInformation.cs" />
+    <Compile Include="Common\TimeZones\DateTimeWithZone.cs" />
+    <Compile Include="Common\Threading\ReaderWriterTracker.cs" />
+    <Compile Include="Common\SmartClient\CacheStoreSource.cs" />
+    <Compile Include="Common\SmartClient\CacheStoreConfiguration.cs" />
+    <Compile Include="Common\SmartClient\ClientInfo.cs" />
+    <Compile Include="Common\Settings\IStorageSettings.cs" />
+    <Compile Include="Common\Services\LicenseService.cs" />
+    <Compile Include="Common\Services\ClosedLoanBillingInfo.cs" />
+    <Compile Include="Common\Services\GetClosedLoanBillingInfoCompletedEventHandler.cs" />
+    <Compile Include="Common\Services\GetClosedLoanBillingInfoCompletedEventArgs.cs" />
+    <Compile Include="Common\Serialization\HexEncoding.cs" />
+    <Compile Include="Common\Serialization\StreamHelper.cs" />
+    <Compile Include="Common\Serialization\StringBuilderReader.cs" />
+    <Compile Include="Common\Serialization\EncodedStringStream.cs" />
+    <Compile Include="Common\RemotingServices\EmailNotificationInfo.cs" />
+    <Compile Include="Common\RemotingServices\SimpleUserInfo.cs" />
+    <Compile Include="Common\Calendar\AppointmentType.cs" />
+    <Compile Include="Common\Calendar\Appointment.cs" />
+    <Compile Include="Common\Calendar\AppointmentOccurrence.cs" />
+    <Compile Include="Common\Calendar\CalendarUtils.cs" />
+    <Compile Include="Common\Calendar\MonthYear.cs" />
+    <Compile Include="Common\Calendar\NonrecurringAppointment.cs" />
+    <Compile Include="Common\Calendar\PersistentAppointment.cs" />
+    <Compile Include="Common\Calendar\RecurrenceType.cs" />
+    <Compile Include="Common\Calendar\RecurrenceWeek.cs" />
+    <Compile Include="Common\Calendar\RecurrenceDay.cs" />
+    <Compile Include="Common\Calendar\RecurringAppointment.cs" />
+    <Compile Include="Common\Licensing\AuthenticationUtils.cs" />
+    <Compile Include="Common\Licensing\LicenseHelper.cs" />
+    <Compile Include="Common\Licensing\EncompassEdition.cs" />
+    <Compile Include="Common\Licensing\Encompass3XEdition.cs" />
+    <Compile Include="Common\Licensing\LicenseType.cs" />
+    <Compile Include="Common\Licensing\BillingModel.cs" />
+    <Compile Include="Common\Licensing\LicenseInfo.cs" />
+    <Compile Include="Common\Licensing\ModuleLicenseCollection.cs" />
+    <Compile Include="Common\Licensing\PreauthorizedModuleType.cs" />
+    <Compile Include="Common\Licensing\PreauthorizedModule.cs" />
+    <Compile Include="Common\Licensing\UserLicenseInfo.cs" />
+    <Compile Include="Common\Properties\Resources.cs" />
+    <Compile Include="Common\Metrics\LoanActivityMetric.cs" />
+    <Compile Include="Common\Metrics\LoanActivityMetricData.cs" />
+    <Compile Include="Common\Logging\TextTraceListener.cs" />
+    <Compile Include="Common\Logging\WindowsEventLog.cs" />
+    <Compile Include="Common\IIs\IIs8.cs" />
+    <Compile Include="Common\IIs\IApplicationPool.cs" />
+    <Compile Include="Common\IIs\IIsVersion.cs" />
+    <Compile Include="Common\IIs\IIs.cs" />
+    <Compile Include="Common\IIs\IIs6.cs" />
+    <Compile Include="Common\IIs\IIs7.cs" />
+    <Compile Include="Common\IIs\IWebRoot.cs" />
+    <Compile Include="Common\IIs\IWebServer.cs" />
+    <Compile Include="Common\IIs\IWebSite.cs" />
+    <Compile Include="Common\Loan\SupportingDataSource.cs" />
+    <Compile Include="Common\eFolder\Constants.cs" />
+    <Compile Include="Common\eFolder\EnhanceConditionError.cs" />
+    <Compile Include="Common\eFolder\ApiResponse.cs" />
+    <Compile Include="Common\eFolder\ImageConversionType.cs" />
+    <Compile Include="Common\eFolder\ImageProperties.cs" />
+    <Compile Include="Common\eFolder\Licenses.cs" />
+    <Compile Include="Common\eFolder\ThumbnailProperties.cs" />
+    <Compile Include="Common\Diagnostics\ClassicLogTarget.cs" />
+    <Compile Include="Common\Diagnostics\CustomLogFilter.cs" />
+    <Compile Include="Common\Diagnostics\IRemoteCallLogDecorator.cs" />
+    <Compile Include="Common\Diagnostics\IWhiteListRemoteMethodParam.cs" />
+    <Compile Include="Common\Diagnostics\ApiTraceLog.cs" />
+    <Compile Include="Common\Diagnostics\ClientDiagConfigData.cs" />
+    <Compile Include="Common\Diagnostics\ClassicLogConfigData.cs" />
+    <Compile Include="Common\Diagnostics\RemotingLogConfigData.cs" />
+    <Compile Include="Common\Diagnostics\CloudLogConfigData.cs" />
+    <Compile Include="Common\Diagnostics\LogListenersConfigData.cs" />
+    <Compile Include="Common\Diagnostics\SmartClientSettingOverride.cs" />
+    <Compile Include="Common\Diagnostics\SqlTraceLog.cs" />
+    <Compile Include="Common\Diagnostics\ConfigChangeHandlers\CloudLogConfigChangeHandler.cs" />
+    <Compile Include="Common\Diagnostics\ConfigChangeHandlers\ClassicLogConfigChangeHandler.cs" />
+    <Compile Include="Common\Diagnostics\ConfigChangeHandlers\RemotingLogConfigChangeHandler.cs" />
+    <Compile Include="Common\Contact\ChannelType.cs" />
+    <Compile Include="Common\Contact\CompensationPaidType.cs" />
+    <Compile Include="Common\Contact\AmortizationType.cs" />
+    <Compile Include="Common\Contact\AmortizationTypeEnumUtil.cs" />
+    <Compile Include="Common\Contact\BizContactLoanSearchEnum.cs" />
+    <Compile Include="Common\Contact\BizContactLoanSearchEnumUtil.cs" />
+    <Compile Include="Common\Contact\BoolCondition.cs" />
+    <Compile Include="Common\Contact\BoolConditionEnumUtil.cs" />
+    <Compile Include="Common\Contact\BorContactLoanSearchEnum.cs" />
+    <Compile Include="Common\Contact\BorContactLoanSearchEnumUtil.cs" />
+    <Compile Include="Common\Contact\BorrowerType.cs" />
+    <Compile Include="Common\Contact\BorrowerTypeEnumUtil.cs" />
+    <Compile Include="Common\Contact\BusinessCategory.cs" />
+    <Compile Include="Common\Contact\BusinessCategoryEnumUtil.cs" />
+    <Compile Include="Common\Contact\ContactMarketingActivity.cs" />
+    <Compile Include="Common\Contact\ContactMarketingActivityEnumUtil.cs" />
+    <Compile Include="Common\Contact\ContactSource.cs" />
+    <Compile Include="Common\Contact\ContactSourceEnumUtil.cs" />
+    <Compile Include="Common\Contact\DateCondition.cs" />
+    <Compile Include="Common\Contact\DateConditionEnumUtil.cs" />
+    <Compile Include="Common\Contact\EmploymentStatus.cs" />
+    <Compile Include="Common\Contact\EmploymentStatusEnumUtil.cs" />
+    <Compile Include="Common\Contact\LienEnum.cs" />
+    <Compile Include="Common\Contact\LienEnumUtil.cs" />
+    <Compile Include="Common\Contact\LoanPurpose.cs" />
+    <Compile Include="Common\Contact\LoanPurposeEnumUtil.cs" />
+    <Compile Include="Common\Contact\LoanTypeEnum.cs" />
+    <Compile Include="Common\Contact\LoanTypeEnumUtil.cs" />
+    <Compile Include="Common\Contact\MonthWeekEnum.cs" />
+    <Compile Include="Common\Contact\MonthWeekEnumUtil.cs" />
+    <Compile Include="Common\Contact\NumberCondition.cs" />
+    <Compile Include="Common\Contact\NumberConditionEnumUtil.cs" />
+    <Compile Include="Common\Contact\PropertyType.cs" />
+    <Compile Include="Common\Contact\PropertyTypeEnumUtil.cs" />
+    <Compile Include="Common\Contact\PropertyUse.cs" />
+    <Compile Include="Common\Contact\PropertyUseEnumUtil.cs" />
+    <Compile Include="Common\Contact\RolodexField.cs" />
+    <Compile Include="Common\Contact\TextCondition.cs" />
+    <Compile Include="Common\Contact\TextConditionEnumUtil.cs" />
+    <Compile Include="Common\Configuration\Constants.cs" />
+    <Compile Include="Common\Configuration\StaticInstanceConfiguration.cs" />
+    <Compile Include="Common\Configuration\IInstanceConfiguration.cs" />
+    <Compile Include="Common\Configuration\RegistryInstanceConfiguration.cs" />
+    <Compile Include="Common\CommandLine\Options.cs" />
+    <Compile Include="Common\CommandLine\Parser.cs" />
+    <Compile Include="Common\CommandLine\Config.cs" />
+    <Compile Include="Common\CommandLine\Variant.cs" />
+    <Compile Include="Common\CommandLine\Parameter.cs" />
+    <Compile Include="Common\Cache\FastSerializable.cs" />
+    <Compile Include="Common\Cache\IInstanceCache.cs" />
+    <Compile Include="Common\Cache\InstanceCache.cs" />
+    <Compile Include="Common\Cache\ILruDataCache.cs" />
+    <Compile Include="Common\Cache\LruCache.cs" />
+    <Compile Include="Common\Cache\RequestCache.cs" />
+    <Compile Include="Common\Cache\TimedDataCache.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\CustomMessageBox.resx" />
+    <EmbeddedResource Include="Common\Properties\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

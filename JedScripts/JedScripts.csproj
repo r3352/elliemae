@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\JedScripts.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDCA255E-710A-47E0-A431-7A1FEE313BA7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>JedScripts</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.3.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>JedScripts</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My\MyApplication.cs" />
+    <Compile Include="My\MyComputer.cs" />
+    <Compile Include="My\MyProject.cs" />
+    <Compile Include="EllieMae\EMLite\Script\JS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG1_SPANISHCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG1__2004_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG1__2006_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG1__LETTER_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG2_SPANISHCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG2__2004_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG2__2006_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG2__LETTER_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG3_SPANISHCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG3__2004_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG3__2006_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG3__LETTER_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG4_SPANISHCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG4__2004_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG4__2006_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG4__LETTER_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG5_SPANISHCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG5__LETTER_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG6_SPANISHCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG7_SPANISHCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003PG8_SPANISHCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_P4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG4_ASSETS_LIABILITIESCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG4_ASSETS_LIABILITIES__2004_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG4_ASSETS_LIABILITIES__2006_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG4_EMPLOYMENTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG4_EMPLOYMENT__2004_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG4_EMPLOYMENT__2006_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG4_PREVIOUS_ADDRESSCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG4_REAL_ESTATE_OWNEDCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG4_REAL_ESTATE_OWNED__2004_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG4_REAL_ESTATE_OWNED__2006_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG5_ASSETS_LIABILITIES__LETTER_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG5_EMPLOYMENT__LETTER_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG5_PREVIOUS_ADDRESS__LETTER_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG5_REAL_ESTATE_OWNED__LETTER_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG8_ASSETS_LIABILITIES__SPANISH_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG8_EMPLOYMENT__SPANISH_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG8_PREVIOUS_ADDRESS__SPANISH_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1003_PG8_REAL_ESTATE_OWNED__SPANISH_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1008___TSUM_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1084A_CASH_ANALYSISCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_1084B_PARTNERSHIP_ETCCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_2010ITEMIZATIONCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ABILITYTOREPAY_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ABILITYTOREPAY_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ABILITYTOREPAY_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ABILITYTOREPAY_P4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ABILITYTOREPAY_P5CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ACKNOWLEDGEMENTOFINTENTTOPROCEEDCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ACKNOWLEDGERECEIPTHOMECOUNSELINGCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ACKNOWLEDGMENTOFRECEIPTOFGOODFAITHESTIMATECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ADDENDUMHUDSETTLEMENTSTATEMENTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_AMORT__SCHEDULE_COMPLETECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_AMORT__SCHEDULE_ENDING_SUMMARIESCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_AMORT__SCHEDULE_YEARLY_TOTALS_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ANNUALREPAYMENTINCOMEWORKSHEETP1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ANNUALREPAYMENTINCOMEWORKSHEETP2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ANNUALREPAYMENTINCOMEWORKSHEETP3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_APPRAISAL_NOTICECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_APPRAISAL_REQUESTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BORROWER_CONTACT_DETAIL_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BORROWER_CONTACT_DETAIL_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BORROWER_CONTACT_DETAIL_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BORROWER_CONTACT_DETAIL_P4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BORROWER_CONTACT_DETAIL_P5CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BORROWER_CONTACT_DETAIL_P6CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BORROWER_CONTACT_SUMMARYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BORROWER_SUMMARYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BUSINESS_CONTACT_DETAIL_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BUSINESS_CONTACT_DETAIL_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BUSINESS_CONTACT_DETAIL_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BUSINESS_CONTACT_DETAIL_P4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BUSINESS_CONTACT_DETAIL_P5CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_BUSINESS_CONTACT_SUMMARYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_CASH_TO_CLOSECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_CA_PRIVACYPOLICYDISCLOSURECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_CONDITION_TRACKING_DETAILCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_CONDITION_TRACKING_SUMMARYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_CONVERSATION_LOGCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_CREDITSCOREDISCLOSUREEXCEPTIONMODELH3_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_CREDITSCOREDISCLOSUREEXCEPTIONMODELH3_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_CREDITSCOREDISCLOSUREEXCEPTIONMODELH3_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_CREDITSCORENOTAVAILABLEMODELH5CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_CREDIT_AUTHORIZATIONCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DEBT_CONSOLIDATIONCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DISCLOSURE_NOTICESCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DISCLOSURE_TRACKING_DETAILSCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DISCLOSURE_TRACKING_SUMMARYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DIS___AFFILIATED_BUSINESSCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DIS___ECOACLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DIS___PMI_ARMCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DIS___PMI_FIXEDCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DIS___PMI_HIGH_RISKCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DIS___PMI_LPMICLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DIS___RESPA_SERVICINGCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DOCUMENT_TRACKING_DETAILCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_DOCUMENT_TRACKING_SUMMARYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ECOAAPPNOTICECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_EDM_COVERSHEETCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_EEMCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ESTIMATEDTRANSACTIONSUMMARYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_EVERIF_COVERSHEETCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FACT_ACT_DISCLOSURE_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FACT_ACT_DISCLOSURE_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FAIRLENDINGCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_203KPUR_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_203KPUR_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_ALTERNATIVE_DOC_LISTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_AMENDATORY_CLAUSECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_APPR_VALUE_DISCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_ASSUMPTION_NOTICECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_BLANKET_SIG_AUTHCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_CONSUMER_DISCLOSURECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_COUNSELING_CERTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_ID_OF_INTEREST_CERTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_NOTICE_TO_HOMEBUYERS_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_NOTICE_TO_HOMEBUYERS_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_SSN__CERT_BORCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FHA_SSN__CERT_COBORCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FILE_CONTACTS_PG_1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FILE_CONTACTS_PG_1_PECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FILE_CONTACTS_PG_2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FILE_CONTACTS_PG_3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FILE_CONTACTS_PG_4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FLOOD_CERT_FEDERALCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FLOOD_HAZARD_NOTICECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FUNDING_BALANCING_WORKSHEETCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FUNDING_WORKSHEETCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_FUNDING_WORKSHEET_ADDITIONAL_PAGECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFENEWCONSTRUCTIONDISCLOSURECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFEP1_2010CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFEP1_2010LCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFEP2_2010CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFEP2_2010LCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFEP3_2010CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFEP3_2010LCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_BROKERCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_BROKER_EXPANDEDCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_CA_RE88395_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_CA_RE88395_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_CA_RE88395_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_CA___RE882_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_CA___RE882_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_CA___RE882_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_CA___RE885_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_CA___RE885_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_CA___RE885_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_CA___RE885_P4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_LENDERCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_LENDER_EXPANDEDCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_PROVIDERCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_PROVIDERNEXTPAGECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_PROVIDERNEXTPAGE_LETTERCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE_PROVIDER_LETTERCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_GFE___ITEMIZATIONCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HOMEOWNERSHIP_COUNSELING_ORGANIZATION_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HOMEOWNERSHIP_COUNSELING_ORGANIZATION_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HPMLAPPNOTICECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD1PG1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD1PG1_2010CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD1PG2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD1PG2_2010CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD1PG3_2010CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD92900LTP1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD92900LTP2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUDSETTLEMENTCOSTBOOKLETCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_1003_ADDENDUM_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_1003_ADDENDUM_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_1003_ADDENDUM_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_1003_ADDENDUM_P4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_1ACLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_1A__2010__P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_1A__2010__P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_1A__2010__P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_1ESCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_26_1805_REAS_VAL_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_26_1805_REAS_VAL_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_26_1805_REAS_VAL_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_26_1805_REAS_VAL_P4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_314_203K_ESCROW_COMCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_54114_DIRECT_ENDCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_56001_PROP_IMP_PG1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_56001_PROP_IMP_PG2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_56001_PROP_IMP_PG3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_56001_PROP_IMP_PG4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_746_ACLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92051_INSPECTION_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92051_INSPECTION_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92561CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92564HS_BUYER_SUMMCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92564VC_NOTICE_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92564VC_NOTICE_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92564VC_NOTICE_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92564VC_NOTICE_P4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92564VC_NOTICE_P5CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92564_CNCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92700_203K_WRKSHEET_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92700_203K_WRKSHEET_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92700_A_203K_BOR_ACKCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_928005B_APPR_VAL_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_928005B_APPR_VAL_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_928005B_APPR_VAL_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_928005B_APPR_VAL_P4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_928005B_APPR_VAL_P5CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_928005B_APPR_VAL_P6CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92900_PUR_MCAW_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92900_PUR_MCAW_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92900_WS_REFI_MCAW_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_92900_WS_REFI_MCAW_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_HUD_9746_ACLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_INSURANCECONSUMERAUTHORIZATIONLIBERTYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_INSURANCE_EVIDENCECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_INSURANCE_EVIDENCE_FLOODCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_INSURANCE_EVIDENCE_HAZARDCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_INTERIM_SERVICING_TRACKING_SUMMARYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_IRS4506T_TRANST_REQ_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_IRS4506T_TRANST_REQ_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_IRS4506_TRANST_REQ_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_IRS4506_TRANST_REQ_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_IRS8821_TAX_AUTH_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_IRS8821_TAX_AUTH_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_IRS8821_TAX_AUTH_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_IRS8821_TAX_AUTH_P4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ITEMIZEDFEEWORKSHEETCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_ITEMIZEDFEEWORKSHEETP2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_LOANOPTIONSDISCLOSURE_PAGE1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_LOANOPTIONSDISCLOSURE_PAGE2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_LOANOPTIONSDISCLOSURE_PAGE3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_LOAN_COMPARISONCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_LOAN_LOGCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_LOAN_SUBMISSION_SHEETCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_MTG_LOAN_COMM_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_MTG_LOAN_COMM_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_MTG_LOAN_COMM_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_MTG_LOAN_ORIG_AGREEMENTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_NETTANGIBLEBENEFITDISP1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_NETTANGIBLEBENEFITDISP2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_NETTANGIBLEBENEFITP1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_NETTANGIBLEBENEFITP2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_NONSTANDARDTOSTANDARDREFIELIGIBILITYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_OHIO_1003_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_PAYMENT_HISTORYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_PAYMENT_TRANSACTION_DETAIL__BY_CHECKCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_POSTCONDITION_TRACKING_DETAILCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_POSTCONDITION_TRACKING_SUMMARYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_PRELIMINARYCONDITIONDETAILCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_PRELIMINARYCONDITIONLISTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_PREQUALIFICATIONCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_PRIVACYPOLICYP1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_PRIVACYPOLICYP2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_PRIVACY_POLICYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_PROFIT_MANAGEMENTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_1980_19CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_1980_21_PAGE_1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_1980_21_PAGE_2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_1980_21_PAGE_3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_1980_21_PAGE_4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_1980_86CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_3555_21_PAGE_1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_3555_21_PAGE_2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_3555_21_PAGE_3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_3555_21_PAGE_4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_3555_21_PAGE_5CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_3555_21_PAGE_6CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_3555_21_PAGE_7CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RD_410_4_PAGE_6CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_REGZ_TIL_SUMMARYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_REGZ___TIL32_PG_1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_REGZ___TIL32_PG_2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_REGZ___TILCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RENT_V_OWNCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RISKBASEDPRICINGNOTICEMODELH1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RISKBASEDPRICINGNOTICEMODELH6_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_RISKBASEDPRICINGNOTICEMODELH6_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_SORCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_SOR__LETTER_CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_SPECIALNOTICEFORBALLOONMORTGAGESCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_SSA_89SOCIALSECURITYNUMBERVERIFICATIONP1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_SSA_89SOCIALSECURITYNUMBERVERIFICATIONP2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_STATEMENT_OF_DENIALCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_STATEMENT_OF_DENIAL_COBORROWERCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_STATEMENT_OF_DENIAL_COBORROWER_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_STATEMENT_OF_DENIAL_COBORROWER_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_STATEMENT_OF_DENIAL_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_STATEMENT_OF_DENIAL_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_TASKDETAILCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_TASKSLISTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_TAX_AND_INSURANCECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_TITLE_COMMITMENT_REQUESTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_TRUST_ACCOUNTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_UNDERWRITERSUMMARYP1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_UNDERWRITERSUMMARYP2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_UNDERWRITERSUMMARYP3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_UNDERWRITINGCONDITIONSCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_1003_ADDENDUM_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_1003_ADDENDUM_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_1003_ADDENDUM_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_1003_ADDENDUM_P4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_0285_TRANSMITTAL_LISTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_0286_LOAN_SUMMARY_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_0286_LOAN_SUMMARY_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_0503_FED_COLLECTION_POLICYCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_0551_DEBT_QUESTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_0592_MILITARY_CHECKLISTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_1805_REAS_VAL_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_1805_REAS_VAL_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_1805_REAS_VAL_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_1805_REAS_VAL_P4CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_1817_UNMARRIED_SURVIVING_SPOUSESCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_1820_LOAN_DISBURSEMENT_CERT_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_1820_LOAN_DISBURSEMENT_CERT_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_1880_ELIG_CERT_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_1880_ELIG_CERT_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_6393_LOAN_ANALYSISCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_6393_LOAN_ANALYSIS_ADDENDUMCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_8261_A_VETERAN_STATUSCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_8923_RATE_REDUCTION_WORKSHEETCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_8937_VERIF_OF_BENEFITSCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_26_8978_BORROWER_RIGHTSCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_CONTRACT_AMENDMENTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VA_RATE_DISCLOSURECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VODCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VOECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VOLCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VOMCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\_VORCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__FL_BROKER_CONTRACT_NO_COMMITMENTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__FL_BROKER_CONTRACT_WITH_COMMITMENT_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__FL_BROKER_CONTRACT_WITH_COMMITMENT_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__FL_COMMITMENTCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__FL_LENDER_DISCLOSURECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__GA_DISCLOSURECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__NY_APPLICATION_LOG_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__NY_APPLICATION_LOG_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__NY_HIGH_COST_ADDENDUMCLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__NY_HIGH_COST_AGGREGATECLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__NY_PREAPPLICATION_BROKER_DISCLOSURE_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__NY_PREAPPLICATION_BROKER_DISCLOSURE_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__NY_PREAPPLICATION_BROKER_DISCLOSURE_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__NY_PREAPPLICATION_LENDER_DISCLOSURE_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__NY_PREAPPLICATION_LENDER_DISCLOSURE_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__NY_PREAPPLICATION_LENDER_DISCLOSURE_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__TX_MORTGAGE_BROKER_P1CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__TX_MORTGAGE_BROKER_P2CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__TX_MORTGAGE_BROKER_P3CLASS.cs" />
+    <Compile Include="EllieMae\EMLite\Script\__TX_MULTIPLE_ROLE_DISCLOSURECLASS.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PostSharp\ImplementationDetails_9ec88781.EnhancedByPostSharp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

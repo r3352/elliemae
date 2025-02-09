@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JedScripts", "JedScripts.csproj", "{CDCA255E-710A-47E0-A431-7A1FEE313BA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDCA255E-710A-47E0-A431-7A1FEE313BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDCA255E-710A-47E0-A431-7A1FEE313BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDCA255E-710A-47E0-A431-7A1FEE313BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDCA255E-710A-47E0-A431-7A1FEE313BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

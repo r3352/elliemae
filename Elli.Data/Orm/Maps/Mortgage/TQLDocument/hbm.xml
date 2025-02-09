@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="TQLDocument" table="ElliTQLDocument" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">TQL</param>
+      </generator>
+    </id>
+    <many-to-one name="TQL" class="TQL" column="ElliTQLId" />
+    <property name="TQLDocumentDeliveredDate" />
+  </class>
+</hibernate-mapping>

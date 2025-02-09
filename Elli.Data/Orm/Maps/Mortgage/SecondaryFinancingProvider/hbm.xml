@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="SecondaryFinancingProvider" table="ElliSecondaryFinancingProvider" dynamic-update="true">
+    <id name="Id" column="ElliSecondaryFinancingProviderId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="HudLoanData" column="ElliHudLoanDataId" />
+    <property name="SecondaryFinancingProviderType"/>
+    <property name="FinancingAmount"/>
+    <property name="SellerFundedDapIndicator" />
+    <property name="Source"/>
+    <property name="SourceFromFamilyIndicator"/>
+    <property name="SourceFromGovernmentIndicator"/>
+    <property name="SourceFromNPIndicator"/>
+    <property name="SourceFromOtherIndicator"/>
+    <property name="SourceOtherDetail"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Metrics.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7632F3EC-CC87-4EC4-AA42-EF5B083CA4F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Elli.Metrics</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Elli.Metrics</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Metrics">
+      <HintPath>lib\Metrics.dll</HintPath>
+    </Reference>
+    <Reference Include="Metrics.NET.SignalFX">
+      <HintPath>lib\Metrics.NET.SignalFX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="IContactsPaginationMetricsRecorder.cs" />
+    <Compile Include="IHazelCastMetricsRecorder.cs" />
+    <Compile Include="ILoanAccessorMetricsRecorder.cs" />
+    <Compile Include="ILoanPipelineMetricsRecorder.cs" />
+    <Compile Include="HighLatencyException.cs" />
+    <Compile Include="ILoanSerializationMatrixRecorder.cs" />
+    <Compile Include="IMetricsFactory.cs" />
+    <Compile Include="IMongoUtilityMetricsRecorder.cs" />
+    <Compile Include="IServerEventMetricsRecorder.cs" />
+    <Compile Include="ServerEventType.cs" />
+    <Compile Include="ServerEventErrorType.cs" />
+    <Compile Include="MetricsFactory.cs" />
+    <Compile Include="IFormBuilderMetricsRecorder.cs" />
+    <Compile Include="ILoanMetricsRecorder.cs" />
+    <Compile Include="LoanAccessorOperationType.cs" />
+    <Compile Include="LoanSeriazationOperationType.cs" />
+    <Compile Include="SignalFx\ContactsPaginationMetricsRecorder.cs" />
+    <Compile Include="SignalFx\HazelCastMetricsRecorder.cs" />
+    <Compile Include="SignalFx\LoanAccessorMetricsRecorder.cs" />
+    <Compile Include="SignalFx\LoanPipelineMetricsRecorder.cs" />
+    <Compile Include="SignalFx\FormBuilderMetricsRecorder.cs" />
+    <Compile Include="SignalFx\LoanMetricsRecorder.cs" />
+    <Compile Include="SignalFx\LoanSerializationMetricsRecorder.cs" />
+    <Compile Include="SignalFx\MongoUtilityMetricsRecorder.cs" />
+    <Compile Include="SignalFx\ServerEventMetricsRecorder.cs" />
+    <Compile Include="Disabled\ContactsPaginationMetricsRecorder.cs" />
+    <Compile Include="Disabled\LoanAccessorMetricsRecorder.cs" />
+    <Compile Include="Disabled\HazelCastMetricsRecorder.cs" />
+    <Compile Include="Disabled\LoanSerializationMetricsRecorder.cs" />
+    <Compile Include="Disabled\ServerEventMetricsRecorder.cs" />
+    <Compile Include="Disabled\LoanPipelineMetricsRecorder.cs" />
+    <Compile Include="Disabled\FormBuilderMetricsRecorder.cs" />
+    <Compile Include="Disabled\LoanMetricsRecorder.cs" />
+    <Compile Include="Disabled\MongoUtilityMetricsRecorder.cs" />
+    <Compile Include="Client\ClientMetricsProviderFactory.cs" />
+    <Compile Include="Client\ClientMetricsProvider.cs" />
+    <Compile Include="Client\Constants.cs" />
+    <Compile Include="Client\IClientMetricsProvider.cs" />
+    <Compile Include="Client\SFxTag.cs" />
+    <Compile Include="Client\SFxActionTypeTag.cs" />
+    <Compile Include="Client\SFxUiTag.cs" />
+    <Compile Include="Client\SFxSdkTag.cs" />
+    <Compile Include="Client\SFxInternalTag.cs" />
+    <Compile Include="Client\IClientMetricsRecorder.cs" />
+    <Compile Include="Client\IMetricsFactory.cs" />
+    <Compile Include="Client\MetricsFactory.cs" />
+    <Compile Include="Client\SignalFx\ClientMetricsRecorder.cs" />
+    <Compile Include="Client\Disabled\ClientMetricsRecorder.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="ServicingDisclosure" table="ElliServicingDisclosure" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="FiftyOneTo75Indicator" />
+    <property name="SeventySixTo100Indicator" />
+    <property name="ThisEstimateType" />
+    <property name="ThisInformationType" />
+    <property name="ThisIsOurRecordOfTransferingIndicator" />
+    <property name="TwentySixTo50Indicator" />
+    <property name="WeAreAbleType" />
+    <property name="WeDoNotSellMortgageLoansIndicator" />
+    <property name="WeDoNotServiceMortgageLoansIndicator" />
+    <property name="WeHaveNotServicedMortgLoansIn3YrsIndicator" />
+    <property name="WeHavePreviouslyAssignedIndicator" />
+    <property name="WeMayAssignIndicator" />
+    <property name="ZeroTo25Indicator" />
+    <property name="DisclosurePercent1" />
+    <property name="DisclosureYear1" />
+    <property name="DisclosurePercent2" />
+    <property name="DisclosureYear2" />
+    <property name="DisclosurePercent3" />
+    <property name="DisclosureYear3" />
+  </class>
+</hibernate-mapping>

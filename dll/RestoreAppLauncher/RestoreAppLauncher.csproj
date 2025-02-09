@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\Ellie Mae\Encompass\RestoreAppLauncher.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE03C28D-1DC5-4487-BC7F-A98463391D3A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>RestoreAppLauncher</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppUpdtr\PgBarForm.cs" />
+    <Compile Include="RestoreAppLauncher\AppExperienceForm.cs" />
+    <Compile Include="RestoreAppLauncher\FileSelectionForm.cs" />
+    <Compile Include="RestoreAppLauncher\StartupObject.cs" />
+    <Compile Include="RestoreAppLauncher\PgBarThreadStart.cs" />
+    <Compile Include="RestoreAppLauncher\CheckItems.cs" />
+    <Compile Include="RestoreAppLauncher\CopyWRetryResult.cs" />
+    <Compile Include="RestoreAppLauncher\Program.cs" />
+    <Compile Include="RestoreAppLauncher\SCUtil.cs" />
+    <Compile Include="RestoreAppLauncher\UACUtil.cs" />
+    <Compile Include="RestoreAppLauncher\Properties\Resources.cs" />
+    <Compile Include="RestoreAppLauncher\Properties\Settings.cs" />
+    <Compile Include="EllieMae\Encompass\AsmResolver\AuthenticationForm.cs" />
+    <Compile Include="EllieMae\Encompass\AsmResolver\AuthResultCode.cs" />
+    <Compile Include="EllieMae\Encompass\AsmResolver\AuthenticationResult.cs" />
+    <Compile Include="EllieMae\Encompass\AsmResolver\Utils\BasicUtils.cs" />
+    <Compile Include="EllieMae\Encompass\AsmResolver\Utils\FileCompressor.cs" />
+    <Compile Include="EllieMae\Encompass\AsmResolver\Utils\IProgressBar.cs" />
+    <Compile Include="EllieMae\Encompass\AsmResolver\Utils\ProgressBarForm.cs" />
+    <Compile Include="EllieMae\Encompass\AsmResolver\Utils\Consts.cs" />
+    <Compile Include="EllieMae\Encompass\AsmResolver\Utils\WebUtil.cs" />
+    <Compile Include="EllieMae\Encompass\AsmResolver\Utils\XT.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AppUpdtr\PgBarForm.resx" />
+    <EmbeddedResource Include="EllieMae\Encompass\AsmResolver\AuthenticationForm.resx" />
+    <EmbeddedResource Include="EllieMae\Encompass\AsmResolver\Utils\ProgressBarForm.resx" />
+    <EmbeddedResource Include="RestoreAppLauncher\AppExperienceForm.resx" />
+    <EmbeddedResource Include="RestoreAppLauncher\FileSelectionForm.resx" />
+    <EmbeddedResource Include="RestoreAppLauncher\Properties\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

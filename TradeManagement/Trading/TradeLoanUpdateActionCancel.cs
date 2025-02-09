@@ -1,0 +1,49 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: EllieMae.EMLite.Trading.TradeLoanUpdateActionCancel
+// Assembly: TradeManagement, Version=24.3.0.5, Culture=neutral, PublicKeyToken=null
+// MVID: 30F9401A-5385-498E-9C5B-D147722AC94C
+// Assembly location: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\TradeManagement.dll
+
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
+
+#nullable disable
+namespace EllieMae.EMLite.Trading
+{
+  public class TradeLoanUpdateActionCancel : UserControl
+  {
+    private IContainer components;
+    private EllieMae.EMLite.UI.LinkLabel lnkLblCancel;
+
+    public TradeLoanUpdateActionCancel() => this.InitializeComponent();
+
+    protected override void Dispose(bool disposing)
+    {
+      if (disposing && this.components != null)
+        this.components.Dispose();
+      base.Dispose(disposing);
+    }
+
+    private void InitializeComponent()
+    {
+      this.lnkLblCancel = new EllieMae.EMLite.UI.LinkLabel();
+      this.SuspendLayout();
+      this.lnkLblCancel.AutoSize = true;
+      this.lnkLblCancel.Font = new Font("Microsoft Sans Serif", 7f, FontStyle.Regular, GraphicsUnit.Point, (byte) 0);
+      this.lnkLblCancel.Location = new Point(0, 2);
+      this.lnkLblCancel.Margin = new Padding(2, 0, 2, 0);
+      this.lnkLblCancel.Name = "lnkLblCancel";
+      this.lnkLblCancel.Size = new Size(39, 13);
+      this.lnkLblCancel.TabIndex = 2;
+      this.lnkLblCancel.Text = "Cancel";
+      this.AutoScaleDimensions = new SizeF(6f, 13f);
+      this.AutoScaleMode = AutoScaleMode.Font;
+      this.Controls.Add((Control) this.lnkLblCancel);
+      this.Name = nameof (TradeLoanUpdateActionCancel);
+      this.Size = new Size(70, 18);
+      this.ResumeLayout(false);
+      this.PerformLayout();
+    }
+  }
+}

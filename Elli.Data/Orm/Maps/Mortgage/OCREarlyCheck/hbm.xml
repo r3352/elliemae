@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="EarlyCheck" table="ElliOCREarlyCheck" dynamic-update="true">
+    <id name="Id" column="ElliEarlyCheckId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Correspondent" column="ElliLoanId" />
+    <property name="EcUcdpLastSubmissionDateTimeEarly" />
+    <property name="EcAppraisalValue" />
+    <property name="EcDocumentFileId" />
+  </class>
+</hibernate-mapping>

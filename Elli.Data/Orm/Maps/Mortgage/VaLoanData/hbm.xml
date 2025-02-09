@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="VaLoanData" table="ElliVaLoanData" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <!-- VA_CERTIFICATE_ELIGIBILITY -->
+    <property name="VeteranDischargedIndicator" />
+    <property name="VAClaimNumber" />
+    <property name="PreviousVALoanIndicator" />
+    <property name="PurpleHeartRecipientIndicator" />
+    <property name="MailingAddress" />
+    <property name="MailingCity" />
+    <property name="MailingPostalCode" />
+    <property name="MailingState" />
+    <property name="PreDischargeClaimPending" />
+    <property name="WillUseCertificateFor" />
+    <property name="OwnsDestroyedProperty" />
+    <property name="DestroyedPropertyLoanDate" />
+    <property name="DestroyedPropertyLossDate" />
+    <property name="DestroyedPropertyStreetAddress" />
+    <property name="DestroyedPropertyCity" />
+    <property name="DestroyedPropertyState" />
+    <property name="DestroyedPropertyPostalCode" />
+    <property name="DestroyedPropertyRemarks" />
+    <!-- VA_CERTIFICATE_OF_REASONABLE_VALUE -->
+    <property name="Acres" />
+    <property name="AvailableForInspectionAMIndicator" />
+    <property name="AnnualGroundRent" />
+    <property name="AnnualRealEstateTaxes" />
+    <property name="BuildingType" />
+    <property name="BuyerPurchasingLotSeparately" />
+    <property name="ClothesWasherIndicator" />
+    <property name="ConstructionCompletedDate" />
+    <property name="ConstructionWarrantyIncluded" />
+    <property name="ContractNoApprovedByVA" />
+    <property name="AvailableForInspectionDateAndTime" />
+    <property name="DateOfAssignment" />
+    <property name="DishwasherIndicator" />
+    <property name="DryerIndicator" />
+    <property name="EmailToBeNotifiedWhenUploaded" />
+    <property name="WarrantyProgramExpirationDate" />
+    <property name="GarbageDisposalIndicator" />
+    <property name="IrregularLotSizeInSquareFeet" />
+    <property name="IsDelinquent30Days" />
+    <property name="KeysAtAddress" />
+    <property name="LeaseholdType" />
+    <property name="LotDimensions" />
+    <property name="MineralRightsReserved" />
+    <property name="NameOfOccupant" />
+    <property name="NameOfOwner" />
+    <property name="NameOfWarrantyProgram" />
+    <property name="NumberOfBuildings" />
+    <property name="OccupantTelephone" />
+    <property name="EquipmentOtherDescription" />
+    <property name="ConstructionPlan" />
+    <property name="PlansSubmitted" />
+    <property name="POCAddress" />
+    <property name="POCCity" />
+    <property name="POCName" />
+    <property name="POCPhone" />
+    <property name="POCState" />
+    <property name="POCZipCode" />
+    <property name="PropertyOccupancyType" />
+    <property name="ProposedSaleContractAttached" />
+    <property name="RangeOvenIndicator" />
+    <property name="RefrigeratorIndicator" />
+    <property name="Rent" />
+    <property name="StreetAccess" />
+    <property name="StreetMaintenance" />
+    <property name="Title" />
+    <property name="VABuilderIDNo" />
+    <property name="VABuilderDescription" />
+    <property name="VentFanIndicator" />
+    <property name="InspectionWillBeMadeBy" />
+    <property name="WWCarpetIndicator" />
+    <property name="InsuranceType" />
+    <property name="AnnualMaintenanceAssessment" />
+    <property name="SpecialAssessmentComments1" type="StringClob" />
+    <property name="SpecialAssessmentComments2" type="StringClob" />
+    <property name="SpecialAssessmentComments3" type="StringClob" />
+    <property name="PropertyLegalDescription1" type="StringClob" />
+    <property name="PropertyLegalDescription2" type="StringClob" />
+    <property name="PropertyLegalDescription3" type="StringClob" />
+    <property name="PropertyLegalDescription4" type="StringClob" />
+    <property name="TitleLimitations1" type="StringClob" />
+    <property name="TitleLimitations2" type="StringClob" />
+    <property name="TitleLimitations3" type="StringClob" />
+    <property name="UtilitiesElectricDescription" />
+    <property name="UtilitiesGasDescription" />
+    <property name="UtilitiesWaterDescription" />
+    <property name="UtilitiesSewerDescription" />
+    <property name="WarrantorAddress" />
+    <property name="WarrantorCity" />
+    <property name="WarrantorName" />
+    <property name="WarrantorPhone" />
+    <property name="WarrantorPostalCode" />
+    <property name="WarrantorState" />
+    <!-- VA_LOAN_ANALYSIS -->
+    <property name="TotalDebtMonthlyPayment" />
+    <property name="PayoffIndicator1" />
+    <property name="PayoffIndicator2" />
+    <property name="PayoffIndicator3" />
+    <property name="PayoffIndicator4" />
+    <property name="PayoffIndicator5" />
+    <property name="PayoffIndicator6" />
+    <property name="PayoffIndicator7" />
+    <property name="PayoffIndicator8" />
+    <property name="PayoffIndicator9" />
+    <property name="LoanAnalysisRemarks1" type="StringClob" />
+    <property name="LoanAnalysisRemarks2" type="StringClob" />
+    <property name="LoanAnalysisRemarks3" type="StringClob" />
+    <property name="LoanAnalysisRemarks4" type="StringClob" />
+    <property name="LoanAnalysisRemarks5" type="StringClob" />
+    <property name="LoanAnalysisRemarks6" type="StringClob" />
+    <property name="LoanAnalysisRemarks7" type="StringClob" />
+    <property name="LoanAnalysisRemarks8" type="StringClob" />
+    <property name="LoanAnalysisRemarks9" type="StringClob" />
+    <property name="NegativeRents" />
+    <property name="UnderwriterRecommendation" />
+    <property name="UnderwriterRecommendationDate" />
+    <property name="FinalAction" />
+    <property name="FinalActionDate" />
+    <!-- VA_LOAN_SUMMARY -->
+    <property name="VaLoanSummaryApplicantType" />
+    <property name="EnergyImprovementsAdditionOfFeature" />
+    <property name="AgeOfProperty" />
+    <property name="AmountSpentOnEnergyImprovements" />
+    <property name="AppraisalType" />
+    <property name="BorrowerPaidDiscountPointsTotalAmount" />
+    <property name="CreditScore" />
+    <property name="DateSAR" />
+    <property name="DiscountPoint" />
+    <property name="EntitlementCode" />
+    <property name="FirstTimeUse" />
+    <property name="FundingFeeExempt" />
+    <property name="Insulation" />
+    <property name="LenderSAR" />
+    <property name="LoanCode" />
+    <property name="LoanProcedure" />
+    <property name="LoanProcessedUnderAU" />
+    <property name="ManufacturedHome" />
+    <property name="MCRVNumber" />
+    <property name="MilitaryBranchOfService" />
+    <property name="NoEnergyImprovements" />
+    <property name="OriginalInterestRate" />
+    <property name="OriginalLoanAmount" />
+    <property name="OriginalTerm" />
+    <property name="OriginalValueEstimateChanged" />
+    <property name="OtherImprovements" />
+    <property name="PaidInFullVALoanNumber" />
+    <property name="TotalDiscountPointsCharged" />
+    <property name="PriorLoanType" />
+    <property name="PropertyDesignation" />
+    <property name="PropertyGrossLivingArea" />
+    <property name="PurposeOfLoan" />
+    <property name="ReplacementOfSystem" />
+    <property name="RiskClasification" />
+    <property name="VeteranServiceType" />
+    <property name="SolarHeatingOrCooling" />
+    <property name="SystemUsed" />
+    <property name="TotalBaths" />
+    <property name="TotalBedrooms" />
+    <property name="TotalDiscountPointCharged" />
+    <property name="TotalRooms" />
+    <property name="TypeOfHybridARM" />
+    <property name="TypeOfMortgage" />
+    <property name="TypeOfOwnsership" />
+    <property name="TypeOfStructure" />
+    <property name="LoanSummaryRemarks1" type="StringClob" />
+    <property name="LoanSummaryRemarks2" type="StringClob" />
+    <property name="LoanSummaryRemarks3" type="StringClob" />
+    <property name="LoanSummaryRemarks4" type="StringClob" />
+    <property name="LoanSummaryRemarks5" type="StringClob" />
+    <property name="LoanSummaryRemarks6" type="StringClob" />
+    <property name="LoanSummaryRemarks7" type="StringClob" />
+    <property name="LoanSummaryRemarks8" type="StringClob" />
+    <!-- VA_LOAN_DISBURSEMENT -->
+    <property name="AutomaticProcedure" />
+    <property name="PriorApprovalProcedure" />
+    <property name="FirstChattelLoanType" />
+    <property name="UnsecuredLoanType" />
+    <property name="OtherLoanType" />
+    <property name="OtherDescriptionLoanType" />
+    <property name="OtherEstateProperty" />
+    <property name="OtherDescriptionEstateProperty" />
+    <property name="AnnualSpecialAssessment" />
+    <property name="TotalUnpaidSpecialAssessments" />
+    <property name="NonrealtyDescription" type="StringClob" />
+    <property name="AdditionalSecurityDescription" type="StringClob" />
+    <property name="DateAquiredLand" />
+    <property name="LandPurchasePrice" />
+    <property name="AmountTypeWithheld" />
+    <property name="AmountWithheld" />
+    <property name="ReasonableValueCompleted" />
+    <property name="RefinancedModified" />
+    <property name="ModifiedInterestRate" />
+    <property name="ModifiedTerm" />
+    <property name="EscrowItemsToComplete" />
+    <property name="UnderwriterVaIdNumber" />
+    <property name="VaPurposeOfLoan" />
+    <property name="NotDischargedReserve" />
+    <property name="UnmarriedSpouseStatus" />
+    <property name="VeteranNotDischarged" />    
+    
+    <!-- VA_MANAGEMENT -->
+    <property name="DisabilityAmountCollected" />
+    <property name="PestReportFee" />
+    <property name="VATrackingSARName" />
+    <property name="VATrackingSARID" />
+    <property name="VATrackingIsSARLAPPCertified" />
+    <property name="VAAppraisalSentDate" />
+    <property name="VANOVDateReceived" />
+    <property name="VANOVDateReviewed" />
+    <property name="VANOVIssuedDate" />
+    <property name="VADateNOVAppraisalMailedToBorrower" />
+    <property name="VATrackingOrderedDate" />
+    <property name="VATrackingCOEIssueDate" />
+    <property name="VATrackingCOEIssueHistory" />
+    <property name="VATrackingPaidDate" />
+    <property name="VATrackingReceiptReceived" />
+    <property name="VATrackingLoanGuaranteeCertReceipt" />
+    <property name="VATrackingGSAExclusionaryListChecked" />
+    <property name="VATrackingCertOfCommitmentIssued" />
+    <property name="VATrackingMasterCommitmentLockExpired" />
+    <property name="VATrackingFinalApprovalCommitmentDate" />
+    <property name="VATrackingPurchaseContractDate" />    
+    <property name="VATrackingInuranceFloodPolicy" />
+    <property name="VATrackingInuranceHazardPolicy" />
+    <property name="VATrackingInuranceWoodDestroyingPolicy" />
+    <property name="VATrackingInuranceWindOrHailPolicy" />
+    <property name="VAQualificationCountryRegion" />
+    <property name="VAQualification2ndTierEntitlement" />
+    <property name="VAQualificationCountyLimits" />
+
+    <property name="VAOriginalMonthlyPayment" />
+    <property name="VAOriginalAmortizationType" />
+    <property name="VARecoupmentMonthlyDecreaseInPayment" />
+    <property name="VARecoupmentTotalClosingCosts" />
+    <property name="VARecoupmentExcludePrepaids" />
+    <property name="VARecoupmentClosingCosts" />
+    <property name="VARecoupmentYears" />
+    <property name="VARecoupmentMonths" />
+    <property name="VALatePaymentIn6Months" />
+    <property name="VAIsDelinquent30Days" />
+    
+    <!-- VA_REFI_WORKSHEET -->
+    <property name="CashPaymentFromVeteran" />
+    <property name="PreliminaryDiscountAmount" />
+    <property name="FinalDiscountAmount" />
+    <property name="DiscountPercentage" />
+    <property name="PreliminaryFundingFeeAmount" />
+    <property name="FinalFundingFeeAmount" />
+    <property name="OriginationFeeAmount" />
+    <property name="OtherClosingCosts" />
+    <property name="InitialTotal" />
+    <property name="PreliminaryTotal" />
+    <property name="TotalForMaxLoanAmount" />
+    <!-- VA_VERIFICATION_OF_BENEFIT -->
+    <property name="AdministratorContact" />
+    <property name="VABenefitRelatedIndebtedness" />
+    <property name="ClaimDisabilityBenefits" />
+    <property name="CurrentlyOnMilitaryDuty" />
+    <property name="OnMilitaryDutyFollowingSeparation" />
+    <property name="ServiceNumber" />
+    <property name="TypeOfVeteran" />
+    <property name="VAClaimFolderNumber" />
+    <property name="AdministratorAddress" />
+    <property name="AdministratorCity" />
+    <property name="AdministratorName" />
+    <property name="AdministratorPostalCode" />
+    <property name="AdministratorState" />
+    <!-- MilitaryServices -->
+    <bag name="militaryServices" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliVaLoanDataId" />
+      <one-to-many class="MilitaryService"/>
+    </bag>
+    <!-- PreviousVaLoans -->
+    <bag name="previousVaLoans" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliVaLoanDataId" />
+      <one-to-many class="PreviousVaLoan"/>
+    </bag>
+    <property name="TotalMonthlyPayment" />
+    <property name="TotalProposedMonthlyPayment" />
+    <property name="ExcludeTaxesInsuranceIndicator" />
+    <property name="ApplicantBirthDate" />
+    <property name="ApplicantFirstNameWithMiddleName" />
+    <property name="ApplicantLastNameWithSuffix" />
+    <property name="ApplicantTaxIdentificationIdentifier" />
+    <property name="ApplicantHmdaGenderType" />
+    <property name="ApplicantAddressStreetLine1" />
+    <property name="ApplicantAddressCity" />
+    <property name="ApplicantAddressState" />
+    <property name="ApplicantAddressPostalCode" />
+    <property name="ApplicantHomePhoneNumber" />
+    <!-- CBIZ-22028 V.A. Circular 26-18-30 Updates -->
+    <property name="ExistingVALoanNumber" />
+    <property name="ExistingLoanBalance" />
+    <property name="EstimatedImpactofLoanBalanceAmount" />
+    <property name="EstimatedImpactofRemainingTermMonths" />
+    <property name="EstimatedImpactofInterestRate" />
+    <property name="ExistingTotalRemainingPaymentAmount" />
+    <property name="ProposedTotalRemainingPaymentAmount" />
+    <property name="EstimatedImpactofTotalRemainingPaymentAmount" />
+    <property name="EstimatedImpactofLTV" />
+    <property name="ExistingReasonableAppraisedValue" />
+    <property name="ExistingHomeEquityRemainingAmount" />
+    <property name="ProposedHomeEquityRemainingAmount" />
+    <property name="EstimatedImpactofHomeEquityRemainingAmount" />
+    <property name="CashDisbursedToBorrowerAmount" />
+    <property name="DisbursementsLessPayoffAmount" />
+    <property name="VAImpactLoanBalanceIndicator" />
+    <property name="VAImpactRemainingTermIndicator" />
+    <property name="VAImpactInterestRateIndicator" />
+    <property name="VAImpactScheduledPaymentsIndicator" />
+    <property name="VAImpactLTVIndicator" />
+    <property name="VAImpactRemainingEquityIndicator" />
+    <property name="TotalPaidOverLifeIncreasedAmount" />
+    <property name="ExistingLoanFirstPaymentDate" />
+    <property name="TotalClosingCostLessGuaranteeFee" />
+    <property name="VACashOutRefinanceType" />
+    <property name="AmountOfProposedLiens" />
+    <property name="VAStatutoryClosingCosts" />
+    <property name="VAStatutoryMonthlyPayment" />
+    <property name="VAStatutoryMonthlyReduction" />
+    <property name="VAStatutoryRecoupmentMonths" />
+    <property name="VARateReducedSolelybyDiscountPointsIndicator" />
+    <property name="VAEnergyEfficientImprovementsFinancedAmount" />
+    <property name="VAEEMIncludedinBaseLoanAmountIndicator" />
+    <property name="VAFinancedClosingCostsToExcludeAmount" />
+    <property name="InitialRecoupmentFormProvidedDate" />
+    <property name="FinalRecoupmentFormProvidedDate" />
+    <!-- CBIZ-30264 -->
+    <property name="CdNonShoppableLessFundingFee" />
+    <property name="LeTotalClosingCosts" />
+    <property name="LeRecoupmentMonths" />
+    <property name="IncludeSectionAIndicator" />
+    <property name="IncludeSectionBVaFundingFeeIndicator" />
+    <property name="IncludeSectionBOtherIndicator" />
+    <property name="IncludeSectionCIndicator" />
+    <property name="IncludeSectionEIndicator" />
+    <property name="IncludeSectionFIndicator" />
+    <property name="IncludeSectionGIndicator" />
+    <property name="IncludeSectionHIndicator" />
+    <property name="IncludeLenderCreditIndicator" />
+    <property name="RefinancePropertyExistingLienAmount" />
+    
+    <!-- CBIZ-47944, Update to VA 26-1805 Request for Determination of Reasonable Value Form -->
+    <property name="SubjectAddrLatitudeLongitudeGrid" />
+    <property name="SubjectPropertyLeaseholdFlag" />
+    <property name="SubjectAddrVerifiedByUspsFlag" />
+    <property name="LoanAppraisalType" />
+    <property name="LoanUse" />
+    <property name="VeteranSellerWorksNightsFlag" />
+    <property name="PetsOnPremisesFlag" />
+    <property name="HouseAlarmFlag" />
+    <property name="GatedCommunityFlag" />
+    <property name="SpecialEnergyEfficiencyFlag" />
+    <property name="OtherSpecialInstruction" />
+    <property name="NumberOfPagesInSalesContract" />
+    <property name="TideWaterPocName" />
+    <property name="TideWaterPocPhone" />
+    <property name="TideWaterPocEmail" />
+    <property name="SponsorType" />
+    <property name="CanAappBeUtilizedFlag" />
+    <property name="ApplicantAddressStreetLine2" />
+    <property name="SellerOwnerPhone" />
+    <property name="SellerOwnerEmail" />
+  </class>
+</hibernate-mapping>

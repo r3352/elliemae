@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="LoanEstimate3" table="ElliLoanEstimate3" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign" >
+        <param name="property">ClosingCost</param>
+      </generator>
+    </id>
+    <one-to-one name="ClosingCost" class="ClosingCost" constrained="true" />
+    <property name="LenderLicenseID" />
+    <property name="LenderEmail" />
+    <property name="LenderPhone" />
+    <property name="LenderLoanOfficer" />
+    <property name="LenderLoanOfficerNMLSId" />
+    <property name="MortgageBrokerLicenseID" />
+    <property name="MortgageBrokerEmail" />
+    <property name="MortgageBrokerPhone" />
+    <property name="MortgageBrokerLoanOfficer" />
+    <property name="MortgageBrokerLoanOfficerNMLSId" />
+    <property name="Appraisal" />
+    <property name="Assumption" />
+    <property name="HomeownerInsurance" />
+    <property name="Servicing" />
+    <property name="ConstructionLoan" />
+    <property name="TotalInterestPercentage" />
+    <property name="TotalInterestPercentageUI" />
+    <property name="In5YearsTotalYouWillHavePaid" />
+    <property name="In5YearsPrincipalYouWillHavePaidOff" />
+    <property name="SignatureType" />
+    <property name="LenderLicenseState" />
+    <property name="LenderLoanOfficerLicenseState" />
+    <property name="MortgageBrokerLicenseState" />
+    <property name="MortgageBrokerLoanOfficerLicenseState" />
+    <property name="MortgageLenderLoanOfficerLicenseID" />
+    <property name="MortgageBrokerLoanOfficerLicenseID" />
+  </class>
+</hibernate-mapping>

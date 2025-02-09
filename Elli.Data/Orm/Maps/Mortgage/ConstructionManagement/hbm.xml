@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="ConstructionManagement" table="ElliConstructionManagement" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="SecuredBySeparateProperty" />
+    <property name="ConstCompletionDate" />
+    <property name="MaxLTVPercent" />
+    <property name="HoldbackPercent" />
+    <property name="HoldbackAmount" />
+    <property name="ProjectDelaySurchargePercent" />
+    <property name="ConstructionContractIssuedDate"/>
+    <property name="ConstructionContractReceivedDate"/>
+    <property name="CommitmentLetterDate"/>
+    <property name="CommitmentExpirationDate"/>
+    <property name="ReturnLendersCopyCommitmentDays"/>
+    <property name="TakeOutCommitmentIndicator"/>
+    <property name="TakeOutCommitmentDate"/>
+    <property name="TitleInsuranceIndicator"/>
+    <property name="TitleInsuranceDate"/>
+    <property name="SurveyIndicator"/>
+    <property name="SurveyDate"/>
+    <property name="PermitsIndicator"/>
+    <property name="PermitsDate"/>
+    <property name="UtilityLettersIndicator"/>
+    <property name="UtilityLettersDate"/>
+    <property name="PlansAndSpecificationsIndicator"/>
+    <property name="PlansAndSpecificationsDate"/>
+    <property name="ConstructionContractIndicator"/>
+    <property name="BudgetIndicator"/>
+    <property name="BudgetDate"/>
+    <property name="ConstOnlyAmortizationType"/>
+    <property name="ContractorsAgreementIndicator"/>
+    <property name="ContractorsAgreementDate"/>
+    <property name="ArchitectsCertificateIndicator"/>
+    <property name="ArchitectsCertificateDate"/>
+    <property name="EnvironmentalAssessmentIndicator"/>
+    <property name="EnvironmentalAssessmentDate"/>
+    <property name="SoilReportIndicator"/>
+    <property name="SoilReportDate"/>
+    <property name="WaterTestIndicator"/>
+    <property name="WaterTestDate"/>
+    <property name="PercolationTestIndicator"/>
+    <property name="PercolationTestDate"/>
+    <property name="PaymentAndPerformanceBondsIndicator"/>
+    <property name="PaymentAndPerformanceBondsDate"/>
+    <property name="LienAgentNorthCarolinaIndicator"/>
+    <property name="LienAgentNorthCarolinaDate"/>
+    <property name="FloodHazardDeterminationIndicator"/>
+    <property name="FloodHazardDeterminationDate"/>
+    <property name="ListOfConstructionAgreementsIndicator"/>
+    <property name="ListOfConstructionAgreementsDate"/>
+    <property name="OtherIndicator"/>
+    <property name="OtherDate"/>
+    <property name="OtherDescription"/>
+    <property name="FutureAdvancePeriod"/>
+    <property name="MinimumDaysBetweenDisbursements"/>
+    <property name="AdditionalDisbursementsConditions"/>
+    <property name="ConstructionPeriodIncludedInLoanTermFlag"/>
+    <property name="PartialPrepaymentsElection"/>
+    <property name="AsCompletedPurchasePrice" />
+    <property name="AsCompletedAppraisedValue" />
+    <property name="TakeOutLenderName" />
+    <property name="TakeOutLenderNMLSNumber" />
+    <property name="TakeOutLenderLicenseNumber" />
+    <property name="TakeOutLenderAddress" />
+    <property name="TakeOutLenderCity" />
+    <property name="TakeOutLenderState" />
+    <property name="TakeOutLenderZip" />
+    <property name="TakeOutCommitmentIssuedDate" />
+    <property name="TakeOutLenderContactName" />
+    <property name="TakeOutLenderContactTitle" />
+    <property name="TakeOutLenderPhone" />
+    <property name="TakeOutLenderEmail" />
+    <property name="TakeOutLenderFax" />
+    <property name="CostImprovementsIncluded" />
+  </class>
+</hibernate-mapping>

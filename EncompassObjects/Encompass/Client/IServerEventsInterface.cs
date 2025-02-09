@@ -1,0 +1,51 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: EllieMae.Encompass.Client.IServerEventsInterface
+// Assembly: EncompassObjects, Version=1.5.1.0, Culture=neutral, PublicKeyToken=d11ef57bba4acf91
+// MVID: BFD5C65C-A9EC-4558-A5A0-AEF78CA2996D
+// Assembly location: C:\SmartClientCache\Apps\Ellie Mae\Encompass\SDK\EncompassObjects.dll
+// XML documentation location: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\EncompassObjects.xml
+
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace EllieMae.Encompass.Client
+{
+  /// <summary>
+  /// Provides a COM source interface to permit COM clients to receive events from the
+  /// ServerEvents class.
+  /// </summary>
+  /// <exclude />
+  [InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
+  public interface IServerEventsInterface
+  {
+    /// <summary>ConnectionMonitor</summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    [DispId(1)]
+    void ConnectionMonitor(object sender, ConnectionMonitorEventArgs e);
+
+    /// <summary>ExceptionMonitor</summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    [DispId(2)]
+    void ExceptionMonitor(object sender, ExceptionMonitorEventArgs e);
+
+    /// <summary>LicenseMonitor</summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    [DispId(3)]
+    void LicenseMonitor(object sender, LicenseMonitorEventArgs e);
+
+    /// <summary>LoanMonitor</summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    [DispId(4)]
+    void LoanMonitor(object sender, LoanMonitorEventArgs e);
+
+    /// <summary>SessionMonitor</summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    [DispId(5)]
+    void SessionMonitor(object sender, SessionMonitorEventArgs e);
+  }
+}

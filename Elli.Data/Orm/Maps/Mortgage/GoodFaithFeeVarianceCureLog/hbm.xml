@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="GoodFaithFeeVarianceCureLog" extends="LogRecord" dynamic-update="true" discriminator-value="30">
+    <join table="ElliGoodFaithFeeVarianceCureLog">
+      <key column="ElliLogRecordId" />
+      <property name="TotalVariance" />
+      <property name="InLogIndicator" />
+      <property name="AppliedCureAmount" />
+      <property name="ResolvedById" />
+      <property name="ResolvedBy" />
+      <property name="Name" />
+      <property name="CureComments" />
+      <property name="DateResolved" />
+      <property name="AlertDateUtc" />
+      <property name="GFFVAlertTriggerFieldsXml" type="StringClob" />
+    </join>
+  </subclass>
+</hibernate-mapping>

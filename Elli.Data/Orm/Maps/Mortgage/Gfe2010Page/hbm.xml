@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Gfe2010Page" table="ElliGfe2010Page" dynamic-update="true">
+    <id name="Id" column="ElliClosingCostId">
+      <generator class="foreign">
+        <param name="property">ClosingCost</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="ClosingCost" class="ClosingCost" constrained="true" />
+    <property name="Hud1Pg1SellerPaidClosingCostsAmount" />
+    <property name="Hud1Pg1TotalSettlementCharges" />
+    <property name="Hud1Pg2SellerPaidClosingCostsAmount" />
+    <property name="Hud1Pg2TotalSettlementCharges" />
+    <property name="BrokerCompensationFwbc" />
+    <property name="BrokerCompensationFwsc" />
+    <property name="Line1101SellerPaidTotal" />
+    <property name="Line1201SellerPaidTotal" />
+    <property name="Line1301SellerPaidTotal" />
+    <property name="Line801BorrowerPaidTotal" />
+    <property name="Line801SellerPaidTotal" />
+    <property name="Line802BorrowerPaidTotal" />
+    <property name="Line803BorrowerPaidTotal" />
+    <property name="Line803SellerPaidTotal" />
+    <property name="Line818FwbcIndicator" />
+    <property name="Line818FwscIndicator" />
+    <property name="Line819FwbcIndicator" />
+    <property name="Line819FwscIndicator" />
+    <property name="Line820FwbcIndicator" />
+    <property name="Line820FwscIndicator" />
+    <property name="Line821FwbcIndicator" />
+    <property name="Line821FwscIndicator" />
+    <property name="Line822FwbcIndicator" />
+    <property name="Line822FwscIndicator" />
+    <property name="Line823FwbcIndicator" />
+    <property name="Line823FwscIndicator" />
+    <property name="Line824FwbcIndicator" />
+    <property name="Line824FwscIndicator" />
+    <property name="Line825FwbcIndicator" />
+    <property name="Line825FwscIndicator" />
+    <property name="Line826FwbcIndicator" />
+    <property name="Line826FwscIndicator" />
+    <property name="Line827FwbcIndicator" />
+    <property name="Line827FwscIndicator" />
+    <property name="Line828FwbcIndicator" />
+    <property name="Line828FwscIndicator" />
+    <property name="Line829FwbcIndicator" />
+    <property name="Line829FwscIndicator" />
+    <property name="Line830FwbcIndicator" />
+    <property name="Line830FwscIndicator" />
+    <property name="Line831FwbcIndicator" />
+    <property name="Line831FwscIndicator" />
+    <property name="Line832FwbcIndicator" />
+    <property name="Line832FwscIndicator" />
+    <property name="Line833FwbcIndicator" />
+    <property name="Line833FwscIndicator" />
+    <property name="LineLFwbcIndicator" />
+    <property name="LineLFwscIndicator" />
+    <property name="LineMFwbcIndicator" />
+    <property name="LineMFwscIndicator" />
+    <property name="LineNFwbcIndicator" />
+    <property name="LineNFwscIndicator" />
+    <property name="LineOFwbcIndicator" />
+    <property name="LineOFwscIndicator" />
+    <property name="LinePFwbcIndicator" />
+    <property name="LinePFwscIndicator" />
+    <property name="LineQFwbcIndicator" />
+    <property name="LineQFwscIndicator" />
+    <property name="LineRFwbcIndicator" />
+    <property name="LineRFwscIndicator" />
+    <property name="BalloonPaymentDueInYears" />
+    <property name="FirstArmChangeDate" />
+    <property name="GfeRecordingCharges" />
+    <property name="GfeTotalTolerance" />
+    <property name="CuredGfeTotalTolerance" />
+    <property name="HasEscrowAccountIndicator" />
+    <property name="HasEscrowFloodInsurancesIndicator" />
+    <property name="HasEscrowHomeownerInsurancesIndicator" />
+    <property name="HasEscrowPropertyTaxesIndicator" />
+    <property name="HasEscrowCityPropertyTaxesIndicator" />
+    <property name="HasEscrowUserDefinedIndicator1" />
+    <property name="HasEscrowUserDefinedIndicator2" />
+    <property name="HasEscrowUserDefinedIndicator3" />
+    <property name="HasEscrowUserDefinedIndicator4" />
+    <property name="HighestArmRate" />
+    <property name="Hud1GovernmentRecordingCharge" />
+    <property name="HudTotalTolerance" />
+    <property name="HudTotalToleranceIncreasePercent" />
+    <property name="LowestArmRate" />
+    <property name="MonthlyAmountIncludeInterestIndicator" />
+    <property name="MonthlyAmountIncludeMiIndicator" />
+    <property name="MonthlyAmountIncludePrincipalIndicator" />
+    <property name="MonthlyAmountWithEscrow" />
+    <property name="MonthlyEscrowPayment" />
+    <property name="PrepaidInterest" />
+    <property name="TotalToleranceIncreaseAmount" />
+    <property name="HasEscrowMortgageInsurancesIndicator" />
+    
+    <!-- Gfe2010 GFE Charges-->
+    <bag name="gfe2010GfeCharges" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliGfe2010PageId" />
+      <one-to-many class="Gfe2010GfeCharge"/>
+    </bag>
+    <!-- Gfe2010 GFE FWBC/FWSCs-->
+    <bag name="gfe2010FwbcFwscs" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliGfe2010PageId" />
+      <one-to-many class="Gfe2010FwbcFwsc"/>
+    </bag>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Property" table="ElliProperty" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="BorrowerHomesteadIndicator" />
+    <property name="City" />
+    <property name="TexasContinuousMoneyLoanIndicator" />
+    <property name="County" />
+    <property name="FinancedNumberOfUnits" />
+    <property name="PostalCode" />
+    <property name="State" />
+    <property name="StreetAddress" />
+    <property name="StreetAddress2" />
+    <property name="Square" />
+    <property name="StructureBuiltYear" />
+    <property name="AssessorsParcelIdentifier" />
+    <property name="BuildingStatusType" />
+    <property name="LegalDescriptionText1" type="StringClob" />
+    <property name="LegalDescriptionText2" type="StringClob" />
+    <property name="Suffix" />
+    <property name="InstrumentNumber" />
+    <property name="TaxMapNumber" />
+    <!--Flood Determination-->
+    <property name="FloodCertificationIdentifier" />
+    <property name="LotAcres" />
+    <property name="NumberOfStories" />
+    <property name="CondotelIndicator" />
+    <property name="NonwarrantableProjectIndicator" />
+    <property name="RuralAreaIndicator" />
+    <property name="ProdIsSpInUnderservedArea" />
+    <property name="UnincorporatedAreaName" />
+    <property name="SubjectPropertyConvertedToRealPropertyIndicator" />
+    <!--Platted Land-->
+    <property name="BlockIdentifier" />
+    <property name="LotIdentifier" />
+    <property name="SectionIdentifier" />
+    <property name="TypeRecordingJurisdiction" />
+    <property name="NameRecordingJurisdiction" />
+    <!--Loan Purpose-->
+    <property name="LoanPurposeType" />
+    <property name="GseTitleMannerHeldDescription" />
+    <property name="OtherLoanPurposeDescription" />
+    <property name="PropertyLeaseholdExpirationDate" />
+    <property name="PropertyRightsType" />
+    <property name="PropertyUsageType" />
+    <!--Construction Refinance Data-->
+    <property name="ConstructionImprovementCostsAmount" />
+    <property name="FreCashOutAmount" />
+    <property name="GseRefinancePurposeType" />
+    <property name="LandEstimatedValueAmount" />
+    <property name="PropertyAcquiredYear" />
+    <property name="PropertyExistingLienAmount" />
+    <property name="PropertyOriginalCostAmount" />
+    <property name="RefinanceImprovementCostsAmount" />
+    <property name="RefinanceImprovementsType" />
+    <property name="RefinanceProposedImprovementsDescription" type="StringClob" />
+    <property name="TotalConstructionValueAmount" />
+    <!--EllieMae Construction Refinance Data-->
+    <property name="RefinancePropertyAcquiredYear" />
+    <property name="RefinancePropertyExistingLienAmount" />
+    <property name="RefinancePropertyOriginalCostAmount" />
+    <property name="PriorLoanRecordationBookNumber" />
+    <property name="PriorLoanRecordationPageNumber" />
+    <property name="PriorLoanRecordationOriginalPrincipalAmount" />
+    <property name="PriorLoanRecordationCurrentPrincipalAmount" />
+    <property name="IsConstructionPhaseDisclosedSeparately" />
+    <property name="LinkedLoanPurposeType" />
+    <property name="LinkedIsConstructionPhaseDisclosedSeparately" />    
+    <property name="PriorLoanRecordationOriginalLoanNumber" />
+    <property name="PriorLoanRecordationDated" />
+    <property name="LinkedMortgageType" />
+    <property name="LinkedLienPriorityType" />
+    <property name="LinkedInitialAdvanceAmount" />
+    <property name="LinkedClosedEndPrimaryMortgageLoanAmount" />
+    <property name="LinkedClosedEndSubordinateMortgageLoanAmount" />
+    <property name="LinkedHelocNewFinancingNotLinkedDrawAmount" />
+    <property name="LinkedHelocNewFinancingNotLinkedCreditLimit" />
+    <property name="LinkedAmountApplyToDownPayment" />
+    <property name="LinkedHELOCLienPosition" />
+    <property name="LinkedLoanNumber" />
+    <property name="LinkedBaseLoanAmount" />
+    <property name="LinkedProposedOtherMortgagesAmount" />
+    <property name="LinkedProposedOtherAmount" />
+    <property name="LinkedProposedFirstMortgageAmount" />
+    <property name="LinkedMax5YrsPrincipleAndInterest" />
+    <property name="LinkedLenderName" />
+    <property name="LinkedPaymentDeferredFirstFiveYears" />
+    <property name="LinkedAffordableLoan" />
+    <property name="LinkedRequestedInterestRatePercent" />
+    <property name="LinkedHelocQualifyingPaymentAmount" />
+    
+    <!--New URLA 2020 -->
+    <property name="LoanPurposeTypeURLA" />
+    <property name="LoanPurposeTypeOtherDescription" />
+    <property name="AddressLineText" />
+    <property name="AddressUnitDesignatorType" />
+    <property name="AddressUnitIdentifier" />
+    <property name="FHASecondaryResidenceIndicator" />
+    <property name="PropertyMixedUsageIndicator" />
+    <property name="OccupancyDisplayField" />  
+    <property name="OneTimeClose" />  
+    <property name="TwoTimeClose" />
+    <property name="AduIndicator" />
+    <property name="AduCount" />
+    <property name="AduGrossIncome" />
+    <property name="AduExpenses" />
+    <property name="AduVacancyFactor" />
+    <property name="AduNetIncome" />
+  </class>
+</hibernate-mapping>
+
+

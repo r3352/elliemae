@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="GiftGrant" table="ElliGiftGrant" dynamic-update="true">
+    <id name="Id" column="ElliGiftGrantId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Application" column="ElliApplicationId" />
+    <property name="GiftGrantIndex" not-null="true" />
+    <property name="AltId" />
+    <property name="Owner" /> <!--this is Person in the XML file-->
+    <property name="GiftorGrantDate" />
+    <property name="PrintAttachmentIndicator" />
+    <property name="HolderName" />
+    <property name="Attention" />
+    <property name="HolderAddressStreetLine1" />
+    <property name="HolderAddressCity" />
+    <property name="HolderAddressState" />
+    <property name="HolderAddressPostalCode" />
+    <property name="HolderPhone" />
+    <property name="HolderFax" />
+    <property name="HolderEmail" />
+    <property name="Title" />
+    <property name="PrintUserNameIndicator" />
+    <property name="PrintUserJobTitleIndicator" />
+    <property name="TitlePhone" />
+    <property name="TitleFax" />
+    <property name="AssetType" />
+    <property name="Source" />
+    <property name="DepositedIndicator" />
+    <property name="Amount" />
+    <property name="OtherSourceDescription" type="StringClob" />
+	<property name="AmtAppliedToDownPayment" />
+	<property name="AmtAppliedToClosingCosts" />
+  </class>
+</hibernate-mapping>

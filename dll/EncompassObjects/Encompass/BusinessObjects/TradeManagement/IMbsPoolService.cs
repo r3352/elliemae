@@ -1,0 +1,22 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: EllieMae.Encompass.BusinessObjects.TradeManagement.IMbsPoolService
+// Assembly: EncompassObjects, Version=1.5.1.0, Culture=neutral, PublicKeyToken=d11ef57bba4acf91
+// MVID: BFD5C65C-A9EC-4558-A5A0-AEF78CA2996D
+// Assembly location: C:\SmartClientCache\Apps\Ellie Mae\Encompass\SDK\EncompassObjects.dll
+
+using System.Collections.Generic;
+
+#nullable disable
+namespace EllieMae.Encompass.BusinessObjects.TradeManagement
+{
+  public interface IMbsPoolService
+  {
+    MbsPool GetMbsPool(string poolId);
+
+    List<TradeLoanAssignment> GetTradeLoanAssignments(string poolId);
+
+    List<MbsPoolSecurityTrade> GetPoolSecurityTradeAssignments(string poolId);
+
+    List<MbsPool> GetMbsPools(TradeStatus[] tradeStatus);
+  }
+}

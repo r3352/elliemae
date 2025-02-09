@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="InterimServicingTransaction" table="ElliInterimServicingTransaction" dynamic-update="true">
+    <id name="Id" column="ElliInterimServicingTransactionId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <discriminator column="InterimServicingDiscriminator" />
+    <version name="Version" />
+    <many-to-one name="InterimServicing" column="ElliInterimServicingId" />
+    <property name="Guid" />
+    <property name="ServicingTransactionType" />
+    <property name="ServicingPaymentMethod" />
+    <property name="TransactionDate" />
+    <property name="TransactionAmount" />
+    <property name="CreatedDateTimeUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+    <property name="CreatedById" />
+    <property name="CreatedByName" />
+    <property name="ModifiedDateTimeUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+    <property name="ModifiedById" />
+    <property name="ModifiedByName" />
+    <property name="Comments" type="StringClob" />
+    <subclass name="EscrowDisbursementTransaction" extends="InterimServicingTransaction" discriminator-value="1">
+      <property name="DisbursementNumber" column="ED_DisbursementNumber" />
+      <property name="DisbursementDueDate" column="ED_DisbursementDueDate" />
+      <!--MM/dd/yyyy-->
+      <property name="DisbursementType" column="ED_DisbursementType" />
+      <property name="InstitutionName" column="ED_InstitutionName" />
+    </subclass>
+    <subclass name="EscrowInterestTransaction" extends="InterimServicingTransaction" discriminator-value="2">
+      <!-- No column data -->
+    </subclass>
+    <subclass name="OtherTransaction" extends="InterimServicingTransaction" discriminator-value="3">
+      <property name="InstitutionName" column="OTH_InstitutionName" />
+      <property name="InstitutionRouting" column="OTH_InstitutionRouting" />
+      <property name="AccountNumber" column="OTH_AccountNumber" />
+      <property name="Reference" column="OTH_Reference" />
+    </subclass>
+    <subclass name="PaymentReversalTransaction" extends="InterimServicingTransaction" discriminator-value="4">
+      <property name="PaymentId" column="PR_PaymentId" />
+      <property name="ReversalType" column="PR_ReversalType" />
+    </subclass>
+    <subclass name="PaymentTransaction" extends="InterimServicingTransaction" discriminator-value="5">
+      <property name="PaymentNumber" column="PAY_PaymentNumber" />
+      <property name="PaymentIndexDate" column="PAY_PaymentIndexDate" />
+      <property name="StatementDate" column="PAY_StatementDate" />
+      <property name="PaymentDueDate" column="PAY_PaymentDueDate" />
+      <property name="LatePaymentDate" column="PAY_LatePaymentDate" />
+      <property name="PaymentReceivedDate" column="PAY_PaymentReceivedDate" />
+      <property name="PaymentDepositedDate" column="PAY_PaymentDepositedDate" />
+      <property name="IndexRate" column="PAY_IndexRate" />
+      <property name="InterestRate" column="PAY_InterestRate" />
+      <property name="TotalAmountDue" column="PAY_TotalAmountDue" />
+      <property name="TotalAmountReceived" column="PAY_TotalAmountReceived" />
+      <property name="Principal" column="PAY_Principal" />
+      <property name="Interest" column="PAY_Interest" />
+      <property name="Escrow" column="PAY_Escrow" />
+      <property name="BuydownSubsidyAmount" column="PAY_BuydownSubsidyAmount" />
+      <property name="LateFee" column="PAY_LateFee" />
+      <property name="MiscFee" column="PAY_MiscFee" />
+      <property name="AdditionalPrincipal" column="PAY_AdditionalPrincipal" />
+      <property name="AdditionalEscrow" column="PAY_AdditionalEscrow" />
+      <property name="LateFeeIfLate" column="PAY_LateFeeIfLate" />
+      <property name="InstitutionName" column="PAY_InstitutionName" />
+      <property name="InstitutionRouting" column="PAY_InstitutionRouting" />
+      <property name="AccountNumber" column="PAY_AccountNumber" />
+      <property name="AccountHolder" column="PAY_AccountHolder" />
+      <property name="Reference" column="PAY_Reference" />
+      <property name="CheckNumber" column="PAY_CheckNumber" />
+      <property name="CommonAmount" column="PAY_CommonAmount" />
+      <property name="CommonDate" column="PAY_CommonDate" />
+      <property name ="EscrowTax" column ="PAY_EscrowTax"/>
+      <property name ="EscrowMortgageInsurance" column ="PAY_EscrowMortgageInsurance"/>
+      <property name ="EscrowFloodInsurance" column ="PAY_EscrowFloodInsurance" />
+      <property name ="EscrowCityPropertyTax" column ="PAY_EscrowCityPropertyTax" />
+      <property name ="EscrowHazardInsurance" column ="PAY_EscrowHazardInsurance" />
+      <property name ="EscrowOther1" column ="PAY_EscrowOther1" />
+      <property name ="EscrowOther2" column ="PAY_EscrowOther2" />
+      <property name ="EscrowOther3" column ="PAY_EscrowOther3" />
+      <property name ="EscrowUSDAMonthlyPremium" column ="PAY_EscrowUSDAMonthlyPremium" />
+      <property name ="SchedulePayLogMiscFee" column ="PAY_SchedulePayLogMiscFee" />
+    </subclass>
+    <subclass name="SchedulePaymentTransaction" extends="InterimServicingTransaction" discriminator-value="6">
+      <property name="PaymentNumber" column="SP_PaymentNumber" />
+      <property name="LatePaymentDate" column="SP_LatePaymentDate" />
+      <property name="IndexRate" column="SP_IndexRate" />
+      <property name="InterestRate" column="SP_InterestRate" />
+      <property name="PrincipalDue" column="SP_PrincipalDue" />
+      <property name="InterestDue" column="SP_InterestDue" />
+      <property name="EscrowDue" column="SP_EscrowDue" />
+      <property name="BuydownSubsidyAmountDue" column="SP_BuydownSubsidyAmountDue" />
+      <property name="MiscFeeDue" column="SP_MiscFeeDue" />
+      <property name="TotalPastDue" column="SP_TotalPastDue" />
+      <property name="UnpaidLateFeeDue" column="SP_UnpaidLateFeeDue" />
+      <property name="EscrowTaxDue" column ="SP_EscrowTaxDue" />
+      <property name ="EscrowMortgageInsuranceDue" column ="SP_EscrowMortgageInsuranceDue" />
+      <property name ="EscrowHazardInsuranceDue" column ="SP_EscrowHazardInsuranceDue" />
+      <property name ="EscrowFloodInsuranceDue" column ="SP_EscrowFloodInsuranceDue" />
+      <property name ="EscrowCityPropertyTaxDue" column ="SP_EscrowCityPropertyTaxDue" />
+      <property name ="EscrowOther1Due" column ="SP_EscrowOther1Due" />
+      <property name ="EscrowOther2Due" column ="SP_EscrowOther2Due" />
+      <property name ="EscrowOther3Due" column ="SP_EscrowOther3Due" />
+      <property name ="EscrowUSDAMonthlyPremiumDue" column ="SP_EscrowUSDAMonthlyPremiumDue" />
+      <property name ="Principal" column ="SP_Principal" />
+      <property name ="Interest" column="SP_Interest" />
+      <property name ="Escrow" column ="SP_Escrow" />
+      <property name="BuydownSubsidyAmount" column ="SP_BuydownSubsidyAmount" />
+      <property name ="MiscFee" column ="SP_MiscFee" />
+      <property name ="LateFee" column ="SP_LateFee" />
+      <property name ="AdditionalEscrow" column ="SP_AdditionalEscrow" />
+      <property name ="AdditionalPrincipal" column ="SP_AdditionalPrincipal" />
+      <property name ="Taxes" column ="SP_Taxes" />
+      <property name ="HazardInsurance" column ="SP_HazardInsurance" />
+      <property name ="MortgageInsurance" column ="SP_MortgageInsurance" />
+      <property name ="FloodInsurance" column ="SP_FloodInsurance" />
+      <property name ="CityPropertyTax" column ="SP_CityPropertyTax" />
+      <property name ="Other1Escrow" column ="SP_Other1Escrow" />
+      <property name ="Other2Escrow" column ="SP_Other2Escrow" />
+      <property name ="Other3Escrow" column ="SP_Other3Escrow" />
+      <property name ="USDAMonthlyPremium" column ="SP_USDAMonthlyPremium" />
+    </subclass>
+    <subclass name="LoanPurchaseTransaction" extends="InterimServicingTransaction" discriminator-value="7">
+      <property name="PurchaseAdviceDate" column ="PA_PurchaseAdviceDate" />
+      <property name="Investor" column ="PA_Investor"  />
+      <property name="InvestorLoanNumber" column="PA_InvestorLoanNumber" />
+      <property name="FirstPaymenttoInvestor" column ="PA_FirstPaymenttoInvestor"/>
+      <property name="PurchaseAmount" column="PA_PurchaseAmount" />
+      <property name ="CreatedTime" column ="PA_CreatedTime" />
+    </subclass>
+    <subclass name="PrincipalDisbursementTransaction" extends="InterimServicingTransaction" discriminator-value="8">
+      <property name="Comments" column="PD_Comments" />
+      <property name="InstitutionName" column="PD_InstitutionName" />
+      <property name="DisbursementDate" column="PD_DisbursementDate" />
+    </subclass>
+  </class>
+</hibernate-mapping>

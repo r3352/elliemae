@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Hud1EsPayTo" table="ElliHud1EsPayTo" dynamic-update="true">
+    <id name="Id" column="ElliHud1EsPayToId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Hud1Es" column="ElliHud1EsId" />
+    <property name="Hud1EsPayToIndex" />
+    <property name="Address" />
+    <property name="AmountLastPay" />
+    <property name="AmountNextDue" />
+    <property name="City" />
+    <property name="ContactName" />
+    <property name="CoverageAmount" />
+    <property name="DatePaid" />
+    <property name="DelinquentDate" />
+    <property name="Email" />
+    <property name="Fax" />
+    <property name="FeeType" />
+    <property name="Name" />
+    <property name="NextDueDate" />
+    <property name="PaymentSchedule" />
+    <property name="Phone" />
+    <property name="PolicyNumber" />
+    <property name="PostalCode" />
+    <property name="Premium" />
+    <property name="RenewalDate" />
+    <property name="State" />
+    <property name="MaxDeductiblePercentage" />
+    <property name="MaxDeductibleAmount" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="SpecialFeatureCode" table="ElliSpecialFeatureCode" dynamic-update="true">
+    <id name="Id" column="ElliSpecialFeatureCodeId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Loan" column="ElliLoanId" />
+    <property name="Code" />
+    <property name="Description" />
+    <property name="Comments" />
+    <property name="Source" />
+    <property name="SourceOther" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="PrivacyPolicy" table="ElliPrivacyPolicy" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="AdditionalRightsDescription" type="StringClob" />
+    <property name="AffiliateType" type="StringClob" />
+    <property name="AffiliateTypeExample1" type="StringClob" />
+    <property name="AffiliateTypeExample2" type="StringClob" />
+    <property name="AffiliateTypeExample3" type="StringClob" />
+    <property name="AlsoCollectFrom" type="StringClob" />
+    <property name="DaysToUse" />
+    <property name="HowToShare" type="StringClob" />
+    <property name="InformationShare1" type="StringClob" />
+    <property name="InformationShare2" type="StringClob" />
+    <property name="InformationShare3" type="StringClob" />
+    <property name="InformationShare4" type="StringClob" />
+    <property name="InformationShare5" type="StringClob" />
+    <property name="InformationShare6" type="StringClob" />
+    <property name="InformationShare7" type="StringClob" />
+    <property name="InformationTypesWeCollect1" type="StringClob" />
+    <property name="InformationTypesWeCollect2" type="StringClob" />
+    <property name="InformationTypesWeCollect3" type="StringClob" />
+    <property name="InformationTypesWeCollect4" type="StringClob" />
+    <property name="InformationTypesWeCollect5" type="StringClob" />
+    <property name="JointMarketType" type="StringClob" />
+    <property name="JointMarketTypeExample1" type="StringClob" />
+    <property name="LimitSharing1" type="StringClob" />
+    <property name="LimitSharing2" type="StringClob" />
+    <property name="LimitSharing3" type="StringClob" />
+    <property name="LimitSharing4" type="StringClob" />
+    <property name="LimitSharing5" type="StringClob" />
+    <property name="LimitSharing6" type="StringClob" />
+    <property name="LimitSharing7" type="StringClob" />
+    <property name="NonaffiliateType" type="StringClob" />
+    <property name="NonaffiliateTypeExample1" type="StringClob" />
+    <property name="NotesForProtectPrivacy" type="StringClob" />
+    <property name="OtherInformation" type="StringClob" />
+    <property name="PhoneForQuestion" type="StringClob" />
+    <property name="PhoneToLimit" type="StringClob" />
+    <property name="PrintSelection" type="StringClob" />
+    <property name="ShareInfoWithJointMarketing" type="StringClob" />
+    <property name="TimesToCollect1" type="StringClob" />
+    <property name="TimesToCollect2" type="StringClob" />
+    <property name="TimesToCollect3" type="StringClob" />
+    <property name="TimesToCollect4" type="StringClob" />
+    <property name="TimesToCollect5" type="StringClob" />
+    <property name="WebsiteForQuestion" type="StringClob" />
+    <property name="WebsiteToLimit" type="StringClob" />
+    <property name="Month" type="StringClob"/>
+    <property name="Year" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="AlertChangeCircumstance" table="ElliAlertChangeCircumstance" dynamic-update="true">
+    <id name="Id" column="ElliAlertChangeCircumstanceId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <many-to-one name="Loan" column="ElliLoanId" />
+
+    <property name="AlertTriggerFielDID" />
+    <property name ="ChangedCircumstanceDate"/>
+    <property name ="RevisedDueDate"/>
+    <property name ="ChangedCircumstanceDescription"/>
+    <property name ="ChangedCircumstanceComments"/>
+    <property name ="ChangedCircumstanceReason"/>
+    <property name="ChangedCircumstanceReasonOther" />
+    <property name="ChangedCircumstanceCategory" />
+    <property name="ChangedCircumstanceAlertFeeDescription" />
+    <property name="ChangedCircumstanceAlertInitialAmount" />
+    <property name="ChangedCircumstanceAlertBaseline" />
+    <property name="ChangedCircumstanceAlertDisclosedAmount" />
+    <property name="ChangedCircumstanceAlertItemizationAmount" />
+    <property name="ChangedCircumstanceAlertVarianceAmount" />
+    <property name ="AltId"/>
+
+  </class>
+</hibernate-mapping>
+

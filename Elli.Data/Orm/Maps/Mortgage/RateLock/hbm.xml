@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+	<class name="RateLock" table="ElliRateLock" dynamic-update="true">
+		<id name="Id" column="ElliLoanId">
+			<generator class="foreign">
+				<param name="property">Loan</param>
+			</generator>
+		</id>
+		<version name="Version"/>
+		<one-to-one name="Loan" class="Loan"/>
+		<property name="CumulatedDaystoExtend"/>
+		<property name="ExtensionSequenceNumber"/>
+		<property name="Hedging"/>
+		<property name="ImpoundType"/>
+		<property name="ImpoundWavied"/>
+		<property name="PenaltyTerm"/>
+		<property name="PrepayPenalty"/>
+		<property name="RequestFullfilledDateTime"/>
+		<property name="TotalSubordinateFinancing"/>
+		<property name="CompSideComparisonedBy"/>
+		<property name="CompGainLossTotalCompPrice"/>
+		<property name="RequestStartingAdjPoint"/>
+		<!--Buy Side-->
+		<property name="BuySideComments" type="StringClob"/>
+		<property name="BuySideCurrentRateSetDate"/>
+		<property name="BuySideDaystoExtend"/>
+		<property name="BuySideExtendedLockExpires"/>
+		<property name="BuySideLockDate"/>
+		<property name="BuySideLockExpires"/>
+		<property name="BuySideLockExtendPriceAdjustment"/>
+		<property name="BuySideNumberOfDays"/>
+		<property name="BuySideOriginalLockExpires"/>
+		<property name="BuySideRateSheetID"/>
+		<property name="BuySideRequestedBy"/>
+		<property name="BuySideSRPPaidOut"/>
+		<property name="BuySideUnDiscountedRate"/>
+		<property name="BuySideStartingAdjRate"/>
+		<property name="BuySideStartingAdjPrice"/>
+		<property name="BuySideCommitmentNumber"/>
+		<property name="BuySideMasterCommitmentNumber"/>
+		<property name="BuySideTPOName"/>
+		<property name="BuySideTPOID"/>
+		<property name="BuySideOrgID"/>
+		<property name="BuySideCommitmentDate"/>
+		<property name="BuySideCommitmentType"/>
+		<property name="BuySideDeliveryType"/>
+		<property name="BuySideExpirationDate"/>
+		<property name="BuySideDeliveryExpirationDate"/>
+		<property name="BuySideTradeGuid"/>
+		<property name="BuySideTradeNumber"/>
+		<property name="BuySideOnrpLockTime"/>
+		<property name="BuySideOnrpEligible"/>
+		<property name="BuySideOnrpLockDate"/>
+    <property name="BuySideInvestor"/>
+		<!--Concessions-->
+		<property name="BranchApprovalDate"/>
+		<property name="BranchApprovedby"/>
+		<property name="BranchPrice"/>
+		<property name="CorporateApprovalDate"/>
+		<property name="CorporateApprovedby"/>
+		<property name="CorporatePrice"/>
+		<property name="ReasonforBranchApproval"/>
+		<property name="ReasonforCorporateApproval"/>
+		<property name="TotalPrice"/>
+		<property name="TotalBuyPrice" precision="19" scale="10"/>
+		<property name="Commitment"/>
+		<property name="BuySideMarginNetBuyRate"/>
+		<property name="BuySideMarginRate"/>
+		<property name="BuySideMarginTotalAdjustment"/>
+		<property name="BuySidePriceNetBuyPrice" precision="19" scale="10"/>
+		<property name="BuySidePriceRate" precision="19" scale="10"/>
+		<property name="BuySidePriceTotalAdjustment" precision="19" scale="10"/>
+		<property name="BuySideRateNetBuyRate"/>
+		<property name="BuySideRate"/>
+		<property name="BuySideRateTotalAdjustment"/>
+		<property name="ProfitMarginAdjustedBuyPrice" precision="19" scale="10"/>
+    <property name="CorporatePrice2"/>
+    <property name="CorporateApprovalDate2"/>
+    <property name="CorporateApprovedBy2"/>
+    <property name="ReasonForCorporateApproval2"/>
+    <property name="CorporatePrice3"/>
+    <property name="CorporateApprovalDate3"/>
+    <property name="CorporateApprovedBy3"/>
+    <property name="ReasonForCorporateApproval3"/>
+    <property name="CorporatePrice4"/>
+    <property name="CorporateApprovalDate4"/>
+    <property name="CorporateApprovedBy4"/>
+    <property name="ReasonForCorporateApproval4"/>
+    <property name="CorporatePrice5"/>
+    <property name="CorporateApprovalDate5"/>
+    <property name="CorporateApprovedBy5"/>
+    <property name="ReasonForCorporateApproval5"/>
+    <property name="BranchPrice2"/>
+    <property name="BranchApprovalDate2"/>
+    <property name="BranchApprovedBy2"/>
+    <property name="ReasonForBranchApproval2"/>
+    <property name="BranchPrice3"/>
+    <property name="BranchApprovalDate3"/>
+    <property name="BranchApprovedBy3"/>
+    <property name="ReasonForBranchApproval3"/>
+    <property name="BranchPrice4"/>
+    <property name="BranchApprovalDate4"/>
+    <property name="BranchApprovedBy4"/>
+    <property name="ReasonForBranchApproval4"/>
+    <property name="BranchPrice5"/>
+    <property name="BranchApprovalDate5"/>
+    <property name="BranchApprovedBy5"/>
+    <property name="ReasonForBranchApproval5"/>
+    <property name="TotalCorporatePriceConcession"/>
+    <property name="TotalBranchPriceConcession"/>
+    <!--Current-->
+		<property name="CurrentComments" type="StringClob"/>
+		<property name="CurrentRateSetDate"/>
+		<property name="CurrentLockDate"/>
+		<property name="CurrentLockExpires"/>
+		<property name="CurrentNumberOfDays"/>
+		<property name="CurrentRateSheetID"/>
+		<property name="CurrentMarginRate"/>
+		<property name="CurrentMarginRateRequested"/>
+		<property name="CurrentMarginTotalAdjustment"/>
+		<property name="CurrentPriceRate" precision="19" scale="10"/>
+		<property name="CurrentPriceRateRequested" precision="19" scale="10"/>
+		<property name="CurrentPriceTotalAdjustment" precision="19" scale="10"/>
+		<property name="CurrentRate"/>
+		<property name="CurrentRateRequested"/>
+		<property name="CurrentRateTotalAdjustment"/>
+		<property name="CurrentAcquisition"/>
+		<property name="CurrentConstructionRefi"/>
+		<!--SellSide-->
+		<property name="SellSideComments" type="StringClob"/>
+		<property name="SellSideCurrentRateSetDate"/>
+		<property name="SellSideDaystoExtend"/>
+		<property name="SellSideDiscountYSP"/>
+		<property name="SellSideExtendedLockExpires"/>
+		<property name="SellSideInvestorStatus"/>
+		<property name="SellSideInvestorStatusDate"/>
+		<property name="SellSideInvestorTradeNumber"/>
+		<property name="SellSideLoanProgram"/>
+		<property name="SellSideLockDate"/>
+		<property name="SellSideLockExpires"/>
+		<property name="SellSideLockExtendPriceAdjustment"/>
+		<property name="SellSideMasterContractNumber"/>
+		<property name="SellSideNumberOfDays"/>
+		<property name="SellSideOriginalLockExpires"/>
+		<property name="SellSideRateSheetID"/>
+		<property name="SellSideRequestedBy"/>
+		<property name="SellSideSRPPaidOut"/>
+		<property name="SellSideTradeGuid"/>
+		<property name="SellSideTradeNumber"/>
+		<property name="SellSideMarginNetSellRate"/>
+		<property name="SellSideMarginRate"/>
+		<property name="SellSideMarginTotalAdjustment"/>
+		<property name="SellSideNetSellPrice" precision="19" scale="10"/>
+		<property name="SellSidePriceRate" precision="19" scale="10"/>
+		<property name="SellSidePriceTotalAdjustment" precision="19" scale="10"/>
+		<property name="SellSideNetSellRate"/>
+		<property name="SellSideRate"/>
+		<property name="SellSideRateTotalAdjustment"/>
+		<property name="SellSideServicingType"/>
+		<property name="SellSideServicer"/>
+		<property name="SellSideServicingFee"/>
+		<property name="SellSideGuaranteeFee"/>
+		<property name="SellSidePoolNumber"/>
+		<property name="GainLossPercentage"/>
+		<property name="GainLossPrice"/>
+		<property name="GainLossTotalBuyPrice" precision="19" scale="10"/>
+		<property name="SellSideTradeMgmtPrevConfirmedLockGuid"/>
+		<property name="SellSideCommitmentDate"/>
+		<property name="SellSidePoolID"/>
+		<property name="SellSideCommitmentContractNumber"/>
+		<property name="SellSideProductName"/>
+		<property name="SellSideMSRValue"/>
+		<property name="SellSideGuarantyBaseFee"/>
+		<!--CompSide-->
+		<property name="CompSideComments" type="StringClob"/>
+		<property name="CompSideCurrentRateSetDate"/>
+		<property name="CompSideDaystoExtend"/>
+		<property name="CompSideDiscountYSP"/>
+		<property name="CompSideExtendedLockExpires"/>
+		<property name="CompSideInvestorStatus"/>
+		<property name="CompSideInvestorStatusDate"/>
+		<property name="CompSideInvestorTradeNumber"/>
+		<property name="CompSideLoanProgram"/>
+		<property name="CompSideLockDate"/>
+		<property name="CompSideLockExpires"/>
+		<property name="CompSideLockExtendPriceAdjustment"/>
+		<property name="CompSideMasterContractNumber"/>
+		<property name="CompSideNumberOfDays"/>
+		<property name="CompSideOriginalLockExpires"/>
+		<property name="CompSideRateSheetID"/>
+		<property name="CompSideRequestedBy"/>
+		<property name="CompSideSRPPaidOut"/>
+		<property name="CompSideTradeGuid"/>
+		<property name="CompSideTradeNumber"/>
+		<property name="CompSideMarginNetCompRate"/>
+		<property name="CompSideMarginRate"/>
+		<property name="CompSideMarginTotalAdjustment"/>
+		<property name="CompSideNetCompPrice" precision="19" scale="10"/>
+		<property name="CompSidePriceRate" precision="19" scale="10"/>
+		<property name="CompSidePriceTotalAdjustment" precision="19" scale="10"/>
+		<property name="CompSideNetCompRate"/>
+		<property name="CompSideRate"/>
+		<property name="CompSideRateTotalAdjustment"/>
+		<property name="CompSideServicingType"/>
+		<property name="CompGainLossPercentage"/>
+		<property name="CompGainLossPrice"/>
+		<property name="CompGainLossTotalBuyPrice" precision="19" scale="10"/>
+		<!--Investor-->
+		<property name="InvestorPostalCode"/>
+		<property name="InvestorState"/>
+		<property name="InvestorAddress"/>
+		<property name="InvestorCity"/>
+		<property name="InvestorCommitment"/>
+		<property name="InvestorContact"/>
+		<property name="DateLockedWithInvestor"/>
+		<property name="InvestorEmail"/>
+		<property name="InvestorDeliveryDate"/>
+		<property name="InvestorTemplateName"/>
+		<property name="InvestorLoanNumber"/>
+		<property name="InvestorLockType"/>
+		<property name="InvestorMERSNumber"/>
+		<property name="InvestorName"/>
+		<property name="InvestorPhone"/>
+		<property name="InvestorProgramCode"/>
+		<property name="InvestorTargetDeliveryDate"/>
+		<property name="TimeLockedWithInvestor"/>
+		<property name="InvestorWebsite"/>
+		<property name="CompInvestorPostalCode"/>
+		<property name="CompInvestorState"/>
+		<property name="CompInvestorAddress"/>
+		<property name="CompInvestorCity"/>
+		<property name="CompInvestorContact"/>
+		<property name="CompInvestorEmail"/>
+		<property name="CompInvestorTemplateName"/>
+		<property name="CompInvestorLockType"/>
+		<property name="CompInvestorName"/>
+		<property name="CompInvestorPhone"/>
+		<property name="CompInvestorProgramCode"/>
+		<property name="CompInvestorWebsite"/>
+		<!--Request-->
+		<property name="RequestComments" type="StringClob"/>
+    <property name="RequestProgramNotes"/>
+		<property name="RequestCurrentRateSetDate"/>
+		<property name="RequestDaystoExtend"/>
+		<property name="RequestExtendedLockExpires"/>
+		<property name="RequestLockDate"/>
+		<property name="RequestLockExpires"/>
+		<property name="RequestLockExtendComment" type="StringClob"/>
+		<property name="RequestLockExtendPriceAdjustment"/>
+		<property name="RequestNumberOfDays"/>
+		<property name="RequestOriginalLockExpires"/>
+		<property name="RequestRateSheetID"/>
+		<property name="RequestMarginRate"/>
+		<property name="RequestMarginRateRequested"/>
+		<property name="RequestMarginSRPPaidOut"/>
+		<property name="RequestMarginTotalAdjustment"/>
+		<property name="RequestPriceRate" precision="19" scale="10"/>
+		<property name="RequestPriceRateRequested" precision="19" scale="10"/>
+		<property name="RequestPriceTotalAdjustment" precision="19" scale="10"/>
+		<property name="RequestRate"/>
+		<property name="RequestRateRequested"/>
+		<property name="RequestRateTotalAdjustment"/>
+		<property name="RequestLockCancellationDate"/>
+		<property name="RequestLockCancellationComment" type="StringClob"/>
+		<property name="RequestLockType"/>
+		<property name="RequestUnDiscountedRate"/>
+		<property name="RequestStartingAdjRate"/>
+		<property name="RequestOnrpLockTime"/>
+		<property name="RequestOnrpEligible"/>
+		<property name="RequestOnrpLockDate"/>
+		<property name="CommitmentType"/>
+    <property name="RequestLockVoidDate"/>
+    <property name="RequestLockVoidComment"/>
+    <property name="PricingConcessionRequested"/>
+    <property name="PriceConcessionIndicator"/>
+    <property name="ExtensionIndicator"/>
+    <property name="PriceConcessionRequestStatus"/>
+		<!--
+  [RT] - Removed due to missing model property and encompassfields.xml
+        <property name ="RequestStartingAdjPrice" />
+		-->
+		<property name="NoClosingCostOption"/>
+		<!--Purchase Advice-->
+		<property name="ActualSellAmount"/>
+		<property name="ActualSellPrice"/>
+		<property name="ActualSellSideSRP"/>
+		<property name="ActualSRPAmount"/>
+		<property name="AmountDue"/>
+		<property name="AmountDueTo"/>
+		<property name="AmountPaid"/>
+		<property name="AmountPaidTo"/>
+		<property name="AmountReceived"/>
+		<property name="Comments" type="StringClob"/>
+		<property name="ConfirmedBy"/>
+		<property name="ConfirmedDate"/>
+		<property name="Date"/>
+		<property name="DateFirstPaymentToInvestor"/>
+		<property name="DateSold"/>
+		<property name="DateWarehoused"/>
+		<property name="DiffAmountReceived"/>
+		<property name="DiffImpounds"/>
+		<property name="DiffInterest"/>
+		<property name="DiffPremium"/>
+		<property name="DiffPrinciple"/>
+		<property name="DiffRemainingBuydownFunds"/>
+		<property name="DiffSellAmount"/>
+		<property name="DiffSellPrice"/>
+		<property name="DiffSellSideSRP"/>
+		<property name="DiffSRP"/>
+		<property name="DiffSRPAmount"/>
+		<property name="ExpectedAmountReceived"/>
+		<property name="ExpectedImpounds"/>
+		<property name="ExpectedInterest"/>
+		<property name="ExpectedPremium"/>
+		<property name="ExpectedPrinciple"/>
+		<property name="ExpectedRemainingBuydownFunds"/>
+		<property name="ExpectedSRP"/>
+		<property name="FirstPaymenTo"/>
+		<property name="Impounds"/>
+		<property name="Interest"/>
+		<property name="NetSellAmount"/>
+		<property name="NetSellPrice"/>
+		<property name="NextPaymentDate"/>
+		<property name="PurchaseAdviceNumberOfDays"/>
+		<property name="PerDiemInterestRoundingType"/>
+		<property name="Premium"/>
+		<property name="Principle"/>
+		<property name="ReconciledDiff"/>
+		<property name="RemainingBuydownFunds"/>
+		<property name="SellSideSRP"/>
+		<property name="ServicingReleaseIndicator"/>
+		<property name="SRP"/>
+		<property name="SRPAmount"/>
+		<property name="UsePoint"/>
+		<!-- Purchase Advice Correspondent -->
+		<property name="CorrespondentDate"/>
+		<property name="CorrespondentCurrentImpounds"/>
+		<property name="CorrespondentPaidToDate"/>
+		<property name="CorrespondentFirstPaymentDate"/>
+		<property name="CorrespondentCurrentPrincipal"/>
+		<property name="CorrespondentAdjusterDescription1" type="StringClob"/>
+		<property name="CorrespondentAdjusterAmount1"/>
+		<property name="CorrespondentAdjusterDescription2" type="StringClob"/>
+		<property name="CorrespondentAdjusterAmount2"/>
+		<property name="CorrespondentAdjusterDescription3" type="StringClob"/>
+		<property name="CorrespondentAdjusterAmount3"/>
+		<property name="CorrespondentFinalBuyPrice"/>
+		<property name="CorrespondentPurchasedPrincipal"/>
+		<property name="CorrespondentInterest"/>
+		<property name="CorrespondentInterestDays"/>
+		<property name="CorrespondentImpounds"/>
+		<property name="CorrespondentFinalBuyAmount"/>
+		<property name="CorrespondentSRPAmount"/>
+		<property name="CorrespondentRemainingBuydownAmount"/>
+		<property name="CorrespondentTotalBuyAmount"/>
+		<property name="CorrespondentTotalFees"/>
+		<property name="CorrespondentReconcilationComments" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineDescription1" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount1"/>
+		<property name="CorrespondentAdditionalLineDescription2" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount2"/>
+		<property name="CorrespondentAdditionalLineDescription3" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount3"/>
+		<property name="CorrespondentAdditionalLineDescription4" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount4"/>
+		<property name="CorrespondentAdditionalLineDescription5" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount5"/>
+		<property name="CorrespondentAdditionalLineDescription6" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount6"/>
+		<property name="CorrespondentAdditionalLineDescription7" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount7"/>
+		<property name="CorrespondentAdditionalLineDescription8" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount8"/>
+		<property name="CorrespondentAdditionalLineDescription9" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount9"/>
+		<property name="CorrespondentAdditionalLineDescription10" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount10"/>
+		<property name="CorrespondentAdditionalLineDescription11" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount11"/>
+		<property name="CorrespondentAdditionalLineDescription12" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount12"/>
+		<property name="CorrespondentAdditionalLineDescription14" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount14"/>
+		<property name="CorrespondentAdditionalLineDescription15" type="StringClob"/>
+		<property name="CorrespondentAdditionalLineAmount15"/>
+		<property name="CorrespondentAdditionalLineTotalAmount"/>
+		<property name="CorrespondentConfirmedBy"/>
+		<property name="CorrespondentConfirmedDate"/>
+		<property name="CorrespondentWarehouseBankName"/>
+		<property name="CorrespondentWarehouseBankId"/>
+		<property name="CorrespondentWarehouseBankAcctNum"/>
+		<property name="CorrespondentWarehouseBankAcctName"/>
+		<property name="CorrespondentWarehouseBankFurtherCreditAcctNum"/>
+		<property name="CorrespondentWarehouseBankFurtherCreditAcctName"/>
+		<property name="CorrespondentWarehouseBankABANum"/>
+		<property name="CorrespondentWarehouseBankWireInstructionsReceivedIndicator"/>
+		<property name="CorrespondentWarehouseBankBaileeLetterReceivedIndicator"/>
+		<property name="CorrespondentWarehouseBankAddress"/>
+		<property name="CorrespondentWarehouseBankAddress1"/>
+		<property name="CorrespondentWarehouseBankCity"/>
+		<property name="CorrespondentWarehouseBankState"/>
+		<property name="CorrespondentWarehouseBankZip"/>
+		<property name="CorrespondentWarehouseBankDescription"/>
+		<property name="CorrespondentWarehouseBankSelfFunderIndicator"/>
+		<property name="CorrespondentWarehouseBankBaileeLetterReqIndicator"/>
+		<property name="CorrespondentWarehouseBankBaileeExpirationDate"/>
+		<property name="CorrespondentWarehouseBankTriPartyContractIndicator"/>
+		<property name="CorrespondentWarehouseBankContactName"/>
+		<property name="CorrespondentWarehouseBankContactEmail"/>
+		<property name="CorrespondentWarehouseBankContactPhone"/>
+		<property name="CorrespondentWarehouseBankContactFax"/>
+		<property name="CorrespondentWarehouseBankUseDefaultContactIndicator"/>
+		<property name="CorrespondentWarehouseBankNotes"/>
+		<property name="CorrespondentWarehouseBankWireConfirmationNumber"/>
+    <property name="CorrespondentEscrowHoldback"/>
+        <property name="ConfirmAdviceIndicator"/>
+        <property name="CorrespondentRetainUserInputs"/>                
+		<!-- Correspondent Escrow Details Final CD -->
+        <property name="CorrespondentFinalCDHomeInsurance"/>        
+		<property name="CorrespondentFinalCDMortgageInsurance"/>
+		<property name="CorrespondentFinalCDPropertyTax"/>
+		<property name="CorrespondentFinalCDCityPropertyTax"/>
+		<property name="CorrespondentFinalCDFloodInsurance"/>
+		<property name="CorrespondentFinalCDDescription1007"/>
+		<property name="CorrespondentFinalCDAmount1007"/>
+		<property name="CorrespondentFinalCDDescription1008"/>
+		<property name="CorrespondentFinalCDAmount1008"/>
+		<property name="CorrespondentFinalCDDescription1009"/>
+		<property name="CorrespondentFinalCDAmount1009"/>
+		<property name="CorrespondentFinalCDUSDAAnnualFee"/>
+		<property name="CorrespondentFinalCDAggAdjAmount"/>
+		<property name="CorrespondentFinalCDOption1Desc"/>
+		<property name="CorrespondentFinalCDOption1Amount"/>
+		<property name="CorrespondentFinalCDOption2Desc"/>
+		<property name="CorrespondentFinalCDOption2Amount"/>
+		<property name="CorrespondentFinalCDReservesCollectedAtClosing"/>
+		<!-- Correspondent Escrow Details Additional Escrows -->
+		<property name="CorrespondentAdditionalEscrowHomeInsurance"/>
+		<property name="CorrespondentAdditionalEscrowPropertyTax"/>
+		<property name="CorrespondentAdditionalEscrowCityPropertyTax"/>
+		<property name="CorrespondentAdditionalEscrowFloodInsurance"/>
+		<property name="CorrespondentAdditionalEscrowDescription1007"/>
+		<property name="CorrespondentAdditionalEscrowAmount1007"/>
+		<property name="CorrespondentAdditionalEscrowDescription1008"/>
+		<property name="CorrespondentAdditionalEscrowAmount1008"/>
+		<property name="CorrespondentAdditionalEscrowDescription1009"/>
+		<property name="CorrespondentAdditionalEscrowAmount1009"/>
+		<property name="CorrespondentAdditionalEscrowUSDAAnnualFee"/>
+		<property name="CorrespondentAdditionalEscrowOption1Desc"/>
+		<property name="CorrespondentAdditionalEscrowOption1Amount"/>
+		<property name="CorrespondentAdditionalEscrowOption2Desc"/>
+		<property name="CorrespondentAdditionalEscrowOption2Amount"/>
+		<property name="CorrespondentAdditionalEscrowNumOfPayments"/>
+		<property name="CorrespondentAdditionalEscrowSumOfPayments"/>
+		<property name="CorrespondentAdditionalEscrowMIMIP"/>
+		<property name="CorrespondentAdditionalEscrowAdditionalEscrow"/>
+		<!-- Correspondent Escrow Details Escrow Disbursement -->
+		<property name="CorrespondentEscrowDisbursementsHomeInsurance"/>
+		<property name="CorrespondentEscrowDisbursementsMortgageInsurance"/>
+		<property name="CorrespondentEscrowDisbursementsPropertyTax"/>
+		<property name="CorrespondentEscrowDisbursementsCityPropertyTax"/>
+		<property name="CorrespondentEscrowDisbursementsFloodInsurance"/>
+		<property name="CorrespondentEscrowDisbursementsDescription1007"/>
+		<property name="CorrespondentEscrowDisbursementsAmount1007"/>
+		<property name="CorrespondentEscrowDisbursementsDescription1008"/>
+		<property name="CorrespondentEscrowDisbursementsAmount1008"/>
+		<property name="CorrespondentEscrowDisbursementsDescription1009"/>
+		<property name="CorrespondentEscrowDisbursementsAmount1009"/>
+		<property name="CorrespondentEscrowDisbursementsUSDAAnnualFee"/>
+		<property name="CorrespondentEscrowDisbursementsOption1Desc"/>
+		<property name="CorrespondentEscrowDisbursementsOption1Amount"/>
+		<property name="CorrespondentEscrowDisbursementsOption2Desc"/>
+		<property name="CorrespondentEscrowDisbursementsOption2Amount"/>
+		<property name="CorrespondentEscrowDisbursementsEscrowsToBePaidBySeller"/>
+		<property name="CorrespondentEscrowDisbursementsEsrowFundedByInvestor"/>
+		<!-- Correspondent Payment History -->
+		<property name="CorrespondentPaymentHistoryNoteDate"/>
+		<property name="CorrespondentPaymentHistoryFirstBorrowerPaymentDueDate"/>
+		<property name="CorrespondentPaymentHistoryPricipalReduction"/>
+		<property name="CorrespondentPaymentHistoryAnticipatedPurchaseDate"/>
+		<property name="CorrespondentPaymentHistoryFirstInvestorPaymentDate"/>
+		<property name="CorrespondentPaymentHistoryCalculatedPurchasedPrincipal"/>
+		<!-- Correspondent Payment History Extra Payments -->
+		<bag name="extraPayments" cascade="all-delete-orphan" inverse="true" access="field">
+			<key column="ElliRateLockId"/>
+			<one-to-many class="ExtraPayment"/>
+		</bag>
+		<!-- Purchase Advice Payouts -->
+		<bag name="purchaseAdvicePayouts" cascade="all-delete-orphan" inverse="true" access="field">
+			<key column="ElliRateLockId"/>
+			<one-to-many class="PurchaseAdvicePayout"/>
+		</bag>
+		<!--Price Adjustments-->
+		<bag name="priceAdjustments" cascade="all-delete-orphan" inverse="true" access="field">
+			<key column="ElliRateLockId"/>
+			<one-to-many class="PriceAdjustment"/>
+		</bag>
+		<!--RateLockBuydowns-->
+		<bag name="rateLockBuydowns" cascade="all-delete-orphan" inverse="true" access="field">
+			<key column="ElliRateLockId"/>
+			<one-to-many class="RateLockBuydown"/>
+		</bag>
+		<!-- Loan Info-->
+		<property name="EmploymentBorrowerSelfEmployedIndicator1"/>
+		<property name="EmploymentBorrowerSelfEmployedIndicator2"/>
+		<property name="EmploymentBorrowerSelfEmployedIndicator3"/>
+		<property name="EmploymentBorrowerSelfEmployedIndicator4"/>
+		<property name="EmploymentBorrowerSelfEmployedIndicator5"/>
+		<property name="EmploymentBorrowerSelfEmployedIndicator6"/>
+		<property name="EmploymentBorrowerSelfEmployedIndicator7"/>
+		<property name="EmploymentBorrowerSelfEmployedIndicator8"/>
+		<property name="EmploymentBorrowerSelfEmployedIndicator9"/>
+		<property name="EmploymentBorrowerSelfEmployedIndicator10"/>
+		<property name="EmploymentBorrowerSelfEmployedIndicator11"/>
+		<property name="EmploymentBorrowerSelfEmployedIndicator12"/>
+		<property name="FirstTimeHomebuyersIndicator"/>
+		<property name="FinancedNumberOfUnits"/>
+		<property name="TwelveMonthMortgageRentalHistoryIndicator"/>
+		<property name="LenderPaidMortgageInsuranceIndicator"/>
+		<property name="SubjectPropertyCity"/>
+		<property name="SubjectPropertyCounty"/>
+		<property name="SubjectPropertyPostalCode"/>
+		<property name="SubjectPropertyState"/>
+		<property name="SubjectPropertyStreetAddress"/>
+		<property name="PricingUpdated"/>
+		<property name="Type"/>
+		<property name="BalloonLoanMaturityTermMonths"/>
+		<property name="BaseLoanAmount"/>
+		<property name="BorrowerRequestedLoanAmount"/>
+		<property name="CombinedLTV"/>
+		<property name="FHAUpfrontMIPremiumPercent"/>
+		<property name="FirstSubordinateAmount"/>
+		<property name="FNMProductPlanIdentifier"/>
+		<property name="FundingAmount"/>
+		<property name="GPMRate"/>
+		<property name="GPMYears"/>
+		<property name="GSEPropertyType"/>
+		<property name="RequestImpoundType"/>
+		<property name="RequestImpoundWavied"/>
+		<property name="LienPriorityType"/>
+		<property name="LoanAmortizationTermMonths"/>
+		<property name="LoanAmortizationType"/>
+		<property name="LoanDocumentationType"/>
+		<property name="LoanProgram"/>
+		<property name="LoanProgramFile"/>
+		<property name="LoanScheduledClosingDate"/>
+		<property name="LockField"/>
+		<property name="LTV"/>
+		<property name="MinFICO"/>
+		<property name="MinFICO2"/>
+		<property name="MIPPaidInCash"/>
+		<property name="MortgageType"/>
+		<property name="OtherAmortizationTypeDescription"/>
+		<property name="OtherSubordinateAmount"/>
+		<property name="RequestPenaltyTerm"/>
+		<property name="PlanCode"/>
+		<property name="RequestPrepayPenalty"/>
+		<property name="PropertyAppraisedValueAmount"/>
+		<property name="PropertyEstimatedValueAmount"/>
+		<property name="PropertyUsageType"/>
+		<property name="PurchasePriceAmount"/>
+		<property name="RoundToNearest50"/>
+		<property name="SecondSubordinateAmount"/>
+		<property name="SellerPaidMIPremium"/>
+		<property name="LockRequestLoanPurposeType"/>
+		<property name="LoanFor203K"/>
+		<property name="TotalForLesserOfSumAsIs"/>
+		<property name="HELOCActualBalance"/>
+		<property name="DeliveryType"/>
+		<property name="IsDeliveryType"/>
+		<property name="CorrespondentAdditionalLineAmount13"/>
+		<property name="CorrespondentLateFeePriceAdjustment"/>
+		<property name="CorrespondentLateFeeAmount"/>
+		<property name="BuySideStartingAdjPoint"/>
+		<property name="ONRPLock"/>
+		<property name="SubjectPropertyCondotelIndicator"/>
+		<property name="SubjectPropertyNonWarrantableProjectIndicator"/>
+		<property name="SRPPaidOut"/>
+		<property name="RequestLockStatus"/>
+		<property name="LenderFeeWaiverOption"/>
+    <property name="BorrLenderPaid"/>
+    <property name="SubjectPropertyPropertyStreetAddress"/>
+    <property name="SubjectPropertyUnitType"/>
+    <property name="SubjectPropertyUnitNumber"/>
+    <property name="FHASecondaryResidence" />
+    <property name="InitialAdvanceAmount" />
+    <property name="TeaserRate" />
+    <property name="DisclosureType" />
+    <property name="IndexCurrentValuePercent" />
+    <property name="HCLTVHTLTV" />
+    <property name="HELOCCreditLimit" />
+	  <property name="BuydownContributor" />
+	  <property name="BuydownType" />    
+    <property name="CondominiumIndicator" />
+    <property name="CooperativeIndicator" />
+		<property name="PudIndicator" />
+		<property name="NotInProjectIndicator" />
+    <property name="LockValidationStatus" />
+		<property name="FloatDateUpdatedOn" />
+    <property name="LotOwnedFreeAndClearIndicator"/>
+		<!-- Lock Request Borrower Information (LoanInfo section)-->
+		<list name="lockRequestBorrowers" cascade="all-delete-orphan" inverse="true" access="field">
+			<key column="ElliRateLockId"/>
+			<index column="LrbIndex"/>
+			<one-to-many class="LockRequestBorrower"/>
+		</list>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\TradeManagement.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1B210D9-E05E-493D-8270-42E47BE256F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>TradeManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>24.3.0.5</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EllieMae.EMLite</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Client">
+      <HintPath>lib\Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientCommon">
+      <HintPath>lib\ClientCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientSession">
+      <HintPath>lib\ClientSession.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="EMInput">
+      <HintPath>lib\EMInput.dll</HintPath>
+    </Reference>
+    <Reference Include="EMLoanUtils15">
+      <HintPath>lib\EMLoanUtils15.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Web.Host">
+      <HintPath>lib\Elli.Web.Host.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Environment">
+      <HintPath>lib\Environment.dll</HintPath>
+    </Reference>
+    <Reference Include="HelpAPI">
+      <HintPath>lib\HelpAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Reporting">
+      <HintPath>lib\Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Server">
+      <HintPath>lib\Server.dll</HintPath>
+    </Reference>
+    <Reference Include="SetupUI">
+      <HintPath>lib\SetupUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="UIElements">
+      <HintPath>lib\UIElements.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LoanAssignmentFromFileImport.cs" />
+    <Compile Include="FileImportType.cs" />
+    <Compile Include="Trading\CorrespondentCommitmentTypeDialog.cs" />
+    <Compile Include="Trading\AssignedCorrespondentTradeList.cs" />
+    <Compile Include="Trading\AddMSRItemDialog.cs" />
+    <Compile Include="Trading\BidTapeRegistration.cs" />
+    <Compile Include="Trading\CorrespondentTradeUpdateStatus.cs" />
+    <Compile Include="Trading\EPPSLoanProgramSelector.cs" />
+    <Compile Include="Trading\MbsFannieFreddiePricingItemDialog.cs" />
+    <Compile Include="Trading\MSRPricingEditor.cs" />
+    <Compile Include="Trading\GSEcmtAssignmentListScreen.cs" />
+    <Compile Include="Trading\CommitmentAssignLoanToPoolDialog.cs" />
+    <Compile Include="Trading\AssignmentErrorCode.cs" />
+    <Compile Include="Trading\GSECmtAssignmentDialog.cs" />
+    <Compile Include="Trading\FannieMaePEMbsPoolAssignmentListScreen.cs" />
+    <Compile Include="Trading\CommonPairOffDialog.cs" />
+    <Compile Include="Trading\CorrespondentMasterCommitmentEditor.cs" />
+    <Compile Include="Trading\CorrespondentTradeEditor.cs" />
+    <Compile Include="Trading\CorrespondentTradePairOffDialog.cs" />
+    <Compile Include="Trading\CommitmentListScreen.cs" />
+    <Compile Include="Trading\CommitmentsPoolAllocateAmountControl.cs" />
+    <Compile Include="Trading\GseCommitmentEditor.cs" />
+    <Compile Include="Trading\FannieMaeProductGrid.cs" />
+    <Compile Include="Trading\GSECommitmentListScreen.cs" />
+    <Compile Include="Trading\GuaranteeFeeDialog.cs" />
+    <Compile Include="Trading\FannieMaePEPoolEditor.cs" />
+    <Compile Include="Trading\MbsPoolAssignmentListScreen.cs" />
+    <Compile Include="Trading\NewCorrespondentTrade.cs" />
+    <Compile Include="Trading\CorrespondentLoanSyncDlg.cs" />
+    <Compile Include="Trading\CorrespondentLoanUpdateDialog.cs" />
+    <Compile Include="Trading\ContractListScreen.cs" />
+    <Compile Include="Trading\CorrespondentDeliveryType.cs" />
+    <Compile Include="Trading\CorrespondentMasterListScreen.cs" />
+    <Compile Include="Trading\CorrespondentTradeListScreen.cs" />
+    <Compile Include="Trading\CorrespondentTradeParallelLoanUpdateJob.cs" />
+    <Compile Include="Trading\CorrespondentTradeProcesses.cs" />
+    <Compile Include="Trading\DeliveryMethodDetailDialog.cs" />
+    <Compile Include="Trading\MBSPoolBuyUpDownDialog.cs" />
+    <Compile Include="Trading\MBSPoolBuyUpDownEditor.cs" />
+    <Compile Include="Trading\MBSPoolAdvancedPricingEditor.cs" />
+    <Compile Include="Trading\MbsPoolParallelLoanUpdateJob.cs" />
+    <Compile Include="Trading\MbsPoolLoanUpdateDialog.cs" />
+    <Compile Include="Trading\MbsPoolLoanSyncDlg.cs" />
+    <Compile Include="Trading\MbsPoolFreddieMacFieldsEditor.cs" />
+    <Compile Include="Trading\MbsPoolMortgageTypeDialog.cs" />
+    <Compile Include="Trading\MBSPoolGinnieMaeFieldsEditor.cs" />
+    <Compile Include="Trading\MigrateSecurityTradeDataDialog.cs" />
+    <Compile Include="Trading\MultiInputDialog.cs" />
+    <Compile Include="Trading\NewCorrespondentMaster.cs" />
+    <Compile Include="Trading\Notes.cs" />
+    <Compile Include="Trading\PairOffControl.cs" />
+    <Compile Include="Trading\SecurityTradeAssignmentDialog.cs" />
+    <Compile Include="Trading\ITradeEditorBase.cs" />
+    <Compile Include="Trading\ParallelLoanUpdateJob.cs" />
+    <Compile Include="Trading\SelectEPPSLoanProgramControl.cs" />
+    <Compile Include="Trading\TradeAssignmentByTradeListScreenBase.cs" />
+    <Compile Include="Trading\TradeAssignmentByTradeProfitControl.cs" />
+    <Compile Include="Trading\IAssignmentItem.cs" />
+    <Compile Include="Trading\AssignmentItem.cs" />
+    <Compile Include="Trading\CorrespondentTradeAssignmentItem.cs" />
+    <Compile Include="Trading\MbsPoolLoanAssignmentItem.cs" />
+    <Compile Include="Trading\TradeLoanUpdateActionCancel.cs" />
+    <Compile Include="Trading\TradeLoanUpdateActionClear.cs" />
+    <Compile Include="Trading\TradeLoanUpdateNotificationDialog.cs" />
+    <Compile Include="Trading\TradeLoanUpdateQueue`1.cs" />
+    <Compile Include="Trading\TradeLoanUpdateQueueItem.cs" />
+    <Compile Include="Trading\TradeLoanUpdateResults.cs" />
+    <Compile Include="Trading\TradeLoanUpdateError.cs" />
+    <Compile Include="Trading\TradeLoanUpdateException.cs" />
+    <Compile Include="Trading\TradeProcesses2.cs" />
+    <Compile Include="Trading\AddPricingItemDialog.cs" />
+    <Compile Include="Trading\ContractEditor.cs" />
+    <Compile Include="Trading\ContractProfitControl.cs" />
+    <Compile Include="Trading\ITradeEditor.cs" />
+    <Compile Include="Trading\LoanListScreen.cs" />
+    <Compile Include="Trading\MbsPoolFannieMaeFieldsEditor.cs" />
+    <Compile Include="Trading\IMbsPoolFieldsEditor.cs" />
+    <Compile Include="Trading\ValueChangedEventHandler.cs" />
+    <Compile Include="Trading\ValueChangeEventArgs.cs" />
+    <Compile Include="Trading\MbsPoolFieldsEditorBase.cs" />
+    <Compile Include="Trading\ValidateMode.cs" />
+    <Compile Include="Trading\MbsPoolEditor.cs" />
+    <Compile Include="Trading\MbsPoolListScreen.cs" />
+    <Compile Include="Trading\DealerEditorControl.cs" />
+    <Compile Include="Trading\TradeUpdateEventArgs.cs" />
+    <Compile Include="Trading\TradeUpdateEventHandler.cs" />
+    <Compile Include="Trading\TradeJobProcessorState.cs" />
+    <Compile Include="Trading\ITradeJob.cs" />
+    <Compile Include="Trading\TradeLoanUpdateCompleteDialog.cs" />
+    <Compile Include="Trading\ProcessType.cs" />
+    <Compile Include="Trading\TradeLoanUpdateDialog.cs" />
+    <Compile Include="Trading\SingleLoanUpdateJob.cs" />
+    <Compile Include="Trading\LoanTradePairOffDialog.cs" />
+    <Compile Include="Trading\MbsPoolProcesses.cs" />
+    <Compile Include="Trading\MbsPoolAssignmentDialog.cs" />
+    <Compile Include="Trading\SecurityTradeAssignmentListScreen.cs" />
+    <Compile Include="Trading\SecurityTradePairOffDialog.cs" />
+    <Compile Include="Trading\SecurityTradeProfitControl.cs" />
+    <Compile Include="Trading\SecurityTradeListScreen.cs" />
+    <Compile Include="Trading\SecurityTradeEditor.cs" />
+    <Compile Include="Trading\LoanSearchScreen.cs" />
+    <Compile Include="Trading\LockedLoanDialog.cs" />
+    <Compile Include="Trading\PairOffEditor.cs" />
+    <Compile Include="Trading\CalculateFeeEventHandler.cs" />
+    <Compile Include="Trading\CalculateFeeEventArgs.cs" />
+    <Compile Include="Trading\PriceAdjustmentTemplateSelector.cs" />
+    <Compile Include="Trading\RemoveLoansOptionsDialog.cs" />
+    <Compile Include="Trading\SaveSearchDialog.cs" />
+    <Compile Include="Trading\SecurityTradeSmallEditor.cs" />
+    <Compile Include="Trading\TermMonthsUpdatedEventArgs.cs" />
+    <Compile Include="Trading\SimpleSearchControl.cs" />
+    <Compile Include="Trading\SRPTemplateSelector.cs" />
+    <Compile Include="Trading\TradeAdvancedPricingEditor.cs" />
+    <Compile Include="Trading\TradeAdvancedPricingItemDialog.cs" />
+    <Compile Include="Trading\TradeEditor.cs" />
+    <Compile Include="Trading\TradeFilterTemplateSelector.cs" />
+    <Compile Include="Trading\TradeListScreen.cs" />
+    <Compile Include="Trading\TradeLoanSyncDlg.cs" />
+    <Compile Include="Trading\DisplayItem.cs" />
+    <Compile Include="Trading\TradeManagementConsole.cs" />
+    <Compile Include="Trading\TradePricingEditor.cs" />
+    <Compile Include="Trading\TradeProcesses.cs" />
+    <Compile Include="Trading\TradeProfitControl.cs" />
+    <Compile Include="Trading\TradeSelector.cs" />
+    <Compile Include="Trading\TradeSync.cs" />
+    <Compile Include="Trading\TradeUpdateLoansDialog.cs" />
+    <Compile Include="Trading\TradeStatsPopup.cs" />
+    <Compile Include="Trading\Notifications\TradeLoanUpdateNotificationEventHandler.cs" />
+    <Compile Include="Trading\Notifications\TradeLoanUpdateArgs.cs" />
+    <Compile Include="Trading\Notifications\TradeLoanUpdateNotificationClientListener.cs" />
+    <Compile Include="Trading\FannieMaePEMBS\FannieMaeProductNames.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LoanAssignmentFromFileImport.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="Trading\AddMSRItemDialog.resx" />
+    <EmbeddedResource Include="Trading\AddPricingItemDialog.resx" />
+    <EmbeddedResource Include="Trading\AssignedCorrespondentTradeList.resx" />
+    <EmbeddedResource Include="Trading\CommitmentAssignLoanToPoolDialog.resx" />
+    <EmbeddedResource Include="Trading\CommitmentListScreen.resx" />
+    <EmbeddedResource Include="Trading\CommitmentsPoolAllocateAmountControl.resx" />
+    <EmbeddedResource Include="Trading\ContractEditor.resx" />
+    <EmbeddedResource Include="Trading\ContractListScreen.resx" />
+    <EmbeddedResource Include="Trading\ContractProfitControl.resx" />
+    <EmbeddedResource Include="Trading\CorrespondentCommitmentTypeDialog.resx" />
+    <EmbeddedResource Include="Trading\CorrespondentDeliveryType.resx" />
+    <EmbeddedResource Include="Trading\CorrespondentMasterCommitmentEditor.resx" />
+    <EmbeddedResource Include="Trading\CorrespondentMasterListScreen.resx" />
+    <EmbeddedResource Include="Trading\CorrespondentTradeEditor.resx" />
+    <EmbeddedResource Include="Trading\CorrespondentTradeListScreen.resx" />
+    <EmbeddedResource Include="Trading\CorrespondentTradePairOffDialog.resx" />
+    <EmbeddedResource Include="Trading\CorrespondentTradeUpdateStatus.resx" />
+    <EmbeddedResource Include="Trading\DealerEditorControl.resx" />
+    <EmbeddedResource Include="Trading\DeliveryMethodDetailDialog.resx" />
+    <EmbeddedResource Include="Trading\EPPSLoanProgramSelector.resx" />
+    <EmbeddedResource Include="Trading\FannieMaePEMBS\FannieMaeProductNames.resx" />
+    <EmbeddedResource Include="Trading\FannieMaePEPoolEditor.resx" />
+    <EmbeddedResource Include="Trading\GSECmtAssignmentDialog.resx" />
+    <EmbeddedResource Include="Trading\GSEcmtAssignmentListScreen.resx" />
+    <EmbeddedResource Include="Trading\GseCommitmentEditor.resx" />
+    <EmbeddedResource Include="Trading\GSECommitmentListScreen.resx" />
+    <EmbeddedResource Include="Trading\GseCommitmentPairOffDialog.resx" />
+    <EmbeddedResource Include="Trading\GuaranteeFeeDialog.resx" />
+    <EmbeddedResource Include="Trading\LoanListScreen.resx" />
+    <EmbeddedResource Include="Trading\LoanSearchScreen.resx" />
+    <EmbeddedResource Include="Trading\LoanTradePairOffDialog.resx" />
+    <EmbeddedResource Include="Trading\LockedLoanDialog.resx" />
+    <EmbeddedResource Include="Trading\MbsFannieFreddiePricingItemDialog.resx" />
+    <EmbeddedResource Include="Trading\MBSPoolAdvancedPricingEditor.resx" />
+    <EmbeddedResource Include="Trading\MbsPoolAssignmentDialog.resx" />
+    <EmbeddedResource Include="Trading\MbsPoolAssignmentListScreen.resx" />
+    <EmbeddedResource Include="Trading\MBSPoolBuyUpDownDialog.resx" />
+    <EmbeddedResource Include="Trading\MBSPoolBuyUpDownEditor.resx" />
+    <EmbeddedResource Include="Trading\MbsPoolEditor.resx" />
+    <EmbeddedResource Include="Trading\MbsPoolFannieMaeFieldsEditor.resx" />
+    <EmbeddedResource Include="Trading\MbsPoolFreddieMacFieldsEditor.resx" />
+    <EmbeddedResource Include="Trading\MBSPoolGinnieMaeFieldsEditor.resx" />
+    <EmbeddedResource Include="Trading\MbsPoolListScreen.resx" />
+    <EmbeddedResource Include="Trading\MbsPoolLoanSyncDlg.resx" />
+    <EmbeddedResource Include="Trading\MbsPoolLoanUpdateDialog.resx" />
+    <EmbeddedResource Include="Trading\MbsPoolMortgageTypeDialog.resx" />
+    <EmbeddedResource Include="Trading\MbsPoolProfitControl.resx" />
+    <EmbeddedResource Include="Trading\MSRPricingEditor.resx" />
+    <EmbeddedResource Include="Trading\MultiInputDialog.resx" />
+    <EmbeddedResource Include="Trading\NewCorrespondentMaster.resx" />
+    <EmbeddedResource Include="Trading\NewCorrespondentTrade.resx" />
+    <EmbeddedResource Include="Trading\Notes.resx" />
+    <EmbeddedResource Include="Trading\PairOffControl.resx" />
+    <EmbeddedResource Include="Trading\PairOffEditor.resx" />
+    <EmbeddedResource Include="Trading\RemoveLoansOptionsDialog.resx" />
+    <EmbeddedResource Include="Trading\SaveSearchDialog.resx" />
+    <EmbeddedResource Include="Trading\SecurityTradeAssignmentDialog.resx" />
+    <EmbeddedResource Include="Trading\SecurityTradeAssignmentListScreen.resx" />
+    <EmbeddedResource Include="Trading\SecurityTradeEditor.resx" />
+    <EmbeddedResource Include="Trading\SecurityTradeListScreen.resx" />
+    <EmbeddedResource Include="Trading\SecurityTradePairOffDialog.resx" />
+    <EmbeddedResource Include="Trading\SecurityTradeProfitControl.resx" />
+    <EmbeddedResource Include="Trading\SecurityTradeSmallEditor.resx" />
+    <EmbeddedResource Include="Trading\SelectEPPSLoanProgramControl.resx" />
+    <EmbeddedResource Include="Trading\SimpleSearchControl.resx" />
+    <EmbeddedResource Include="Trading\TradeAdvancedPricingEditor.resx" />
+    <EmbeddedResource Include="Trading\TradeAdvancedPricingItemDialog.resx" />
+    <EmbeddedResource Include="Trading\TradeAssignmentByTradeProfitControl.resx" />
+    <EmbeddedResource Include="Trading\TradeEditor.resx" />
+    <EmbeddedResource Include="Trading\TradeListScreen.resx" />
+    <EmbeddedResource Include="Trading\TradeLoanSyncDlg.resx" />
+    <EmbeddedResource Include="Trading\TradeLoanUpdateActionCancel.resx" />
+    <EmbeddedResource Include="Trading\TradeLoanUpdateActionClear.resx" />
+    <EmbeddedResource Include="Trading\TradeLoanUpdateCompleteDialog.resx" />
+    <EmbeddedResource Include="Trading\TradeLoanUpdateDialog.resx" />
+    <EmbeddedResource Include="Trading\TradeLoanUpdateNotificationDialog.resx" />
+    <EmbeddedResource Include="Trading\TradeLoanUpdateResults.resx" />
+    <EmbeddedResource Include="Trading\TradeManagementConsole.resx" />
+    <EmbeddedResource Include="Trading\TradePricingEditor.resx" />
+    <EmbeddedResource Include="Trading\TradeProfitControl.resx" />
+    <EmbeddedResource Include="Trading\TradeSelector.resx" />
+    <EmbeddedResource Include="Trading\TradeStatsPopup.resx" />
+    <EmbeddedResource Include="Trading\TradeUpdateLoansDialog.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

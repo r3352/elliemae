@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="EmDocumentLender" table="ElliEmDocumentLender" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="LndBrchCty" />
+    <property name="LndBrchFax" />
+    <property name="LndBrchJrsdctn" />
+    <property name="LndBrchNm" />
+    <property name="LndBrchOrgTyp" />
+    <property name="LndBrchPhone" />
+    <property name="LndBrchStCd" />
+    <property name="LndBrchStreetAddr1" />
+    <property name="LndBrchStreetAddr2" />
+    <property name="LndBrchTollFreePhone" />
+    <property name="LndBrchUrl" />
+    <property name="LndBrchZip" />
+    <property name="LndCnty" />
+    <property name="LndCty" />
+    <property name="LndFaxNum" />
+    <property name="LndFhaOrgntrId" />
+    <property name="LndFhaSpnsrId" />
+    <property name="LndJrsdctn" />
+    <property name="LndLossPayeeAdtlTxt" />
+    <property name="LndLossPayeeCntctEmail" />
+    <property name="LndLossPayeeCntctFax" />
+    <property name="LndLossPayeeCntctNm" />
+    <property name="LndLossPayeeCntctPhone" />
+    <property name="LndLossPayeeCty" />
+    <property name="LndLossPayeeJrsdctn" />
+    <property name="LndLossPayeeNm" />
+    <property name="LndLossPayeeOrgTyp" />
+    <property name="LndLossPayeeScsrsClausTxtDesc" />
+    <property name="LndLossPayeeStCd" />
+    <property name="LndLossPayeeStreetAddr1" />
+    <property name="LndLossPayeeStreetAddr2" />
+    <property name="LndLossPayeeZip" />
+    <property name="LndMersIdNum" />
+    <property name="LndNm" />
+    <property name="LndNmlsIdNum" />
+    <property name="LndNtryCmsnBndNumIdntfr" />
+    <property name="LndNtryCmsnCnty" />
+    <property name="LndNtryCmsnExprDt" />
+    <property name="LndNtryCmsnNumIdntfr" />
+    <property name="LndNtryCmsnSt" />
+    <property name="LndNtryCty" />
+    <property name="LndNtryNm" />
+    <property name="LndNtryStCd" />
+    <property name="LndNtryStreetAddr1" />
+    <property name="LndNtryStreetAddr2" />
+    <property name="LndNtryTtlOrRank" />
+    <property name="LndNtryZip" />
+    <property name="LndOrgTyp" />
+    <property name="LndPhoneNum" />
+    <property name="LndStCd" />
+    <property name="LndStreetAddr1" />
+    <property name="LndStreetAddr2" />
+    <property name="LndSvcrAdtlTxt" />
+    <property name="LndSvcrCntctNm" />
+    <property name="LndSvcrCntctPhoneNum" />
+    <property name="LndSvcrCntctTollFreePhoneNum" />
+    <property name="LndSvcrCty" />
+    <property name="LndSvcrDayOp" />
+    <property name="LndSvcrDayOpAddl" />
+    <property name="LndSvcrHrsOp" />
+    <property name="LndSvcrHrsOpAddl" />
+    <property name="LndSvcrJrsdctn" />
+    <property name="LndSvcrNm" />
+    <property name="LndSvcrOrgTyp" />
+    <property name="LndSvcrStCd" />
+    <property name="LndSvcrStreetAddr1" />
+    <property name="LndSvcrStreetAddr2" />
+    <property name="LndSvcrZip" />
+    <property name="LndTaxIDNum" />
+    <property name="LndTollFreePhoneNum" />
+    <property name="LndUrl" />
+    <property name="LndVaIdNum" />
+    <property name="LndZip" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.ElliEnum.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC04F26B-DE62-4FCD-90FC-106544493C5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Elli.ElliEnum</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Elli.ElliEnum</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AncillaryEntityType.cs" />
+    <Compile Include="CalculationType.cs" />
+    <Compile Include="DbLogSource.cs" />
+    <Compile Include="DisclosureTypeEnum.cs" />
+    <Compile Include="ExpirationGenericTimeZoneType.cs" />
+    <Compile Include="LoanBatchRequestStatusType.cs" />
+    <Compile Include="LoanBatchRequestType.cs" />
+    <Compile Include="DeferrableLoanProcessMode.cs" />
+    <Compile Include="DeferrableProcessorRole.cs" />
+    <Compile Include="ElliConstants.cs" />
+    <Compile Include="FieldAccessRestrictionType.cs" />
+    <Compile Include="LoanActionType.cs" />
+    <Compile Include="FieldAccessRight.cs" />
+    <Compile Include="FieldValidationType.cs" />
+    <Compile Include="InternalFieldPopulationOption.cs" />
+    <Compile Include="LoanActivityType.cs" />
+    <Compile Include="LoanPersistent.cs" />
+    <Compile Include="LoanBatchActionFixture.cs" />
+    <Compile Include="LoanSecurityOptions.cs" />
+    <Compile Include="LogSnapshotType.cs" />
+    <Compile Include="LogType.cs" />
+    <Compile Include="MilestoneTaskType.cs" />
+    <Compile Include="NextMilestoneUserType.cs" />
+    <Compile Include="NotificationType.cs" />
+    <Compile Include="GetUsersResultOption.cs" />
+    <Compile Include="UserAssignedContactsBehaviorEnums.cs" />
+    <Compile Include="Triggers\TriggerActionType.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

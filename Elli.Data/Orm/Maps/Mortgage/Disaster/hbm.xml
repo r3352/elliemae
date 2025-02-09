@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Disaster" table="ElliDisaster" dynamic-update="true">
+    <id name="Id" column="ElliDisasterId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Loan" column="ElliLoanId" />
+
+    <property name="FemaDeclarationString" />
+    <property name="DisasterNumber" />
+    <property name="DeclarationType" />
+    <property name="DeclarationDate" />
+    <property name="FiscalYearDeclared" />
+    <property name="IncidentType" />
+    <property name="DeclarationTitle" />
+    <property name="IhProgramDeclared" />
+    <property name="IaProgramDeclared" />
+    <property name="PaProgramDeclared" />
+    <property name="HmProgramDeclared" />
+    <property name="IncidentBeginDate" />
+    <property name="IncidentEndDate" />
+    <property name="DisasterCloseoutDate" />
+    <property name="DeclarationRequestNumber" />
+    <property name="LastIaFilingDate" />
+    <property name="LastRefreshDate" />
+    <property name="AltId" />
+
+  </class>
+</hibernate-mapping>

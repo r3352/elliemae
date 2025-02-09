@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Server.Remoting.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74584CCA-2185-4E81-A0D5-A7F79C0AFA69}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Elli.Server.Remoting</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Elli.Server.Remoting</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Client">
+      <HintPath>lib\Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="DataAccess">
+      <HintPath>lib\DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Common">
+      <HintPath>lib\Elli.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.DirectoryServices.Contracts">
+      <HintPath>lib\Elli.DirectoryServices.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.DirectoryServices.Proxies">
+      <HintPath>lib\Elli.DirectoryServices.Proxies.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.ElliEnum">
+      <HintPath>lib\Elli.ElliEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Interface">
+      <HintPath>lib\Elli.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Encompass.Diagnostics">
+      <HintPath>lib\Encompass.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="GenuineChannels">
+      <HintPath>lib\GenuineChannels.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportingDbUtils">
+      <HintPath>lib\ReportingDbUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Server">
+      <HintPath>lib\Server.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceInterface">
+      <HintPath>lib\ServiceInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions">
+      <HintPath>lib\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception">
+      <HintPath>lib\Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="VersionInterface15">
+      <HintPath>lib\VersionInterface15.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ePASS\Title\FeeSnapshotUtil.cs" />
+    <Compile Include="ePASS\Title\GetData4CloUtil.cs" />
+    <Compile Include="ePASS\Title\IBam.cs" />
+    <Compile Include="ConnectionManager.cs" />
+    <Compile Include="ConnectionManagerWrapper.cs" />
+    <Compile Include="ConnectionManagerNoop.cs" />
+    <Compile Include="DiagnosticsInterface.cs" />
+    <Compile Include="InProcConnection.cs" />
+    <Compile Include="LoginManager.cs" />
+    <Compile Include="RemotableEncompassServer.cs" />
+    <Compile Include="RemotedObject.cs" />
+    <Compile Include="VersionControl.cs" />
+    <Compile Include="Installer\ServerUpdateInstaller.cs" />
+    <Compile Include="Interception\ApiTraceV2Log.cs" />
+    <Compile Include="Interception\RemoteCallBehavior.cs" />
+    <Compile Include="Interception\InterceptionUtils.cs" />
+    <Compile Include="Interception\RemoteCallTracker.cs" />
+    <Compile Include="Interception\RemotedMethodParameterConverter.cs" />
+    <Compile Include="Interception\RemoteMethodParameter.cs" />
+    <Compile Include="DataSync\DataSyncDebuggingInfo.cs" />
+    <Compile Include="DataSync\DataSyncManager.cs" />
+    <Compile Include="DataSync\DataSyncUtils.cs" />
+    <Compile Include="DataSync\FileResourceManager.cs" />
+    <Compile Include="DataSync\FileSystemManager.cs" />
+    <Compile Include="DataSync\FileSystemTranslatorBase.cs" />
+    <Compile Include="DataSync\HeadRelationTableDef.cs" />
+    <Compile Include="DataSync\HeadTableDef.cs" />
+    <Compile Include="DataSync\IFileManager.cs" />
+    <Compile Include="DataSync\ConflictResolveMethod.cs" />
+    <Compile Include="DataSync\IFileSystemTranslator.cs" />
+    <Compile Include="DataSync\InputFormManager.cs" />
+    <Compile Include="DataSync\LoanFolderManager.cs" />
+    <Compile Include="DataSync\ForeignKey.cs" />
+    <Compile Include="DataSync\RelationTableDef.cs" />
+    <Compile Include="DataSync\CalculatedField.cs" />
+    <Compile Include="DataSync\StoredProcedureSignature.cs" />
+    <Compile Include="DataSync\TableDef.cs" />
+    <Compile Include="DataSync\TableManager.cs" />
+    <Compile Include="Cursors\BizPartnerCursor.cs" />
+    <Compile Include="Cursors\BorrowerCursor.cs" />
+    <Compile Include="Cursors\CampaignContactCursor.cs" />
+    <Compile Include="Cursors\CampaignHistoryCursor.cs" />
+    <Compile Include="Cursors\CorrespondentMasterCursor.cs" />
+    <Compile Include="Cursors\CorrespondentTradeCursor.cs" />
+    <Compile Include="Cursors\CorrespondentTradeLoanCursor.cs" />
+    <Compile Include="Cursors\CursorBase.cs" />
+    <Compile Include="Cursors\GseCommitmentCursor.cs" />
+    <Compile Include="Cursors\MasterContractCursor.cs" />
+    <Compile Include="Cursors\MbsPoolCursor.cs" />
+    <Compile Include="Cursors\MbsPoolLoanCursor.cs" />
+    <Compile Include="Cursors\PipelineCursor.cs" />
+    <Compile Include="Cursors\QueryResultCursor.cs" />
+    <Compile Include="Cursors\SecurityTradeCursor.cs" />
+    <Compile Include="Cursors\TradeCursor.cs" />
+    <Compile Include="Cursors\TradeLoanCursor.cs" />
+    <Compile Include="Acl\EnhancedConditionsAclManager.cs" />
+    <Compile Include="Acl\InvestorServicesAclManager.cs" />
+    <Compile Include="Acl\ExportServicesAclManager.cs" />
+    <Compile Include="Acl\FeatureConfigsAclManager.cs" />
+    <Compile Include="Acl\FeaturesAclManager.cs" />
+    <Compile Include="Acl\FieldAccessAclManager.cs" />
+    <Compile Include="Acl\InputFormsAclManager.cs" />
+    <Compile Include="Acl\LoanDuplicationAclManager.cs" />
+    <Compile Include="Acl\LoanFoldersAclManager.cs" />
+    <Compile Include="Acl\LoConnectServiceAclManager.cs" />
+    <Compile Include="Acl\MilestonesAclManager.cs" />
+    <Compile Include="Acl\MilestonesFreeRoleAclManager.cs" />
+    <Compile Include="Acl\PipelineViewAclManager.cs" />
+    <Compile Include="Acl\ServicesAclManager.cs" />
+    <Compile Include="Acl\StandardWebFormAclManager.cs" />
+    <Compile Include="Acl\ToolsAclManager.cs" />
+    <Compile Include="SessionObjects\EfolderDocTrackViewManager.cs" />
+    <Compile Include="SessionObjects\AclGroupManager.cs" />
+    <Compile Include="SessionObjects\AlertManager.cs" />
+    <Compile Include="SessionObjects\AsyncEventStatus.cs" />
+    <Compile Include="SessionObjects\AsyncEventResult.cs" />
+    <Compile Include="SessionObjects\DelegateInvoker.cs" />
+    <Compile Include="SessionObjects\EventQueue.cs" />
+    <Compile Include="SessionObjects\BatchJobsManager.cs" />
+    <Compile Include="SessionObjects\BpmManager.cs" />
+    <Compile Include="SessionObjects\CalendarManager.cs" />
+    <Compile Include="SessionObjects\CampaignManager.cs" />
+    <Compile Include="SessionObjects\ClientSession.cs" />
+    <Compile Include="SessionObjects\ConfigurationManager.cs" />
+    <Compile Include="SessionObjects\ContactGroupManager.cs" />
+    <Compile Include="SessionObjects\ContactManager.cs" />
+    <Compile Include="SessionObjects\CorrespondentMasterManager.cs" />
+    <Compile Include="SessionObjects\CorrespondentTradeManager.cs" />
+    <Compile Include="SessionObjects\CurrentUser.cs" />
+    <Compile Include="SessionObjects\Data4CloAccessor.cs" />
+    <Compile Include="SessionObjects\LoanExternalFieldManager.cs" />
+    <Compile Include="SessionObjects\EncERDBRegMgr.cs" />
+    <Compile Include="SessionObjects\FormManager.cs" />
+    <Compile Include="SessionObjects\GseCommitmentManager.cs" />
+    <Compile Include="SessionObjects\IdentityManager.cs" />
+    <Compile Include="SessionObjects\LoanManager.cs" />
+    <Compile Include="SessionObjects\LoanProxy.cs" />
+    <Compile Include="SessionObjects\LoanSnapshotProvider.cs" />
+    <Compile Include="SessionObjects\LoanSummaryExtensionManager.cs" />
+    <Compile Include="SessionObjects\LoanTradeManager.cs" />
+    <Compile Include="SessionObjects\LockComparisonFieldManager.cs" />
+    <Compile Include="SessionObjects\ManagementSession.cs" />
+    <Compile Include="SessionObjects\MasterContractManager.cs" />
+    <Compile Include="SessionObjects\MbsPoolManager.cs" />
+    <Compile Include="SessionObjects\MessengerListManager.cs" />
+    <Compile Include="SessionObjects\OrganizationManager.cs" />
+    <Compile Include="SessionObjects\OverNightRateProtectionManager.cs" />
+    <Compile Include="SessionObjects\PersonaManager.cs" />
+    <Compile Include="SessionObjects\ReportManager.cs" />
+    <Compile Include="SessionObjects\ReportSettingsAccessor.cs" />
+    <Compile Include="SessionObjects\SecurityManagerUtil.cs" />
+    <Compile Include="SessionObjects\SecurityManager.cs" />
+    <Compile Include="SessionObjects\SecurityTradeManager.cs" />
+    <Compile Include="SessionObjects\ServerManager.cs" />
+    <Compile Include="SessionObjects\SessionEventHandler.cs" />
+    <Compile Include="SessionObjects\Session.cs" />
+    <Compile Include="SessionObjects\SessionBoundObject.cs" />
+    <Compile Include="SessionObjects\SessionProxy.cs" />
+    <Compile Include="SessionObjects\SpecialFeatureCodeManager.cs" />
+    <Compile Include="SessionObjects\TitleFeesAccessor.cs" />
+    <Compile Include="SessionObjects\IBamWrapper.cs" />
+    <Compile Include="SessionObjects\TradeLoanEligibilityManager.cs" />
+    <Compile Include="SessionObjects\TradeLoanUpdateQueueManager.cs" />
+    <Compile Include="SessionObjects\TradeManagerBase.cs" />
+    <Compile Include="SessionObjects\TradeSynchronizationManager.cs" />
+    <Compile Include="SessionObjects\WelcomeScreenSettingMgr.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="LockConfirmLog" extends="LogRecord" dynamic-update="true" discriminator-value="10">
+    <join table="ElliLockConfirmLog">
+      <key column="ElliLogRecordId" />
+      <property name="TimeConfirmed" column="TimeConfirmed" />
+      <property name="ConfirmedBy" column="ConfirmedBy" />
+      <property name="ConfirmedByIdIndicator" column="ConfirmedByIdIndicator" />
+      <property name="RequestGuid" column="RequestGuid" />
+      <property name="BuySideExpirationDate" column="BuySideExpirationDate" />
+      <property name="SellSideExpirationDate" column="SellSideExpirationDate" />
+      <property name="SellSideDeliveryDate" column="SellSideDeliveryDate" />
+      <property name="SellSideDeliveredBy" column="SellSideDeliveredBy" />
+      <property name="AlertIndicator" column="AlertIndicator" />
+      <property name="CommitmentTermEnabled" column="CommitmentTermEnabled" />
+      <property name="EnableZeroParPricingRetail" column="EnableZeroParPricingRetail" />
+      <property name="EnableZeroParPricingWholesale" column="EnableZeroParPricingWholesale" />
+      <property name="Voided" column="Voided" />
+      <property name="HideLog" column="HideLog" />
+      <property name="IncludeConfirmCount" column="IncludeConfirmCount" />
+    </join>
+  </subclass>
+</hibernate-mapping>

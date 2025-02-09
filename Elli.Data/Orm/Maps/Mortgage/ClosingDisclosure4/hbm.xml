@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="ClosingDisclosure4" table="ElliClosingDisclosure4" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign" >
+        <param name="property">ClosingCost</param>
+      </generator>
+    </id>
+    <one-to-one name="ClosingCost" class="ClosingCost" constrained="true" />
+    <property name="DemandFeature" />
+    <property name="NegativeAmortization" />
+    <property name="PartialPayment" />
+    <property name="Other1" />
+    <property name="Other2" />
+    <property name="Other3" />
+    <property name="Lender" />
+    <property name="EstimatedPropertyCosts" />
+    <property name="EscrowIndicator" />
+    <property name="MonthlyEscrowPayment" />
+    <property name="InterestOnlyPayments" />
+    <property name="StepPayments" />
+    <property name="StepPayment" />
+    <property name="SeasonalPayments" />
+    <property name="SeasonalPaymentFromYr" />
+    <property name="FirstChangeAmt" />
+    <property name="SubsequentChanges" />
+    <property name="MaximumPaymentAmt" />
+    <property name="FirstChangeMinAmt" />
+    <property name="FirstChangeMaxAmt" />
+    <property name="FirstChangePayment" />
+    <property name="MaxPaymentAmt" />
+    <property name="MaxPayment" />
+    <property name="TotalDisbursed1YearConsummation" />
+    <property name="NonEscrowedPropertyCosts1YearConsummation" />
+    <property name="PartialPaymentHoldUntilComplete" />
+    <property name="PartialPaymentNone" />
+    <property name="IgnoreARMAdj" />
+    <property name="InitialEscrowPayment" />
+    <property name="HOADuesIsEscrow" />
+    <property name="InterestOnlyPaymentMonths" />
+    <property name="InterestRateAdjustments" />
+    <property name="StepRateFirstChange" />    
+    <property name="MaximumARMPaymentAmount" />
+    <property name="MaximumARMPaymentMonthReached" />
+    <property name="EscrowedPropertyCostsBasis" />
+  </class>
+</hibernate-mapping>

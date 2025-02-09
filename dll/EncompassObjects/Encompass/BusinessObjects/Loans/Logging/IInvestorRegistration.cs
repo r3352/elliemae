@@ -1,0 +1,40 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: EllieMae.Encompass.BusinessObjects.Loans.Logging.IInvestorRegistration
+// Assembly: EncompassObjects, Version=1.5.1.0, Culture=neutral, PublicKeyToken=d11ef57bba4acf91
+// MVID: BFD5C65C-A9EC-4558-A5A0-AEF78CA2996D
+// Assembly location: C:\SmartClientCache\Apps\Ellie Mae\Encompass\SDK\EncompassObjects.dll
+
+using System;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace EllieMae.Encompass.BusinessObjects.Loans.Logging
+{
+  [Guid("49F5CFDC-08E9-42f7-8C55-78C742516FBC")]
+  public interface IInvestorRegistration
+  {
+    string ID { get; }
+
+    LogEntryType EntryType { get; }
+
+    string Comments { get; set; }
+
+    LogAlerts RoleAlerts { get; }
+
+    bool IsAlert { get; }
+
+    string RegisteredBy { get; }
+
+    string InvestorName { get; set; }
+
+    DateTime DateRegistered { get; set; }
+
+    object ExpirationDate { get; set; }
+
+    bool Expired { get; }
+
+    bool Current { get; }
+
+    string ReferenceNumber { get; set; }
+  }
+}

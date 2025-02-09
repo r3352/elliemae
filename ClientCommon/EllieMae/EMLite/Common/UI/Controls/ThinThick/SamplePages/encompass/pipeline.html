@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // DO NOT REMOVE THE NEXT LINE //
+        // $encompass.interaction.js$
+        // 
+
+        function populateCallBackResult(resp) {
+            document.getElementById("callBackResult").value = resp;
+        }
+
+        function setMenuState(callback) {
+            var jsonParams = document.getElementById("menuState").value;
+            encompass.interaction.setMenuState(jsonParams, callback);
+        }
+
+        function setHelpTargetName(callback) {
+            var jsonParams = "{ HelpTargetName: '" + document.getElementById("helpTargetName").value + "'}";
+            encompass.interaction.setHelpTargetName(jsonParams, callback);
+        }
+
+        function createNewLoan(callback) {
+            var jsonParams = null;
+            encompass.interaction.createNewLoan(jsonParams, callback);
+        }
+
+        function openLoanMailbox(callback) {
+            var jsonParams = null;
+            encompass.interaction.openLoanMailbox(jsonParams, callback);
+        }
+
+        function selectField(callback) {
+            var jsonParams = null;
+            encompass.interaction.selectField(jsonParams, callback);
+        }
+
+        function importLoans(callback) {
+            var jsonParams = null;
+            encompass.interaction.importLoans(jsonParams, callback);
+        }
+
+        function rebuildLoan(callback) {
+            var jsonParams = "{ LoanFolder: '" + document.getElementById("rebuildLoanFolder").value + "', LoanName: '" + document.getElementById("rebuildLoanName").value + "'}";
+            encompass.interaction.rebuildLoan(jsonParams, callback);
+        }
+
+        function openLoan(callback) {
+            var jsonParams = null;
+            encompass.interaction.openLoan(jsonParams, callback);
+        }
+
+        function processEPassUrl(url, callback) {
+            var jsonParams = "{ Url: '" + url + "'}";
+            encompass.interaction.processEPassUrl(jsonParams, callback);
+        }
+
+        function openLoanForm(loanFormName, callback) {
+            var jsonParams = "{ LoanFormName: '" + loanFormName + "'}";
+            encompass.interaction.openLoanForm(jsonParams, callback);
+        }
+
+        function showLockConfirmation(callback) {
+            var jsonParams = null;
+            encompass.interaction.showLockConfirmation(jsonParams, callback);
+        }
+
+        function startConversation(isEmail, isBorrower, contactInfo, callback) {
+            var jsonParams = "{ IsEmail: " + isEmail + ", IsBorrower: " + isBorrower + ", ContactInfo: '" + contactInfo + "'}";
+            encompass.interaction.startConversation(jsonParams, callback);
+        }
+
+        function exportToExcel(exportAll, callback) {
+            var jsonParams = "{ ExportAll: " + exportAll + "}";
+            encompass.interaction.exportToExcel(jsonParams, callback);
+        }
+
+        function printForms(callback) {
+            var jsonParams = null;
+            encompass.interaction.printForms(jsonParams, callback);
+        }
+
+        function setThinPipelineInfos(callback) {
+            var jsonParams = document.getElementById("pipeline_thinPipelineInfos").value;
+            encompass.interaction.setThinPipelineInfos(jsonParams, callback);
+        }
+
+        function setPipelineView(callback) {
+            var jsonParams = "{ PipelineViewName: '" + document.getElementById("pipelineViewName").value + "', PersonaName: '" + document.getElementById("pipelinePersonaName").value + "'}";
+            encompass.interaction.setPipelineView(jsonParams, callback);
+        }
+
+        function setPipelineViewXml(callback) {
+            var jsonParams = "{ Xml: '" + document.getElementById("pipelineViewXml").value + "'}";
+            encompass.interaction.setPipelineViewXml(jsonParams, callback);
+        }
+
+        function transferLoans(callback) {
+            var jsonParams = null;
+            encompass.interaction.transferLoans(jsonParams, callback);
+        }
+
+        function notifyUsers(callback) {
+            var jsonParams = null;
+            encompass.interaction.notifyUsers(jsonParams, callback);
+        }
+
+        function duplicateLoan(callback) {
+            var isSecond = false;
+            var isPiggyback = false;
+            var destinationFolder = document.getElementById('duplicateLoanFolder').value;
+            var templateToUse = document.getElementById('duplicateLoanTemplate').value;
+
+            if (document.getElementById('duplicateLoanFolder').checked) {
+                isSecond = true;
+            } else if (document.getElementById('duplicateLoanTemplate').checked) {
+                isPiggyback = true;
+            }
+            var jsonParams = "{ IsSecond: " + isSecond + ", IsPiggyback: " + isPiggyback + ", DestinationFolder: '" + destinationFolder + "', TemplateToUse: '" + templateToUse + "'}";
+            encompass.interaction.duplicateLoan(jsonParams, callback);
+        }
+
+        function eFolderExport(exportAll, callback) {
+            var jsonParams = "{ ExportAll: " + exportAll + "}";
+            encompass.interaction.eFolderExport(jsonParams, callback);
+        }
+
+        function investorStandardExportPipeline(exportAll, dataServiceId, callback) {
+            var jsonParams = "{ CategoryName: 'GSE Services', DataServiceId: '" + dataServiceId + "', ExportAll: " + exportAll + " }";
+            encompass.interaction.investorStandardExportPipeline(jsonParams, callback);
+        }
+
+        function exportFannieMaeFormattedFile(callback) {
+            var jsonParams = null;
+            encompass.interaction.exportFannieMaeFormattedFile(jsonParams, callback);
+        }
+
+        function exportLEFPipeline(exportAll, callback) {
+            var jsonParams = "{ ExportAll: " + exportAll + "}";
+            encompass.interaction.exportLEFPipeline(jsonParams, callback);
+        }
+
+        function generateNMLSReport(callback) {
+            var jsonParams = null;
+            encompass.interaction.generateNMLSReport(jsonParams, callback);
+        }
+
+        function generateNCMLDReport(callback) {
+            var jsonParams = null;
+            encompass.interaction.generateNCMLDReport(jsonParams, callback);
+        }
+
+        function createAppointment(callback) {
+            var jsonParams = "{ ContactGuid: '" + document.getElementById('contactGuid').value + "'}";
+            encompass.interaction.createAppointment(jsonParams, callback);
+        }
+
+        //SCRIPTS TO BE CALLED FROM THICK CLIENT
+        function encompassInteractionMenuClicked(param) {
+            document.getElementById("menuTag").value = param;
+        }
+
+    </script>
+</head>
+<body>
+<p style="color:orange;margin-top:0;margin-bottom:0;">
+    Please run RemoveUAC.exe, if you haven't done so recently, to ensure that you are running latest and greatest version of this sample page and scripts!</p>
+<br/>
+    <!--- callback result --->
+    <fieldset>
+        <legend>
+            <h3 style="margin-top:0;margin-bottom:0;">Callback Result</h3>
+        </legend>
+        <input type="text" id="callBackResult" size="100" />
+    </fieldset>
+    <br/>
+    <fieldset>
+        <legend>
+            <p style="color: green; margin-top: 0; margin-bottom: 0;">Common functions</p>
+        </legend>
+        Menu Item with Tag <input type="text" id="menuTag" size="38" readonly /> was executed.
+        <br/>
+        <br/>
+        Menu State: <input type="text" id="menuState" size="100"/><br/>
+        { MenuState: [ { MenuItemTag: "PI_New", Enabled: true, Visible: true }, { MenuItemTag: "PI_Edit", Enabled: false, Visible: false }, { MenuItemTag: "PI_Duplicate", Enabled: false, Visible: true }] }<br/>
+        <input type="button" value="Set Menu State" onclick="setMenuState(populateCallBackResult);"/>
+        <br/>
+        <br/>
+        HelpTargetName:<input type="text" id="helpTargetName"/><i> PipelinePage, MoveDialog, TransferDialog</i>
+        <br/>
+        <input type="button" value="Set Help" onclick="setHelpTargetName(populateCallBackResult); "/>       
+    </fieldset>
+    <br/>
+    <fieldset>
+        <legend>
+            <p style="color: green; margin-top: 0; margin-bottom: 0;">Pipeline functions</p>
+        </legend>
+    <input type="button" value="Loan Mailbox" onclick=" openLoanMailbox(populateCallBackResult); "/>
+    <input type="button" value="Select Field" onclick=" selectField(populateCallBackResult); "/>
+    <input type="button" value="Import Loans" onclick=" importLoans(populateCallBackResult); "/>
+    <br/><br/>
+    Loan Folder: <input type="text" id="rebuildLoanFolder"/>
+    Loan Name: <input type="text" id="rebuildLoanName"/>
+    <input type="button" value="Rebuild Loan" onclick=" rebuildLoan(populateCallBackResult); "/>
+    <br/><br/>
+    <p style="color: orange; margin-top: 0; margin-bottom: 0;">
+        Notify thick client about loans selected in thin client, before executing any action that involves selected loans:</p>
+    <input type="text" id="pipeline_thinPipelineInfos" size="142"/>
+    <input type="button" value="Set selected loans" onclick=" setThinPipelineInfos(populateCallBackResult); "/><br/>
+    { ThinPipelineInfos: [ { LoanGuid: "f826ba91-a2d9-484f-ade3-3eb71168cfe5", LoanNumber: "1411EM000015", LoanName: "RTT8", BorrowerName: "Alice Jane", LoanAmount: 142500.00 },
+    { LoanGuid: "6ae57433-9f43-407c-a382-deb6328f2540", LoanNumber: "1411EM000025", LoanName: "unnamed#3", BorrowerName: "AAA", LoanAmount: 200500.00 } ] }
+    <br/>
+    <br/>
+    <input type="button" value="Edit Loan" onclick=" openLoan(populateCallBackResult); "/>
+    <input type="button" value="Print Forms" onclick=" printForms(populateCallBackResult); "/>
+    <input type="button" value="Transfer Loans" onclick=" transferLoans(populateCallBackResult); "/>
+    <input type="button" value="Notify Users" onclick=" notifyUsers(populateCallBackResult); "/>
+    <br/>
+    <br/>
+    <input type="radio" name="loan" value="IsLoan" checked="checked"/>Duplicate the selected loan.<br/>
+    <input type="radio" name="loan" value="IsSecond"/>Create a second lien using the data from the selected loan.<br/>
+    <input type="radio" name="loan" value="IsPiggyback"/>Create a second lien linked as a piggyback using the data from the selected loan.<br/>
+    Folder: <input type="text" id="duplicateLoanFolder"/>
+    Template: <input type="text" id="duplicateLoanTemplate"/>
+    <input type="button" value="Duplicate Loan" onclick=" duplicateLoan(populateCallBackResult); "/>
+    <br/>
+    <br/>
+    EPass:
+    <input type="button" value="Order Appraisal" onclick=" processEPassUrl('_EPASS_SIGNATURE;EPASSAI;2;Appraisal', populateCallBackResult); "/>
+    <input type="button" value="Order Title" onclick=" processEPassUrl('_EPASS_SIGNATURE;EPASSAI;2;Title+%26+Closing', populateCallBackResult); "/>
+    <input type="button" value="Search for Product and Pricing" onclick=" processEPassUrl('_EPASS_SIGNATURE;EPASSAI;2;Product+and+Pricing', populateCallBackResult); "/>
+    <input type="button" value="Submit to Lender" onclick=" processEPassUrl('_EPASS_SIGNATURE;EPASSAI;2;Lenders', populateCallBackResult); "/>
+    <input type="button" value="Order Credit" onclick=" processEPassUrl('_EPASS_SIGNATURE;EPASSAI;2;Credit+Report', populateCallBackResult); "/>
+    <br/>
+    <br/>
+    Contact GUID: <input type="text" id="contactGuid"/>
+    <input type="button" value="Create Appointment" onclick=" createAppointment(populateCallBackResult); "/>
+    <br/>
+    <br/>
+    LoanEditor:
+    <input type="button" value="Lock Request Form" onclick=" openLoanForm('Lock Request Form', populateCallBackResult); "/>
+    <input type="button" value="Secondary Registration" onclick=" openLoanForm('Secondary Registration', populateCallBackResult); "/>
+    <input type="button" value="Lock Confirmation" onclick=" showLockConfirmation(populateCallBackResult); "/><br/>
+    Phone:<input type="text" id="conversationPhone"/>
+    Email:<input type="text" id="conversationEmail"/>
+    <div style="display: none;">1st parameter: isEmail</div>
+    <div style="display: none;">2nd parameter: isBorrower</div>
+    <input type="button" value="Open Conversation Log" onclick=" startConversation(false, true, document.getElementById('conversationPhone').value, populateCallBackResult); "/>
+    <input type="button" value="Open Conversation Log and Mail Client" onclick=" startConversation(true, true, document.getElementById('conversationEmail').value, populateCallBackResult); "/>
+    <br/>
+    <br/>
+    <!--Setting the Pipeline View-->
+    <p style="color: orange; margin-top: 0; margin-bottom: 0;">
+    Make sure Pipeline View Name and Persona Name are set, before clicking the buttons below!</p>
+    Pipeline View Name:<input type="text" id="pipelineViewName" size="50"/><br/>
+    Persona Name:<input type="text" id="pipelinePersonaName" size="50"/><i>Super Administrator, Loan Officer, Underwriter, etc... (leave blank for custom views)</i><br/>
+    <input type="button" value="Set Pipeline View (OBSOLETE)" onclick=" setPipelineView(populateCallBackResult); "/><br/>
+    <br/>
+    <!--Setting Pipeline View by passing the whole xml, instead of a view name-->
+    <p style="color: green; margin-top: 0; margin-bottom: 0;">
+    You can also set Pipeline View by passing the whole xml, instead of just a view name</p>
+    Pipeline View XML:<input type="text" id="pipelineViewXml" size="100"/><br/>
+    <input type="button" value="Set Pipeline View" onclick=" setPipelineViewXml(populateCallBackResult); "/><br/>
+    <br/>
+    <input type="button" value="Add New Loan" onclick=" createNewLoan(populateCallBackResult); "/>
+    <i>It does require a view to be set, because a new loan is created in the selected folder</i>
+    <br/>
+    <br/>
+    Compliance Services<br/>
+    <input type="button" value="Export to LEF, Selected Loans Only" onclick=" exportLEFPipeline(false, populateCallBackResult); "/><br/>
+    <input type="button" value="Export to LEF, All Loans on All Pages" onclick=" exportLEFPipeline(true, populateCallBackResult); "/><br/>
+    <input type="button" value="Generate NMLS Call Report" onclick=" generateNMLSReport(populateCallBackResult); "/><br/>
+    <input type="button" value="Generate North Carolina Compliance Report" onclick=" generateNCMLDReport(populateCallBackResult); "/>
+    <br/>
+    <br/>
+    eFolder<br/>
+    <input type="button" value="Export Document(s), Selected Loans Only" onclick=" eFolderExport(false, populateCallBackResult); "/><br/>
+    <input type="button" value="Export Document(s), All Loans on All Pages" onclick=" eFolderExport(true, populateCallBackResult); "/><br/>
+    <br/>
+    Export to Excel<br/>
+    <input type="button" value="Export to Excel, Selected Loans Only" onclick=" exportToExcel(false, populateCallBackResult); "/><br/>
+    <input type="button" value="Export to Excel, All Loans on All Pages" onclick=" exportToExcel(true, populateCallBackResult); "/>
+    <br/>
+    <br/>
+    GSE Services<br/>
+    <input type="button" value="Export ULDD to FannieMae, Selected Loans Only" onclick=" investorStandardExportPipeline(false, 'Fannie', populateCallBackResult); "/><br/>
+    <input type="button" value="Export ULDD to FannieMae, All Loans on All Pages" onclick=" investorStandardExportPipeline(true, 'Fannie', populateCallBackResult); "/><br/>
+    <input type="button" value="Export ULDD to FreddieMac, Selected Loans Only" onclick=" investorStandardExportPipeline(false, 'Freddie', populateCallBackResult); "/><br/>
+    <input type="button" value="Export ULDD to FreddieMac, All Loans on All Pages" onclick=" investorStandardExportPipeline(true, 'Freddie', populateCallBackResult); "/><br/>
+    <input type="button" value="Export Fannie Mae Formatted File (3.2)" onclick=" exportFannieMaeFormattedFile(populateCallBackResult); "/>
+    </fieldset>
+    <br/>
+</body>
+</html>

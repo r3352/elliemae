@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="FeeVarianceOther" table="ElliFeeVarianceOther" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign" >
+        <param name="property">ClosingCost</param>
+      </generator>
+    </id>
+    <one-to-one name="ClosingCost" class="ClosingCost" constrained="true" />
+    <property name="ChargesThatCannotDecreaseInitialLE1" />
+    <property name="ChargesThatCannotDecreaseLE1" />
+    <property name="ChargesThatCannotDecreaseCD1" />
+    <property name="ChargesThatCannotIncreaseInitialLE1" />
+    <property name="ChargesThatCannotIncreaseLE1" />
+    <property name="ChargesThatCannotIncreaseCD1" />
+    <property name="ChargesCannotIncrease10InitialLE1" />
+    <property name="ChargesCannotIncrease10LE1" />
+    <property name="ChargesCannotIncrease10CD1" />
+    <property name="ChargesThatCanChangeInitialLE1" />
+    <property name="ChargesThatCanChangeLE1" />
+    <property name="ChargesThatCanChangeCD1" />
+    <property name="GoodFaithAmountInitialLE1" />
+    <property name="RequiredCureAmount" />
+    <property name="AppliedCureAmount" />
+    <property name="LEInitialGuid" />
+    <property name="LELatestGuid" />
+    <property name="CDInitialGuid" />
+    <property name="CDLatestGuid" />
+    <property name="CannotDecreaseLEBaselineGuid" />
+    <property name="CannotDecreaseCDBaselineGuid" />
+    <property name="CannotIncreaseLEBaselineGuid" />
+    <property name="CannotIncreaseCDBaselineGuid" />
+    <property name="CannotIncrease10LEBaselineGuid" />
+    <property name="CannotIncrease10CDBaselineGuid" />
+    <property name="CDPostConGuid" />
+    <property name="SafeHarborGuid" />
+    <property name="SSPLGuid" />
+    <property name="LEBaselineUsedCannotDecrease" />
+    <property name="LEBaselineUsedCannotIncrease" />
+    <property name="LEBaselineUsedCannotIncrease10" />
+    <property name="LEInitialDTGuid" />
+    <property name="CDRecentAppliedCure" />
+    <property name="DisclosureLogGUIDForECD" />
+    <property name="DisclosureLogGUIDReceivedForECD" />
+    <property name="CdInitialDtGuid" />
+    <property name="CdRevisedDtGuid" />
+    <property name="CdPostConsummationDtGuid" />
+    <property name="LERevisedSentDateGuid" />
+    <property name="LEInitialReceivedDateGuid" />
+    <property name="LERevisedReceivedDateGuid" />
+    <property name="CDInitialReceivedDateGuid" />
+    <property name="CDRevisedReceivedDateGuid" />
+
+    <property name="CureAppliedToLenderCredit" />
+    <property name="CureAppliedToPrincipalReduction" />
+  </class>
+</hibernate-mapping>

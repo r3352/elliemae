@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="NewYorkPrimaryLender" table="ElliNewYorkPrimaryLender" dynamic-update="true">
+    <id name="Id" column="ElliNewYorkPrimaryLenderId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="StateDisclosure" column="ElliStateDisclosureId" />
+    <property name="NewYorkPrimaryLenderIndex" />
+    <property name="Address" />
+    <property name="City" />
+    <property name="Comments" />
+    <property name="Name" />
+    <property name="PostalCode" />
+    <property name="State" />
+  </class>
+</hibernate-mapping>

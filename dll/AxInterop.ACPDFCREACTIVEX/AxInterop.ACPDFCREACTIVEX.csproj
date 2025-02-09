@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\Ellie Mae\Encompass\AxInterop.ACPDFCREACTIVEX.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6EEA25C7-54EE-4C7D-8673-0B8F2A859C0C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>AxInterop.ACPDFCREACTIVEX</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationVersion>3.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>AxACPDFCREACTIVEX</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.ACPDFCREACTIVEX">
+      <HintPath>lib\Interop.ACPDFCREACTIVEX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AxPDFCreactiveX.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_BeforeDeleteEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_BeforeDeleteEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_PrintPageEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_PrintPageEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_SavePageEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_SavePageEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ClickHyperlinkEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ClickHyperlinkEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ObjectTextChangeEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ObjectTextChangeEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ContextSensitiveMenuEventHan.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ContextSensitiveMenuEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_MouseDownEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_MouseDownEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_MouseMoveEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_MouseMoveEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_MouseUpEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_MouseUpEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_NewObjectEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_NewObjectEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ActivateObjectEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ActivateObjectEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_LoadPageEventHandler.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_LoadPageEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_EvaluateExpressionEventHandl.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_EvaluateExpressionEvent.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ProcessingProgressEventHandl.cs" />
+    <Compile Include="_IPDFCreactiveXEvents_ProcessingProgressEvent.cs" />
+    <Compile Include="AxPDFCreactiveXEventMulticaster.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

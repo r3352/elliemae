@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="StatusOnlineLog" extends="LogRecord" dynamic-update="true" discriminator-value="21">
+    <join table="ElliStatusOnlineLog">
+      <key column="ElliLogRecordId" />
+      <property name="Creator" column="Creator" />
+      <property name="Description" column="Description" type="StringClob"/>
+      <property name="EventsXml" column="EventsXml" type="StringClob" />
+    </join>
+  </subclass>
+</hibernate-mapping>

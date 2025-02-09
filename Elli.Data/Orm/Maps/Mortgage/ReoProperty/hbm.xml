@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="ReoProperty" table="ElliReoProperty" dynamic-update="true">
+    <id name="Id" column="ElliReoPropertyId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Application" column="ElliApplicationId" />
+    <property name="ReoPropertyIndex" not-null="true" />
+    <property name="City" />
+    <property name="DispositionStatusType" />
+    <property name="GsePropertyType" />
+    <property name="LienInstallmentAmount" />
+    <property name="LienUpbAmount" />
+    <property name="MaintenanceExpenseAmount" />
+    <property name="MarketValueAmount" />
+    <property name="PostalCode" />
+    <property name="RentalIncomeGrossAmount" />
+    <property name="RentalIncomeNetAmount" />
+    <property name="State" />
+    <property name="StreetAddress" />
+    <property name="SubjectIndicator" />
+    <property name="ReoId" />
+    <property name="RequestDate" />
+    <property name="AcquiredDate" />
+    <property name="NoLinkToDocTrackIndicator" />
+    <property name="ParticipationPercentage" />
+    <property name="PercentageofRental" />
+    <property name="PrintAttachIndicator" />
+    <property name="PrintUserNameIndicator" />
+    <property name="PrintUserJobTitleIndicator" />
+    <property name="PropertyUsageType" />
+    <property name="PurchasePrice" />
+    <property name="ReoComments" />
+    <property name="Title" />
+    <property name="TitleFax" />
+    <property name="TitlePhone" />
+    <property name="Owner" />
+    <property name="UnitType" />
+    <property name="UnitNumber" />
+    <property name="URLA2020StreetAddress" />
+    <property name="CountryCode" />
+    <property name="LiabilityDoesNotApply" />
+    <property name="IncludeInAusExport" /> 
+    <property name="YearBuilt" />
+    <property name="NumberOfUnits" />
+    <property name="FuturePropertyUsageType" />
+    <property name="FutureUsageTypeOtherDesc" />
+    <property name="AltId" />
+    <property name="Country" />
+    <property name="ForeignAddressIndicator" />
+    <property name="PendingSaleDate" />
+    <property name="SourceOfIncomeData" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="ClosingDisclosure5" table="ElliClosingDisclosure5" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign" >
+        <param name="property">ClosingCost</param>
+      </generator>
+    </id>
+    <one-to-one name="ClosingCost" class="ClosingCost" constrained="true" />
+    <property name="TotalPayments" />
+    <property name="CDLiabilityAfterForeclosure" />
+    <property name="LenderName" />
+    <property name="LenderAddress" />
+    <property name="LenderCity" />
+    <property name="LenderState" />
+    <property name="LenderZip" />
+    <property name="LenderNMLSID" />
+    <property name="LenderSTLicenseID" />
+    <property name="LenderContact" />
+    <property name="LenderContactNMLSID" />
+    <property name="LenderContactATLicenseID" />
+    <property name="LenderEmail" />
+    <property name="LenderPhone" />
+    <property name="MortgageBrokerName" />
+    <property name="MortgageBrokerAddress" />
+    <property name="MortgageBrokerCity" />
+    <property name="MortgageBrokerState" />
+    <property name="MortgageBrokerZip" />
+    <property name="MortgageBrokerNMLSID" />
+    <property name="MortgageBrokerSTLicenseID" />
+    <property name="MortgageBrokerContact" />
+    <property name="MortgageBrokerContactNMLSID" />
+    <property name="MortgageBrokerContactATLicenseID" />
+    <property name="MortgageBrokerEmail" />
+    <property name="MortgageBrokerPhone" />
+    <property name="RealEstateBrokerBName" />
+    <property name="RealEstateBrokerBAddress" />
+    <property name="RealEstateBrokerBCity" />
+    <property name="RealEstateBrokerBState" />
+    <property name="RealEstateBrokerBZip" />
+    <property name="RealEstateBrokerBNMLSID" />
+    <property name="RealEstateBrokerBSTLicenseID" />
+    <property name="RealEstateBrokerBContact" />
+    <property name="RealEstateBrokerBContactNMLSID" />
+    <property name="RealEstateBrokerBContactATLicenseID" />
+    <property name="RealEstateBrokerBEmail" />
+    <property name="RealEstateBrokerBPhone" />
+    <property name="RealEstateBrokerSName" />
+    <property name="RealEstateBrokerSAddress" />
+    <property name="RealEstateBrokerSCity" />
+    <property name="RealEstateBrokerSState" />
+    <property name="RealEstateBrokerSZip" />
+    <property name="RealEstateBrokerSNMLSID" />
+    <property name="RealEstateBrokerSSTLicenseID" />
+    <property name="RealEstateBrokerSContact" />
+    <property name="RealEstateBrokerSContactNMLSID" />
+    <property name="RealEstateBrokerSContactATLicenseID" />
+    <property name="RealEstateBrokerSEmail" />
+    <property name="RealEstateBrokerSPhone" />
+    <property name="SettlementAgentName" />
+    <property name="SettlementAgentAddress" />
+    <property name="SettlementAgentCity" />
+    <property name="SettlementAgentState" />
+    <property name="SettlementAgentZip" />
+    <property name="SettlementAgentNMLSID" />
+    <property name="SettlementAgentSTLicenseID" />
+    <property name="SettlementAgentContact" />
+    <property name="SettlementAgentContactNMLSID" />
+    <property name="SettlementAgentContactATLicenseID" />
+    <property name="SettlementAgentEmail" />
+    <property name="SettlementAgentPhone" />
+    <property name="SignatureType" />
+  </class>
+</hibernate-mapping>

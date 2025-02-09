@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\Ellie Mae\Encompass\SDK\EncompassAutomation.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{271BDEB4-95DA-4D35-B567-E9BE58285728}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>EncompassAutomation</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>24.3.0.5</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EllieMae.Encompass</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Client" />
+    <Reference Include="ClientCommon" />
+    <Reference Include="ClientServer" />
+    <Reference Include="ClientSession" />
+    <Reference Include="EMBAM15" />
+    <Reference Include="EMCommon" />
+    <Reference Include="EMLoanUtils15" />
+    <Reference Include="EllieMae.Encompass.AsmResolver" />
+    <Reference Include="Encompass.Diagnostics" />
+    <Reference Include="EncompassObjects">
+      <HintPath>lib\EncompassObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.JEDCOMBO2Lib" />
+    <Reference Include="Microsoft.mshtml" />
+    <Reference Include="SgmlReaderDll" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIElements" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\BorrowerType.cs" />
+    <Compile Include="Forms\BorrowerLink.cs" />
+    <Compile Include="Forms\BoundedControl.cs" />
+    <Compile Include="Forms\Button.cs" />
+    <Compile Include="Forms\Calendar.cs" />
+    <Compile Include="Forms\CategoryBox.cs" />
+    <Compile Include="Forms\CheckBox.cs" />
+    <Compile Include="Forms\CodeBase.cs" />
+    <Compile Include="Forms\ContactButton.cs" />
+    <Compile Include="Forms\ContainerControl.cs" />
+    <Compile Include="Forms\ContentControl.cs" />
+    <Compile Include="Forms\Control.cs" />
+    <Compile Include="Forms\ControlCache.cs" />
+    <Compile Include="Forms\ControlCollection.cs" />
+    <Compile Include="Forms\ControlEvent.cs" />
+    <Compile Include="Forms\ScriptLanguage.cs" />
+    <Compile Include="Forms\ControlEvents.cs" />
+    <Compile Include="Forms\ControlSelection.cs" />
+    <Compile Include="Forms\CopyBuffer.cs" />
+    <Compile Include="Forms\DesignerControl.cs" />
+    <Compile Include="Forms\DocumentEvents.cs" />
+    <Compile Include="Forms\DragSelector.cs" />
+    <Compile Include="Forms\DropdownBox.cs" />
+    <Compile Include="Forms\DropdownEditBox.cs" />
+    <Compile Include="Forms\DropdownOption.cs" />
+    <Compile Include="Forms\IDropdownOptionContainer.cs" />
+    <Compile Include="Forms\DropdownOptionCollection.cs" />
+    <Compile Include="Forms\Alignment.cs" />
+    <Compile Include="Forms\ResizeMethod.cs" />
+    <Compile Include="Forms\BorderStyle.cs" />
+    <Compile Include="Forms\Location.cs" />
+    <Compile Include="Forms\TextAlignment.cs" />
+    <Compile Include="Forms\RolodexField.cs" />
+    <Compile Include="Forms\LayoutMethod.cs" />
+    <Compile Include="Forms\FieldSource.cs" />
+    <Compile Include="Forms\ContactMethod.cs" />
+    <Compile Include="Forms\FieldAccessMode.cs" />
+    <Compile Include="Forms\StandardButtonType.cs" />
+    <Compile Include="Forms\Overflow.cs" />
+    <Compile Include="Forms\EmptyControl.cs" />
+    <Compile Include="Forms\ISupportsEvents.cs" />
+    <Compile Include="Forms\ISupportsLoadEvent.cs" />
+    <Compile Include="Forms\ISupportsDataBindEvent.cs" />
+    <Compile Include="Forms\ISupportsClickEvent.cs" />
+    <Compile Include="Forms\ISupportsChangeEvent.cs" />
+    <Compile Include="Forms\ISupportsFocusEvent.cs" />
+    <Compile Include="Forms\ISupportsPopupEvent.cs" />
+    <Compile Include="Forms\ISupportsFormatEvent.cs" />
+    <Compile Include="Forms\ISupportsDateSelectedEvent.cs" />
+    <Compile Include="Forms\DataBindEventArgs.cs" />
+    <Compile Include="Forms\DataCommitEventArgs.cs" />
+    <Compile Include="Forms\DataBindEventHandler.cs" />
+    <Compile Include="Forms\DataCommitEventHandler.cs" />
+    <Compile Include="Forms\FormatEventArgs.cs" />
+    <Compile Include="Forms\FormatEventHandler.cs" />
+    <Compile Include="Forms\ItemSelectedEventArgs.cs" />
+    <Compile Include="Forms\ItemSelectedEventHandler.cs" />
+    <Compile Include="Forms\DateSelectedEventArgs.cs" />
+    <Compile Include="Forms\DateSelectedEventHandler.cs" />
+    <Compile Include="Forms\FieldControl.cs" />
+    <Compile Include="Forms\FieldLock.cs" />
+    <Compile Include="Forms\FormOptions.cs" />
+    <Compile Include="Forms\Form.cs" />
+    <Compile Include="Forms\FormCodeBase.cs" />
+    <Compile Include="Forms\FormEventHandler.cs" />
+    <Compile Include="Forms\FormEventArgs.cs" />
+    <Compile Include="Forms\ControlIDChangedEventHandler.cs" />
+    <Compile Include="Forms\ControlIDChangedEventArgs.cs" />
+    <Compile Include="Forms\GroupBox.cs" />
+    <Compile Include="Forms\HorizontalRule.cs" />
+    <Compile Include="Forms\HorizontalSlider.cs" />
+    <Compile Include="Forms\Html2XHtml.cs" />
+    <Compile Include="Forms\HtmlReader.cs" />
+    <Compile Include="Forms\HtmlWriter.cs" />
+    <Compile Include="Forms\HTMLFont.cs" />
+    <Compile Include="Forms\HTMLHelper.cs" />
+    <Compile Include="Forms\Hyperlink.cs" />
+    <Compile Include="Forms\IActionable.cs" />
+    <Compile Include="Forms\Image.cs" />
+    <Compile Include="Forms\ImageButton.cs" />
+    <Compile Include="Forms\Label.cs" />
+    <Compile Include="Forms\MultilineTextBox.cs" />
+    <Compile Include="Forms\Panel.cs" />
+    <Compile Include="Forms\PickList.cs" />
+    <Compile Include="Forms\RadioButton.cs" />
+    <Compile Include="Forms\Rolodex.cs" />
+    <Compile Include="Forms\RolodexGroup.cs" />
+    <Compile Include="Forms\RolodexGroups.cs" />
+    <Compile Include="Forms\RuntimeControl.cs" />
+    <Compile Include="Forms\SectionControl.cs" />
+    <Compile Include="Forms\Slider.cs" />
+    <Compile Include="Forms\StandardButton.cs" />
+    <Compile Include="Forms\TabIndexSortComparer.cs" />
+    <Compile Include="Forms\TextBox.cs" />
+    <Compile Include="Forms\VerticalRule.cs" />
+    <Compile Include="Forms\VerticalSlider.cs" />
+    <Compile Include="Forms\ZipCodeLookup.cs" />
+    <Compile Include="Forms\Design\BaseDropdownTypeEditor.cs" />
+    <Compile Include="Forms\Design\BizCategorySelector.cs" />
+    <Compile Include="Forms\Design\CheckedValueEditor.cs" />
+    <Compile Include="Forms\Design\CodeBaseSelector.cs" />
+    <Compile Include="Forms\Design\CodeBaseEditor.cs" />
+    <Compile Include="Forms\Design\CodeLanguageEditor.cs" />
+    <Compile Include="Forms\Design\TextBoxSelector.cs" />
+    <Compile Include="Forms\Design\LockableControlSelector.cs" />
+    <Compile Include="Forms\Design\ZipCodeTargetSelector.cs" />
+    <Compile Include="Forms\Design\NonExpandableControlTypeConverter.cs" />
+    <Compile Include="Forms\Design\DropdownOptionsDialog.cs" />
+    <Compile Include="Forms\Design\DropdownOptionsEditor.cs" />
+    <Compile Include="Forms\Design\EMEventEditor.cs" />
+    <Compile Include="Forms\Design\EventEditorHandler.cs" />
+    <Compile Include="Forms\Design\EventCodeEditorArgs.cs" />
+    <Compile Include="Forms\Design\EventsTab.cs" />
+    <Compile Include="Forms\Design\EventPropertyDescriptor.cs" />
+    <Compile Include="Forms\Design\FieldSelector.cs" />
+    <Compile Include="Forms\Design\FieldEditor.cs" />
+    <Compile Include="Forms\Design\FileOpenTypeEditor.cs" />
+    <Compile Include="Forms\Design\HTMLFontSelector.cs" />
+    <Compile Include="Forms\Design\HTMLFontEditor.cs" />
+    <Compile Include="Forms\Design\RolodexSelector.cs" />
+    <Compile Include="Diagnostics\FilterLogEventArgs.cs" />
+    <Compile Include="Diagnostics\FilterLogEventHandler.cs" />
+    <Compile Include="Diagnostics\Log.cs" />
+    <Compile Include="Diagnostics\ILog.cs" />
+    <Compile Include="Diagnostics\LogLevel.cs" />
+    <Compile Include="Diagnostics\LogErrorData.cs" />
+    <Compile Include="Diagnostics\ILogErrorData.cs" />
+    <Compile Include="Diagnostics\WriteLogEventArgs.cs" />
+    <Compile Include="Diagnostics\WriteLogEventHandler.cs" />
+    <Compile Include="ComponentModel\MacroAttribute.cs" />
+    <Compile Include="ComponentModel\PluginAttribute.cs" />
+    <Compile Include="ComponentModel\RequiredAttribute.cs" />
+    <Compile Include="ComponentModel\ToolboxControlAttribute.cs" />
+    <Compile Include="Automation\EncompassApplication.cs" />
+    <Compile Include="Automation\ApplicationScreens.cs" />
+    <Compile Include="Automation\EncompassScreen.cs" />
+    <Compile Include="Automation\AutomationException.cs" />
+    <Compile Include="Automation\BorrowerContactsScreen.cs" />
+    <Compile Include="Automation\BusinessContactsScreen.cs" />
+    <Compile Include="Automation\EPass.cs" />
+    <Compile Include="Automation\EPassScreen.cs" />
+    <Compile Include="Automation\LoanServices.cs" />
+    <Compile Include="Automation\LoansScreen.cs" />
+    <Compile Include="Automation\FormChangeEventArgs.cs" />
+    <Compile Include="Automation\FormChangeEventHandler.cs" />
+    <Compile Include="Automation\Macro.cs" />
+    <Compile Include="Automation\PipelineScreen.cs" />
+    <Compile Include="Automation\Screen.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Design\CodeBaseSelector.resx" />
+    <EmbeddedResource Include="Forms\Design\DropdownOptionsDialog.resx" />
+    <EmbeddedResource Include="Forms\Design\FieldSelector.resx" />
+    <EmbeddedResource Include="Forms\Design\FLASH.BMP" />
+    <EmbeddedResource Include="Forms\Design\HTMLFontSelector.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="CollateralTracking" table="ElliCollateralTracking" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign" >
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <one-to-one name="Loan" class="Loan" />
+
+    <property name="CtDotInitPurchaseDate" />
+    <property name="CtDotInitNextFollowupDate" />
+    <property name="CtDotInitReceived" />
+    <property name="CtDotInitDaysOutstanding" />
+    <property name="CtDotInitLastRequested" />
+    <property name="CtDotInitRequestedBy" />
+    <property name="CtDotInitOrganization" />
+    <property name="CtDotInitContact" />
+    <property name="CtDotInitEmail" />
+    <property name="CtDotInitPhone" />
+    <property name="CtDotInitDocumentNumber" />
+    <property name="CtDotInitBookNumber" />
+    <property name="CtDotInitPageNumber" />
+    <property name="CtDotInitRiderReceived" />
+
+    <property name="CtDotShipShippingDate" />
+    <property name="CtDotShipShippedBy" />
+    <property name="CtDotShipCarrier" />
+    <property name="CtDotShipTrackingNumber" />
+    <property name="CtDotShipOrganization" />
+    <property name="CtDotShipAddress" />
+    <property name="CtDotShipContact" />
+    <property name="CtDotShipEmail" />
+    <property name="CtDotShipPhone" />
+
+    <property name="CtDotRetNextFollowUpDate" />
+    <property name="CtDotRetReceived" />
+    <property name="CtDotRetLastRequested" />
+    <property name="CtDotRetRequestedBy" />
+    <property name="CtDotRetOrganization" />
+    <property name="CtDotRetContact" />
+    <property name="CtDotRetEmail" />
+    <property name="CtDotRetPhone" />
+
+    <property name="CtFtpInitNextFollowupDate" />
+    <property name="CtFtpInitReceived" />
+    <property name="CtFtpInitDaysOutstanding" />
+    <property name="CtFtpInitLastRequested" />
+    <property name="CtFtpInitRequestedBy" />
+    <property name="CtFtpInitOrganization" />
+    <property name="CtFtpInitContact" />
+    <property name="CtFtpInitEmail" />
+    <property name="CtFtpInitPhone" />
+
+    <property name="CtFtpShipShippingDate" />
+    <property name="CtFtpShipShippedBy" />
+    <property name="CtFtpShipCarrier" />
+    <property name="CtFtpShipTrackingNumber" />
+    <property name="CtFtpShipOrganization" />
+    <property name="CtFtpShipAddress" />
+    <property name="CtFtpShipContact" />
+    <property name="CtFtpShipEmail" />
+    <property name="CtFtpShipPhone" />
+
+    <property name="CtFtpRetNextFollowUpDate" />
+    <property name="CtFtpRetReceived" />
+    <property name="CtFtpRetLastRequested" />
+    <property name="CtFtpRetRequestedBy" />
+    <property name="CtFtpRetOrganization" />
+    <property name="CtFtpRetContact" />
+    <property name="CtFtpRetEmail" />
+    <property name="CtFtpRetPhone" />
+
+	<property name="CtEnShipShippingDate" />
+	<property name="CtEnShipShippedBy" />
+	<property name="CtEnShipCarrier" />
+	<property name="CtEnShipTrackingNumber" />
+	<property name="CtEnShipOrganization" />
+	<property name="CtEnShipContact" />
+	<property name="CtEnShipAddress" />
+	<property name="CtEnShipEmail" />
+	<property name="CtEnShipPhone" />
+
+    <property name="CtComAllComments" />
+    <property name="CtComTransactionComment" />
+    
+  </class>
+</hibernate-mapping>

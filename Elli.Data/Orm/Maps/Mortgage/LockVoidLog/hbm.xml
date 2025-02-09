@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="LockVoidLog" extends="LogRecord" dynamic-update="true" discriminator-value="49">
+    <join table="ElliLockVoidLog">
+      <key column="ElliLogRecordId" />
+      <property name="TimeVoided" column="TimeVoided" />
+      <property name="VoidedBy" column="VoidedBy" />
+      <property name="VoidedById" column="VoidedById" />
+      <property name="RequestGuid" column="RequestGuid" />
+      <property name="AlertIndicator" column="AlertIndicator" />
+      <property name="Voided" column="Voided" />
+    </join>
+  </subclass>
+</hibernate-mapping>

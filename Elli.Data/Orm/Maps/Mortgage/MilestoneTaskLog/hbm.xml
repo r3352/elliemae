@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="MilestoneTaskLog" extends="LogRecord" dynamic-update="true" discriminator-value="16">
+    <join table="ElliMilestoneTaskLog">
+      <key column="ElliLogRecordId" />
+      <property name="TaskGuid" />
+      <property name="TaskName" />
+      <property name="TaskDescription" type="StringClob" />
+      <property name="CompletedDateUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="Stage" />
+      <property name="AddedBy" />
+      <property name="AddedByUserId" />
+      <property name="CompletedBy" />
+      <property name="CompletedByUserId" />
+      <property name="IsRequiredIndicator" />
+      <property name="Priority" />
+      <property name="DaysToComplete" />
+      <property name="DaysToCompleteFromSetting" />
+      <property name="ContactsXml" type="StringClob" />
+    </join>
+  </subclass>
+</hibernate-mapping>

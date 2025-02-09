@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="AntiSteeringLoanOption" table="ElliAntiSteeringLoanOption" dynamic-update="true">
+    <id name="Id" column="ElliAntiSteeringLoanOptionId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="ClosingDocument" column="ElliClosingDocumentId" />
+    <property name="AntiSteeringLoanOptionIndex" />
+    <property name="CreditorName" />
+    <property name="DiscountPoints" />
+    <property name="FixedRatePeriod" />
+    <property name="HaveDemandFeature" />
+    <property name="HavePrepaymentPenalty" />
+    <property name="InterestRate" />
+    <property name="IsBalloonPaymentIn7Years" />
+    <property name="IsInterestOnlyLoan" />
+    <property name="IsNegativeAmortization" />
+    <property name="LoanTerm" />
+    <property name="LoanType" />
+    <property name="OriginationPointsFees" />
+    <property name="OriginationPointsPercetange" />
+    <property name="DiscountFeeBorPaidAmount" />
+    <property name="DiscountFeeSellerPaidAmount" />
+    <property name="OriginationFeeBorPaidAmount" />
+    <property name="OriginationFeePercentage" />
+    <property name="OriginationFeeSellerPaidAmount" />
+    <property name="BrokerCompensationFeeAmount" />
+    <property name="BrokerCompensationFeeBorPaidAmount" />
+    <property name="BrokerCompensationFeePercentage" />
+    <property name="BrokerFeeAmount" />
+    <property name="BrokerFeeBorPaidAmount" />
+    <property name="BrokerFeePercentage" />
+    <property name="BrokerFeeSellerPaidAmount" />
+    <property name="InspectionFeeBorPaidAmount" />
+    <property name="InspectionFeeSellerPaidAmount" />
+    <property name="ProcessingFeeBorPaidAmount" />
+    <property name="ProcessingFeeSellerPaidAmount" />
+    <property name="UnderwritingFeeBorPaidAmount" />
+    <property name="UnderwritingFeeSellerPaidAmount" />
+    <property name="UserDefinedFee1BorPaidAmount" />
+    <property name="UserDefinedFee1Description" />
+    <property name="UserDefinedFee1SellerPaidAmount" />
+    <property name="UserDefinedFee2BorPaidAmount" />
+    <property name="UserDefinedFee2Description" />
+    <property name="UserDefinedFee2SellerPaidAmount" />
+    <property name="UserDefinedFee3BorPaidAmount" />
+    <property name="UserDefinedFee3Description" />
+    <property name="UserDefinedFee3SellerPaidAmount" />
+    <property name="UserDefinedFee4BorPaidAmount" />
+    <property name="UserDefinedFee4Description" />
+    <property name="UserDefinedFee4SellerPaidAmount" />
+    <property name="UserDefinedFee5BorPaidAmount" />
+    <property name="UserDefinedFee5Description" />
+    <property name="UserDefinedFee5SellerPaidAmount" />
+    <property name="DiscountAdditionalAmount" />
+    <property name="DiscountPercentage" />
+    <property name="DiscountAmount" />
+    <property name="TotalOriginationDiscountAmount" />
+  </class>
+</hibernate-mapping>

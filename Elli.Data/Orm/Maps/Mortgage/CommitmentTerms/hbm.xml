@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="CommitmentTerms" table="ElliCommitmentTerms" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="ActionDate" />
+    <property name="AdditionalConditions" type="StringClob" />
+    <property name="AdditionalItems1" type="StringClob" />
+    <property name="AdditionalItems2" type="StringClob" />
+    <property name="AdditionalItems3" type="StringClob" />
+    <property name="AppraisalDone" />
+    <property name="AssuranceOfCompletion" />
+    <property name="CommitmentDate" />
+    <property name="CommitmentExpired" />
+    <property name="CommitmentIssued" />
+    <property name="ConditionalCommitmentUnderActg" />
+    <property name="EligibleForHighLtv" />
+    <property name="EstimatedRemainingYears" />
+    <property name="ImprovedLivingAreas" type="StringClob" />
+    <property name="ManufacturedHousing" />
+    <property name="MaxInsurableMortgage" />
+    <property name="OtherMonthlyExpenseDescription" />
+    <property name="ReportDate" />
+    <property name="RequirementsNumber" />
+    <property name="SubdivisionDescription" type="StringClob" />
+    <property name="SubdivisionRequirements" type="StringClob" />
+    <property name="TotalMonthlyExpense" />
+    <property name="MortgageeAddress" />
+    <property name="MortgageeCity" />
+    <property name="MortgageeName" />
+    <property name="MortgageePostalCode" />
+    <property name="MortgageeState" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+	<class name="RateLockBuydown" table="ElliRateLockBuydown" dynamic-update="true">
+		<id name="Id" column="ElliRateLockBuydownId" unsaved-value="00000000-0000-0000-0000-000000000000">
+			<generator class="guid.comb" />
+		</id>
+		<version name="Version" />
+		<many-to-one name="RateLock" column="ElliRateLockId" />
+		<property name="IncreaseRatePercent" />
+		<property name="ChangeFrequencyMonths" />		
+	</class>
+</hibernate-mapping>

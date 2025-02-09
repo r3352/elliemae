@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.CalculationEngine.Core.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7652A38A-099F-4567-A5F2-88989581729B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Elli.CalculationEngine.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Elli.CalculationEngine.Core</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elli.CalculationEngine.Common">
+      <HintPath>lib\Elli.CalculationEngine.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalculationEngineConfiguration.cs" />
+    <Compile Include="AssemblyCache.cs" />
+    <Compile Include="DownloadProgressEventHandler.cs" />
+    <Compile Include="BinaryObject.cs" />
+    <Compile Include="DownloadProgressEventArgs.cs" />
+    <Compile Include="CanceledOperationException.cs" />
+    <Compile Include="CalculationBuilder.cs" />
+    <Compile Include="CodeRegion.cs" />
+    <Compile Include="CodeWriter.cs" />
+    <Compile Include="CompileException.cs" />
+    <Compile Include="CodeLanguage.cs" />
+    <Compile Include="Compiler.cs" />
+    <Compile Include="CalculationContext.cs" />
+    <Compile Include="CalculationImplBase.cs" />
+    <Compile Include="CompilerError.cs" />
+    <Compile Include="CompilerErrorCollection.cs" />
+    <Compile Include="ICalculationImpl.cs" />
+    <Compile Include="ICalculationContext.cs" />
+    <Compile Include="RuntimeContext.cs" />
+    <Compile Include="ContextBoundCodeImplBase.cs" />
+    <Compile Include="IExecutionContext.cs" />
+    <Compile Include="ExecutionContext.cs" />
+    <Compile Include="EngineUtility.cs" />
+    <Compile Include="EngineBase.cs" />
+    <Compile Include="ExpressionType.cs" />
+    <Compile Include="CalculationUtility.cs" />
+    <Compile Include="SourceControl\ReasonCode.cs" />
+    <Compile Include="SourceControl\ReasonCodeCollection.cs" />
+    <Compile Include="SourceControl\ReasonCodes.cs" />
+    <Compile Include="ExpressionParser\TransientDataObjectReplacementRegex.cs" />
+    <Compile Include="ExpressionParser\TransientDataObjectExpression.cs" />
+    <Compile Include="ExpressionParser\ReferencedElement.cs" />
+    <Compile Include="ExpressionParser\FunctionReplacementRegex.cs" />
+    <Compile Include="ExpressionParser\TemplateReplacementRegex.cs" />
+    <Compile Include="ExpressionParser\FieldReplacementRegex.cs" />
+    <Compile Include="ExpressionParser\CalculationExpression.cs" />
+    <Compile Include="ExpressionParser\Expression.cs" />
+    <Compile Include="ExpressionParser\FunctionExpression.cs" />
+    <Compile Include="ExpressionParser\FunctionParameter.cs" />
+    <Compile Include="ExpressionParser\TemplateExpression.cs" />
+    <Compile Include="ExpressionParser\TemplateSubstitution.cs" />
+    <Compile Include="CoreFunctions\CoreFunctionsBase.cs" />
+    <Compile Include="DataSource\DataElementType.cs" />
+    <Compile Include="DataSource\IEntityWrapper.cs" />
+    <Compile Include="DataSource\GenericEntityWrapper.cs" />
+    <Compile Include="DataSource\DataEntityWrapper.cs" />
+    <Compile Include="DataSource\DataFieldWrapper.cs" />
+    <Compile Include="DataSource\DataSourceWrapperFactory.cs" />
+    <Compile Include="DataSource\DataSourceWrapper.cs" />
+    <Compile Include="DataSource\EntityParameter.cs" />
+    <Compile Include="DataSource\FieldDescriptor.cs" />
+    <Compile Include="DataSource\IDataElement.cs" />
+    <Compile Include="DataSource\IDataEntity.cs" />
+    <Compile Include="DataSource\EntityDescriptor.cs" />
+    <Compile Include="DataSource\TransientField.cs" />
+    <Compile Include="DataSource\IDataField.cs" />
+    <Compile Include="DataSource\IDataSource.cs" />
+    <Compile Include="CalculationLibrary\TransientDataObject.cs" />
+    <Compile Include="CalculationLibrary\FieldValuesAllowedType.cs" />
+    <Compile Include="CalculationLibrary\CalculationSetSerializer.cs" />
+    <Compile Include="CalculationLibrary\FieldValue.cs" />
+    <Compile Include="CalculationLibrary\ICalculationLibrary.cs" />
+    <Compile Include="CalculationLibrary\InputField.cs" />
+    <Compile Include="CalculationLibrary\CalculationTest.cs" />
+    <Compile Include="CalculationLibrary\CalculationSet.cs" />
+    <Compile Include="CalculationLibrary\CalculationTemplate.cs" />
+    <Compile Include="CalculationLibrary\ElementIdentity.cs" />
+    <Compile Include="CalculationLibrary\LibraryElementType.cs" />
+    <Compile Include="CalculationLibrary\CalculationSetElement.cs" />
+    <Compile Include="CalculationLibrary\FieldExpressionCalculation.cs" />
+    <Compile Include="CalculationLibrary\Function.cs" />
+    <Compile Include="CalculationLibrary\ICalculationSetElement.cs" />
+    <Compile Include="CalculationLibrary\IElementIdentity.cs" />
+    <Compile Include="CalculationLibrary\LibraryElement.cs" />
+    <Compile Include="CalculationLibrary\CalculationLibraries.cs" />
+    <Compile Include="CalculationLibrary\CalculationLibrary.cs" />
+    <Compile Include="CalculationLibrary\DropDownListJsonBase.cs" />
+    <Compile Include="EngineCore\DependencyGraphBuilder.cs" />
+    <Compile Include="EngineCore\ExecutionDataTableBuilder.cs" />
+    <Compile Include="EngineCore\FieldExecutionData.cs" />
+    <Compile Include="EngineCore\FieldIndexDictionaryBuilder.cs" />
+    <Compile Include="EngineCore\DependencyGraph.cs" />
+    <Compile Include="EngineCore\DependencyNode.cs" />
+    <Compile Include="EngineCore\ExecutionDataTable.cs" />
+    <Compile Include="EngineCore\FieldState.cs" />
+    <Compile Include="EngineCore\PlanType.cs" />
+    <Compile Include="EngineCore\EngineCore.cs" />
+    <Compile Include="Configuration\UniqueOrDefaultSettingType.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

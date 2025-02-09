@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="CreditReport" table="ElliCreditReport" dynamic-update="true">
+    <id name="Id" column="ElliCreditReportId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Borrower" column="ElliBorrowerId" />
+    <property name="CreditReportIndex" not-null="true" />
+    <property name="VerifySsn" />
+    <property name="DateOfBirth" />
+    <property name="CreditReportCompany" />
+    <property name="CreditReportDate" />
+    <property name="CreditReportId" />
+    <property name="NonTraditionalCredit" />
+    <property name="AltId" />  
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: EllieMae.EMLite.DataAccess.DbSchema.SchemaPrimaryKeyConstraint
+// Assembly: DataAccess, Version=6.5.0.0, Culture=neutral, PublicKeyToken=d11ef57bba4acf91
+// MVID: A079574B-67E2-4BE9-A7E2-5764B684A9D9
+// Assembly location: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\DataAccess.dll
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Xml.Linq;
+
+#nullable disable
+namespace EllieMae.EMLite.DataAccess.DbSchema
+{
+  public class SchemaPrimaryKeyConstraint : SchemaElement
+  {
+    private List<SchemaIndexColumnSpec> columns = new List<SchemaIndexColumnSpec>();
+
+    public SchemaPrimaryKeyConstraint(XElement xmlElement)
+      : base(xmlElement)
+    {
+      this.columns.AddRange((IEnumerable<SchemaIndexColumnSpec>) (this.GetRelationship("ColumnSpecifications") ?? throw new ArgumentException("Missing ColumnSpecification relationship for Primary Key: " + (string) this.Name)).EntriesOfType<SchemaIndexColumnSpec>());
+      ICollection<SchemaReference> source = (this.GetRelationship("DefiningTable") ?? throw new ArgumentException("Missing DefiningTable relationship for Primary Key: " + (string) this.Name)).EntriesOfType<SchemaReference>();
+      this.TableName = source.Count != 0 ? source.First<SchemaReference>().Name : throw new ArgumentException("Missing Reference element for Column in index spec: " + (string) this.Name);
+      if (this.Name != null)
+        return;
+      this.Name = new QualifiedName("PK_" + SQL.EncodeSysName(this.TableName.GetUnbracketedObjectName()));
+    }
+
+    public QualifiedName TableName { get; private set; }
+
+    public ICollection<SchemaIndexColumnSpec> Columns
+    {
+      get => (ICollection<SchemaIndexColumnSpec>) this.columns;
+    }
+
+    public bool IsClustered => this.GetProperty(nameof (IsClustered)) != "False";
+
+    public void Publish(IScriptWriter writer)
+    {
+      StringBuilder stringBuilder = new StringBuilder();
+      stringBuilder.AppendLine("if not exists (select 1 from sysobjects where id = object_id(" + SQL.EncodeString((string) this.Name) + "))");
+      stringBuilder.AppendLine("begin");
+      stringBuilder.AppendLine("    print 'Adding primary key constraint " + (string) this.Name + " to table " + (string) this.TableName + "'");
+      stringBuilder.Append("    alter table " + (string) this.TableName + " add constraint " + (string) this.Name + " primary key");
+      if (this.IsClustered)
+        stringBuilder.Append(" clustered");
+      else
+        stringBuilder.Append(" nonclustered");
+      List<string> values = new List<string>();
+      foreach (SchemaIndexColumnSpec column in (IEnumerable<SchemaIndexColumnSpec>) this.Columns)
+        values.Add((string) column.ColumnName);
+      stringBuilder.Append(" (" + string.Join(",", (IEnumerable<string>) values) + ")");
+      stringBuilder.AppendLine();
+      stringBuilder.AppendLine("end");
+      writer.WriteTransaction(stringBuilder.ToString());
+    }
+  }
+}

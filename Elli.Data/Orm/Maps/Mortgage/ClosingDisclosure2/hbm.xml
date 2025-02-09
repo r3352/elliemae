@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="ClosingDisclosure2" table="ElliClosingDisclosure2" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign" >
+        <param name="property">ClosingCost</param>
+      </generator>
+    </id>
+    <one-to-one name="ClosingCost" class="ClosingCost" constrained="true" />
+    <property name="LCAtClosing" />
+    <property name="OriginationChargesSubTotal" />
+    <property name="ServicesDidNotShopSubTotal" />
+    <property name="ServicesDidShopSubTotal" />
+    <property name="TotalLoanCost" />
+    <property name="LastDisclosedLoanCosts" />
+    <property name="TotalBorrowerPaidAtClosing" />
+    <property name="TotalBorrowerPaidBeforeClosing" />
+    <property name="TaxesGovermentFeesSubTotal" />
+    <property name="PrepaidsSubTotal" />
+    <property name="InitialEscrowSubTotal" />
+    <property name="OtherSubTotal" />
+    <property name="TotalOtherCost" />
+    <property name="LastDisclosedOtherCosts" />
+    <property name="TotalOtherCostAtClosing" />
+    <property name="TotalOtherCostBeforeClosing" />
+    <property name="TotalClosingCost" />
+    <property name="BorrowerClosingCostAtClosing" />
+    <property name="BorrowerClosingCostBeforeClosing" />
+    <property name="SellerClosingCostAtClosing" />
+    <property name="SellerClosingCostBeforeClosing" />
+    <property name="ClosingCostPaidByOthers" />
+    <property name="ClosingCostLenderCredits" />
+    <property name="LastDisclosedLenderCredits" />
+    <property name="DiscloseLenderCredits" />
+  </class>
+</hibernate-mapping>

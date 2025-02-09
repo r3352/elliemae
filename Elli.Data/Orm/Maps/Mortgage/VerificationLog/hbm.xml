@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="VerificationLog" extends="LogRecord" dynamic-update="true" discriminator-value="23">
+    <join table="ElliVerificationLog">
+      <key column="ElliLogRecordId" />
+      <property name="LogId" column="LogId" />
+      <property name="IsEPassIndicator" />
+      <property name="EPassSignature" />
+      <property name="ClosingDocumentIndicator" />
+      <property name="EDisclosureIndicator" />
+      <property name="ArchiveDateUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="Title" />
+      <property name="Company" />
+      <property name="OrderDateUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="ReceiveDateUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="ReorderDateUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="Stage" />
+      <property name="PairId" />
+      <property name="DaysDue" />
+      <property name="DaysTillExpire" />
+      <property name="DateAddedUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="AddedBy" />
+      <property name="RequestedBy" />
+      <property name="RerequestedBy" />
+      <property name="ReceivedBy" />
+      <property name="ArchivedBy" />
+      <property name="IsExternalIndicator" />
+      <property name="ReviewedDateUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="ReviewedBy" />
+      <property name="AccessedDateUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="AccessedBy" />
+      <property name="UnderwritingReadyDateUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="UnderwritingReadyBy" />
+      <property name="ShippingReadyDateUtc" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="ShippingReadyBy" />
+      <property name="ConditionsXml" type="StringClob" />
+      <property name="AllowedRolesXml" type="StringClob" />
+    </join>
+  </subclass>
+</hibernate-mapping>

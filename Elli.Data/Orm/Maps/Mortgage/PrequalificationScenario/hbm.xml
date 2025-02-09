@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="PrequalificationScenario" table="ElliPrequalificationScenario" dynamic-update="true">
+    <id name="Id" column="ElliPrequalificationScenarioId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Prequalification" column="ElliPrequalificationId" />
+    <property name="PrequalificationScenarioIndex" not-null="true"/>
+    <property name="AppraisedValue" />
+    <property name="Apr" />
+    <property name="CashToClose" />
+    <property name="ClosingCost" />
+    <property name="Cltv" />
+    <property name="Comments" />
+    <property name="CreditScore" />
+    <property name="CurrentStatus" />
+    <property name="DownPaymentPercent" />
+    <property name="DownPaymentAmount" />
+    <property name="FhaUpfrontMIPremiumPercent" />
+    <property name="GrossNegativeCashFlow" />
+    <property name="LoanAmount" />
+    <property name="Ltv" />
+    <property name="MaximumDebt" />
+    <property name="MaximumLoanAmount" />
+    <property name="MiAndFundingFeeFinancedAmount" />
+    <property name="MinimumIncome" />
+    <property name="MonthlyPayment" />
+    <property name="PrepaidItemsEstimatedAmount" />
+    <property name="QualBottomRatioPercent" />
+    <property name="QualTopRatioPercent" />
+    <property name="SalesPrice" />
+    <property name="SubordinateFin" />
+    <property name="TotalBaseCost" />
+    <property name="TotalCashAvailable" />
+    <property name="TotalCashLeft" />
+    <property name="TotalCosts" />
+    <property name="TotalFinancing" />
+    <property name="TotalHe" />
+    <property name="TotalIncome" />
+    <property name="TotalLoanAmount" />
+    <property name="TotalOtherExpense" />
+    <property name="TotalPaidOffMortgage" />
+    <property name="TotalPaidOffOthers" />
+    <property name="TotalPayments" />
+  </class>
+</hibernate-mapping>
+

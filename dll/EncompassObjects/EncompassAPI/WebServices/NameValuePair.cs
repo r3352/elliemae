@@ -1,0 +1,38 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: EllieMae.EncompassAPI.WebServices.NameValuePair
+// Assembly: EncompassObjects, Version=1.5.1.0, Culture=neutral, PublicKeyToken=d11ef57bba4acf91
+// MVID: BFD5C65C-A9EC-4558-A5A0-AEF78CA2996D
+// Assembly location: C:\SmartClientCache\Apps\Ellie Mae\Encompass\SDK\EncompassObjects.dll
+
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
+#nullable disable
+namespace EllieMae.EncompassAPI.WebServices
+{
+  [GeneratedCode("System.Xml", "4.8.3752.0")]
+  [DebuggerStepThrough]
+  [DesignerCategory("code")]
+  [XmlType(Namespace = "http://hosted.elliemae.com/")]
+  [Serializable]
+  public class NameValuePair
+  {
+    private string nameField;
+    private object valueField;
+
+    public string Name
+    {
+      get => this.nameField;
+      set => this.nameField = value;
+    }
+
+    public object Value
+    {
+      get => this.valueField;
+      set => this.valueField = value;
+    }
+  }
+}

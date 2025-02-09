@@ -1,0 +1,70 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Elli.BusinessRules.Actions.RuleActionType
+// Assembly: Elli.BusinessRules, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d11ef57bba4acf91
+// MVID: D0A206AB-C2DC-4F02-BBE4-A037D1140EF4
+// Assembly location: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.BusinessRules.dll
+
+#nullable disable
+namespace Elli.BusinessRules.Actions
+{
+  public enum RuleActionType
+  {
+    None,
+    ImportAppendixQIncome,
+    UpdateCorrespondentBalance,
+    UpdateCorrespondentFees,
+    CopyItemizationToStateDisclosure,
+    CalculateEemMortgage,
+    UpdateLenderRepresentative,
+    PopulateGuidForDisclosureTracking2015,
+    CopyCurrentAddressFromBorrower,
+    CopyMailingAddressFromBorrower,
+    CopyFormerAddressFromBorrower,
+    CopyFromBorrowerDenial,
+    CopyFromCoBorrowerDenial,
+    RunDTActions,
+    SetReceivedDate,
+    SetIntentFields,
+    SetPreSumedReceivedDate,
+    SetReasonsForDisclosure,
+    SetRegulationZBasedOnIntentToProceed,
+    UpdateRevisedDueDate,
+    CalculateNonVol,
+    CopyLiabilitiesToCdPage3,
+    UpdateIntentToProceed,
+    GenerateGffVarianceAlertDetails,
+    SetDisclosedMethod,
+    UpdateRequestLockStatus,
+    CopyAUSToLoan,
+    UpdateUseForUCDExport,
+    BuildFinalVesting,
+    BuildTrust1Beneficiary,
+    BuildTrust2Beneficiary,
+    UpdatePurchaseAdviceBalance,
+    CopySelectedOptionToLoan,
+    MilestoneDueDateChanged,
+    CalculateFundingWorksheetData,
+    ApplyMIRules,
+    CalculateCityStateUserFees,
+    CalculateTitleEscrowFee,
+    CopyAddressFromPresent,
+    MarkFinalCd,
+    UnMarkFinalCd,
+    GetAMILimits,
+    SetDefaultHMDAExemptValues,
+    WithdrawBorrowerEConsent,
+    WithdrawCoBorrowerEConsent,
+    WithdrawNboEConsent,
+    CopyMERS,
+    GetNextMersMin,
+    GetMFILimits,
+    DeleteLoanProgram,
+    DeletePlanCode,
+    DeleteAltLender,
+    CopyBorrowerToTaxRequest,
+    PopulateNonFeeLevelChangedCircumstanceInfoCD,
+    PopulateNonFeeLevelChangedCircumstanceInfoLE,
+    PopulateAnalyzerIncomeImportDate,
+    GenerateUli,
+  }
+}

@@ -1,0 +1,37 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: EllieMae.Encompass.BusinessObjects.Users.IUserPersonas
+// Assembly: EncompassObjects, Version=1.5.1.0, Culture=neutral, PublicKeyToken=d11ef57bba4acf91
+// MVID: BFD5C65C-A9EC-4558-A5A0-AEF78CA2996D
+// Assembly location: C:\SmartClientCache\Apps\Ellie Mae\Encompass\SDK\EncompassObjects.dll
+
+using EllieMae.Encompass.Collections;
+using System.Collections;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace EllieMae.Encompass.BusinessObjects.Users
+{
+  [Guid("D7DB4425-AA81-46ba-9DAB-2A2C8E9206F8")]
+  public interface IUserPersonas
+  {
+    int Count { get; }
+
+    Persona this[int index] { get; }
+
+    void Add(Persona p);
+
+    void AddRange(PersonaList personas);
+
+    void Remove(Persona p);
+
+    void Replace(PersonaList personas);
+
+    void Clear();
+
+    bool Contains(Persona p);
+
+    IEnumerator GetEnumerator();
+
+    string ToString();
+  }
+}

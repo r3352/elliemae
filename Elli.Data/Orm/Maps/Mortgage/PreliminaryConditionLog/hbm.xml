@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="PreliminaryConditionLog" extends="StandardConditionLog" dynamic-update="true" discriminator-value="18">
+    <join table="ElliPreliminaryConditionLog">
+      <key column="ElliLogRecordId" />
+      <property name="Category" column="Category" />
+      <property name="PriorTo" column="PriorTo" />
+      <property name="UnderwriterAccessIndicator" column="UnderwriterAccessIndicator" />
+      <property name="DateFulfilled" column="DateFulfilled" />
+      <property name="FulfilledBy" column="FulfilledBy" />
+    </join>
+  </subclass>
+</hibernate-mapping>

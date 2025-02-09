@@ -1,0 +1,32 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Elli.Common.Extensions.TaskExtensions
+// Assembly: Elli.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d11ef57bba4acf91
+// MVID: 5A516607-8D77-4351-85BB-54751A6A69B4
+// Assembly location: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Common.dll
+
+using System;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
+
+#nullable disable
+namespace Elli.Common.Extensions
+{
+  public static class TaskExtensions
+  {
+    public static void WaitOrThrowOnError(this Task task)
+    {
+      try
+      {
+        task.Wait();
+      }
+      catch (AggregateException ex)
+      {
+        ReadOnlyCollection<Exception> innerExceptions = ex.InnerExceptions;
+        // ISSUE: explicit non-virtual call
+        if ((innerExceptions != null ? (__nonvirtual (innerExceptions.Count) == 1 ? 1 : 0) : 0) != 0)
+          throw ex.InnerException;
+        throw;
+      }
+    }
+  }
+}

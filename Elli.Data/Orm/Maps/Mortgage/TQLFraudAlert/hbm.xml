@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="TQLFraudAlert" table="ElliTQLFraudAlert" dynamic-update="true">
+    <id name="Id" column="ElliTQLFraudAlertId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="TQL" column="ElliTQLId" />
+    <property name="TQLFraudAlertIndex" />
+    <property name="LastFraudOrderAlertCategories" />
+    <property name="LastFraudOrderDescriptionOfAlerts" />
+    <property name="LastFraudOrderAlertLevel" />
+    <property name="LastFraudOrderAlertID" />
+    <property name="DriveFraudAlertStatus" />
+    <property name="DriveFraudAlertCode" />
+    <property name="FraudGuardFraudAlertStatus" />
+    <property name="FraudGuardFraudAlertCode" />
+  </class>
+</hibernate-mapping>

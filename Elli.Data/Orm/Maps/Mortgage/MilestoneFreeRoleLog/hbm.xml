@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="MilestoneFreeRoleLog" extends="LogRecord" dynamic-update="true" discriminator-value="14">
+    <join table="ElliMilestoneFreeRoleLog">
+      <key column="ElliLogRecordId" />
+      <component name="LoanAssociate">
+        <property name="LoanAssociateType" column="LoanAssociateType" />
+        <property name="IdString" column="LoanAssociateIdString" />
+        <property name="Name" column="LoanAssociateName" />
+        <property name="Title" column="LoanAssociateTitle" />
+        <property name="Phone" column="LoanAssociatePhone" />
+        <property name="CellPhone" column="LoanAssociateCellPhone" />
+        <property name="Fax" column="LoanAssociateFax" />
+        <property name="Email" column="LoanAssociateEmail" />
+        <property name="RoleName" column="LoanAssociateRoleName" />
+        <property name="RoleId" column="LoanAssociateRoleId" />
+        <property name="WriteAccess" column="LoanAssociateWriteAccess" />
+        <property name="APIClientID" column="LoanAssociateAPIClientID" />
+      </component>
+    </join>
+  </subclass>
+</hibernate-mapping>

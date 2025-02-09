@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="UCDDetail" table="ElliUCDDetail" dynamic-update="true">
+    <id name="Id" column="ElliUCDDetailId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="ClosingDisclosure3" column="ElliClosingDisclosure3Id" />
+    <property name="FeeIndex"/>
+    <property name="Section"/>
+    <property name="LineNumber"/>
+    <property name="FeeAccountType" />
+    <property name="FeeAmount" />
+    <property name="FeeDateFrom" />
+    <property name="FeeDateTo" />
+    <property name="FeeDesc" />
+    <property name="FeePOC" />
+    <property name="FeePaidTo" />
+    <property name="FeePaidBy" />
+  </class>
+</hibernate-mapping>
+

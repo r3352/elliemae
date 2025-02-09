@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="StateDisclosure" table="ElliStateDisclosure" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <!-- AZ -->
+    <property name="AdvFeeAgmtInEfctNumDay" />
+    <property name="AZCmplBlankSpcsDoc1BlankFldDesc1" />
+    <property name="AZCmplBlankSpcsDoc1BlankFldDesc2" />
+    <property name="AZCmplBlankSpcsDoc1BlankFldDesc3" />
+    <property name="AZCmplBlankSpcsDoc1Nm" />
+    <property name="AZCmplBlankSpcsDoc2Nm" />
+    <property name="AZCmplBlankSpcsDoc3Nm" />
+    <!-- CA -->
+    <property name="BorrowerElectsEstablishEscrowAmount" />
+    <property name="BorrowerElectsEstablishEscrowIndicator" />
+    <!-- CREDITINFO -->
+    <property name="CreditIsUsedForReason" />
+    <!-- FLORIDA -->
+    <property name="AcceptedByBorrowerIndicator" />
+    <property name="AcceptedDate" />
+    <property name="FloridaApplicationFee" />
+    <property name="AppraisalDeposit" />
+    <property name="BrokerageFeeAddition1" />
+    <property name="BrokerageFeeAddition2" />
+    <property name="BrokerageFeeAddition3" />
+    <property name="BrokerageFeeAmount1" />
+    <property name="BrokerageFeeAmount2" />
+    <property name="BrokerageFeeAmount3" />
+    <property name="BrokerageFeeDays" />
+    <property name="BrokerageFeePercent1" />
+    <property name="BrokerageFeePercent2" />
+    <property name="BrokerageFeePercent3" />
+    <property name="CHARMBookletIndicator" />
+    <property name="CheckPayableTo" />
+    <property name="CommitmentAmount" />
+    <property name="CommitmentFee" />
+    <property name="CommitmentPercent" />
+    <property name="CompensationAddition" />
+    <property name="CompensationPercent" />
+    <property name="CreditDeposit" />
+    <property name="DaysBeforeClosing" />
+    <property name="DepositReceipt" />
+    <property name="DepositRefundableIndicator" />
+    <property name="DirectContact" />
+    <property name="ExpirationDate" />
+    <property name="FeeReceivedByLender" />
+    <property name="HUDBookletIndicator" />
+    <property name="IndexUsed" />
+    <property name="InformationAboutTheIndexCanBeFound" />
+    <property name="IsEstimateIndicator" />
+    <property name="LenderPaid" />
+    <property name="LockInFee" />
+    <property name="MethodDescription" />
+    <property name="MethodDetermine" />
+    <property name="MortgageAgreementIndicator" />
+    <property name="MtgBrokerLicense" />
+    <property name="NameOfLicensee" />
+    <property name="FloridaOtherFee1" />
+    <property name="FloridaOtherFee2" />
+    <property name="FloridaOtherFeeTo1" />
+    <property name="FloridaOtherFeeTo2" />
+    <property name="FloridaOtherFeeTo3" />
+    <property name="FloridaOtherFeeTo4" />
+    <property name="ProvidedBy" />
+    <property name="RefinancingFee" />
+    <property name="RefundableIndicator" />
+    <property name="RefundableBy" />
+    <property name="RefundableType" />
+    <property name="SignedByBorrowerIndicator" />
+    <property name="SpecificARMIndicator" />
+    <property name="TermsChange" />
+    <property name="ThirdPartyFee" />
+    <!-- MD -->
+    <property name="PrintMDDeliveryIndicator" />
+    <property name="ScheduleOfChargesEstimatedFinalIndicator" />
+    <!-- NEWYORK -->
+    <property name="ApplicationDate" />
+    <property name="NewYorkApplicationFee" />
+    <property name="NewYorkAppraisalFee" />
+    <property name="NewYorkCreditReportFee" />
+    <property name="NewYorkProcessingFee" />
+    <property name="QuestionContact" />
+    <property name="QuestionContactPhone" />
+    <property name="QuestionContactTollFree" />
+    <property name="SelectDivisionFeesIndicator" />
+    <property name="SelectPrimaryLenderIndicator" />
+    <property name="SelectPrivateLenderIndicator" />
+    <property name="PaidByBorrower" />
+    <property name="PaidByLender" />
+    <property name="PaidByOther1" />
+    <property name="PaidByOther2" />
+    <property name="PaidByOtherDescription1" />
+    <property name="PaidByOtherDescription2" />
+    <property name="TotalFee" />
+    <property name="BrokerPayIndicator" />
+    <property name="BrokerPayAddition" />
+    <property name="BrokerPayAmount" />
+    <property name="BrokerPayPercent" />
+    <property name="DirectPayIndicator" />
+    <property name="DirectPayAmount" />
+    <property name="DirectPayClosing" />
+    <property name="DirectPayCommitment" />
+    <property name="DirectPayPercent" />
+    <property name="LenderPayIndicator" />
+    <property name="LenderPayAmount" />
+    <property name="LenderPayMaxPoint" />
+    <property name="LenderPayPercent" />
+    <property name="LenderPayPoint" />
+    <property name="LenderPayUnknownIndicator" />
+    <property name="FeeReceived1" />
+    <property name="FeeReceived2" />
+    <property name="GFEFeeReceived1" />
+    <property name="GFEFeeReceived2" />
+    <property name="ReceivedBy" />
+    <property name="LenderDate" />
+    <property name="LenderName" />
+    <property name="LenderStatus" />
+    <property name="RefundCondition1" type="StringClob" />
+    <property name="RefundCondition2" type="StringClob" />
+    <property name="RefundCondition3" type="StringClob" />
+    <property name="RefundCondition4" type="StringClob" />
+    <property name="RefundCondition5" type="StringClob" />
+    <property name="RefundCondition6" type="StringClob" />
+    <property name="CommitmentCondition1" type="StringClob" />
+    <property name="CommitmentCondition2" type="StringClob" />
+    <property name="AdvisoryCondition1" type="StringClob" />
+    <property name="AdvisoryCondition2" type="StringClob" />
+    <property name="AdvisoryCondition3" type="StringClob" />
+    <property name="AdvisoryCondition4" type="StringClob" />
+    <property name="NewMoneyAmount" />
+    <property name="PreviousMortgageAmountOne" />
+    <property name="PreviousMortgageAmountTwo" />
+    <property name="TypeOfProperty" />
+    <!-- NV -->
+    <property name="BrokerAuthorizedSigningRepName" />
+    <property name="BrokerAuthorizedSigningRepTitle" />
+    <property name="FurtherFeesEarnedByMortgageBroker" />
+    <property name="OriginationFeeChargedAmount" />
+    <property name="OriginationFeeChargedIndicator" />
+    <property name="OriginationFeeDecreasesRate" />
+    <property name="OriginationFeeIncreasesRate" />
+    <property name="OriginationFeeInterestRateImpactedStatus" />
+    <property name="OriginationFeePaidBy" />
+    <property name="ServicingFeeChargedAmount" />
+    <property name="ServicingFeeChargedIndicator" />
+    <property name="ServicingFeePaidBy" />
+    <property name="ServicingFeePaidFrequence" />
+    <property name="TransferFeeChargedAmount" />
+    <property name="TransferFeeChargedIndicator" />
+    <property name="TransferFeePaidBy" />
+    <property name="YSPChargedAmount" />
+    <property name="YSPChargedIndicator" />
+    <property name="YSPDecreasesRate" />
+    <property name="YSPIncreasesRate" />
+    <property name="YSPInterestRateImpactedStatus" />
+    <property name="YSPPaidBy" />
+    <property name="RateLockHonoredIndicator" />
+    <!-- TEXAS -->
+    <property name="ActingOtherDescription1" />
+    <property name="ActingOtherDescription2" />
+    <property name="ActingOthersIndicator" />
+    <property name="TexasApplicationFee" />
+    <property name="AppraisalContact" />
+    <property name="TexasAppraisalFee" />
+    <property name="AsAttorneyIndicator" />
+    <property name="AsRealBrokerIndicator" />
+    <property name="AttorneyForTheBuyerIndicator" />
+    <property name="AttorneyForTheLenderIndicator" />
+    <property name="AttorneyForTheSellerIndicator" />
+    <property name="BasedOnOthersIndicator" />
+    <property name="BasedOnOthersDescription" />
+    <property name="BasedOnWholesaleOptionsIndicator" />
+    <property name="BrokerForTheSeller" />
+    <property name="BrokerLicense" />
+    <property name="BrokerName" />
+    <property name="CreditReportContact" />
+    <property name="TexasCreditReportFee" />
+    <property name="EstimatedChargeShownOnGFEIndicator" />
+    <property name="FeesReceiving" />
+    <property name="IndependentContractorIndicator" />
+    <property name="NotRefundableAmount" />
+    <property name="OfferRetailPriceIndicator" />
+    <property name="TexasOtherFee1" />
+    <property name="TexasOtherFee2" />
+    <property name="TexasOtherFeeContact1" />
+    <property name="TexasOtherFeeContact2" />
+    <property name="TexasProcessingFee" />
+    <property name="SubmitToLenderIndicator" />
+    <property name="UnderwritingContact" />
+    <property name="UnderwritingFee" />
+    <property name="DisclosureDeliveredBy" />
+    <property name="DisclosureDeliveredByOtherMethod" />
+    <property name="DisclosureDeliveredDate" />
+    <!-- WI -->
+    <property name="LoanTermsFixedThroughDateofLoanClosingIndicator" />
+    <!-- SC -->
+    <property name="ScRegulatoryAgencyType" />
+    <!-- KS -->
+    <property name="KsUcccElectionIndicator" />
+    <!-- TX -->
+    <property name="TxVeteransLandBoardIndicator" />
+    <!-- KY -->
+    <property name="KyHomeSolicationLoanIndicator" />
+    <!-- NewYorkFees -->
+    <bag name="newYorkFees" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliStateDisclosureId" />
+      <one-to-many class="NewYorkFee"/>
+    </bag>
+    <!-- NewYorkPrimaryLenders -->
+    <bag name="newYorkPrimaryLenders" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliStateDisclosureId" />
+      <one-to-many class="NewYorkPrimaryLender"/>
+    </bag>
+    <!-- AK -->
+    <property name="Areas" />
+    <property name="PrintInterestRateReductionRider" />
+    <property name="PrintCertificationOfCosts" />
+    <property name="FederallySubsidizedAmountPercentage" />
+    <property name="FederallySubsidizedAmount" />
+    <property name="TaxExemptAcquisitionCostCertificationOwnersTitleInsurance" />
+    <property name="TaxExemptAcquisitionCostCertificationSurvey" />
+    <property name="TaxExemptAcquisitionCostCertificationRealEstateCommission" />
+    <property name="TaxExemptAcquisitionCostCertificationAssessments" />
+    <property name="TaxExemptAcquisitionCostCertificationRepairsImprovements" />
+    <property name="TaxExemptAcquisitionCostCertificationOther" />
+    <property name="TaxExemptAcquisitionCostCertificationOtherAmount" />
+    <property name="TaxExemptAcquisitionCostCertificationTotalAdjustments" />
+    <property name="OriginalAcquisitionCost" />
+    <property name="AmendedAcquisitionCost" />
+    <property name="LeaseAgreementDate" />
+    <property name="LessorName" />
+    <!-- INDIANA -->
+    <property name="InLicensedNo" />
+    <property name="InLicensedType" />
+    <!-- SOUTH CAROLINA -->
+    <property name ="RegulatorAddress" />
+    <property name ="RegulatorCity" />
+    <property name ="RegulatorState" />
+    <property name ="RegulatorZipCode" />
+    <property name ="RegulatorPhone" />
+    <property name ="RegulatorTollFreePhone" />
+    <property name ="RegulatorMailingAddress" />
+    <property name ="RegulatorMailingCity" />
+    <property name ="RegulatorMailingState" />
+    <property name ="RegulatorMailingZipCode" />
+    <property name ="RegulatorWebAddress" />
+  </class>
+</hibernate-mapping>

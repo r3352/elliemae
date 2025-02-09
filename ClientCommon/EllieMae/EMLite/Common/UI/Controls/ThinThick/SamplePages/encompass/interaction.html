@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // DO NOT REMOVE THE NEXT LINE //
+        // $encompass.interaction.js$
+        // 
+
+        function populateCallBackResult(resp) {
+            document.getElementById("callBackResult").value = resp;
+        }
+
+        function getSessionId(callback) {
+            var jsonParams = null;
+            encompass.interaction.getSessionId(jsonParams, callback);
+        }
+
+        function writeLog(callback) {
+            var jsonParams = "{ Message: '" + document.getElementById("logging_message").value + "', TraceLevel: '" + document.getElementById("logging_traceLevel").value + "'}";
+            encompass.interaction.writeLog(jsonParams, callback);
+        }
+
+        function setHelpTargetName(callback) {
+            var jsonParams = "{ HelpTargetName: '" + document.getElementById("helpTargetName").value + "'}";
+            encompass.interaction.setHelpTargetName(jsonParams, callback);
+        }
+
+        function openBusinessRuleFindFieldDialog(jsonParams, callback) {
+            encompass.interaction.openBusinessRuleFindFieldDialog(jsonParams, callback);
+        }
+
+        function openFieldSearchRuleEditor(callback) {
+            var jsonParams = "{ FsRuleId: " + document.getElementById("openFieldSearchRuleEditor_fsRuleId").value + "}";
+            encompass.interaction.openFieldSearchRuleEditor(jsonParams, callback);
+        }
+
+    </script>
+</head>
+<body>
+<p style="color:orange;margin-top:0;margin-bottom:0;">
+    Please run RemoveUAC.exe, if you haven't done so recently, to ensure that you are running latest and greatest version of this sample page and scripts!</p>
+<p style="color: green; margin-top: 0; margin-bottom: 0;">
+    The functions demonstrated here reside in <b>encompass.interaction</b> namespace.</p>
+<br/>
+    <!--- callback result --->
+    <fieldset>
+        <legend>
+            <h3 style="margin-top:0;margin-bottom:0;">Callback Result</h3>
+        </legend>
+        <input type="text" id="callBackResult" size="100" />
+    </fieldset>
+    <br/>
+    <fieldset>
+        <legend>
+            <h3 style="color:blue;margin-top:0;margin-bottom:0;">Session</h3>
+        </legend>
+        <input type="button" value="Get Session ID" onclick="getSessionId(populateCallBackResult); "/>       
+    </fieldset>
+    <br/>
+    <fieldset>
+        <legend>
+            <h3 style="color:blue;margin-top:0;margin-bottom:0;">Logging</h3>
+        </legend>       
+        Message:<input type="text" id="logging_message" />
+        Trace Level:<input type="text" id="logging_traceLevel" />
+        <input type="button" value="Write Log" onclick="writeLog(populateCallBackResult);" />
+    </fieldset>
+    <br/>
+    <fieldset>
+        <legend>
+            <h3 style="color:blue;margin-top:0;margin-bottom:0;">Help</h3>
+        </legend>
+        HelpTargetName:<input type="text" id="helpTargetName"/><i> PipelinePage, MoveDialog, TransferDialog</i>
+        <br/>
+        <input type="button" value="Set Help" onclick="setHelpTargetName(populateCallBackResult); "/>       
+    </fieldset>
+    <br/>
+    <fieldset>
+        <legend>
+            <h3 style="color:blue;margin-top:0;margin-bottom:0;">Field Search</h3>
+        </legend>       
+        <input type="button" value="Open BusinessRuleFindFieldDialog" onclick="openBusinessRuleFindFieldDialog(null, populateCallBackResult);" />
+        <br/>
+        FS Rule ID:<input type="text" id="openFieldSearchRuleEditor_fsRuleId" />
+        <input type="button" value="Open FieldSearchRuleEditor" onclick="openFieldSearchRuleEditor(populateCallBackResult);" />
+    </fieldset>
+    <br/>
+</body>
+</html>

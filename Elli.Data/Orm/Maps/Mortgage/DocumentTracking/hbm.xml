@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="DocumentTrackingLog" extends="LogRecord" dynamic-update="true" discriminator-value="37">
+    <join table="ElliDocumentTrackingLog">
+      <key column="ElliLogRecordId" />
+      <property name="ActionCd" column="ActionCd" />
+      <property name="Action" column="Action" />
+      <property name="LogDate" column="LogDate" />
+      <property name="LogBy" column="LogBy" />
+      <property name="Dot" column="Dot" />
+      <property name="Ftp" column="Ftp" />
+	  <property name="ExecutedNote" column="ExecutedNote" />	
+      <property name="Organization" column="Organization" />
+      <property name="Contact" column="Contact" />
+      <property name="Phone" column="Phone" />
+      <property name="Email" column="Email" />      
+    </join>
+  </subclass>
+</hibernate-mapping>
+

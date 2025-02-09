@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="FreddieServiceLqaLog" extends="LogRecord" dynamic-update="true" discriminator-value="36">
+    <join table="ElliFreddieServiceLqaLog">
+      <key column="ElliLogRecordId" />
+      <property name="Name" column="Name" />
+      <property name="Result" column="Result" />
+      <property name="Details" column="Details" />
+      <property name="ShowAlert" column="ShowAlert" />
+    </join>
+  </subclass>
+</hibernate-mapping>

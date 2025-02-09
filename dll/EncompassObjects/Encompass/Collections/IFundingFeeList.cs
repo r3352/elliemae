@@ -1,0 +1,29 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: EllieMae.Encompass.Collections.IFundingFeeList
+// Assembly: EncompassObjects, Version=1.5.1.0, Culture=neutral, PublicKeyToken=d11ef57bba4acf91
+// MVID: BFD5C65C-A9EC-4558-A5A0-AEF78CA2996D
+// Assembly location: C:\SmartClientCache\Apps\Ellie Mae\Encompass\SDK\EncompassObjects.dll
+
+using EllieMae.Encompass.BusinessObjects.Loans;
+using System.Collections;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace EllieMae.Encompass.Collections
+{
+  [Guid("11C3A527-B9C5-4adc-8AF9-B6FACF237BB9")]
+  public interface IFundingFeeList
+  {
+    FundingFee this[int index] { get; set; }
+
+    int Count { get; }
+
+    bool Contains(FundingFee value);
+
+    int IndexOf(FundingFee value);
+
+    FundingFee[] ToArray();
+
+    IEnumerator GetEnumerator();
+  }
+}

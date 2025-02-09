@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="DataTracLog" extends="LogRecord" dynamic-update="true" discriminator-value="3">
+    <join table="ElliDataTracLog">
+      <key column="ElliLogRecordId" />
+      <property name="Creator" column="Creator" />
+      <property name="FileId" column="FileId" />
+      <property name="Message" column="Message" type="StringClob" />
+    </join>
+  </subclass>
+</hibernate-mapping>

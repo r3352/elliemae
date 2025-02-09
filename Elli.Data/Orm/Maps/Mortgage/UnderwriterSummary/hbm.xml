@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="UnderwriterSummary" table="ElliUnderwriterSummary" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="SupervisoryAppraiserLicenseNumber" />
+    <property name="AppraisalCompletedDate" />
+    <property name="AppraisalExpiredDate" />
+    <property name="AppraisalOrderedDate" />
+    <property name="AppraisalType" />
+    <property name="Conditions" type="StringClob" />
+    <property name="OriginalAppraiser" />
+    <property name="OriginalAppraisersValue" />
+    <property name="ReviewAppraiser" />
+    <property name="ReviewCompletedDate" />
+    <property name="ReviewRequestedDate" />
+    <property name="ReviewType" />
+    <property name="ReviewValue" />
+    <property name="Appraisal" type="StringClob" />
+    <property name="ApprovalExpiredDate" />
+    <property name="ApprovedBy" />
+    <property name="ApprovedDate" />
+    <property name="AusNumber" />
+    <property name="AusRunDate" />
+    <property name="AusSource" />
+    <property name="BenefitRequiredIndicator" />
+    <property name="ClearToCloseDate" />
+    <property name="Concerns" type="StringClob" />
+    <property name="Credit" type="StringClob" />
+    <property name="CreditApprovalDate" />
+    <property name="SentToDate" />
+    <property name="DeniedBy" />
+    <property name="DeniedDate" />
+    <property name="DifferentApprovalExpiredDate" />
+    <property name="DifferentApprovedBy" />
+    <property name="DifferentApprovedDate" />
+    <property name="Exceptions" type="StringClob" />
+    <property name="ExceptionSignOffBy" />
+    <property name="ExceptionSignOffDate" />
+    <property name="MaxRate" />
+    <property name="MiOrderedDate" />
+    <property name="MiReceivedDate" />
+    <property name="ModifiedLoanAmount" />
+    <property name="ModifiedLoanRate" />
+    <property name="ModifiedLoanTerm" />
+    <property name="ModifiedLtv" />
+    <property name="ModifiedMonthlyPayment" />
+    <property name="ResubmittedDate" />
+    <property name="SignOffBy" />
+    <property name="SignOffDate" />
+    <property name="Strengths" type="StringClob" />
+    <property name="SubmittedDate" />
+    <property name="SuspendedBy" />
+    <property name="SuspendedDate" />
+    <property name="SuspendedReasons" type="StringClob" />
+    <property name="IsAgencyWithAgreement" />
+    <property name="IsAgencyWaiver" />
+    <property name="IsAgencyManually" />
+    <property name="CounterOfferDate" />
+    <property name="CounterOfferStatus" />
+    <property name="ApplicationCompletedDate" />
+    <property name="IncompleteNoticeIssuedDate" />
+    <property name="ReceivedRequestedInfoDate" />
+    <property name="LoanDecisionDate" />
+    <property name="IncompleteFileClosedDate" />
+    <property name ="DecisionDueDate" />
+  </class>
+</hibernate-mapping>

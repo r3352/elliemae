@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\eFolder.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A1F22F9-FD8C-4ABD-AFA3-4486743CD3AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>eFolder</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>24.3.0.5</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EllieMae.EMLite</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClientCommon">
+      <HintPath>lib\ClientCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientSession">
+      <HintPath>lib\ClientSession.dll</HintPath>
+    </Reference>
+    <Reference Include="DTI.ImageMan.Twain">
+      <HintPath>lib\DTI.ImageMan.Twain.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentConverter">
+      <HintPath>lib\DocumentConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="EMInput">
+      <HintPath>lib\EMInput.dll</HintPath>
+    </Reference>
+    <Reference Include="EMLoanUtils15">
+      <HintPath>lib\EMLoanUtils15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMePass">
+      <HintPath>lib\EMePass.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Web.Host">
+      <HintPath>lib\Elli.Web.Host.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Encompass.Diagnostics">
+      <HintPath>lib\Encompass.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="HelpAPI">
+      <HintPath>lib\HelpAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="JedScriptEngine">
+      <HintPath>lib\JedScriptEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="LoanServices">
+      <HintPath>lib\LoanServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services2" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Reporting">
+      <HintPath>lib\Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIElements">
+      <HintPath>lib\UIElements.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>lib\itextsharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EncompassServerConnectionException.cs" />
+    <Compile Include="WebServices\ePackage.cs" />
+    <Compile Include="WebServices\ePackageWse.cs" />
+    <Compile Include="WebServices\IDRService.cs" />
+    <Compile Include="WebServices\IDRServiceWse.cs" />
+    <Compile Include="WebServices\InboxService.cs" />
+    <Compile Include="WebServices\InboxServiceWse.cs" />
+    <Compile Include="WebServices\RecipientInfo.cs" />
+    <Compile Include="WebServices\SenderInfo.cs" />
+    <Compile Include="WebServices\GetSecurityFieldListCompletedEventHandler.cs" />
+    <Compile Include="WebServices\GetSecurityFieldListCompletedEventArgs.cs" />
+    <Compile Include="WebServices\RegisterRequestCompletedEventHandler.cs" />
+    <Compile Include="WebServices\RegisterRequestCompletedEventArgs.cs" />
+    <Compile Include="WebServices\RegisterStatusOnlineRequestCompletedEventHandler.cs" />
+    <Compile Include="WebServices\RegisterStatusOnlineRequestCompletedEventArgs.cs" />
+    <Compile Include="WebServices\UploadStatusCompletedEventHandler.cs" />
+    <Compile Include="WebServices\SendLoanStatusEmailCompletedEventHandler.cs" />
+    <Compile Include="WebServices\SendRecipientEmailCompletedEventHandler.cs" />
+    <Compile Include="WebServices\GetLoanStatusPreviewCompletedEventHandler.cs" />
+    <Compile Include="WebServices\GetLoanStatusPreviewCompletedEventArgs.cs" />
+    <Compile Include="WebServices\UploadAttachmentCompletedEventHandler.cs" />
+    <Compile Include="WebServices\ProcessRequestCompletedEventHandler.cs" />
+    <Compile Include="WebServices\GetDisclosureTrackingDetailsCompletedEventHandler.cs" />
+    <Compile Include="WebServices\GetDisclosureTrackingDetailsCompletedEventArgs.cs" />
+    <Compile Include="WebServices\GetLoanDisclosureTrackingDetailsCompletedEventHand.cs" />
+    <Compile Include="WebServices\GetLoanDisclosureTrackingDetailsCompletedEventArgs.cs" />
+    <Compile Include="WebServices\ProcessRequestDocuSignCompletedEventHandler.cs" />
+    <Compile Include="WebServices\ProcessRequestDocuSignCompletedEventArgs.cs" />
+    <Compile Include="WebServices\VerifyLoanExistsCompletedEventHandler.cs" />
+    <Compile Include="WebServices\VerifyLoanExistsCompletedEventArgs.cs" />
+    <Compile Include="WebServices\GetOAPIAccessTokenCompletedEventHandler.cs" />
+    <Compile Include="WebServices\GetOAPIAccessTokenCompletedEventArgs.cs" />
+    <Compile Include="WebServices\IDRCredentials.cs" />
+    <Compile Include="WebServices\FormIdentity.cs" />
+    <Compile Include="WebServices\InboxCredentials.cs" />
+    <Compile Include="WebServices\PageIdentity.cs" />
+    <Compile Include="WebServices\InboxFile.cs" />
+    <Compile Include="eFolder\CreateDisclosureEntryDialog.cs" />
+    <Compile Include="eFolder\Configuration.cs" />
+    <Compile Include="eFolder\HideeFolderWarningMessageForm.cs" />
+    <Compile Include="eFolder\EmailManager.cs" />
+    <Compile Include="eFolder\eFolderManager.cs" />
+    <Compile Include="eFolder\eFolderDialog.cs" />
+    <Compile Include="eFolder\Transaction.cs" />
+    <Compile Include="eFolder\WebServices\ArchiveService.cs" />
+    <Compile Include="eFolder\WebServices\ArchiveServiceWse.cs" />
+    <Compile Include="eFolder\Files\AddCloudAttachmentDialog.cs" />
+    <Compile Include="eFolder\Files\AddImageAttachmentDialog.cs" />
+    <Compile Include="eFolder\Files\AnnotateFileDialog.cs" />
+    <Compile Include="eFolder\Files\AttachFilesDialog.cs" />
+    <Compile Include="eFolder\Files\AutoAssignFilesDialog.cs" />
+    <Compile Include="eFolder\Files\EditFileDialog.cs" />
+    <Compile Include="eFolder\Files\IdentifyFilesDialog.cs" />
+    <Compile Include="eFolder\Files\PasswordDialog.cs" />
+    <Compile Include="eFolder\Files\SplitUnassignedFileDialog.cs" />
+    <Compile Include="eFolder\Files\SuggestTrainingDialog.cs" />
+    <Compile Include="eFolder\Files\TextAnnotationDialog.cs" />
+    <Compile Include="eFolder\Files\PageViewerControl.cs" />
+    <Compile Include="eFolder\Files\SplitAssignedFileDialog.cs" />
+    <Compile Include="eFolder\Files\AttachFormsDialog.cs" />
+    <Compile Include="eFolder\Files\ScanFileDialog.cs" />
+    <Compile Include="eFolder\Files\AllFilesDialog.cs" />
+    <Compile Include="eFolder\Files\AssignFilesDialog.cs" />
+    <Compile Include="eFolder\WcfExtensions\SsoBehaviorExtensionElement.cs" />
+    <Compile Include="eFolder\WcfExtensions\SsoTokenEndpointBehavior.cs" />
+    <Compile Include="eFolder\Viewers\CloudAttachmentViewerControl.cs" />
+    <Compile Include="eFolder\Viewers\AttachmentView.cs" />
+    <Compile Include="eFolder\Viewers\DeleteAttachmentWarningDialog.cs" />
+    <Compile Include="eFolder\Viewers\FileAttachmentViewerControl.cs" />
+    <Compile Include="eFolder\Viewers\ImageAttachmentViewerControl.cs" />
+    <Compile Include="eFolder\Viewers\ImageMouseEventHandler.cs" />
+    <Compile Include="eFolder\Viewers\ImageMouseEventArgs.cs" />
+    <Compile Include="eFolder\Viewers\ImageViewerControl.cs" />
+    <Compile Include="eFolder\Viewers\CallBackHandler.cs" />
+    <Compile Include="eFolder\Viewers\MsgHook.cs" />
+    <Compile Include="eFolder\Viewers\NativeAttachmentViewerControl.cs" />
+    <Compile Include="eFolder\Viewers\PageAnnotationDialog.cs" />
+    <Compile Include="eFolder\Viewers\PageAnnotationListControl.cs" />
+    <Compile Include="eFolder\Viewers\PageImageListControl.cs" />
+    <Compile Include="eFolder\Viewers\PageThumbnailListControl.cs" />
+    <Compile Include="eFolder\Viewers\ViewerMessage.cs" />
+    <Compile Include="eFolder\Viewers\ViewerMessage2.cs" />
+    <Compile Include="eFolder\Viewers\ViewerMessagePayload.cs" />
+    <Compile Include="eFolder\Viewers\ViewerErrorMessage.cs" />
+    <Compile Include="eFolder\Viewers\DragDropAttachment.cs" />
+    <Compile Include="eFolder\Viewers\url.cs" />
+    <Compile Include="eFolder\Viewers\ViewerResponse.cs" />
+    <Compile Include="eFolder\Viewers\VirtualPageAnnotation.cs" />
+    <Compile Include="eFolder\Viewers\VirtualPageImage.cs" />
+    <Compile Include="eFolder\Utilities\AutoAssignUtils.cs" />
+    <Compile Include="eFolder\UI\eFolderUIHelper.cs" />
+    <Compile Include="eFolder\UI\CommentCollectionControl.cs" />
+    <Compile Include="eFolder\UI\CommentEntryDialog.cs" />
+    <Compile Include="eFolder\ThinThick\ThinThickType.cs" />
+    <Compile Include="eFolder\ThinThick\ThinThickControl.cs" />
+    <Compile Include="eFolder\ThinThick\ThinThickDialog.cs" />
+    <Compile Include="eFolder\EmailNotificationController\Security.cs" />
+    <Compile Include="eFolder\EmailNotificationController\EmailSetting.cs" />
+    <Compile Include="eFolder\EmailNotificationController\FailedEmailSetting.cs" />
+    <Compile Include="eFolder\EmailNotificationController\IEmailNotificationController.cs" />
+    <Compile Include="eFolder\EmailNotificationController\EmailSaveRequest.cs" />
+    <Compile Include="eFolder\EmailNotificationController\EmailSaveResponse.cs" />
+    <Compile Include="eFolder\EmailNotificationController\EmailGetRequest.cs" />
+    <Compile Include="eFolder\EmailNotificationController\EmailGetResponse.cs" />
+    <Compile Include="eFolder\EmailNotificationController\IEmailNotificationControllerChannel.cs" />
+    <Compile Include="eFolder\EmailNotificationController\EmailNotificationControllerClient.cs" />
+    <Compile Include="eFolder\DocClassificationControllerServiceReference\PageClass.cs" />
+    <Compile Include="eFolder\DocClassificationControllerServiceReference\DocumentClass.cs" />
+    <Compile Include="eFolder\DocClassificationControllerServiceReference\PageClassData.cs" />
+    <Compile Include="eFolder\DocClassificationControllerServiceReference\IDocClassificationController.cs" />
+    <Compile Include="eFolder\DocClassificationControllerServiceReference\IDocClassificationControllerChannel.cs" />
+    <Compile Include="eFolder\DocClassificationControllerServiceReference\DocClassificationControllerClient.cs" />
+    <Compile Include="eFolder\ConsentServiceController\Security.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ClientConsentDataSaveRequestClientConsentDataSaveR.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ClientConsentDataSaveResponseClientConsentDataSave.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentClientDataGetRequestConsentClientDataGetReq.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentClientDataGetResponseConsentClientDataGetRe.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentGetHtmlRequestConsentGetHtmlRequestBody.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentGetHtmlResponseConsentGetHtmlResponseBody.cs" />
+    <Compile Include="eFolder\ConsentServiceController\IsConsentRequiredRequestIsConsentRequiredRequestBo.cs" />
+    <Compile Include="eFolder\ConsentServiceController\User.cs" />
+    <Compile Include="eFolder\ConsentServiceController\IsConsentRequiredResponseIsConsentRequiredResponse.cs" />
+    <Compile Include="eFolder\ConsentServiceController\UserConsentDataSaveRequestUserConsentDataSaveReque.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentModelInput.cs" />
+    <Compile Include="eFolder\ConsentServiceController\Client.cs" />
+    <Compile Include="eFolder\ConsentServiceController\UserConsentDataSaveResponseUserConsentDataSaveResp.cs" />
+    <Compile Include="eFolder\ConsentServiceController\UserConsentDataGetRequestUserConsentDataGetRequest.cs" />
+    <Compile Include="eFolder\ConsentServiceController\UserConsentDataGetResponseUserConsentDataGetRespon.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentPDFGetRequestConsentPDFGetRequestBody.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentPdfResponse.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ClientSecurity.cs" />
+    <Compile Include="eFolder\ConsentServiceController\IConsentServiceController.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ClientConsentDataSaveRequest.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ClientConsentDataSaveResponse.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentClientDataGetRequest.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentClientDataGetResponse.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentGetHtmlRequest.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentGetHtmlResponse.cs" />
+    <Compile Include="eFolder\ConsentServiceController\IsConsentRequiredRequest.cs" />
+    <Compile Include="eFolder\ConsentServiceController\IsConsentRequiredResponse.cs" />
+    <Compile Include="eFolder\ConsentServiceController\UserConsentDataSaveRequest.cs" />
+    <Compile Include="eFolder\ConsentServiceController\UserConsentDataSaveResponse.cs" />
+    <Compile Include="eFolder\ConsentServiceController\UserConsentDataGetRequest.cs" />
+    <Compile Include="eFolder\ConsentServiceController\UserConsentDataGetResponse.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentPDFGetRequest.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentPDFGetResponse.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ClientConsentDataSaveRequestVersionMigration.cs" />
+    <Compile Include="eFolder\ConsentServiceController\IConsentServiceControllerChannel.cs" />
+    <Compile Include="eFolder\ConsentServiceController\ConsentServiceControllerClient.cs" />
+    <Compile Include="eFolder\Properties\Settings.cs" />
+    <Compile Include="eFolder\Properties\Resources.cs" />
+    <Compile Include="eFolder\Printing\ImagePrintDialog.cs" />
+    <Compile Include="eFolder\Printing\ImagePrintOptions.cs" />
+    <Compile Include="eFolder\Printing\ImagePrintOptionsDialog.cs" />
+    <Compile Include="eFolder\History\HistoryTrackingControl.cs" />
+    <Compile Include="eFolder\eDelivery\DMOSServiceClient.cs" />
+    <Compile Include="eFolder\eDelivery\GetDMOSRecipientURLRequest.cs" />
+    <Compile Include="eFolder\eDelivery\Party.cs" />
+    <Compile Include="eFolder\eDelivery\LoanEntity.cs" />
+    <Compile Include="eFolder\eDelivery\DMOSContact.cs" />
+    <Compile Include="eFolder\eDelivery\GetDMOSRecipientURLResponse.cs" />
+    <Compile Include="eFolder\eDelivery\PartyResponse.cs" />
+    <Compile Include="eFolder\eDelivery\PhoneType.cs" />
+    <Compile Include="eFolder\eDelivery\GetDMOSAuditTrailResponse.cs" />
+    <Compile Include="eFolder\eDelivery\AuditFile.cs" />
+    <Compile Include="eFolder\eDelivery\AuditFileUrl.cs" />
+    <Compile Include="eFolder\eDelivery\DMOSServiceError.cs" />
+    <Compile Include="eFolder\eDelivery\eDeliveryAttachment.cs" />
+    <Compile Include="eFolder\eDelivery\DocumentAttachment.cs" />
+    <Compile Include="eFolder\eDelivery\SDTAttachment.cs" />
+    <Compile Include="eFolder\eDelivery\SFTAttachment.cs" />
+    <Compile Include="eFolder\eDelivery\eDeliveryClient.cs" />
+    <Compile Include="eFolder\eDelivery\eDeliveryMessageType.cs" />
+    <Compile Include="eFolder\eDelivery\eDeliveryMessage.cs" />
+    <Compile Include="eFolder\eDelivery\Request.cs" />
+    <Compile Include="eFolder\eDelivery\Email.cs" />
+    <Compile Include="eFolder\eDelivery\Fulfillment.cs" />
+    <Compile Include="eFolder\eDelivery\User.cs" />
+    <Compile Include="eFolder\eDelivery\NotViewed.cs" />
+    <Compile Include="eFolder\eDelivery\Recipient.cs" />
+    <Compile Include="eFolder\eDelivery\Document.cs" />
+    <Compile Include="eFolder\eDelivery\Caller.cs" />
+    <Compile Include="eFolder\eDelivery\PackageTask.cs" />
+    <Compile Include="eFolder\eDelivery\EDeliveryRequest.cs" />
+    <Compile Include="eFolder\eDelivery\eDeliveryEntityType.cs" />
+    <Compile Include="eFolder\eDelivery\eDeliveryRecipient.cs" />
+    <Compile Include="eFolder\eDelivery\EBSServiceClient.cs" />
+    <Compile Include="eFolder\eDelivery\ContactDetails.cs" />
+    <Compile Include="eFolder\eDelivery\RecipientDetails.cs" />
+    <Compile Include="eFolder\eDelivery\EBSServiceError.cs" />
+    <Compile Include="eFolder\eDelivery\GetRecipientURLResponse.cs" />
+    <Compile Include="eFolder\eDelivery\Laturl.cs" />
+    <Compile Include="eFolder\eDelivery\GetRecipientURLRequest.cs" />
+    <Compile Include="eFolder\eDelivery\Contact.cs" />
+    <Compile Include="eFolder\eDelivery\sendNotificationRequest.cs" />
+    <Compile Include="eFolder\eDelivery\GetCCSiteInfoResponse.cs" />
+    <Compile Include="eFolder\eDelivery\EmailFromType.cs" />
+    <Compile Include="eFolder\eDelivery\EmailFrom.cs" />
+    <Compile Include="eFolder\eDelivery\EDeliveryServiceClient.cs" />
+    <Compile Include="eFolder\eDelivery\GenerateEnvelopeSignerURLRequest.cs" />
+    <Compile Include="eFolder\eDelivery\GenerateEnvelopeSignerURLResponse.cs" />
+    <Compile Include="eFolder\eDelivery\GeneratesMediaServerURLResponse.cs" />
+    <Compile Include="eFolder\eDelivery\GeneratesMediaServerDownloadURLResponse.cs" />
+    <Compile Include="eFolder\eDelivery\EDeliveryServiceError.cs" />
+    <Compile Include="eFolder\eDelivery\Error.cs" />
+    <Compile Include="eFolder\eDelivery\GetConsenttrackingResponse.cs" />
+    <Compile Include="eFolder\eDelivery\Consenttrackingdetail.cs" />
+    <Compile Include="eFolder\eDelivery\Consentoutput.cs" />
+    <Compile Include="eFolder\eDelivery\PackageDetails.cs" />
+    <Compile Include="eFolder\eDelivery\Createdby.cs" />
+    <Compile Include="eFolder\eDelivery\From.cs" />
+    <Compile Include="eFolder\eDelivery\Custom.cs" />
+    <Compile Include="eFolder\eDelivery\RecipientList.cs" />
+    <Compile Include="eFolder\eDelivery\DocumentCollection.cs" />
+    <Compile Include="eFolder\eDelivery\Taskstatus.cs" />
+    <Compile Include="eFolder\eDelivery\Field.cs" />
+    <Compile Include="eFolder\eDelivery\Taskstatus1.cs" />
+    <Compile Include="eFolder\eDelivery\Document1.cs" />
+    <Compile Include="eFolder\eDelivery\OTPEdeliveryMessage.cs" />
+    <Compile Include="eFolder\eDelivery\OTPRequest.cs" />
+    <Compile Include="eFolder\eDelivery\OTPRecipient.cs" />
+    <Compile Include="eFolder\eDelivery\OTPSendPackageDialog.cs" />
+    <Compile Include="eFolder\eDelivery\RecipientControl.cs" />
+    <Compile Include="eFolder\eDelivery\eDeliveryRetrieveDialog.cs" />
+    <Compile Include="eFolder\eDelivery\SendPackageDialog.cs" />
+    <Compile Include="eFolder\eDelivery\OTPRecipientControl.cs" />
+    <Compile Include="eFolder\eDelivery\OTPEdeliveryClient.cs" />
+    <Compile Include="eFolder\eDelivery\Model\Request.cs" />
+    <Compile Include="eFolder\eDelivery\Model\Email.cs" />
+    <Compile Include="eFolder\eDelivery\Model\Fulfillment.cs" />
+    <Compile Include="eFolder\eDelivery\Model\User.cs" />
+    <Compile Include="eFolder\eDelivery\Model\NotViewed.cs" />
+    <Compile Include="eFolder\eDelivery\Model\Recipient.cs" />
+    <Compile Include="eFolder\eDelivery\Model\Signingpoint.cs" />
+    <Compile Include="eFolder\eDelivery\Model\SignatureFieldType.cs" />
+    <Compile Include="eFolder\eDelivery\Model\SignatureField.cs" />
+    <Compile Include="eFolder\eDelivery\Model\ValidationField.cs" />
+    <Compile Include="eFolder\eDelivery\Model\ConditionalField.cs" />
+    <Compile Include="eFolder\eDelivery\Model\SignatureFieldItem.cs" />
+    <Compile Include="eFolder\eDelivery\Model\SignatureFieldItemType.cs" />
+    <Compile Include="eFolder\eDelivery\Model\Document.cs" />
+    <Compile Include="eFolder\eDelivery\Model\Caller.cs" />
+    <Compile Include="eFolder\eDelivery\MediaServer\MediaFile.cs" />
+    <Compile Include="eFolder\eDelivery\MediaServer\MediaServerClient.cs" />
+    <Compile Include="eFolder\eDelivery\MediaServer\MediaServerError.cs" />
+    <Compile Include="eFolder\eDelivery\MediaServer\MediaServerException.cs" />
+    <Compile Include="eFolder\eDelivery\MediaServer\MediaUploadResult.cs" />
+    <Compile Include="eFolder\eDelivery\MediaServer\MediaUrl.cs" />
+    <Compile Include="eFolder\eDelivery\HelperMethods\DMOSRequestHelper.cs" />
+    <Compile Include="eFolder\eDelivery\HelperMethods\LoggingHelper.cs" />
+    <Compile Include="eFolder\eDelivery\HelperMethods\SendPackageFactory.cs" />
+    <Compile Include="eFolder\eDelivery\ePass\OTPAddFileContactDialog.cs" />
+    <Compile Include="eFolder\eDelivery\ePass\AddFileContactDialog.cs" />
+    <Compile Include="eFolder\eDelivery\ePass\EmailListDialog.cs" />
+    <Compile Include="eFolder\eDelivery\ePass\FileContacts.cs" />
+    <Compile Include="eFolder\eDelivery\ePass\OTPEmailListDailog.cs" />
+    <Compile Include="eFolder\eDelivery\ePass\OTPFileContacts.cs" />
+    <Compile Include="eFolder\LoanCenter\BorrowerPairConsentControlCC.cs" />
+    <Compile Include="eFolder\LoanCenter\ContactConsentControlCC.cs" />
+    <Compile Include="eFolder\LoanCenter\BorrowerPairConsentControl.cs" />
+    <Compile Include="eFolder\LoanCenter\ConsentServiceClient.cs" />
+    <Compile Include="eFolder\LoanCenter\RecipientControlEx.cs" />
+    <Compile Include="eFolder\LoanCenter\DocumentationClassificationClient.cs" />
+    <Compile Include="eFolder\LoanCenter\DocuSignSigningPopupDialog.cs" />
+    <Compile Include="eFolder\LoanCenter\EmailFromType.cs" />
+    <Compile Include="eFolder\LoanCenter\EmailFrom.cs" />
+    <Compile Include="eFolder\LoanCenter\EmailNotificationClient.cs" />
+    <Compile Include="eFolder\LoanCenter\EVaultRetrieveDialog.cs" />
+    <Compile Include="eFolder\LoanCenter\LoanDisplayInfo.cs" />
+    <Compile Include="eFolder\LoanCenter\NboConsentControl.cs" />
+    <Compile Include="eFolder\LoanCenter\NotifyUsersDialog.cs" />
+    <Compile Include="eFolder\LoanCenter\RecipientControl.cs" />
+    <Compile Include="eFolder\LoanCenter\SendConsentRequestDialog.cs" />
+    <Compile Include="eFolder\LoanCenter\SendConsentRequestDialogCC.cs" />
+    <Compile Include="eFolder\LoanCenter\SendRequestDialog.cs" />
+    <Compile Include="eFolder\LoanCenter\DocuSignSigningDialog.cs" />
+    <Compile Include="eFolder\LoanCenter\ESignResult.cs" />
+    <Compile Include="eFolder\LoanCenter\UserSelectionDialog.cs" />
+    <Compile Include="eFolder\LoanCenter\RetrieveDownloadDialog.cs" />
+    <Compile Include="eFolder\LoanCenter\SecondaryUseDialog.cs" />
+    <Compile Include="eFolder\LoanCenter\SendDisclosuresDialog.cs" />
+    <Compile Include="eFolder\LoanCenter\SendMessageDialog.cs" />
+    <Compile Include="eFolder\LoanCenter\LoanCenterEntityType.cs" />
+    <Compile Include="eFolder\LoanCenter\LoanCenterSigner.cs" />
+    <Compile Include="eFolder\LoanCenter\LoanCenterSecurityQuestion.cs" />
+    <Compile Include="eFolder\LoanCenter\LoanCenterAttachment.cs" />
+    <Compile Include="eFolder\LoanCenter\DocumentAttachment.cs" />
+    <Compile Include="eFolder\LoanCenter\SDTAttachment.cs" />
+    <Compile Include="eFolder\LoanCenter\SFTAttachment.cs" />
+    <Compile Include="eFolder\LoanCenter\LoanCenterClient.cs" />
+    <Compile Include="eFolder\LoanCenter\LoanCenterMessageType.cs" />
+    <Compile Include="eFolder\LoanCenter\EncompassContactEmail.cs" />
+    <Compile Include="eFolder\LoanCenter\LoanCenterMessage.cs" />
+    <Compile Include="eFolder\Documents\ArchiveDocumentsDialog.cs" />
+    <Compile Include="eFolder\Documents\CurrentDocumentsManager.cs" />
+    <Compile Include="eFolder\Documents\DocumentExportDialog.cs" />
+    <Compile Include="eFolder\Documents\DocumentSortComparer.cs" />
+    <Compile Include="eFolder\Documents\ImportDocumentFactory.cs" />
+    <Compile Include="eFolder\Documents\LoanDetail.cs" />
+    <Compile Include="eFolder\Documents\PrintDocumentsDialog.cs" />
+    <Compile Include="eFolder\Documents\RequestEpassDialog.cs" />
+    <Compile Include="eFolder\Documents\RetrieveBorrowerDialog.cs" />
+    <Compile Include="eFolder\Documents\RetrieveEpassDialog.cs" />
+    <Compile Include="eFolder\Documents\SaveViewDialog.cs" />
+    <Compile Include="eFolder\Documents\SelectDocumentsDialog.cs" />
+    <Compile Include="eFolder\Documents\SelectSignatureTypeDialog.cs" />
+    <Compile Include="eFolder\Documents\AddDocumentDialog.cs" />
+    <Compile Include="eFolder\Documents\AddRequestDialog.cs" />
+    <Compile Include="eFolder\Documents\AllDocumentsDialog.cs" />
+    <Compile Include="eFolder\Documents\EnhancedConditionTypeComboItem.cs" />
+    <Compile Include="eFolder\Documents\AssignDocumentsDialog.cs" />
+    <Compile Include="eFolder\Documents\DocumentAccessDialog.cs" />
+    <Compile Include="eFolder\Documents\DocumentSetsDialog.cs" />
+    <Compile Include="eFolder\Documents\RequestBorrowerDialog.cs" />
+    <Compile Include="eFolder\Documents\RetrieveConflictDialog.cs" />
+    <Compile Include="eFolder\Documents\DocumentTrackingControl.cs" />
+    <Compile Include="eFolder\Documents\RequestConflictDialog.cs" />
+    <Compile Include="eFolder\Documents\DocumentDetailsDialog.cs" />
+    <Compile Include="eFolder\Conditions\AddPostClosingDialog.cs" />
+    <Compile Include="eFolder\Conditions\AddPreliminaryDialog.cs" />
+    <Compile Include="eFolder\Conditions\AddUnderwritingDialog.cs" />
+    <Compile Include="eFolder\Conditions\AssignConditionsDialog.cs" />
+    <Compile Include="eFolder\Conditions\AutomatedConditionDialog.cs" />
+    <Compile Include="eFolder\Conditions\ConditionSetsDialog.cs" />
+    <Compile Include="eFolder\Conditions\ConditionTrackingControl.cs" />
+    <Compile Include="eFolder\Conditions\AddSellDialog.cs" />
+    <Compile Include="eFolder\Conditions\ConditionDeliveryStatusFactory.cs" />
+    <Compile Include="eFolder\Conditions\LoanDetailWithLock.cs" />
+    <Compile Include="eFolder\Conditions\DeliverConditionResponseFactory.cs" />
+    <Compile Include="eFolder\Conditions\ImportConditionFactory.cs" />
+    <Compile Include="eFolder\Conditions\LoanDetail.cs" />
+    <Compile Include="eFolder\Conditions\FormDimension.cs" />
+    <Compile Include="eFolder\Conditions\SellDetailsDialog.cs" />
+    <Compile Include="eFolder\Conditions\DescriptionDetailsDialog.cs" />
+    <Compile Include="eFolder\Conditions\ImportPreliminaryDialog.cs" />
+    <Compile Include="eFolder\Conditions\ImportUnderwritingDialog.cs" />
+    <Compile Include="eFolder\Conditions\PostClosingDetailsDialog.cs" />
+    <Compile Include="eFolder\Conditions\PrintConditionsDialog.cs" />
+    <Compile Include="eFolder\Conditions\UnderwritingDetailsDialog.cs" />
+    <Compile Include="eFolder\Conditions\UserSelectionDialog.cs" />
+    <Compile Include="eFolder\Conditions\AddBlankEnhancedConditionDialog.cs" />
+    <Compile Include="eFolder\Conditions\AddEnhancedConditionsDialog.cs" />
+    <Compile Include="eFolder\Conditions\SelectDuplicateAutomatedEnhancedConditonDialog.cs" />
+    <Compile Include="eFolder\Conditions\AddEnhancedConditionsFromListDialog.cs" />
+    <Compile Include="eFolder\Conditions\EnhancedConditionSetsDialog.cs" />
+    <Compile Include="eFolder\Conditions\EnhancedConditionsTrackingControl.cs" />
+    <Compile Include="eFolder\Conditions\EnhancedDetailsDialog.cs" />
+    <Compile Include="eFolder\Conditions\TrackingOwnersDialog.cs" />
+    <Compile Include="eFolder\Conditions\PreliminaryDetailsDialog.cs" />
+    <Compile Include="CoolPrintPreview\ZoomMode.cs" />
+    <Compile Include="CoolPrintPreview\CoolPrintPreviewControl.cs" />
+    <Compile Include="CoolPrintPreview\PageImageList.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="eFolder\Conditions\AddBlankEnhancedConditionDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\AddEnhancedConditionsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\AddEnhancedConditionsFromListDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\AddPostClosingDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\AddPreliminaryDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\AddSellDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\AddUnderwritingDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\AssignConditionsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\AutomatedConditionDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\ConditionSetsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\ConditionTrackingControl.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\DescriptionDetailsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\EnhancedConditionSetsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\EnhancedConditionsTrackingControl.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\EnhancedDetailsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\ImportPreliminaryDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\ImportUnderwritingDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\PostClosingDetailsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\PreliminaryDetailsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\PrintConditionsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\SelectDuplicateAutomatedEnhancedConditonDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\SellDetailsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\TrackingOwnersDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\UnderwritingDetailsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Conditions\UserSelectionDialog.resx" />
+    <EmbeddedResource Include="eFolder\CreateDisclosureEntryDialog.resx" />
+    <EmbeddedResource Include="eFolder\dll.licenses" />
+    <EmbeddedResource Include="eFolder\Documents\AddDocumentDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\AddRequestDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\AllDocumentsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\ArchiveDocumentsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\AssignDocumentsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\DocumentAccessDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\DocumentDetailsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\DocumentExportDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\DocumentSetsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\DocumentTrackingControl.resx" />
+    <EmbeddedResource Include="eFolder\Documents\PrintDocumentsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\RequestBorrowerDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\RequestConflictDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\RequestEpassDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\RetrieveBorrowerDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\RetrieveConflictDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\RetrieveEpassDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\SaveViewDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\SelectDocumentsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Documents\SelectSignatureTypeDialog.resx" />
+    <EmbeddedResource Include="eFolder\eDelivery\eDeliveryClient.resx" />
+    <EmbeddedResource Include="eFolder\eDelivery\eDeliveryRetrieveDialog.resx" />
+    <EmbeddedResource Include="eFolder\eDelivery\ePass\EmailListDialog.resx" />
+    <EmbeddedResource Include="eFolder\eDelivery\ePass\OTPAddFileContactDialog.resx" />
+    <EmbeddedResource Include="eFolder\eDelivery\OTPRecipientControl.resx" />
+    <EmbeddedResource Include="eFolder\eDelivery\RecipientControl.resx" />
+    <EmbeddedResource Include="eFolder\eDelivery\SendPackageDialog.resx" />
+    <EmbeddedResource Include="eFolder\eFolderDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\AddCloudAttachmentDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\AddImageAttachmentDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\AllFilesDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\AnnotateFileDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\AssignFilesDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\AttachFilesDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\AttachFormsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\AutoAssignFilesDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\EditFileDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\IdentifyFilesDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\PageViewerControl.resx" />
+    <EmbeddedResource Include="eFolder\Files\PasswordDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\ScanFileDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\SplitAssignedFileDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\SplitUnassignedFileDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\SuggestTrainingDialog.resx" />
+    <EmbeddedResource Include="eFolder\Files\TextAnnotationDialog.resx" />
+    <EmbeddedResource Include="eFolder\HideeFolderWarningMessageForm.resx" />
+    <EmbeddedResource Include="eFolder\History\HistoryTrackingControl.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\BorrowerPairConsentControl.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\BorrowerPairConsentControlCC.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\DocumentationClassificationClient.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\DocuSignSigningDialog.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\DocuSignSigningPopupDialog.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\EVaultRetrieveDialog.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\LoanCenterClient.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\NboConsentControl.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\NotifyUsersDialog.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\RecipientControl.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\RetrieveDownloadDialog.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\SecondaryUseDialog.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\SendConsentRequestDialog.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\SendConsentRequestDialogCC.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\SendDisclosuresDialog.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\SendMessageDialog.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\SendRequestDialog.resx" />
+    <EmbeddedResource Include="eFolder\LoanCenter\UserSelectionDialog.resx" />
+    <EmbeddedResource Include="eFolder\Printing\ImagePrintDialog.resx" />
+    <EmbeddedResource Include="eFolder\Printing\ImagePrintOptionsDialog.resx" />
+    <EmbeddedResource Include="eFolder\Properties\Resources.resx" />
+    <EmbeddedResource Include="eFolder\ThinThick\ThinThickControl.resx" />
+    <EmbeddedResource Include="eFolder\ThinThick\ThinThickDialog.resx" />
+    <EmbeddedResource Include="eFolder\UI\CommentCollectionControl.resx" />
+    <EmbeddedResource Include="eFolder\UI\CommentEntryDialog.resx" />
+    <EmbeddedResource Include="eFolder\Viewers\CloudAttachmentViewerControl.resx" />
+    <EmbeddedResource Include="eFolder\Viewers\DeleteAttachmentWarningDialog.resx" />
+    <EmbeddedResource Include="eFolder\Viewers\FileAttachmentViewerControl.resx" />
+    <EmbeddedResource Include="eFolder\Viewers\ImageAttachmentViewerControl.resx" />
+    <EmbeddedResource Include="eFolder\Viewers\ImageViewerControl.resx" />
+    <EmbeddedResource Include="eFolder\Viewers\NativeAttachmentViewerControl.resx" />
+    <EmbeddedResource Include="eFolder\Viewers\PageAnnotationDialog.resx" />
+    <EmbeddedResource Include="eFolder\Viewers\PageAnnotationListControl.resx" />
+    <EmbeddedResource Include="eFolder\Viewers\PageImageListControl.resx" />
+    <EmbeddedResource Include="eFolder\Viewers\PageThumbnailListControl.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="LockRequestBorrower" table="ElliLockRequestBorrower" dynamic-update="true">
+    <id name="Id" column="ElliLockRequestBorrowerId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="RateLock" column="ElliRateLockId" />
+    <property name="LrbIndex" not-null="true" />
+    <property name="FirstName" />
+    <property name="LastName" />
+    <property name="SSN" />
+    <property name="EquifaxScore" />
+    <property name="ExperianScore" />
+    <property name="TransUnionScore" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.SQE.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB8DB3BB-E72E-4959-8A15-6C5EC479E642}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Elli.SQE</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Elli.SQE</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Common">
+      <HintPath>lib\Elli.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CanonicalPath.cs" />
+    <Compile Include="DotNetCoreTypeExtensions.cs" />
+    <Compile Include="EncompassFieldExtensions.cs" />
+    <Compile Include="ObjectExtensions.cs" />
+    <Compile Include="SharedTypeExtensions.cs" />
+    <Compile Include="HierarchyLevel.cs" />
+    <Compile Include="IBuilder`2.cs" />
+    <Compile Include="ICanonicalFragmentFormatter.cs" />
+    <Compile Include="IDef.cs" />
+    <Compile Include="IDefConverter`1.cs" />
+    <Compile Include="IQueryableFieldCriterionPlus.cs" />
+    <Compile Include="IQueryableFieldSourceBuilder.cs" />
+    <Compile Include="IVisitable`1.cs" />
+    <Compile Include="IVisitor`1.cs" />
+    <Compile Include="NoopQueryableFieldCriterionPlus.cs" />
+    <Compile Include="QueryableField.cs" />
+    <Compile Include="QueryableFieldCriterionDef.cs" />
+    <Compile Include="QueryableFieldCriterionDefConverter.cs" />
+    <Compile Include="QueryableFieldSource.cs" />
+    <Compile Include="QueryDsl\IQueryableFieldCastClause.cs" />
+    <Compile Include="QueryDsl\IQueryCriterionVisitor.cs" />
+    <Compile Include="QueryDsl\NoopQueryCriterionVisitor.cs" />
+    <Compile Include="QueryDsl\QueryCriterionExtensions.cs" />
+    <Compile Include="QueryDsl\QueryCriterionVisitable.cs" />
+    <Compile Include="Mapping\IMappingConvention.cs" />
+    <Compile Include="Mapping\IMappingConvention`1.cs" />
+    <Compile Include="Mapping\IModelHierachyVisitor`1.cs" />
+    <Compile Include="Mapping\IModelHierarchy`1.cs" />
+    <Compile Include="Mapping\IModelCollectionHierarchy`1.cs" />
+    <Compile Include="Mapping\IModelEntityHierarchy`1.cs" />
+    <Compile Include="Mapping\IModelPropertyHierarchy`1.cs" />
+    <Compile Include="Mapping\IModelHierarchyMapper`1.cs" />
+    <Compile Include="Mapping\ModelHierarchy`1.cs" />
+    <Compile Include="Mapping\ModelHierarchyExtensions.cs" />
+    <Compile Include="Mapping\ModelHierarchyVisitable`2.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

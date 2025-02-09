@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Miscellaneous" table="ElliMiscellaneous" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="DataTracLoanId" />
+    <property name="ParticipateHomePoints" />
+    <property name="FloodInsuranceExcluded" />
+    <property name="Line1006Excluded" />
+    <property name="Line1007Excluded" />
+    <property name="Line1008Excluded" />
+    <property name="Line1010Excluded" />
+    <property name="OtherPresentHousingExpense" />
+    <property name="SchoolTaxExcluded" />
+    <property name="UseGfeTax" />
+    <property name="UseRegZMi" />
+    <property name="HousingExpenseIntRate1" />
+    <property name="HousingExpenseLoanAmt1" />
+    <property name="HousingExpensePayment1" />
+    <property name="HousingExpenseTerm1" />
+    <property name="HousingExpenseIntRate2" />
+    <property name="HousingExpenseLoanAmt2" />
+    <property name="HousingExpensePayment2" />
+    <property name="HousingExpenseTerm2" />
+    <property name="PointsPaid" />
+    <property name="RefundOrOverpaidInterest" />
+    <property name="TaxId" />
+    <property name="TotalBox4" />
+    <property name="TotalYearlyMi" />
+    <property name="BorrowerDescription1" />
+    <property name="BorrowerDescription2" />
+    <property name="BorrowerDescription3" />
+    <property name="FactorForRevolvingDebt" />
+    <property name="MonthsToExclude" />
+    <property name="MaventAutoOrderIndicator" />
+    <property name="MaventCraxResult" type="StringClob" />
+    <property name="MaventEnterpriseResult" type="StringClob" />
+    <property name="MaventGseResult" type="StringClob" />
+    <property name="MaventHighCostResult" type="StringClob" />
+    <property name="MaventHmdaResult" type="StringClob" />
+    <property name="MaventHpmlResult" type="StringClob" />
+    <property name="MaventLicenseResult" type="StringClob" />
+    <property name="MaventOfacResult" type="StringClob" />
+    <property name="MaventOrderedBy" />
+    <property name="MaventOrderedDate" />
+    <property name="MaventOtherResult" type="StringClob" />
+    <property name="MaventReviewResult" type="StringClob" />
+    <property name="MaventStateResult" type="StringClob" />
+    <property name="MaventTilaRorResult" type="StringClob" />
+    <property name="MaventTilaToleranceResult" type="StringClob" />
+    <property name="OptimalBlueHistoryData" type="StringClob" />
+    <property name="OptimalBlueRequest" type="StringClob" />
+    <property name="OptimalBlueResponse" type="StringClob" />
+    <property name="PartnerEmail" />
+    <property name="PartnerName" />
+    <property name="PartnerPhone" />
+    <property name="StatusUrl" />
+    <property name="SubmitDate" />
+    <property name="RateRegistrationExpirationDate" />
+    <property name="RateRegistrationInvestorName" />
+    <property name="RateRegistrationLoanIsRegistered" />
+    <property name="RateRegistrationReference" />
+    <property name="RateRegistrationRegisteredBy" />
+    <property name="RateRegistrationRegisteredUserId" />
+    <property name="RateRegistrationRegistrationDate" />
+    <property name="ClosingCostProgramFile" type="StringClob" />
+    <property name="DocSetFile" type="StringClob" />
+    <property name="FormListFile" type="StringClob" />
+    <property name="LoanProgramFile" type="StringClob" />
+    <property name="LoanTemplateFile" type="StringClob" />
+    <property name="MiscDataFile" type="StringClob" />
+    <property name="BorrowerDescription4" />
+    <property name="BorrowerDescription5" />
+    <property name="ClosingTaxYear" />
+    <property name="ClosingTaxYearInterestReceived" />
+    <property name="SubTaxYear" />
+    <property name="SubTaxYearInterestReceived" />
+    <property name="SubTaxYearPointsPaid" />
+    <property name="SubTaxYearRefundOrOverpaidInterest" />
+    <property name="MaventNmlsResult" type="StringClob" />
+    <property name="MaventATRQMResult" type="StringClob" />
+    <property name="MIPremiums" />
+    <property name="SubTaxYearMIPremiums" />
+    <property name="FannieEcAutoOrderIndicator" />
+    <property name="FannieDuAutoOrderIndicator" />
+    <property name="OutstandingMtgPrincipal" />
+    <property name="OutstandingMtgPrincipalDate" />
+    <property name="Address" />
+    <property name="City" />
+    <property name="State" />
+    <property name="Zip" />
+    <property name="BorrowerDescription6" />
+    <property name="BorrowerDescription7" />
+    <property name="IsSameAddresswithPayer" />
+    <property name="CopyFromSubjectProperty" />
+    <property name="FreddieLPAAutoOrderIndicator" />
+    <property name="FreddieLQAAutoOrderIndicator" />
+    <property name="ContactName" />
+    <property name="ContactTitle" />
+    <property name="ContactPhone" />
+    <property name="ContactFax" />
+    <property name="PrintStateLicenseOn1003" />
+    <property name="LoanFileSequenceNumber" />
+    <property name="ComplianceVersion_CD3_X1505" />
+    <property name="SavedLogVersion" />
+    <property name="TPOConnectStatusUpdated" />
+    <property name="AllRoles" />
+    <property name="AllUserInfo" />
+    <property name="LenderFeeQuoteID" />
+    <property name="PartnerFeeQuoteID" />
+    <property name="LastFeeImportDate" />
+    <property name="UseOldBuydownUIandLogic" />
+    <property name="NewBuydownEnabled" />
+    <property name="FannieEcUcdpLastSubmissionDateTime" />
+    <property name="FannieEcDocumentFileId" />
+    <property name="FannieEcAppraisalValue" />
+    <property name="FannieEcDuUnderwritingRecommendationCode" />
+    <property name="FannieEcDuLatestSubmissionDateTime" />
+    <property name="FannieEcDuLatestSubmissionNumber" />
+    <property name="FannieEcDuCaseFileId" />
+    <property name="EarlyCheckUcdPassFail" />   
+    <property name="AveragePercentageRate" />
+    <property name="FinanceChargeAmount" />
+    <property name="FederalTotalLoanAmount" />
+    <property name="StateTotalLoanAmount" />
+    <property name="QmPointsAndFeesTotal" />
+    <property name="AbilityToRepayLoanType" />
+    <property name="QualifiedMortgageLoanType" />
+    <property name="QualifiedMortgageEligible" />
+    <property name="HigherPricedCoveredTrans" />
+    <property name="LoanTermAndFeatures" />
+    <property name="QmPointsAndFeesLimit" />
+    <property name="UnderwritingFactors" />
+    <property name="QmPriceBasedLimit" />
+    <property name="ReviewId" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="OtherLiability" table="ElliOtherLiability" dynamic-update="true">
+    <id name="Id" column="ElliOtherLiabilityId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Application" column="ElliApplicationId" />
+    <property name="OtherLiabilityIndex" not-null="true" />
+    <property name="BorrowerType" />
+    <property name="LiabilityOrExpenseType" />
+    <property name="MonthlyPayment" />
+    <property name="Balance" />
+    <property name="MonthsLeft" />
+    <property name="CreditLimit" />
+    <property name="OtherDescription" />
+    <property name="AltId" />
+    
+    <property name="HolderName" />
+    <property name="Attention" />
+    <property name="HolderAddressStreetLine1" />
+    <property name="HolderAddressCity" />
+    <property name="HolderAddressState" />
+    <property name="HolderAddressPostalCode" />
+    <property name="HolderPhone" />
+    <property name="HolderFax" />
+    <property name="HolderEmail" />
+    <property name="Title" />
+    <property name="PrintUserNameIndicator" />
+    <property name="TitlePhone" />
+    <property name="TitleFax" />
+    <property name="DepositoryRequestDate" />
+    <property name="PrintAttachmentIndicator" />
+    <property name="PrintUserJobTitleIndicator" />
+    <property name="Country" />
+    <property name="ForeignAddressIndicator" />
+  </class>
+</hibernate-mapping>

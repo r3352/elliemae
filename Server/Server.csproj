@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B42363D7-94D6-4283-A5C2-37FF7EA15DDF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.5.1.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EllieMae.EMLite.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Client">
+      <HintPath>lib\Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Confluent.Kafka">
+      <HintPath>lib\Confluent.Kafka.dll</HintPath>
+    </Reference>
+    <Reference Include="DataAccess">
+      <HintPath>lib\DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Common">
+      <HintPath>lib\Elli.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.DirectoryServices.Contracts">
+      <HintPath>lib\Elli.DirectoryServices.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.DirectoryServices.Proxies">
+      <HintPath>lib\Elli.DirectoryServices.Proxies.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Domain">
+      <HintPath>lib\Elli.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.ElliEnum">
+      <HintPath>lib\Elli.ElliEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Identity">
+      <HintPath>lib\Elli.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Interface">
+      <HintPath>lib\Elli.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Log">
+      <HintPath>lib\Elli.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.MessageQueues">
+      <HintPath>lib\Elli.MessageQueues.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Metrics">
+      <HintPath>lib\Elli.Metrics.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.SQE">
+      <HintPath>lib\Elli.SQE.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.SQE.DD">
+      <HintPath>lib\Elli.SQE.DD.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.SQE.IO.PGSQL">
+      <HintPath>lib\Elli.SQE.IO.PGSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Service">
+      <HintPath>lib\Elli.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Service.Common">
+      <HintPath>lib\Elli.Service.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Encompass.Diagnostics">
+      <HintPath>lib\Encompass.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Encompass.Security">
+      <HintPath>lib\Encompass.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Hazelcast.Net">
+      <HintPath>lib\Hazelcast.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Jed">
+      <HintPath>lib\Jed.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>lib\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel">
+      <HintPath>lib\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>lib\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly">
+      <HintPath>lib\Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp">
+      <HintPath>lib\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportingDbUtils">
+      <HintPath>lib\ReportingDbUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceInterface">
+      <HintPath>lib\ServiceInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>lib\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="VersionInterface15">
+      <HintPath>lib\VersionInterface15.dll</HintPath>
+    </Reference>
+    <Reference Include="com.elliemae.services.eventbus.models">
+      <HintPath>lib\com.elliemae.services.eventbus.models.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PurchaseConditionTemplateList.cs" />
+    <Compile Include="ClientContextLogFactories.cs" />
+    <Compile Include="ClassicLogFactory.cs" />
+    <Compile Include="GlobalLogConfigChangeHandler.cs" />
+    <Compile Include="InstanceLogConfigChangeHandler.cs" />
+    <Compile Include="ServerDiagConfigData.cs" />
+    <Compile Include="ServerScopeProvider.cs" />
+    <Compile Include="IHealthCheckCacheStore.cs" />
+    <Compile Include="ContextTraceLog.cs" />
+    <Compile Include="TraceLog.cs" />
+    <Compile Include="AMILimitStore.cs" />
+    <Compile Include="ConventionalCountyLimitStore.cs" />
+    <Compile Include="FedTresholdAdjustmentStore.cs" />
+    <Compile Include="LoanVersionDetailsDbAccessor.cs" />
+    <Compile Include="ClientContextEncryptor.cs" />
+    <Compile Include="InstanceEncryptor.cs" />
+    <Compile Include="PgDbQueryBuilder.cs" />
+    <Compile Include="ServerInstanceConfigMonitor.cs" />
+    <Compile Include="ConfigurableKeyDatesDbAccessor.cs" />
+    <Compile Include="ConfigurableWorkFlowDBAccess.cs" />
+    <Compile Include="BidTapeTemplateAccessor.cs" />
+    <Compile Include="AttachmentDataAccessorFactory.cs" />
+    <Compile Include="DataAccessorFactoryBase.cs" />
+    <Compile Include="FileInfoDbAccessor.cs" />
+    <Compile Include="LoanPropertySettingsAccessor.cs" />
+    <Compile Include="LoanQueryEngine.cs" />
+    <Compile Include="MFILimitStore.cs" />
+    <Compile Include="PersistentClientCacheFeature.cs" />
+    <Compile Include="TPOCompanyContactsAccessor.cs" />
+    <Compile Include="LoanSnapshotProvider.cs" />
+    <Compile Include="DashboardAccessor.cs" />
+    <Compile Include="DbContextUtil.cs" />
+    <Compile Include="ILoanDataAccessor.cs" />
+    <Compile Include="LoanAccessor.cs" />
+    <Compile Include="LoanDataAccessorFactory.cs" />
+    <Compile Include="LoanMortgageDataAccessorWrapper.cs" />
+    <Compile Include="PurchaseConditionTemplateListAccessor.cs" />
+    <Compile Include="RegistryConfigurationProvider.cs" />
+    <Compile Include="S2SSession.cs" />
+    <Compile Include="DbAccessManager.cs" />
+    <Compile Include="DbQueryBuilder.cs" />
+    <Compile Include="IInstanceConfigurationProvider.cs" />
+    <Compile Include="ClientCache.cs" />
+    <Compile Include="CacheAction.cs" />
+    <Compile Include="ClientContext.cs" />
+    <Compile Include="ContextContainer.cs" />
+    <Compile Include="EncompassServerMode.cs" />
+    <Compile Include="ServerEventHandler.cs" />
+    <Compile Include="EventLogID.cs" />
+    <Compile Include="HazelCastCacheStore.cs" />
+    <Compile Include="QueuedInstance.cs" />
+    <Compile Include="HazelcastConnection.cs" />
+    <Compile Include="HazelcastConnectionPool.cs" />
+    <Compile Include="InProcCacheStore.cs" />
+    <Compile Include="ReportFieldCache.cs" />
+    <Compile Include="MutexAccess.cs" />
+    <Compile Include="LockStatus.cs" />
+    <Compile Include="LockEventLog.cs" />
+    <Compile Include="SafeMutex.cs" />
+    <Compile Include="LockTracer.cs" />
+    <Compile Include="ServerGlobals.cs" />
+    <Compile Include="ServerSettings.cs" />
+    <Compile Include="InstanceConfiguration.cs" />
+    <Compile Include="XmlConfigurationProvider.cs" />
+    <Compile Include="XML.cs" />
+    <Compile Include="AclChangeCircumstanceAccessor.cs" />
+    <Compile Include="AclGroupAccessor.cs" />
+    <Compile Include="AclGroupBizGroupAccessor.cs" />
+    <Compile Include="AclGroupContactAccessor.cs" />
+    <Compile Include="AclGroupFileAccessor.cs" />
+    <Compile Include="AclGroupLoanAccessor.cs" />
+    <Compile Include="AclGroupRoleAccessor.cs" />
+    <Compile Include="AclGroupStdPrintFormAccessor.cs" />
+    <Compile Include="AlertConfigAccessor.cs" />
+    <Compile Include="AuditTrailAccessor.cs" />
+    <Compile Include="BizPartnerContact.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="BizPartnerCustomFields.cs" />
+    <Compile Include="BizPartnerQueryStore.cs" />
+    <Compile Include="BorrowerContact.cs" />
+    <Compile Include="BorrowerCustomFields.cs" />
+    <Compile Include="BorrowerQueryStore.cs" />
+    <Compile Include="BorrowerStatusStore.cs" />
+    <Compile Include="PrintSelectionXrefStore.cs" />
+    <Compile Include="BusinessCalendarAccessor.cs" />
+    <Compile Include="CalendarSO.cs" />
+    <Compile Include="CampaignProvider.cs" />
+    <Compile Include="CCSiteInfoAccessor.cs" />
+    <Compile Include="ClientIPManager.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="ContactAccessor.cs" />
+    <Compile Include="CSDBAccessor.cs" />
+    <Compile Include="ConcurrentUpdateManager.cs" />
+    <Compile Include="ConcurrentUpdateXmlHelper.cs" />
+    <Compile Include="EventQueueCounters.cs" />
+    <Compile Include="LoanAlertAccessor.cs" />
+    <Compile Include="DraftLoanFolder.cs" />
+    <Compile Include="GseCommitments.cs" />
+    <Compile Include="DraftLoanServerInfo.cs" />
+    <Compile Include="LoanLogSnapshotStore.cs" />
+    <Compile Include="LoanSummaryExtensions.cs" />
+    <Compile Include="CorrespondentMasters.cs" />
+    <Compile Include="CorrespondentTrades.cs" />
+    <Compile Include="CustomCodeContextDataProvider.cs" />
+    <Compile Include="CustomFormDetailsAccessor.cs" />
+    <Compile Include="DisclosureFormAccessor.cs" />
+    <Compile Include="DocEngineDataAccessor.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="ContactCriterionTranslator.cs" />
+    <Compile Include="ContactGroupProvider.cs" />
+    <Compile Include="ContactLoans.cs" />
+    <Compile Include="ContactReportGenerator.cs" />
+    <Compile Include="ContactStore.cs" />
+    <Compile Include="CountyLimitStore.cs" />
+    <Compile Include="CustomLetterStore.cs" />
+    <Compile Include="Dashboard.cs" />
+    <Compile Include="DataFile.cs" />
+    <Compile Include="EncompassServer.cs" />
+    <Compile Include="EncompassSettings.cs" />
+    <Compile Include="EncompassSystemDbAccessor.cs" />
+    <Compile Include="ePassPwdMmntAccessor.cs" />
+    <Compile Include="ERDBSession.cs" />
+    <Compile Include="EventLogEntryCategory.cs" />
+    <Compile Include="Err.cs" />
+    <Compile Include="EventManager.cs" />
+    <Compile Include="EVerifyLoginInfoStore.cs" />
+    <Compile Include="FileStore.cs" />
+    <Compile Include="FormGroup.cs" />
+    <Compile Include="FormGroups.cs" />
+    <Compile Include="CustomLetterXRef.cs" />
+    <Compile Include="FormsConfiguration.cs" />
+    <Compile Include="HomeCounselingAccessor.cs" />
+    <Compile Include="IMDBAccessor.cs" />
+    <Compile Include="InputForms.cs" />
+    <Compile Include="LicenseManager.cs" />
+    <Compile Include="LicenseRequest.cs" />
+    <Compile Include="Loan.cs" />
+    <Compile Include="LoanBatchUpdateAccessor.cs" />
+    <Compile Include="LoanConfiguration.cs" />
+    <Compile Include="LoanDataFormatter.cs" />
+    <Compile Include="LoanDuplicateAccessor.cs" />
+    <Compile Include="LoanEntry.cs" />
+    <Compile Include="LoanFolder.cs" />
+    <Compile Include="LoanHistoryStore.cs" />
+    <Compile Include="LoanNameFolderGenerator.cs" />
+    <Compile Include="LoanNumberGenerator.cs" />
+    <Compile Include="LoanProgramConfiguration.cs" />
+    <Compile Include="LoanReportCriterionTranslator.cs" />
+    <Compile Include="LoanReportGenerator.cs" />
+    <Compile Include="LoanServerInfo.cs" />
+    <Compile Include="LoanStore.cs" />
+    <Compile Include="HzcLoanLockFactory.cs" />
+    <Compile Include="LoanTemplate.cs" />
+    <Compile Include="LoanTrades.cs" />
+    <Compile Include="LoanXDBStore.cs" />
+    <Compile Include="LockExtensionPriceAdjustmentcessor.cs" />
+    <Compile Include="LockExtPriceAdjustPerOccurrenceAccessor.cs" />
+    <Compile Include="LockSnapshotRecaptureStore.cs" />
+    <Compile Include="LOCompAccessor.cs" />
+    <Compile Include="MbsPools.cs" />
+    <Compile Include="MersNumberGenerator.cs" />
+    <Compile Include="MilestoneTaskAccessor.cs" />
+    <Compile Include="MIQueryStore.cs" />
+    <Compile Include="NotePhrases.cs" />
+    <Compile Include="BorrowerOpportunity.cs" />
+    <Compile Include="Organization.cs" />
+    <Compile Include="OrganizationStore.cs" />
+    <Compile Include="PersonaAccessor.cs" />
+    <Compile Include="Pipeline.cs" />
+    <Compile Include="Plugins.cs" />
+    <Compile Include="PreauthorizedModuleAccessor.cs" />
+    <Compile Include="ProductPricingSettingsAccessor.cs" />
+    <Compile Include="RemotingTracker.cs" />
+    <Compile Include="ReportEngine.cs" />
+    <Compile Include="ReportSettingsFile.cs" />
+    <Compile Include="ReportSettingsStore.cs" />
+    <Compile Include="SchemaAccessor.cs" />
+    <Compile Include="SecondaryRegistrationAccessor.cs" />
+    <Compile Include="SecurityTrades.cs" />
+    <Compile Include="ServerContactSearchUtil.cs" />
+    <Compile Include="SessionManager.cs" />
+    <Compile Include="SettingsReportAccessor.cs" />
+    <Compile Include="SettingsRptXmlHelper.cs" />
+    <Compile Include="ExternalEntityRef.cs" />
+    <Compile Include="SyncConfigurations.cs" />
+    <Compile Include="SyncTemplateAccessor.cs" />
+    <Compile Include="SystemAuditTrailAccessor.cs" />
+    <Compile Include="SystemConfiguration.cs" />
+    <Compile Include="TaskList.cs" />
+    <Compile Include="TemplateIdentity.cs" />
+    <Compile Include="XRefKeyType.cs" />
+    <Compile Include="TemplateSettings.cs" />
+    <Compile Include="TemplateXRef.cs" />
+    <Compile Include="TemplateCacheData.cs" />
+    <Compile Include="TemplateSettingsStore.cs" />
+    <Compile Include="TracingManager.cs" />
+    <Compile Include="MasterContracts.cs" />
+    <Compile Include="TradeAssignmentByTrade.cs" />
+    <Compile Include="TradeAssignments.cs" />
+    <Compile Include="TradeLoanUpdateQueues.cs" />
+    <Compile Include="Trades.cs" />
+    <Compile Include="TradeUtils.cs" />
+    <Compile Include="TrusteeQueryStore.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserEntry.cs" />
+    <Compile Include="UserNotifications.cs" />
+    <Compile Include="UserServerInfo.cs" />
+    <Compile Include="UserStore.cs" />
+    <Compile Include="VersionManagementSettings.cs" />
+    <Compile Include="XmlDataStore.cs" />
+    <Compile Include="ServerStatusMonitor.cs" />
+    <Compile Include="EPassMessages.cs" />
+    <Compile Include="SettingsReportStore.cs" />
+    <Compile Include="SkyDrive\SkyDriveRestClient.cs" />
+    <Compile Include="SkyDrive\GetSkyDriveUrlForGetRequest.cs" />
+    <Compile Include="SkyDrive\SkyDriveFile.cs" />
+    <Compile Include="SkyDrive\GetSkyDriveUrlForPutRequest.cs" />
+    <Compile Include="SkyDrive\GetSkyDriveUrlForMetaRequest.cs" />
+    <Compile Include="SkyDrive\GetSkyDriveFileKeysRequest.cs" />
+    <Compile Include="SkyDrive\SkyDriveFileKey.cs" />
+    <Compile Include="SkyDrive\Meta.cs" />
+    <Compile Include="SkyDrive\Owner.cs" />
+    <Compile Include="SkyDrive\SkyDriveUrlResponse.cs" />
+    <Compile Include="WebServices\EncompassService.cs" />
+    <Compile Include="WebServices\LoanService.cs" />
+    <Compile Include="WebServices\ServiceCredentials.cs" />
+    <Compile Include="WebServices\WebRequestValidator.cs" />
+    <Compile Include="WebServices\SecureAttribute.cs" />
+    <Compile Include="IdentityServices\SecurityTokenRequest.cs" />
+    <Compile Include="IdentityServices\TokenType.cs" />
+    <Compile Include="IdentityServices\SecurityTokenResponse.cs" />
+    <Compile Include="IdentityServices\IssueTokenRequest.cs" />
+    <Compile Include="IdentityServices\ValidateTokenRequest.cs" />
+    <Compile Include="IdentityServices\ValidateTokenResponse.cs" />
+    <Compile Include="IdentityServices\ISecurityTokenService.cs" />
+    <Compile Include="IdentityServices\ISecurityTokenServiceChannel.cs" />
+    <Compile Include="IdentityServices\SecurityTokenServiceClient.cs" />
+    <Compile Include="Cache\CacheException.cs" />
+    <Compile Include="Cache\CacheLock`1.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="ServiceObjects\Repositories\QueueMessageRepository.cs" />
+    <Compile Include="ServiceObjects\Repositories\RepositoryBase.cs" />
+    <Compile Include="ServiceObjects\Repositories\SessionCacheRepository.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\KafkaEventLog.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\KafkaEventsAggregatedLog.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\IKafkaEventHandlerContext.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\SingleUseKafkaEventHandlerContext.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\ScopedKafkaEventHandlerContext.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\KafkaEventHandlerContextFactory.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\KafkaEventResponseHandler.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\KafkaEventLogger.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\KafkaEventMessage.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\KafkaEventPublisherCircuitBreaker.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\KafkaTradeProcessor.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\MessageQueueEventService.cs" />
+    <Compile Include="ServiceObjects\KafkaEvent\KafkaProcessor.cs" />
+    <Compile Include="ServerObjects\LoanExternalFieldsAccessor.cs" />
+    <Compile Include="ServerObjects\DataRowExtensions.cs" />
+    <Compile Include="ServerObjects\AttachmentAccessor.cs" />
+    <Compile Include="ServerObjects\BackgroundActionRunner.cs" />
+    <Compile Include="ServerObjects\IAttachmentAccessor.cs" />
+    <Compile Include="ServerObjects\LoanLockAccessor.cs" />
+    <Compile Include="ServerObjects\PipelineViewXmlToDbMigrationManager.cs" />
+    <Compile Include="ServerObjects\QueueMessageHistoryAccessor.cs" />
+    <Compile Include="ServerObjects\SkyDriveViewer.cs" />
+    <Compile Include="ServerObjects\SpecialFeatureCodeDefinitionAccessor.cs" />
+    <Compile Include="ServerObjects\StageLoanHistoryManager.cs" />
+    <Compile Include="ServerObjects\TitleFeeCredentialsAccessor.cs" />
+    <Compile Include="ServerObjects\TpoAccountExecutiveAccessor.cs" />
+    <Compile Include="ServerObjects\LockComparisonFields.cs" />
+    <Compile Include="ServerObjects\TradeSummaryAccessor.cs" />
+    <Compile Include="ServerObjects\TransactionLog.cs" />
+    <Compile Include="ServerObjects\UserSettingsAccessor.cs" />
+    <Compile Include="ServerObjects\BatchJobsAndItemsAccessor.cs" />
+    <Compile Include="ServerObjects\EPPSLoanProgramsSettingsAccessor.cs" />
+    <Compile Include="ServerObjects\DataStoreStateObject.cs" />
+    <Compile Include="ServerObjects\DraftLoanIdentification.cs" />
+    <Compile Include="ServerObjects\LoanLogSnapshotDataParser.cs" />
+    <Compile Include="ServerObjects\ExternalOrgManagementAccessor.cs" />
+    <Compile Include="ServerObjects\OverNightRateProtection.cs" />
+    <Compile Include="ServerObjects\TableFeeType.cs" />
+    <Compile Include="ServerObjects\SystemConfigurationAccessor.cs" />
+    <Compile Include="ServerObjects\TpoSettingsReportGenerator.cs" />
+    <Compile Include="ServerObjects\TradeReportGenerator.cs" />
+    <Compile Include="ServerObjects\TradeSynchronizationHelper.cs" />
+    <Compile Include="ServerObjects\WelcomeScreenSettingStore.cs" />
+    <Compile Include="ServerObjects\TradeLoanEligibilityAndItemsAccessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\Bootstrapper.cs" />
+    <Compile Include="ServerObjects\Deferrables\Logger.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoggerFactory.cs" />
+    <Compile Include="ServerObjects\Deferrables\PasswordPolicy.cs" />
+    <Compile Include="ServerObjects\Deferrables\PasswordPolicyFactory.cs" />
+    <Compile Include="ServerObjects\Deferrables\DeferrableDataBag`1.cs" />
+    <Compile Include="ServerObjects\Deferrables\DeferrableDynamicProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\DeferrableMessageDeliveryTask.cs" />
+    <Compile Include="ServerObjects\Deferrables\DeferrableMessageDeliveryTaskList.cs" />
+    <Compile Include="ServerObjects\Deferrables\DeferrableShellProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\DeferredProcessException.cs" />
+    <Compile Include="ServerObjects\Deferrables\IDeferrableMessageTaskHandler.cs" />
+    <Compile Include="ServerObjects\Deferrables\MessageQueueException.cs" />
+    <Compile Include="ServerObjects\Deferrables\DeferrableTransactionBase.cs" />
+    <Compile Include="ServerObjects\Deferrables\DeferrableProcessStatus.cs" />
+    <Compile Include="ServerObjects\Deferrables\DeferrableType.cs" />
+    <Compile Include="ServerObjects\Deferrables\IDeferrableTransaction.cs" />
+    <Compile Include="ServerObjects\Deferrables\IDeferrableProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\IDeferrableProcessorFactory`1.cs" />
+    <Compile Include="ServerObjects\Deferrables\CircuitBreakerUtil\CircuitBreakerBase.cs" />
+    <Compile Include="ServerObjects\Deferrables\CircuitBreakerUtil\LoanEventPublisherCircuitBreaker.cs" />
+    <Compile Include="ServerObjects\Deferrables\CircuitBreakerUtil\MetricsCircuitBreakerBase.cs" />
+    <Compile Include="ServerObjects\Deferrables\CircuitBreakerUtil\LoanFileSnapshotCircuitBreaker.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanAppSubmitRuntime\AsyncLoanAppSubmitProcessMessage.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanAppSubmitRuntime\DeferrableLoanAppSubmitOptions.cs" />
+    <Compile Include="ServerObjects\Deferrables\BatchJobRuntime\BatchJobOptions.cs" />
+    <Compile Include="ServerObjects\Deferrables\BatchJobRuntime\BatchJobMessage.cs" />
+    <Compile Include="ServerObjects\Deferrables\BatchJobRuntime\TradeSynchronization\TradeSynchronizationMessage.cs" />
+    <Compile Include="ServerObjects\Deferrables\BatchJobRuntime\TradeSynchronization\TradeSynchronizationMessageDeliveryTaskHandler.cs" />
+    <Compile Include="ServerObjects\Deferrables\MessageNotification\CamelCaseResolver.cs" />
+    <Compile Include="ServerObjects\Deferrables\MessageNotification\MessageNotificationMessage.cs" />
+    <Compile Include="ServerObjects\Deferrables\MessageNotification\MessageNotificationMessageData.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\RealTimeEBSReportingDbProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\ProcessorBase.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\TransactionAwareBase.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\DeferredServiceOrderProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\IServiceOrderProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\RealTimeServiceOrderProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\ServiceOrderProcessorFactory.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\IAlertNotificationProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\AlertNotificationProcessorFactory.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\AsyncProcessMessageDeliveryTaskHandler.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\DeferrableLoanOptions.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\AsyncProcessMessage.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\MessageActionType.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\DeferrableLoanTransactionContext.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\DeferrableManager.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\DeferredAlertNotificationProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\LoanFileSnapshotUtils.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\RealTimeAlertNotificationProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\AuditTrailProcessorFactory.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\CompleteTransactionHandler.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\DeferredAuditTrailProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\DeferredPostProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\IAuditTrailProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\PostProcessorFactory.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\DeferredPreProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\PreProcessorFactory.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\DeferredReportingDbProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\RealTimeAuditTrailProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\RealTimeReportingDbProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\ReportingDbProcessorFactory.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\DeferrableLoanTransaction.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\IPostProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\IPreProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\IReportingDbProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\RealTimePostProcessor.cs" />
+    <Compile Include="ServerObjects\Deferrables\LoanRuntime\RealTimePreProcessor.cs" />
+    <Compile Include="ServerObjects\StatusOnline\LoanStatusCollection.cs" />
+    <Compile Include="ServerObjects\StatusOnline\LoanStatusCollectionStore.cs" />
+    <Compile Include="ServerObjects\StatusOnline\LoanStatusStateEnum.cs" />
+    <Compile Include="ServerObjects\StatusOnline\LoanStatusItem.cs" />
+    <Compile Include="ServerObjects\StatusOnline\LoanStatusSettingsForLoan.cs" />
+    <Compile Include="ServerObjects\StatusOnline\LoanStatusSettingsForLoanStore.cs" />
+    <Compile Include="ServerObjects\StatusOnline\LoanStatusTriggerEnum.cs" />
+    <Compile Include="ServerObjects\StatusOnline\LoanStatusTrigger.cs" />
+    <Compile Include="ServerObjects\StatusOnline\StatusOnlineLoanStore.cs" />
+    <Compile Include="ServerObjects\StatusOnline\StatusOnlineSetupAccessor.cs" />
+    <Compile Include="ServerObjects\StatusOnline\StatusOnlineStore.cs" />
+    <Compile Include="ServerObjects\HtmlEmail\HtmlEmailTemplateCollection.cs" />
+    <Compile Include="ServerObjects\HtmlEmail\HtmlEmailTemplateStore.cs" />
+    <Compile Include="ServerObjects\HtmlEmail\LoanStatusEmailTemplate.cs" />
+    <Compile Include="ServerObjects\HtmlEmail\LoanStatusEmailTemplateStore.cs" />
+    <Compile Include="ServerObjects\HtmlEmail\LoanStatusEmailTemplateCollection.cs" />
+    <Compile Include="ServerObjects\LoanEvent\LoanEventLogger.cs" />
+    <Compile Include="ServerObjects\LoanEvent\QueuedEventMessage.cs" />
+    <Compile Include="ServerObjects\LoanEvent\DisabledPublisher.cs" />
+    <Compile Include="ServerObjects\LoanEvent\ILoanEventPublisher.cs" />
+    <Compile Include="ServerObjects\LoanEvent\LoanEventMessage.cs" />
+    <Compile Include="ServerObjects\LoanEvent\LoanEventType.cs" />
+    <Compile Include="ServerObjects\LoanEvent\LogWriter.cs" />
+    <Compile Include="ServerObjects\PipelineEngine\IPipelineEngine.cs" />
+    <Compile Include="ServerObjects\PipelineEngine\MsPipelineEngine.cs" />
+    <Compile Include="ServerObjects\PipelineEngine\PiplineEngineBase.cs" />
+    <Compile Include="ServerObjects\PipelineEngine\PgPipelineEngine.cs" />
+    <Compile Include="ServerObjects\PipelineEngine\PipelineEngineFactory.cs" />
+    <Compile Include="ServerObjects\PipelineEngine\PipelinePagination.cs" />
+    <Compile Include="ServerObjects\PipelineEngine\PipelineParameters.cs" />
+    <Compile Include="ServerObjects\PipelineEngine\CalculateTotalCountEnum.cs" />
+    <Compile Include="ServerObjects\SearchEngine\SearchFilterMappings.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Utils\SearchFilterUtil.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Exceptions\SearchFilterInvalidOperatorException.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Exceptions\SearchFilterParseException.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Exceptions\SearchFilterInvalidValueException.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Enums\FilterDataType.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Enums\FilterOperator.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Enums\FilterCategory.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Defs\DateTimeDef.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Defs\FilterDef.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Defs\EnumDef.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Defs\NumberDef.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Defs\StringDef.cs" />
+    <Compile Include="ServerObjects\SearchEngine\Defs\SearchFilter.cs" />
+    <Compile Include="ServerObjects\SearchEngine\DBQueryGenerator\NumberQuery.cs" />
+    <Compile Include="ServerObjects\SearchEngine\DBQueryGenerator\FilterQuery.cs" />
+    <Compile Include="ServerObjects\SearchEngine\DBQueryGenerator\QueryGenerator.cs" />
+    <Compile Include="ServerObjects\SearchEngine\DBQueryGenerator\StringQuery.cs" />
+    <Compile Include="ServerObjects\QueryEngine\QueryEngineParameters.cs" />
+    <Compile Include="ServerObjects\DbTableEncryption\Mode.cs" />
+    <Compile Include="ServerObjects\DbTableEncryption\EncryptTable.cs" />
+    <Compile Include="ServerObjects\DbTableEncryption\UserSettingsEncryptionFlag.cs" />
+    <Compile Include="ServerObjects\DbTableEncryption\CompanySettingsFlag.cs" />
+    <Compile Include="ServerObjects\DbTableEncryption\SettingsFlag.cs" />
+    <Compile Include="ServerObjects\DbTableEncryption\EPassCredentialsEncryptionFlag.cs" />
+    <Compile Include="ServerObjects\DbTableEncryption\UserSettingsTableEncryptor.cs" />
+    <Compile Include="ServerObjects\DbTableEncryption\DbTableEncryptor.cs" />
+    <Compile Include="ServerObjects\DbTableEncryption\EPassCredentialSettingsTableEncryptor.cs" />
+    <Compile Include="ServerObjects\DbTableEncryption\EncryptDbTablePassword.cs" />
+    <Compile Include="ServerObjects\DbTableEncryption\UserSettingsFlag.cs" />
+    <Compile Include="ServerObjects\Acl\EnhancedConditionsAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\InvestorServicesAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\LoConnectCustomServicesAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\StandardWebFormsAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\AclUtils.cs" />
+    <Compile Include="ServerObjects\Acl\ExportServicesAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\FeatureConfigsAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\FeaturesAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\FieldAccessAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\InputFormsAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\LoanDuplicationAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\LoanFoldersAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\MilestoneFreeRoleAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\MilestonesAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\PipelineViewAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\ServicesAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\Acl\ToolsAclDbAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\EfolderDocTrackViewAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\IEfolderDocTrackViewAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\EfolderDocTrackViewAccessorDB.cs" />
+    <Compile Include="ServerObjects\eFolder\EfolderDocTrackViewAccessorXML.cs" />
+    <Compile Include="ServerObjects\eFolder\TemplateFilesToDBMigrationManager.cs" />
+    <Compile Include="ServerObjects\eFolder\DocumentReportingAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\EnhancedConditionReportingAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\EnhancedConditionSetAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\EnhancedConditionTemplateAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\EnhancedConditionTypeAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\EnhancedConditionViewAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\EDisclosureSignOrderConfiguration.cs" />
+    <Compile Include="ServerObjects\eFolder\IAttachmentXmlProviderFactory.cs" />
+    <Compile Include="ServerObjects\eFolder\IAttachmentProviderBase.cs" />
+    <Compile Include="ServerObjects\eFolder\IAttachmentXmlProvider.cs" />
+    <Compile Include="ServerObjects\eFolder\IAttachmentProvider.cs" />
+    <Compile Include="ServerObjects\eFolder\AttachmentXmlProviderFactory.cs" />
+    <Compile Include="ServerObjects\eFolder\AttachmentProviderFactoryBase.cs" />
+    <Compile Include="ServerObjects\eFolder\AttachmentXmlBase.cs" />
+    <Compile Include="ServerObjects\eFolder\PostgresAttachmentXmlProvider.cs" />
+    <Compile Include="ServerObjects\eFolder\SQLAttachmentXMLProvider.cs" />
+    <Compile Include="ServerObjects\eFolder\FileSystemAttachmentXmlProvider.cs" />
+    <Compile Include="ServerObjects\eFolder\BothFileSystemPostgresMasterAttachmentXmlProvider.cs" />
+    <Compile Include="ServerObjects\eFolder\BothPostgresFileSystemMasterAttachmentXmlProvider.cs" />
+    <Compile Include="ServerObjects\eFolder\PurchaseConditionOptionsAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\ConcurrentUpdateAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\ConsentConfiguration.cs" />
+    <Compile Include="ServerObjects\eFolder\ConditionConfiguration.cs" />
+    <Compile Include="ServerObjects\eFolder\DocumentTrackingAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\DocumentTrackingConfiguration.cs" />
+    <Compile Include="ServerObjects\eFolder\DocumentGroupConfiguration.cs" />
+    <Compile Include="ServerObjects\eFolder\EDisclosureConfiguration.cs" />
+    <Compile Include="ServerObjects\eFolder\EDisclosureConfigurationAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\FileAttachmentStore.cs" />
+    <Compile Include="ServerObjects\eFolder\ImageAttachmentSettingsStore.cs" />
+    <Compile Include="ServerObjects\eFolder\WebCenterSettingsStore.cs" />
+    <Compile Include="ServerObjects\eFolder\PostClosingConditionListAccessor.cs" />
+    <Compile Include="ServerObjects\eFolder\UnderwritingConditionListAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\IRS4506TTemplateDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\IRS4506TTemplateDBColumnName.cs" />
+    <Compile Include="ServerObjects\Bpm\AutomatedEnhancedConditionBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\BpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\TemporaryBuydownTypeBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\ServiceCredentialDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\AesManager.cs" />
+    <Compile Include="ServerObjects\Bpm\ServiceProductDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\ServiceProfileDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\ServiceWorkflowHistoryDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\ServiceWorkflowNotificationDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\ServiceWorkflowRulesBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\AutomatedPurchaseConditionBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\AutoLockExclusionRulesBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\AutomatedConditionBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\DDMDataPopulationTimingDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\DDMDataTableDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\DDMDataTableFieldValueDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\DDMFeeRuleDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\DDMFeeRuleScenarioRulesBpmAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\DDMFieldRuleDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\DDMFieldRuleScenarioRuleBpmAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\FoundSearchFieldRules.cs" />
+    <Compile Include="ServerObjects\Bpm\FieldSearchDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\HMDAProfileDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\LoanActionAccessBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\LoanActionCompletionRulesBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\DocumentAccessRulesDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\FieldAccessBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\FieldRulesBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\InputFormsBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\LoanAccessBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\LoanFolderBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\MilestoneRulesBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\PrintFormsBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\PrintSelectionBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\FormGroupXRef.cs" />
+    <Compile Include="ServerObjects\Bpm\RequestCacheable.cs" />
+    <Compile Include="ServerObjects\Bpm\TriggersBpmDbAccessor.cs" />
+    <Compile Include="ServerObjects\Bpm\WorkflowBpmDbAccessor.cs" />
+    <Compile Include="Tasks\LockComparisonFieldsNotificationPayload.cs" />
+    <Compile Include="Tasks\LockComparisonFieldsNotificationStatus.cs" />
+    <Compile Include="Tasks\LockComparisonFieldsNotificationHandler.cs" />
+    <Compile Include="Tasks\ConcurrentNotificationPayload.cs" />
+    <Compile Include="Tasks\NotificationResult.cs" />
+    <Compile Include="Tasks\NotificationStatus.cs" />
+    <Compile Include="Tasks\ConcurrentUpdateNotificationHandler.cs" />
+    <Compile Include="Tasks\TradeLoanUpdateNotificationPayload.cs" />
+    <Compile Include="Tasks\TradeLoanUpdateNotificationResult.cs" />
+    <Compile Include="Tasks\TradeLoanUpdateNotificationStatus.cs" />
+    <Compile Include="Tasks\TradeLoanUpdateNotificationHandler.cs" />
+    <Compile Include="Tasks\DemoTaskHandler.cs" />
+    <Compile Include="Tasks\EPassMessagePollTaskHandler.cs" />
+    <Compile Include="Tasks\ITaskHandler.cs" />
+    <Compile Include="Tasks\ReportingTaskhandler.cs" />
+    <Compile Include="Tasks\ServerTask.cs" />
+    <Compile Include="Tasks\SettingAuditTrailTaskHandler.cs" />
+    <Compile Include="Tasks\TaskProcessor.cs" />
+    <Compile Include="Tasks\TaskQueue.cs" />
+    <Compile Include="Tasks\TaskScheduleAccessor.cs" />
+    <Compile Include="Tasks\TaskScheduler.cs" />
+    <Compile Include="Tasks\UpdateDbStatisticsTaskHandler.cs" />
+    <Compile Include="ServerTasks\AnalyzersCleanupFromLoanExternalTableTask.cs" />
+    <Compile Include="ServerTasks\AttachmentMetadataMigrationToCIFSTask.cs" />
+    <Compile Include="ServerTasks\KafkaEventForwarderTask.cs" />
+    <Compile Include="ServerTasks\SoftLoanArchivalTaskHandler.cs" />
+    <Compile Include="ServerTasks\LoanVersionCleanupTask.cs" />
+    <Compile Include="ServerTasks\RecentLoansPurgeTaskHandler.cs" />
+    <Compile Include="ServerTasks\RetryTradeSyncTaskHandler.cs" />
+    <Compile Include="ServerTasks\RenewServerLicenseTaskHandler.cs" />
+    <Compile Include="ServerTasks\UpdateCorrTradeStatusTaskHandler.cs" />
+    <Compile Include="ServerTasks\EventLog.cs" />
+    <Compile Include="ServerTasks\EventLogStatus.cs" />
+    <Compile Include="ServerTasks\EventLogRepository.cs" />
+    <Compile Include="ServerTasks\PlatformSessionCleanupTaskHandler.cs" />
+    <Compile Include="ServerTasks\PostVersionMigrationTasks\EFolderDocTrackViewFilesToDbMigrationTask.cs" />
+    <Compile Include="ServerTasks\PostVersionMigrationTasks\EFolderDocTrackViewData.cs" />
+    <Compile Include="ServerTasks\PostVersionMigrationTasks\IPostVersionMigrationTaskHandler.cs" />
+    <Compile Include="ServerTasks\PostVersionMigrationTasks\PipelineViewXmlToDbMigrationTask.cs" />
+    <Compile Include="ServerTasks\PostVersionMigrationTasks\PostVersionMigrationTaskHandler.cs" />
+    <Compile Include="Query\BizPartnerQuery.cs" />
+    <Compile Include="Query\BorrowerQuery.cs" />
+    <Compile Include="Query\ContactFieldTranslator.cs" />
+    <Compile Include="Query\CorrespondentMasterFieldTranslator.cs" />
+    <Compile Include="Query\CorrespondentTradeQuery.cs" />
+    <Compile Include="Query\CorrespondentMasterQuery.cs" />
+    <Compile Include="Query\GseCommitmentQuery.cs" />
+    <Compile Include="Query\LoanFieldTranslator.cs" />
+    <Compile Include="Query\LoanQuery.cs" />
+    <Compile Include="Query\MasterContractFieldTranslator.cs" />
+    <Compile Include="Query\MasterContractQuery.cs" />
+    <Compile Include="Query\MbsPoolQuery.cs" />
+    <Compile Include="Query\SecurityTradeFieldTranslator.cs" />
+    <Compile Include="Query\SecurityTradeQuery.cs" />
+    <Compile Include="Query\TpoSettingsFieldTranslator.cs" />
+    <Compile Include="Query\TpoSettingsQuery.cs" />
+    <Compile Include="Query\TradeFieldTranslator.cs" />
+    <Compile Include="Query\TradeQuery.cs" />
+    <Compile Include="Query\PgQuery\LoanFieldSources.cs" />
+    <Compile Include="Query\PgQuery\LoanFieldTranslator.cs" />
+    <Compile Include="Query\PgQuery\LoanQuery.cs" />
+    <Compile Include="MFAAuthentication\Introspection.cs" />
+    <Compile Include="MFAAuthentication\IntrospectionAccessor.cs" />
+    <Compile Include="MFAAuthentication\IntrospectionDetails.cs" />
+    <Compile Include="ServerCommon\Scope.cs" />
+    <Compile Include="ServerCommon\ApiScopes.cs" />
+    <Compile Include="ServerCommon\HazelCastHealthCheckProvider.cs" />
+    <Compile Include="ServerCommon\HazelcastPipelineCacheStore.cs" />
+    <Compile Include="ServerCommon\SnapshotCursorMetadata.cs" />
+    <Compile Include="ServerCommon\IHazelCastHealthCheckProvider.cs" />
+    <Compile Include="ServerCommon\IPipelineCacheStore.cs" />
+    <Compile Include="ServerCommon\PipelineCacheStoreProvider.cs" />
+    <Compile Include="ServerCommon\DataAccessBootstrapper.cs" />
+    <Compile Include="ServerCommon\EbsClaimTypes.cs" />
+    <Compile Include="ServerCommon\ERDBCache.cs" />
+    <Compile Include="ServerCommon\ERDBServerUtil.cs" />
+    <Compile Include="ServerCommon\ServerUtil.cs" />
+    <Compile Include="Configuration\DirectoryServiceConfiguration.cs" />
+    <Compile Include="Configuration\LoanPipelineCacheStoreConfiguration.cs" />
+    <Compile Include="Configuration\CacheStoreConfiguration.cs" />
+    <Compile Include="Configuration\AppConfigRepository.cs" />
+    <Compile Include="Configuration\ContainerInstanceConfiguration.cs" />
+    <Compile Include="Configuration\DirectoryInstanceConfiguration.cs" />
+    <Compile Include="Configuration\DirectoryConfigurationProvider.cs" />
+    <Compile Include="Configuration\DSWriterInstanceConfiguration.cs" />
+    <Compile Include="Configuration\IConfigurationRepository.cs" />
+    <Compile Include="Configuration\InstanceConfigurationExtensions.cs" />
+    <Compile Include="CapsilonAIQ\AIQapiConfigurations.cs" />
+    <Compile Include="CapsilonAIQ\AIQAuth.cs" />
+    <Compile Include="CapsilonAIQ\AIQServerClient.cs" />
+    <Compile Include="CapsilonAIQ\S3Signers\SignerBase.cs" />
+    <Compile Include="CapsilonAIQ\S3Signers\SignerForAuthorizationHeader.cs" />
+    <Compile Include="CapsilonAIQ\S3Utility\HttpHelpers.cs" />
+    <Compile Include="Authentication\JwtBuilder.cs" />
+    <Compile Include="Authentication\OAuth2Client.cs" />
+    <Compile Include="Authentication\GetJWTSResponse.cs" />
+    <Compile Include="Authentication\JWTKey.cs" />
+    <Compile Include="Authentication\OAuth2Token.cs" />
+    <Compile Include="Authentication\OAuth2TokenIntrospection.cs" />
+    <Compile Include="Authentication\OAuth2Code.cs" />
+    <Compile Include="Authentication\OAuth2Error.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PostSharp\ImplementationDetails_93a154f1.Aspects1" />
+    <EmbeddedResource Include="PostSharp\ImplementationDetails_93a154f1.EnhancedByPostSharp" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

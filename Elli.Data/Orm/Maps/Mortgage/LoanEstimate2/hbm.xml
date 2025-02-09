@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="LoanEstimate2" table="ElliLoanEstimate2" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign" >
+        <param name="property">ClosingCost</param>
+      </generator>
+    </id>
+    <one-to-one name="ClosingCost" class="ClosingCost" constrained="true" />
+    <property name="OriginationChargesSubTotal" />
+    <property name="ServicesYouNotShopSubTotal" />
+    <property name="ServicesYouShopSubTotal" />
+    <property name="TotalLoanCosts" />
+    <property name="TaxesGovFeesSubTotal" />
+    <property name="PrepaidsSubTotal" />
+    <property name="InitialEscrowPaymentClosingSubTotal" />
+    <property name="OtherSubTotal" />
+    <property name="TotalOtherCosts" />
+    <property name="TotalClosingCosts" />
+    <property name="TotalLoanAndOtherCosts" />
+    <property name="LenderCredits" />
+    <property name="ClosingCostsFinanced" />
+    <property name="DownPayment" />
+    <property name="FundsForBorrower" />
+    <property name="AdjustmentsOtherCredits" />
+    <property name="AdjustmentsOtherCreditsDesc1" />
+    <property name="AdjustmentsOtherCreditsAmt1" />
+    <property name="AdjustmentsOtherCreditsDesc2" />
+    <property name="AdjustmentsOtherCreditsAmt2" />
+    <property name="AdjustmentsOtherCreditsDesc3" />
+    <property name="AdjustmentsOtherCreditsAmt3" />
+    <property name="AdjustmentsOtherCreditsDesc4" />
+    <property name="AdjustmentsOtherCreditsAmt4" />
+    <property name="AdjustmentsOtherCreditsDesc5" />
+    <property name="AdjustmentsOtherCreditsAmt5" />
+    <property name="AdjustmentsOtherCreditsDesc6" />
+    <property name="AdjustmentsOtherCreditsAmt6" />
+    <property name="AdjustmentsOtherCreditsDesc7" />
+    <property name="AdjustmentsOtherCreditsAmt7" />
+    <property name="AdjustmentsOtherCreditsDesc8" />
+    <property name="AdjustmentsOtherCreditsAmt8" />
+    <property name="AdjustmentsOtherCreditsDesc9" />
+    <property name="AdjustmentsOtherCreditsAmt9" />
+    <property name="AdjustmentsOtherCreditsDesc10" />
+    <property name="AdjustmentsOtherCreditsAmt10" />
+    <property name="EstimatedCashToCloseSV" />
+    <property name="EstimatedCashToCloseAV" />
+    <property name="FromOrToBorrower" />
+    <property name="UseAlternate" />
+    <property name="IndexMargin" />
+    <property name="firstChangeMonthSuffix" />
+    <property name="subseqChangeMonthSuffix" />
+    <property name="firstChangeFrequencyMonth" />
+    <property name="SellerCreditAmount" />
+    <property name="ThirdPartyPaymentsNotOtherwiseDisclosed" />
+    <property name="UseActualDownPaymentAndClosingCostsFinancedIndicator" />
+    <property name="EstimatedTotalPayoffsAndPaymentsAmount" />
+    <property name="ItemizeServiceSectionCType"/>
+    <property name="IncludePayoffs"/>
+  </class>
+</hibernate-mapping>

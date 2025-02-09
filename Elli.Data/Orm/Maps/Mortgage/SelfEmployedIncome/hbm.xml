@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="SelfEmployedIncome" table="ElliSelfEmployedIncome" dynamic-update="true">
+    <id name="Id" column="ElliSelfEmployedIncomeId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Application" column="ElliApplicationId" />
+    <property name="FormType" type="NHibernate.Type.EnumStringType`1[[Elli.Domain.Mortgage.SelfEmployedIncomeFormType, Elli.Domain]], NHibernate" />
+    <property name="FieldName" />
+    <property name="FirstYearAmount" />
+    <property name="SecondYearAmount" />
+    <property name="FieldValue" />
+    <property name="BoolFieldValue" />
+    <property name="BusinessName" />
+  </class>
+</hibernate-mapping>

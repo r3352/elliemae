@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Fee" table="ElliFee" dynamic-update="true">
+    <id name="Id" column="ElliFeeId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Loan" column="ElliLoanId" />
+    <property name="FeeType" />
+    <property name="BorPaidAmount" />
+    <property name="FHA" />
+    <property name="FWBC" />
+    <property name="FWSC" />
+    <property name="PaidBy" />
+    <property name="PaidInAdvance" />
+    <property name="PaidToBroker" />
+    <property name="PaidToOthers" />
+    <property name="PFC" />
+    <property name="POC" />
+    <property name="PTB" />
+    <property name="SellerPaidAmount" />
+    <property name="IncludeAboveNumber" />
+    <property name="DeedAmount" />
+    <property name="MortgageAmount" />
+    <property name="NewHUDBorPaidAmount">
+      <type name="Elli.Data.UserTypes.NADecimalUserType, Elli.Data">
+        <param name="precision">2</param>
+      </type>
+    </property>
+    <property name="PaidToName" />
+    <property name="NumberOfMonths" />
+    <property name="MonthlyPayment" />
+    <property name="Amount" />
+    <property name="Percentage" />
+    <property name="AmountPerDay" />
+    <property name="DateFrom" />
+    <property name="DateTo" />
+    <property name="Days" />
+    <property name="Use4Decimals" />
+    <property name="ReleasesAmount" />
+    <property name="Description" type="StringClob" />
+    <property name="LenderCoverage" />
+    <property name="OwnerCoverage" />
+    <property name="TruncatedAmountPerDay" />
+    <property name="TaxStampIndicator"></property>
+  </class>
+</hibernate-mapping>

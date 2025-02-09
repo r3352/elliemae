@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="Hmda" table="ElliHmda" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="ActionTaken" />
+    <property name="CensusTrack" />
+    <property name="CountyCode" />
+    <property name="ExcludeLoanFromHMDAReportIndicator" />
+    <property name="PartiallyExemptLoanIndicator" />
+    <property name="BalloonIndicator" />
+    <property name="LoanBalanceRiseIndicator" />
+    <property name="Hmda2InterestOnlyIndicator" />
+    <property name="CDRequired" />
+    <property name="HOEPAStatus" />
+    <property name="LienStatus" />
+    <property name="LoanPurpose" />
+    <property name="MSANumber" />
+    <property name="Preapprovals" />
+    <property name="PropertyType" />
+    <property name="RateSpread" />
+    <property name="ReportPurposeOfLoanIndicator" />
+    <property name="StateCode" />
+    <property name="TypeOfPurchaser" />
+    <property name="DenialReason1" />
+    <property name="DenialReason2" />
+    <property name="DenialReason3" />
+    <property name="QMStatus" />
+    <property name="ReportingYear" />
+    <property name="UniversalLoanId" />
+    <property name="ApplicationDate" />
+    <property name="LoanType" />
+    <property name="LoanAmount" />
+    <property name="HmdaPropertyZipCode" />
+    <property name="Income">
+      <type name="Elli.Data.UserTypes.NADecimalUserType, Elli.Data">
+        <param name="precision">0</param>
+      </type>
+    </property>
+    <property name="DenialReason4" />
+    <property name="OtherDenialReason" />
+    <property name="TotalLoanCosts"/>
+    <property name="TotalPointsAndFees"/>
+    <property name="OriginationCharges"/>
+    <property name="DiscountPoints" />
+    <property name="LenderCredits" />
+    <property name="InterestRate" />
+    <property name="PrepaymentPenaltyPeriod" />
+    <property name="DebtToIncomeRatio" />
+    <property name="CLTV" />
+    <property name="LoanTerm" />
+    <property name="IntroRatePeriod" />
+    <property name="OtherNonAmortization" />
+    <property name="PropertyValue" />
+    <property name="ManufacturedSecuredProperyType" />
+    <property name="ManufacturedHomeLandPropertyInterest" />
+    <property name="MultifamilyNoUnits" />
+    <property name="SubmissionOfApplication" />
+    <property name="InitiallyPayableToYourInstitution" />
+    <property name="NMLSLoanOriginatorID" />
+    <property name="AUS1" />
+    <property name="AUS2" />
+    <property name="AUS3" />
+    <property name="AUS4" />
+    <property name="AUS5" />
+    <property name="OtherAUS" />
+    <property name="AUSRecommendation1" />
+    <property name="AUSRecommendation2" />
+    <property name="AUSRecommendation3" />
+    <property name="AUSRecommendation4" />
+    <property name="AUSRecommendation5" />
+    <property name="OtherAUSRecommendations" />
+    <property name="ReverseMortgage" />
+    <property name="OpenEndLineOfCredit" />
+    <property name="BusinessOrCommercialPurpose" />
+    <property name="FinancialInstitutionName" />
+    <property name="ContactName" />
+    <property name="ContactPhoneNumber" />
+    <property name="ContactEmailAddress" />
+    <property name="ContactOfficeStreetAddress" />
+    <property name="ContactOfficeCity" />
+    <property name="ContactOfficeState" />
+    <property name="ContactOfficeZIPCode" />
+    <property name="ContactFaxNumber" />
+    <property name="FederalAgency" />
+    <property name="FederalTaxpayerIdNumber" />
+    <property name="LegalEntityIdentifier" />
+    <property name="LegalEntityIdentifierReporting" />
+    <property name="LegalEntityIdentifierUsed" />
+    <property name="RespondentID" />
+    <property name="ParentName" />
+    <property name="ParentAddress" />
+    <property name="ParentCity" />
+    <property name="ParentState" />
+    <property name="ParentZip" />    
+    <property name="HmdaPropertyAddress" />
+    <property name="HmdaPropertyCity" />
+    <property name="HmdaPropertyState" />
+    <property name="HmdaSyncAddressIndicator" />
+    <property name="RepurchasedReportingYear" />
+    <property name="RepurchasedLoanAmount" />
+    <property name="RepurchasedTypeOfPurchaser" />
+    <property name="RepurchasedActionTaken" />
+    <property name="RepurchasedActionDate" />
+    <property name="RepurchasedActionDate2" />
+    <property name="HmdaDtiIndicator" />
+    <property name="HmdaCltvIndicator" />
+    <property name="HmdaIncomeIndicator" />
+    <property name="HMDAProfileID" />
+    <property name="HMDAProfileDTIValue" />
+    <property name="HMDAProfileCLTVValue" />
+    <property name="HMDAProfileIncomeValue" />
+    <property name="HMDAProfileApplicationDateValue" />
+    <property name="HMDALoanPurpose" />
+    <property name="HmdaPropertyValueNotReliedUponIndicator" />
+    <property name="HmdaInterestOnlyIndicator" />
+    <property name="IncomeExcludedFromHmda" />    
+    <property name="HMDACensusTrack" />
+    <property name="HMDACountyCode" />
+  </class>
+</hibernate-mapping>

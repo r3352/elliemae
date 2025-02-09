@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\EMePass.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2FDB754B-2467-41D0-86AF-0DDC758837C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>EMePass</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>3.5.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EllieMae.EMLite</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.GNETMXLib">
+      <HintPath>lib\AxInterop.GNETMXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Client">
+      <HintPath>lib\Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientCommon">
+      <HintPath>lib\ClientCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientSession">
+      <HintPath>lib\ClientSession.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentConverter">
+      <HintPath>lib\DocumentConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="EMExport">
+      <HintPath>lib\EMExport.dll</HintPath>
+    </Reference>
+    <Reference Include="EMInput">
+      <HintPath>lib\EMInput.dll</HintPath>
+    </Reference>
+    <Reference Include="EMLoanUtils15">
+      <HintPath>lib\EMLoanUtils15.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Server.Remoting">
+      <HintPath>lib\Elli.Server.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Web.Host">
+      <HintPath>lib\Elli.Web.Host.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Environment">
+      <HintPath>lib\Environment.dll</HintPath>
+    </Reference>
+    <Reference Include="HelpAPI">
+      <HintPath>lib\HelpAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Import">
+      <HintPath>lib\Import.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.GNETPARSERXLib">
+      <HintPath>lib\Interop.GNETPARSERXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="JedScriptEngine">
+      <HintPath>lib\JedScriptEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIElements">
+      <HintPath>lib\UIElements.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ePass\OrchestratorRestAPIHelper.cs" />
+    <Compile Include="ePass\Bam.cs" />
+    <Compile Include="ePass\BrowserControl.cs" />
+    <Compile Include="ePass\CompanyPasswordDialog.cs" />
+    <Compile Include="ePass\EmailDialog.cs" />
+    <Compile Include="ePass\EmailListDialog.cs" />
+    <Compile Include="ePass\EpassControl.cs" />
+    <Compile Include="ePass\EpassLogin.cs" />
+    <Compile Include="ePass\IBam.cs" />
+    <Compile Include="ePass\IBrowser.cs" />
+    <Compile Include="ePass\IPartner.cs" />
+    <Compile Include="ePass\IPartner2.cs" />
+    <Compile Include="ePass\LoanMailboxDialog.cs" />
+    <Compile Include="ePass\LoginUserEventHandler.cs" />
+    <Compile Include="ePass\LoginUserEventArgs.cs" />
+    <Compile Include="ePass\PartnerInterfaceAttribute.cs" />
+    <Compile Include="ePass\SelfHostedMessage.cs" />
+    <Compile Include="ePass\TransferDialog.cs" />
+    <Compile Include="ePass\UserPasswordDialog.cs" />
+    <Compile Include="ePass\Services\AdvertisementControl.cs" />
+    <Compile Include="ePass\Services\EpassCategoryControl.cs" />
+    <Compile Include="ePass\Services\EpassServicesControl.cs" />
+    <Compile Include="ePass\Services\EpassServicesSelfHostedDisabledControl.cs" />
+    <Compile Include="ePass\Services\ViewDocumentDialog.cs" />
+    <Compile Include="ePass\Properties\Resources.cs" />
+    <Compile Include="ePass\PartnerAPI\PapiSettings.cs" />
+    <Compile Include="ePass\BamObjects\DisclosureTrackingRecordBase.cs" />
+    <Compile Include="ePass\BamObjects\DisclosureTrackingRecord2015.cs" />
+    <Compile Include="ePass\BamObjects\EnhancedDisclosureTrackingRecord2015.cs" />
+    <Compile Include="ePass\BamObjects\LoanEstimateFields.cs" />
+    <Compile Include="ePass\BamObjects\IntentToProceedFields.cs" />
+    <Compile Include="ePass\BamObjects\ClosingDisclosureFields.cs" />
+    <Compile Include="ePass\BamObjects\FulfillmentFields.cs" />
+    <Compile Include="ePass\BamObjects\FulfillmentRecipient.cs" />
+    <Compile Include="ePass\BamObjects\DisclosureRecipientTracking.cs" />
+    <Compile Include="ePass\BamObjects\DisclosureRecipient.cs" />
+    <Compile Include="ePass\BamObjects\NBORecipient.cs" />
+    <Compile Include="ePass\BamObjects\BorrowerRecipient.cs" />
+    <Compile Include="ePass\BamObjects\CoBorrowerRecipient.cs" />
+    <Compile Include="ePass\BamObjects\DT2015TrackingIndicators.cs" />
+    <Compile Include="ePass\BamObjects\TrackingFields.cs" />
+    <Compile Include="ePass\BamObjects\DisclosureContentType.cs" />
+    <Compile Include="ePass\BamObjects\Address.cs" />
+    <Compile Include="ePass\BamEnums\DisclosedMethodEnum.cs" />
+    <Compile Include="ePass\BamEnums\DisclosureTracking2015TypeEnum.cs" />
+    <Compile Include="ePass\Messaging\ConcurrentUpdateNotificationEventHandler.cs" />
+    <Compile Include="ePass\Messaging\ConcurrentUpdateArgs.cs" />
+    <Compile Include="ePass\Messaging\ConcurrentUpdateNotificationClientListener.cs" />
+    <Compile Include="ePass\Messaging\EPassMessageEventType.cs" />
+    <Compile Include="ePass\Messaging\EPassMessageEventHandler.cs" />
+    <Compile Include="ePass\Messaging\EPassMessageEventArgs.cs" />
+    <Compile Include="ePass\Messaging\EPassMessages.cs" />
+    <Compile Include="ePass\Browser\EncBeforeNavigationEventArgs.cs" />
+    <Compile Include="ePass\Browser\EncFinishLoadingFrameEvent.cs" />
+    <Compile Include="ePass\Browser\EncStartLoadingFrameEvent.cs" />
+    <Compile Include="ePass\Browser\EncPrintJobEvent.cs" />
+    <Compile Include="ePass\Browser\EncPostMessageHandler.cs" />
+    <Compile Include="ePass\Browser\EncAuditWindowHandler.cs" />
+    <Compile Include="ePass\Browser\EncUpdateTemplateWindowHandler.cs" />
+    <Compile Include="ePass\Browser\EncConsoleMessageEvent.cs" />
+    <Compile Include="ePass\Browser\EncBeforeNavigationEvent.cs" />
+    <Compile Include="ePass\Browser\EncPaperSize.cs" />
+    <Compile Include="ePass\Browser\EncDocumentType.cs" />
+    <Compile Include="ePass\Browser\MessageLevel.cs" />
+    <Compile Include="ePass\Browser\BrowserParams.cs" />
+    <Compile Include="ePass\Browser\SwitchPreferences.cs" />
+    <Compile Include="ePass\Browser\SwitchPreferencesExtensions.cs" />
+    <Compile Include="ePass\Browser\CustomExtensions.cs" />
+    <Compile Include="ePass\Browser\EncConsoleMessageEventArgs.cs" />
+    <Compile Include="ePass\Browser\EncFinishLoadingEventArgs.cs" />
+    <Compile Include="ePass\Browser\EncPageRange.cs" />
+    <Compile Include="ePass\Browser\EncPopUpParams.cs" />
+    <Compile Include="ePass\Browser\EncPrintJobEventArgs.cs" />
+    <Compile Include="ePass\Browser\EncPrintSettings.cs" />
+    <Compile Include="ePass\Browser\EncStartLoadingEventArgs.cs" />
+    <Compile Include="ePass\Browser\EncModuleParameters.cs" />
+    <Compile Include="ePass\Browser\EncModuleUser.cs" />
+    <Compile Include="ePass\Browser\EncompassWebBrowser.cs" />
+    <Compile Include="ePass\Browser\IBrowserParams.cs" />
+    <Compile Include="ePass\Browser\IEncompassBrowser.cs" />
+    <Compile Include="ePass\eFolder\NotificationTemplateRestClient.cs" />
+    <Compile Include="ePass\eFolder\ImportFannie2.cs" />
+    <Compile Include="ePass\eFolder\ImportTransfer.cs" />
+    <Compile Include="ePass\eFolder\ImportWeb.cs" />
+    <Compile Include="ePass\eFolder\DocumentCollector.cs" />
+    <Compile Include="ePass\eFolder\SelectDocumentDialog.cs" />
+    <Compile Include="Common\Licensing\Modules.cs" />
+    <Compile Include="WebServices\ModuleService.cs" />
+    <Compile Include="WebServices\ModuleLicense.cs" />
+    <Compile Include="WebServices\ModuleUser.cs" />
+    <Compile Include="WebServices\ModuleInfo.cs" />
+    <Compile Include="eFolder\FormSelectionDialog.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="eFolder\FormSelectionDialog.resx" />
+    <EmbeddedResource Include="ePass\Browser\EncompassWebBrowser.resx" />
+    <EmbeddedResource Include="ePass\BrowserControl.resx" />
+    <EmbeddedResource Include="ePass\CompanyPasswordDialog.resx" />
+    <EmbeddedResource Include="ePass\eFolder\DocumentCollector.resx" />
+    <EmbeddedResource Include="ePass\eFolder\ImportFannie2.resx" />
+    <EmbeddedResource Include="ePass\eFolder\ImportTransfer.resx" />
+    <EmbeddedResource Include="ePass\eFolder\ImportWeb.resx" />
+    <EmbeddedResource Include="ePass\eFolder\SelectDocumentDialog.resx" />
+    <EmbeddedResource Include="ePass\EmailDialog.resx" />
+    <EmbeddedResource Include="ePass\EmailListDialog.resx" />
+    <EmbeddedResource Include="ePass\EpassControl.resx" />
+    <EmbeddedResource Include="ePass\LoanMailboxDialog.resx" />
+    <EmbeddedResource Include="ePass\Properties\Resources.resx" />
+    <EmbeddedResource Include="ePass\SelfHostedMessage.resx" />
+    <EmbeddedResource Include="ePass\Services\AdvertisementControl.resx" />
+    <EmbeddedResource Include="ePass\Services\EpassCategoryControl.resx" />
+    <EmbeddedResource Include="ePass\Services\EpassServicesControl.resx" />
+    <EmbeddedResource Include="ePass\Services\EpassServicesSelfHostedDisabledControl.resx" />
+    <EmbeddedResource Include="ePass\Services\ViewDocumentDialog.resx" />
+    <EmbeddedResource Include="ePass\TransferDialog.resx" />
+    <EmbeddedResource Include="ePass\UserPasswordDialog.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

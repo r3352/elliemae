@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="RegistrationLog" extends="LogRecord" dynamic-update="true" discriminator-value="20">
+    <join table="ElliRegistrationLog">
+      <key column="ElliLogRecordId" />
+      <property name="RegisteredById" />
+      <property name="RegisteredByName" />
+      <property name="RegisteredDate" />
+      <property name="ExpiredDate" type="Elli.Data.Orm.UtcDateTime, Elli.Data" />
+      <property name="InvestorName" />
+      <property name="Reference" />
+      <property name="CurrentIndicator" />
+    </join>
+  </subclass>
+</hibernate-mapping>

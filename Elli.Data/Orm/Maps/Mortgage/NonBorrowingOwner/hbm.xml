@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="NonBorrowingOwner" table="ElliNonBorrowingOwner" dynamic-update="true">
+    <id name="Id" column="ElliNonBorrowingOwnersId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <many-to-one name="Loan" column="ElliLoanId" />
+    <property name="FirstName" />
+    <property name="MiddleName" />
+    <property name="LastName" />
+    <property name="SuffixName" />
+    <property name="AddressStreet" />
+    <property name="AddressCity" />
+    <property name="AddressState" />
+    <property name="AddressPostalCode" />
+    <property name="BorrowerType" />
+    <property name="HomePhoneNumber" />
+    <property name="No3rdPartyEmailIndicator" />
+    <property name="BusinessPhoneNumber" />
+    <property name="CellPhoneNumber" />
+    <property name="FaxNumber" />
+    <property name="DateOfBirth" />    
+    <property name="eSignConsentNBOCStatus" />
+    <property name="eSignConsentNBOCDateAccepted" />
+    <property name="eSignConsentNBOCIPAddress" />
+    <property name="eSignConsentNBOCSource" />
+    <property name="eSignConsentNBOCDateSent" />
+    <property name="NBOID" />
+    <property name="BorrowerVestingRecordID" />
+    <property name="ForeignAddressIndicator" />
+    <property name="Country" />
+    
+    <property name="HomePhonePreferred" />
+    <property name="WorkPhonePreferred" />
+    <property name="CellPhonePreferred" />
+    <property name="TextMessagePreferred" />
+    <property name="EmailPreferred" />
+    <property name="ContactTimeZone" />
+    <property name="ContactAnyDay" />
+    <property name="ContactMondays" />
+    <property name="ContactTuesdays" />
+    <property name="ContactWednesdays" />
+    <property name="ContactThursdays" />
+    <property name="ContactFridays" />
+    <property name="ContactSaturdays" />
+    <property name="ContactSundays" />
+    <property name="Notes" />
+
+    <property name="eSignConsentWithdrawnBy" />
+    <property name="eSignConsentRecipientId" />
+    
+  </class>
+</hibernate-mapping>

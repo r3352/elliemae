@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="AdditionalLoan" table="ElliAdditionalLoan" dynamic-update="true">
+    <id name="Id" column="ElliAdditionalLoanId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <many-to-one name="Application" column="ElliApplicationId" />
+    <property name="AdditionalLoanIndex" not-null="true" />
+    <property name="BorrowerType" />
+    <property name="AccountType" />
+    <property name="LienPosition" />
+    <property name="MonthlyPrincipalAndInterest" />
+    <property name="MaximumPrincipalAndInterestIn5Years" />
+    <property name="HELOCCreditLimitAmount" />
+    <property name="HELOCInitialDraw" />
+    <property name="AmountAppliedToDownpayment" />
+    <property name="PaymentDeferredFirstFiveYears" />
+    <property name="AffordableLoan" />
+    <property name="LinkedPiggybackIndicator" />
+    <property name="AltId" />
+    <property name="MonthlyPINoteRate" />
+    <property name="MonthlyPITerm" />
+    <property name="MonthlyPILoanAmount" />
+    <property name="MaximumPINoteRate" />
+    <property name="MaximumPITerm" />
+    <property name="MaximumPILoanAmount" />
+    <property name="IndividualCreditorIndicator" />
+    <property name="SourceOfFunds" />
+    
+    <property name="HolderName" />
+    <property name="Attention" />
+    <property name="HolderAddressStreetLine1" />
+    <property name="HolderAddressCity" />
+    <property name="HolderAddressState" />
+    <property name="HolderAddressPostalCode" />
+    <property name="HolderPhone" />
+    <property name="HolderFax" />
+    <property name="HolderEmail" />
+    <property name="Title" />
+    <property name="PrintUserNameIndicator" />
+    <property name="TitlePhone" />
+    <property name="TitleFax" />
+    <property name="AdditionalLoanRequestDate" />
+    <property name="PrintAttachmentIndicator" />
+    <property name="PrintUserJobTitleIndicator" />
+    <property name="MonthlyQualifyingPayment" />
+    
+  </class>
+</hibernate-mapping>

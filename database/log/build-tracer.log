@@ -1,0 +1,385 @@
+[T 02:22:34 60961] CodeQL CLI version 2.20.4
+[T 02:22:34 60961] Initializing tracer.
+[T 02:22:34 60961] Initializing tags.
+[T 02:22:34 60961] ID set to 000000000000EE21_0000000000000001 (parent root)
+[T 02:22:34 60961] Initializing tracer.
+[T 02:22:34 60961] Initializing tags.
+[T 02:22:34 60961] ID set to 000000000000EE21_0000000000000002 (parent root)
+[T 02:22:34 60961] Warning: SEMMLE_EXEC and SEMMLE_EXECP not set. Falling back to path lookup on argv[0].
+[T 02:22:34 60961] ==== Candidate to intercept: /opt/homebrew/Caskroom/codeql/2.20.4/codeql/tools/osx64/runner-osx (canonical: /opt/homebrew/Caskroom/codeql/2.20.4/codeql/tools/osx64/runner-osx) ====
+[T 02:22:34 60961] Executing the following tracer actions:
+[T 02:22:34 60961] Tracer actions:
+[T 02:22:34 60961] pre_invocations(0)
+[T 02:22:34 60961] post_invocations(0)
+[T 02:22:34 60961] trace_languages(1): [cpp]
+[T 02:22:34 60963] Attempting to switch stdout/stderr to 3...
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/bin/bash.semmle.0000EE21.39A3B4F0.slice.x86_64: replacing existing signature
+[T 02:22:36 60961] Initializing tracer.
+[T 02:22:36 60961] Initializing tags.
+[T 02:22:36 60961] ID set to 000000000000EE21_0000000000000003 (parent 000000000000EE21_0000000000000002)
+[T 02:22:36 60961] ==== Candidate to intercept: /opt/homebrew/Caskroom/codeql/2.20.4/codeql/cpp/tools/autobuild.sh (canonical: /opt/homebrew/Caskroom/codeql/2.20.4/codeql/cpp/tools/autobuild.sh) ====
+[T 02:22:36 60961] Executing the following tracer actions:
+[T 02:22:36 60961] Tracer actions:
+[T 02:22:36 60961] pre_invocations(0)
+[T 02:22:36 60961] post_invocations(0)
+[T 02:22:36 60961] trace_languages(1): [cpp]
+[T 02:22:36 60975] Attempting to switch stdout/stderr to 3...
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/usr/bin/mktemp.semmle.0000EE2E.1C90A710.slice.x86_64: replacing existing signature
+[T 02:22:37 60974] Initializing tracer.
+[T 02:22:37 60974] Initializing tags.
+[T 02:22:37 60974] ID set to 000000000000EE2E_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:37 60974] ==== Candidate to intercept: /usr/bin/mktemp (canonical: /usr/bin/mktemp) ====
+[T 02:22:37 60974] Executing the following tracer actions:
+[T 02:22:37 60974] Tracer actions:
+[T 02:22:37 60974] pre_invocations(0)
+[T 02:22:37 60974] post_invocations(0)
+[T 02:22:37 60974] trace_languages(1): [cpp]
+[T 02:22:37 60986] Attempting to switch stdout/stderr to 3...
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/bin/mkdir.semmle.0000EE39.27C0C9D0.slice.x86_64: replacing existing signature
+[T 02:22:37 60985] Initializing tracer.
+[T 02:22:37 60985] Initializing tags.
+[T 02:22:37 60985] ID set to 000000000000EE39_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:37 60985] ==== Candidate to intercept: /bin/mkdir (canonical: /bin/mkdir) ====
+[T 02:22:38 60985] Executing the following tracer actions:
+[T 02:22:38 60985] Tracer actions:
+[T 02:22:38 60985] pre_invocations(0)
+[T 02:22:38 60985] post_invocations(0)
+[T 02:22:38 60985] trace_languages(1): [cpp]
+[T 02:22:38 60992] Attempting to switch stdout/stderr to 3...
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/usr/bin/which.semmle.0000EE3F.00E8ECE8.slice.x86_64: replacing existing signature
+[T 02:22:38 60991] Initializing tracer.
+[T 02:22:38 60991] Initializing tags.
+[T 02:22:38 60991] ID set to 000000000000EE3F_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:38 60991] ==== Candidate to intercept: /usr/bin/which (canonical: /usr/bin/which) ====
+[T 02:22:38 60991] Executing the following tracer actions:
+[T 02:22:38 60991] Tracer actions:
+[T 02:22:38 60991] pre_invocations(0)
+[T 02:22:38 60991] post_invocations(0)
+[T 02:22:38 60991] trace_languages(1): [cpp]
+[T 02:22:38 60998] Attempting to switch stdout/stderr to 3...
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/usr/bin/sed.semmle.0000EE45.15D470A0.slice.x86_64: replacing existing signature
+[T 02:22:38 60997] Initializing tracer.
+[T 02:22:38 60997] Initializing tags.
+[T 02:22:38 60997] ID set to 000000000000EE45_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:38 60997] ==== Candidate to intercept: /usr/bin/sed (canonical: /usr/bin/sed) ====
+[T 02:22:38 60997] Executing the following tracer actions:
+[T 02:22:38 60997] Tracer actions:
+[T 02:22:38 60997] pre_invocations(0)
+[T 02:22:38 60997] post_invocations(0)
+[T 02:22:38 60997] trace_languages(1): [cpp]
+[T 02:22:38 61003] Attempting to switch stdout/stderr to 3...
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/bin/chmod.semmle.0000EE4A.2A6B19B0.slice.x86_64: replacing existing signature
+[T 02:22:39 61002] Initializing tracer.
+[T 02:22:39 61002] Initializing tags.
+[T 02:22:39 61002] ID set to 000000000000EE4A_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61002] ==== Candidate to intercept: /bin/chmod (canonical: /bin/chmod) ====
+[T 02:22:39 61002] Executing the following tracer actions:
+[T 02:22:39 61002] Tracer actions:
+[T 02:22:39 61002] pre_invocations(0)
+[T 02:22:39 61002] post_invocations(0)
+[T 02:22:39 61002] trace_languages(1): [cpp]
+[T 02:22:39 61011] Initializing tracer.
+[T 02:22:39 61011] Initializing tags.
+[T 02:22:39 61011] ID set to 000000000000EE53_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61011] ==== Candidate to intercept: /usr/bin/which (canonical: /usr/bin/which) ====
+[T 02:22:39 61011] Executing the following tracer actions:
+[T 02:22:39 61011] Tracer actions:
+[T 02:22:39 61011] pre_invocations(0)
+[T 02:22:39 61011] post_invocations(0)
+[T 02:22:39 61011] trace_languages(1): [cpp]
+[T 02:22:39 61012] Initializing tracer.
+[T 02:22:39 61012] Initializing tags.
+[T 02:22:39 61012] ID set to 000000000000EE54_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61012] ==== Candidate to intercept: /usr/bin/sed (canonical: /usr/bin/sed) ====
+[T 02:22:39 61012] Executing the following tracer actions:
+[T 02:22:39 61012] Tracer actions:
+[T 02:22:39 61012] pre_invocations(0)
+[T 02:22:39 61012] post_invocations(0)
+[T 02:22:39 61012] trace_languages(1): [cpp]
+[T 02:22:39 61013] Initializing tracer.
+[T 02:22:39 61013] Initializing tags.
+[T 02:22:39 61013] ID set to 000000000000EE55_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61013] ==== Candidate to intercept: /bin/chmod (canonical: /bin/chmod) ====
+[T 02:22:39 61013] Executing the following tracer actions:
+[T 02:22:39 61013] Tracer actions:
+[T 02:22:39 61013] pre_invocations(0)
+[T 02:22:39 61013] post_invocations(0)
+[T 02:22:39 61013] trace_languages(1): [cpp]
+[T 02:22:39 61015] Initializing tracer.
+[T 02:22:39 61015] Initializing tags.
+[T 02:22:39 61015] ID set to 000000000000EE57_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61015] ==== Candidate to intercept: /usr/bin/which (canonical: /usr/bin/which) ====
+[T 02:22:39 61015] Executing the following tracer actions:
+[T 02:22:39 61015] Tracer actions:
+[T 02:22:39 61015] pre_invocations(0)
+[T 02:22:39 61015] post_invocations(0)
+[T 02:22:39 61015] trace_languages(1): [cpp]
+[T 02:22:39 61016] Initializing tracer.
+[T 02:22:39 61016] Initializing tags.
+[T 02:22:39 61016] ID set to 000000000000EE58_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61016] ==== Candidate to intercept: /usr/bin/sed (canonical: /usr/bin/sed) ====
+[T 02:22:39 61016] Executing the following tracer actions:
+[T 02:22:39 61016] Tracer actions:
+[T 02:22:39 61016] pre_invocations(0)
+[T 02:22:39 61016] post_invocations(0)
+[T 02:22:39 61016] trace_languages(1): [cpp]
+[T 02:22:39 61017] Initializing tracer.
+[T 02:22:39 61017] Initializing tags.
+[T 02:22:39 61017] ID set to 000000000000EE59_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61017] ==== Candidate to intercept: /bin/chmod (canonical: /bin/chmod) ====
+[T 02:22:39 61017] Executing the following tracer actions:
+[T 02:22:39 61017] Tracer actions:
+[T 02:22:39 61017] pre_invocations(0)
+[T 02:22:39 61017] post_invocations(0)
+[T 02:22:39 61017] trace_languages(1): [cpp]
+[T 02:22:39 61019] Initializing tracer.
+[T 02:22:39 61019] Initializing tags.
+[T 02:22:39 61019] ID set to 000000000000EE5B_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61019] ==== Candidate to intercept: /usr/bin/which (canonical: /usr/bin/which) ====
+[T 02:22:39 61019] Executing the following tracer actions:
+[T 02:22:39 61019] Tracer actions:
+[T 02:22:39 61019] pre_invocations(0)
+[T 02:22:39 61019] post_invocations(0)
+[T 02:22:39 61019] trace_languages(1): [cpp]
+[T 02:22:39 61020] Initializing tracer.
+[T 02:22:39 61020] Initializing tags.
+[T 02:22:39 61020] ID set to 000000000000EE5C_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61020] ==== Candidate to intercept: /usr/bin/sed (canonical: /usr/bin/sed) ====
+[T 02:22:39 61020] Executing the following tracer actions:
+[T 02:22:39 61020] Tracer actions:
+[T 02:22:39 61020] pre_invocations(0)
+[T 02:22:39 61020] post_invocations(0)
+[T 02:22:39 61020] trace_languages(1): [cpp]
+[T 02:22:39 61021] Initializing tracer.
+[T 02:22:39 61021] Initializing tags.
+[T 02:22:39 61021] ID set to 000000000000EE5D_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61021] ==== Candidate to intercept: /bin/chmod (canonical: /bin/chmod) ====
+[T 02:22:39 61021] Executing the following tracer actions:
+[T 02:22:39 61021] Tracer actions:
+[T 02:22:39 61021] pre_invocations(0)
+[T 02:22:39 61021] post_invocations(0)
+[T 02:22:39 61021] trace_languages(1): [cpp]
+[T 02:22:39 61023] Initializing tracer.
+[T 02:22:39 61023] Initializing tags.
+[T 02:22:39 61023] ID set to 000000000000EE5F_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61023] ==== Candidate to intercept: /usr/bin/which (canonical: /usr/bin/which) ====
+[T 02:22:39 61023] Executing the following tracer actions:
+[T 02:22:39 61023] Tracer actions:
+[T 02:22:39 61023] pre_invocations(0)
+[T 02:22:39 61023] post_invocations(0)
+[T 02:22:39 61023] trace_languages(1): [cpp]
+[T 02:22:39 61024] Initializing tracer.
+[T 02:22:39 61024] Initializing tags.
+[T 02:22:39 61024] ID set to 000000000000EE60_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61024] ==== Candidate to intercept: /usr/bin/sed (canonical: /usr/bin/sed) ====
+[T 02:22:39 61024] Executing the following tracer actions:
+[T 02:22:39 61024] Tracer actions:
+[T 02:22:39 61024] pre_invocations(0)
+[T 02:22:39 61024] post_invocations(0)
+[T 02:22:39 61024] trace_languages(1): [cpp]
+[T 02:22:39 61025] Initializing tracer.
+[T 02:22:39 61025] Initializing tags.
+[T 02:22:39 61025] ID set to 000000000000EE61_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61025] ==== Candidate to intercept: /bin/chmod (canonical: /bin/chmod) ====
+[T 02:22:39 61025] Executing the following tracer actions:
+[T 02:22:39 61025] Tracer actions:
+[T 02:22:39 61025] pre_invocations(0)
+[T 02:22:39 61025] post_invocations(0)
+[T 02:22:39 61025] trace_languages(1): [cpp]
+[T 02:22:39 61027] Initializing tracer.
+[T 02:22:39 61027] Initializing tags.
+[T 02:22:39 61027] ID set to 000000000000EE63_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61027] ==== Candidate to intercept: /usr/bin/which (canonical: /usr/bin/which) ====
+[T 02:22:39 61027] Executing the following tracer actions:
+[T 02:22:39 61027] Tracer actions:
+[T 02:22:39 61027] pre_invocations(0)
+[T 02:22:39 61027] post_invocations(0)
+[T 02:22:39 61027] trace_languages(1): [cpp]
+[T 02:22:39 61028] Initializing tracer.
+[T 02:22:39 61028] Initializing tags.
+[T 02:22:39 61028] ID set to 000000000000EE64_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61028] ==== Candidate to intercept: /usr/bin/sed (canonical: /usr/bin/sed) ====
+[T 02:22:39 61028] Executing the following tracer actions:
+[T 02:22:39 61028] Tracer actions:
+[T 02:22:39 61028] pre_invocations(0)
+[T 02:22:39 61028] post_invocations(0)
+[T 02:22:39 61028] trace_languages(1): [cpp]
+[T 02:22:39 61029] Initializing tracer.
+[T 02:22:39 61029] Initializing tags.
+[T 02:22:39 61029] ID set to 000000000000EE65_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61029] ==== Candidate to intercept: /bin/chmod (canonical: /bin/chmod) ====
+[T 02:22:39 61029] Executing the following tracer actions:
+[T 02:22:39 61029] Tracer actions:
+[T 02:22:39 61029] pre_invocations(0)
+[T 02:22:39 61029] post_invocations(0)
+[T 02:22:39 61029] trace_languages(1): [cpp]
+[T 02:22:39 61031] Initializing tracer.
+[T 02:22:39 61031] Initializing tags.
+[T 02:22:39 61031] ID set to 000000000000EE67_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61031] ==== Candidate to intercept: /usr/bin/which (canonical: /usr/bin/which) ====
+[T 02:22:39 61031] Executing the following tracer actions:
+[T 02:22:39 61031] Tracer actions:
+[T 02:22:39 61031] pre_invocations(0)
+[T 02:22:39 61031] post_invocations(0)
+[T 02:22:39 61031] trace_languages(1): [cpp]
+[T 02:22:39 61033] Initializing tracer.
+[T 02:22:39 61033] Initializing tags.
+[T 02:22:39 61033] ID set to 000000000000EE69_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61033] ==== Candidate to intercept: /usr/bin/which (canonical: /usr/bin/which) ====
+[T 02:22:39 61033] Executing the following tracer actions:
+[T 02:22:39 61033] Tracer actions:
+[T 02:22:39 61033] pre_invocations(0)
+[T 02:22:39 61033] post_invocations(0)
+[T 02:22:39 61033] trace_languages(1): [cpp]
+[T 02:22:39 61034] Initializing tracer.
+[T 02:22:39 61034] Initializing tags.
+[T 02:22:39 61034] ID set to 000000000000EE6A_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:39 61034] ==== Candidate to intercept: /opt/homebrew/Caskroom/codeql/2.20.4/codeql/cpp/tools/do-prebuild (canonical: /opt/homebrew/Caskroom/codeql/2.20.4/codeql/cpp/tools/do-prebuild) ====
+[T 02:22:39 61034] Lua: === Intercepted call to /opt/homebrew/caskroom/codeql/2.20.4/codeql/cpp/tools/do-prebuild ===
+[T 02:22:39 61034] Lua: Disabling tracing for language cpp.
+[T 02:22:39 61034] Executing the following tracer actions:
+[T 02:22:39 61034] Tracer actions:
+[T 02:22:39 61034] pre_invocations(0)
+[T 02:22:39 61034] post_invocations(0)
+[T 02:22:39 61034] trace_languages(0): []
+[T 02:22:39 61034] Disabling tracing for this command.
+[T 02:22:43 61908] Initializing tracer.
+[T 02:22:43 61908] Initializing tags.
+[T 02:22:43 61908] ID set to 000000000000F1D4_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:43 61908] ==== Candidate to intercept: /opt/homebrew/Caskroom/codeql/2.20.4/codeql/cpp/tools/do-build (canonical: /opt/homebrew/Caskroom/codeql/2.20.4/codeql/cpp/tools/do-build) ====
+[T 02:22:43 61908] Executing the following tracer actions:
+[T 02:22:43 61908] Tracer actions:
+[T 02:22:43 61908] pre_invocations(0)
+[T 02:22:43 61908] post_invocations(0)
+[T 02:22:43 61908] trace_languages(1): [cpp]
+[T 02:22:43 61910] Attempting to switch stdout/stderr to 3...
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/usr/bin/readlink.semmle.0000F1D5.2CC4A9B0.slice.x86_64: replacing existing signature
+[T 02:22:44 61909] Initializing tracer.
+[T 02:22:44 61909] Initializing tags.
+[T 02:22:44 61909] ID set to 000000000000F1D5_0000000000000001 (parent 000000000000F1D4_0000000000000001)
+[T 02:22:44 61909] ==== Candidate to intercept: /usr/bin/readlink (canonical: /usr/bin/readlink) ====
+[T 02:22:44 61909] Executing the following tracer actions:
+[T 02:22:44 61909] Tracer actions:
+[T 02:22:44 61909] pre_invocations(0)
+[T 02:22:44 61909] post_invocations(0)
+[T 02:22:44 61909] trace_languages(1): [cpp]
+[T 02:22:44 61916] Attempting to switch stdout/stderr to 3...
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/opt/homebrew/bin/nproc.semmle.0000F1DB.063E0D90.slice.arm64: replacing existing signature
+[T 02:22:44 61915] Initializing tracer.
+[T 02:22:44 61915] Initializing tags.
+[T 02:22:44 61915] ID set to 000000000000F1DB_0000000000000001 (parent 000000000000F1D4_0000000000000001)
+[T 02:22:44 61915] ==== Candidate to intercept: /opt/homebrew/bin/nproc (canonical: /opt/homebrew/Cellar/coreutils/9.5/bin/gnproc) ====
+[T 02:22:44 61915] Executing the following tracer actions:
+[T 02:22:44 61915] Tracer actions:
+[T 02:22:44 61915] pre_invocations(0)
+[T 02:22:44 61915] post_invocations(0)
+[T 02:22:44 61915] trace_languages(1): [cpp]
+[T 02:22:44 61923] Attempting to switch stdout/stderr to 3...
+[T 02:22:44 61924] Attempting to switch stdout/stderr to 3...
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/usr/bin/find.semmle.0000F1E1.12F1BB40.slice.x86_64: replacing existing signature
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/usr/bin/head.semmle.0000F1E2.132D2E00.slice.x86_64: replacing existing signature
+[T 02:22:44 61922] Initializing tracer.
+[T 02:22:44 61922] Initializing tags.
+[T 02:22:44 61922] ID set to 000000000000F1E2_0000000000000001 (parent 000000000000F1D4_0000000000000001)
+[T 02:22:44 61922] ==== Candidate to intercept: /usr/bin/head (canonical: /usr/bin/head) ====
+[T 02:22:44 61922] Executing the following tracer actions:
+[T 02:22:44 61922] Tracer actions:
+[T 02:22:44 61922] pre_invocations(0)
+[T 02:22:44 61922] post_invocations(0)
+[T 02:22:44 61922] trace_languages(1): [cpp]
+[T 02:22:44 61921] Initializing tracer.
+[T 02:22:44 61921] Initializing tags.
+[T 02:22:44 61921] ID set to 000000000000F1E1_0000000000000001 (parent 000000000000F1D4_0000000000000001)
+[T 02:22:44 61921] ==== Candidate to intercept: /usr/bin/find (canonical: /usr/bin/find) ====
+[T 02:22:44 61921] Executing the following tracer actions:
+[T 02:22:44 61921] Tracer actions:
+[T 02:22:44 61921] pre_invocations(0)
+[T 02:22:44 61921] post_invocations(0)
+[T 02:22:44 61921] trace_languages(1): [cpp]
+[T 02:22:44 61931] Initializing tracer.
+[T 02:22:44 61931] Initializing tags.
+[T 02:22:44 61931] ID set to 000000000000F1EB_0000000000000001 (parent 000000000000F1D4_0000000000000001)
+[T 02:22:44 61931] ==== Candidate to intercept: /opt/homebrew/Caskroom/codeql/2.20.4/codeql/cpp/tools/diagnostics/emit.sh (canonical: /opt/homebrew/Caskroom/codeql/2.20.4/codeql/cpp/tools/diagnostics/emit.sh) ====
+[T 02:22:44 61931] Executing the following tracer actions:
+[T 02:22:44 61931] Tracer actions:
+[T 02:22:44 61931] pre_invocations(0)
+[T 02:22:44 61931] post_invocations(0)
+[T 02:22:44 61931] trace_languages(1): [cpp]
+[T 02:22:44 61933] Attempting to switch stdout/stderr to 3...
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/usr/bin/dirname.semmle.0000F1EC.2F0AD0F0.slice.x86_64: replacing existing signature
+[T 02:22:45 61932] Initializing tracer.
+[T 02:22:45 61932] Initializing tags.
+[T 02:22:45 61932] ID set to 000000000000F1EC_0000000000000001 (parent 000000000000F1EB_0000000000000001)
+[T 02:22:45 61932] ==== Candidate to intercept: /usr/bin/dirname (canonical: /usr/bin/dirname) ====
+[T 02:22:45 61932] Executing the following tracer actions:
+[T 02:22:45 61932] Tracer actions:
+[T 02:22:45 61932] pre_invocations(0)
+[T 02:22:45 61932] post_invocations(0)
+[T 02:22:45 61932] trace_languages(1): [cpp]
+[T 02:22:45 61937] Initializing tracer.
+[T 02:22:45 61937] Initializing tags.
+[T 02:22:45 61937] ID set to 000000000000F1F1_0000000000000001 (parent 000000000000F1EB_0000000000000001)
+[T 02:22:45 61937] ==== Candidate to intercept: /bin/mkdir (canonical: /bin/mkdir) ====
+[T 02:22:45 61937] Executing the following tracer actions:
+[T 02:22:45 61937] Tracer actions:
+[T 02:22:45 61937] pre_invocations(0)
+[T 02:22:45 61937] post_invocations(0)
+[T 02:22:45 61937] trace_languages(1): [cpp]
+[T 02:22:45 61939] Attempting to switch stdout/stderr to 3...
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/bin/date.semmle.0000F1F2.09AA8490.slice.x86_64: replacing existing signature
+[T 02:22:45 61938] Initializing tracer.
+[T 02:22:45 61938] Initializing tags.
+[T 02:22:45 61938] ID set to 000000000000F1F2_0000000000000001 (parent 000000000000F1EB_0000000000000001)
+[T 02:22:45 61938] ==== Candidate to intercept: /bin/date (canonical: /bin/date) ====
+[T 02:22:45 61938] Executing the following tracer actions:
+[T 02:22:45 61938] Tracer actions:
+[T 02:22:45 61938] pre_invocations(0)
+[T 02:22:45 61938] post_invocations(0)
+[T 02:22:45 61938] trace_languages(1): [cpp]
+[T 02:22:45 61945] Initializing tracer.
+[T 02:22:45 61945] Initializing tags.
+[T 02:22:45 61945] ID set to 000000000000F1F9_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:45 61945] ==== Candidate to intercept: /opt/homebrew/Caskroom/codeql/2.20.4/codeql/cpp/tools/diagnostics/emit.sh (canonical: /opt/homebrew/Caskroom/codeql/2.20.4/codeql/cpp/tools/diagnostics/emit.sh) ====
+[T 02:22:45 61945] Executing the following tracer actions:
+[T 02:22:45 61945] Tracer actions:
+[T 02:22:45 61945] pre_invocations(0)
+[T 02:22:45 61945] post_invocations(0)
+[T 02:22:45 61945] trace_languages(1): [cpp]
+[T 02:22:45 61946] Initializing tracer.
+[T 02:22:45 61946] Initializing tags.
+[T 02:22:45 61946] ID set to 000000000000F1FA_0000000000000001 (parent 000000000000F1F9_0000000000000001)
+[T 02:22:45 61946] ==== Candidate to intercept: /usr/bin/dirname (canonical: /usr/bin/dirname) ====
+[T 02:22:45 61946] Executing the following tracer actions:
+[T 02:22:45 61946] Tracer actions:
+[T 02:22:45 61946] pre_invocations(0)
+[T 02:22:45 61946] post_invocations(0)
+[T 02:22:45 61946] trace_languages(1): [cpp]
+[T 02:22:45 61947] Initializing tracer.
+[T 02:22:45 61947] Initializing tags.
+[T 02:22:45 61947] ID set to 000000000000F1FB_0000000000000001 (parent 000000000000F1F9_0000000000000001)
+[T 02:22:45 61947] ==== Candidate to intercept: /bin/mkdir (canonical: /bin/mkdir) ====
+[T 02:22:45 61947] Executing the following tracer actions:
+[T 02:22:45 61947] Tracer actions:
+[T 02:22:45 61947] pre_invocations(0)
+[T 02:22:45 61947] post_invocations(0)
+[T 02:22:45 61947] trace_languages(1): [cpp]
+[T 02:22:45 61948] Initializing tracer.
+[T 02:22:45 61948] Initializing tags.
+[T 02:22:45 61948] ID set to 000000000000F1FC_0000000000000001 (parent 000000000000F1F9_0000000000000001)
+[T 02:22:45 61948] ==== Candidate to intercept: /bin/date (canonical: /bin/date) ====
+[T 02:22:45 61948] Executing the following tracer actions:
+[T 02:22:45 61948] Tracer actions:
+[T 02:22:45 61948] pre_invocations(0)
+[T 02:22:45 61948] post_invocations(0)
+[T 02:22:45 61948] trace_languages(1): [cpp]
+[T 02:22:45 61950] Attempting to switch stdout/stderr to 3...
+/Users/matthewzamat/Documents/BugBounty/08_ICE/newdll/database/working/copy-root/000001F5/bin/mv.semmle.0000F1FD.26D4B450.slice.x86_64: replacing existing signature
+[T 02:22:45 61949] Initializing tracer.
+[T 02:22:45 61949] Initializing tags.
+[T 02:22:45 61949] ID set to 000000000000F1FD_0000000000000001 (parent 000000000000EE21_0000000000000003)
+[T 02:22:45 61949] ==== Candidate to intercept: /bin/mv (canonical: /bin/mv) ====
+[T 02:22:45 61949] Executing the following tracer actions:
+[T 02:22:45 61949] Tracer actions:
+[T 02:22:45 61949] pre_invocations(0)
+[T 02:22:45 61949] post_invocations(0)
+[T 02:22:45 61949] trace_languages(1): [cpp]

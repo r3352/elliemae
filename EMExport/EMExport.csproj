@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\EMExport.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD4A18C7-5BCC-4BAA-8CA8-4CF9080F885D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>EMExport</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.5.1.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EllieMae.EMLite.Export</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientSession">
+      <HintPath>lib\ClientSession.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="EMLoanUtils15">
+      <HintPath>lib\EMLoanUtils15.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Interface">
+      <HintPath>lib\Elli.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIElements">
+      <HintPath>lib\UIElements.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bam.cs" />
+    <Compile Include="ExportClient.cs" />
+    <Compile Include="ExportGNMData.cs" />
+    <Compile Include="ExportToLocalDialog.cs" />
+    <Compile Include="ExportData.cs" />
+    <Compile Include="ExportFNMData.cs" />
+    <Compile Include="ExportFREData.cs" />
+    <Compile Include="ExportLEFData.cs" />
+    <Compile Include="ExportLEFDialog.cs" />
+    <Compile Include="IBam.cs" />
+    <Compile Include="IClient.cs" />
+    <Compile Include="IExport.cs" />
+    <Compile Include="IExportMultiple.cs" />
+    <Compile Include="IInvestor.cs" />
+    <Compile Include="IService.cs" />
+    <Compile Include="IValidate.cs" />
+    <Compile Include="BamObjects\DisclosureTrackingRecordBase.cs" />
+    <Compile Include="BamObjects\DisclosureTrackingRecord2015.cs" />
+    <Compile Include="BamObjects\EnhancedDisclosureTrackingRecord2015.cs" />
+    <Compile Include="BamObjects\LoanEstimateFields.cs" />
+    <Compile Include="BamObjects\IntentToProceedFields.cs" />
+    <Compile Include="BamObjects\ClosingDisclosureFields.cs" />
+    <Compile Include="BamObjects\FulfillmentFields.cs" />
+    <Compile Include="BamObjects\FulfillmentRecipient.cs" />
+    <Compile Include="BamObjects\DisclosureRecipientTracking.cs" />
+    <Compile Include="BamObjects\DisclosureRecipient.cs" />
+    <Compile Include="BamObjects\NBORecipient.cs" />
+    <Compile Include="BamObjects\BorrowerRecipient.cs" />
+    <Compile Include="BamObjects\CoBorrowerRecipient.cs" />
+    <Compile Include="BamObjects\DT2015TrackingIndicators.cs" />
+    <Compile Include="BamObjects\TrackingFields.cs" />
+    <Compile Include="BamObjects\DisclosureContentType.cs" />
+    <Compile Include="BamObjects\Address.cs" />
+    <Compile Include="BamEnums\DisclosedMethodEnum.cs" />
+    <Compile Include="BamEnums\DisclosureTracking2015TypeEnum.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExportLEFDialog.resx" />
+    <EmbeddedResource Include="ExportToLocalDialog.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

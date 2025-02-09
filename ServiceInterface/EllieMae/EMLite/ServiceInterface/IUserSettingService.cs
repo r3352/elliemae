@@ -1,0 +1,40 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: EllieMae.EMLite.ServiceInterface.IUserSettingService
+// Assembly: ServiceInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d11ef57bba4acf91
+// MVID: DF0C2B89-A027-4FA0-9669-4D2AA36A4D74
+// Assembly location: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\ServiceInterface.dll
+
+using EllieMae.EMLite.ClientServer;
+using EllieMae.EMLite.Common;
+using EllieMae.EMLite.Common.Licensing;
+using EllieMae.EMLite.RemotingServices;
+using System.Collections;
+
+#nullable disable
+namespace EllieMae.EMLite.ServiceInterface
+{
+  public interface IUserSettingService
+  {
+    UserInfo GetUserInfo(string userId);
+
+    CCSiteInfo GetUserCCSiteInfo(string userId);
+
+    IDictionary UserSettingGet(string userId, string category);
+
+    object UserSettingGet(string userId, string category, string setting);
+
+    void UserSettingSet(string userId, string category, string setting, string settingValue);
+
+    object RoleAssingableUsersGet(string userId, int roleId);
+
+    object RoleAssingableGroupsGet(string userId, int roleId);
+
+    UserLicenseInfo GetUserLicense(string userId);
+
+    Hashtable GetUsers(string[] userIds);
+
+    UserInfo[] GetAllUsersByRole(int roleId);
+
+    AclGroup[] GetUserGroups(string userId);
+  }
+}

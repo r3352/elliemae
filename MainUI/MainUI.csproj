@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\MainUI.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{529D69AB-AE93-4398-8F04-5533AE6C6BC8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>MainUI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>24.3.0.5</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EllieMae.EMLite</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClickLoanImpl">
+      <HintPath>lib\ClickLoanImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="Client">
+      <HintPath>lib\Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientCommon">
+      <HintPath>lib\ClientCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientSession">
+      <HintPath>lib\ClientSession.dll</HintPath>
+    </Reference>
+    <Reference Include="ContactUI">
+      <HintPath>lib\ContactUI.dll</HintPath>
+    </Reference>
+    <Reference Include="DashBoard">
+      <HintPath>lib\DashBoard.dll</HintPath>
+    </Reference>
+    <Reference Include="DataServices">
+      <HintPath>lib\DataServices.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMClickLoan">
+      <HintPath>lib\EMClickLoan.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="EMExport">
+      <HintPath>lib\EMExport.dll</HintPath>
+    </Reference>
+    <Reference Include="EMInput">
+      <HintPath>lib\EMInput.dll</HintPath>
+    </Reference>
+    <Reference Include="EMLoanUtils15">
+      <HintPath>lib\EMLoanUtils15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMePass">
+      <HintPath>lib\EMePass.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.ElliEnum">
+      <HintPath>lib\Elli.ElliEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Metrics">
+      <HintPath>lib\Elli.Metrics.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Server.Remoting">
+      <HintPath>lib\Elli.Server.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Web.Host">
+      <HintPath>lib\Elli.Web.Host.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Encompass.Diagnostics">
+      <HintPath>lib\Encompass.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="EncompassAutomation">
+      <HintPath>lib\EncompassAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="EncompassObjects">
+      <HintPath>lib\EncompassObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="GenuineChannels">
+      <HintPath>lib\GenuineChannels.dll</HintPath>
+    </Reference>
+    <Reference Include="HelpAPI">
+      <HintPath>lib\HelpAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="HomePage">
+      <HintPath>lib\HomePage.dll</HintPath>
+    </Reference>
+    <Reference Include="JITLogger">
+      <HintPath>lib\JITLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="Jed">
+      <HintPath>lib\Jed.dll</HintPath>
+    </Reference>
+    <Reference Include="JedScriptEngine">
+      <HintPath>lib\JedScriptEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts">
+      <HintPath>lib\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms">
+      <HintPath>lib\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf">
+      <HintPath>lib\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="LoanServices">
+      <HintPath>lib\LoanServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Services2" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="Reporting">
+      <HintPath>lib\Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="SetupUI">
+      <HintPath>lib\SetupUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TradeManagement">
+      <HintPath>lib\TradeManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="UIElements">
+      <HintPath>lib\UIElements.dll</HintPath>
+    </Reference>
+    <Reference Include="VersionInterface15">
+      <HintPath>lib\VersionInterface15.dll</HintPath>
+    </Reference>
+    <Reference Include="eFolder">
+      <HintPath>lib\eFolder.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CenterwiseLOSelectionDialog.cs" />
+    <Compile Include="WebServices\PartialWebProxies\ePackage.cs" />
+    <Compile Include="WebServices\PartialWebProxies\ePackageWse.cs" />
+    <Compile Include="WebServices\PartialWebProxies\RecipientInfo.cs" />
+    <Compile Include="WebServices\PartialWebProxies\SenderInfo.cs" />
+    <Compile Include="WebServices\PartialWebProxies\GetSecurityFieldListCompletedEventHandler.cs" />
+    <Compile Include="WebServices\PartialWebProxies\GetSecurityFieldListCompletedEventArgs.cs" />
+    <Compile Include="WebServices\PartialWebProxies\RegisterRequestCompletedEventHandler.cs" />
+    <Compile Include="WebServices\PartialWebProxies\RegisterRequestCompletedEventArgs.cs" />
+    <Compile Include="WebServices\PartialWebProxies\RegisterStatusOnlineRequestCompletedEventHandler.cs" />
+    <Compile Include="WebServices\PartialWebProxies\RegisterStatusOnlineRequestCompletedEventArgs.cs" />
+    <Compile Include="WebServices\PartialWebProxies\UploadStatusCompletedEventHandler.cs" />
+    <Compile Include="WebServices\PartialWebProxies\SendLoanStatusEmailCompletedEventHandler.cs" />
+    <Compile Include="WebServices\PartialWebProxies\SendRecipientEmailCompletedEventHandler.cs" />
+    <Compile Include="WebServices\PartialWebProxies\GetLoanStatusPreviewCompletedEventHandler.cs" />
+    <Compile Include="WebServices\PartialWebProxies\GetLoanStatusPreviewCompletedEventArgs.cs" />
+    <Compile Include="WebServices\PartialWebProxies\UploadAttachmentCompletedEventHandler.cs" />
+    <Compile Include="WebServices\PartialWebProxies\ProcessRequestCompletedEventHandler.cs" />
+    <Compile Include="WebServices\PartialWebProxies\GetDisclosureTrackingDetailsCompletedEventHandler.cs" />
+    <Compile Include="WebServices\PartialWebProxies\GetDisclosureTrackingDetailsCompletedEventArgs.cs" />
+    <Compile Include="WebServices\PartialWebProxies\GetLoanDisclosureTrackingDetailsCompletedEventHand.cs" />
+    <Compile Include="WebServices\PartialWebProxies\GetLoanDisclosureTrackingDetailsCompletedEventArgs.cs" />
+    <Compile Include="WebServices\PartialWebProxies\ProcessRequestDocuSignCompletedEventHandler.cs" />
+    <Compile Include="WebServices\PartialWebProxies\ProcessRequestDocuSignCompletedEventArgs.cs" />
+    <Compile Include="MainUI\EncompassSC.cs" />
+    <Compile Include="MainUI\AboutPage.cs" />
+    <Compile Include="MainUI\AuditTrail.cs" />
+    <Compile Include="MainUI\CenterwiseActivationDialog.cs" />
+    <Compile Include="MainUI\CEOpenLoanForm.cs" />
+    <Compile Include="MainUI\CRMToolPrompt.cs" />
+    <Compile Include="MainUI\AuditReportLabel.cs" />
+    <Compile Include="MainUI\DataDocsSubmissionStatus.cs" />
+    <Compile Include="MainUI\GridViewStatusFilterManager.cs" />
+    <Compile Include="MainUI\SubmissionsCursor.cs" />
+    <Compile Include="MainUI\DataServicesConfig.cs" />
+    <Compile Include="MainUI\DataServicesConfigHelper.cs" />
+    <Compile Include="MainUI\DebugModeConfirmationDialog.cs" />
+    <Compile Include="MainUI\DeliveryStatusForm.cs" />
+    <Compile Include="MainUI\DuplicateLoanDialog.cs" />
+    <Compile Include="MainUI\ExportToLocal.cs" />
+    <Compile Include="MainUI\InvestorExportDialog.cs" />
+    <Compile Include="MainUI\IpcListener.cs" />
+    <Compile Include="MainUI\LoanFolderSelectionDialog.cs" />
+    <Compile Include="MainUI\EmailCheckDialog.cs" />
+    <Compile Include="MainUI\EMMessage.cs" />
+    <Compile Include="MainUI\FieldGoToDialog.cs" />
+    <Compile Include="MainUI\FindAuditTrailField.cs" />
+    <Compile Include="MainUI\LicenseDialog.cs" />
+    <Compile Include="MainUI\LoanHeader.cs" />
+    <Compile Include="MainUI\LoanMetricsDialog.cs" />
+    <Compile Include="MainUI\LoanPage.cs" />
+    <Compile Include="MainUI\LoginScreen.cs" />
+    <Compile Include="MainUI\LoginFormFactory.cs" />
+    <Compile Include="MainUI\EncompassLoginRoutines.cs" />
+    <Compile Include="MainUI\LogoutDialog.cs" />
+    <Compile Include="MainUI\MainForm.cs" />
+    <Compile Include="MainUI\SyncAllDisclosurePackageEventHandler.cs" />
+    <Compile Include="MainUI\MainScreen.cs" />
+    <Compile Include="MainUI\MessageScreen.cs" />
+    <Compile Include="MainUI\MoveDialog.cs" />
+    <Compile Include="MainUI\TempFolderCleanUp.cs" />
+    <Compile Include="MainUI\RediscloseTILAlertDialog.cs" />
+    <Compile Include="MainUI\ULDDExportDialog.cs" />
+    <Compile Include="MainUI\NotificationForm.cs" />
+    <Compile Include="MainUI\NotificationListener.cs" />
+    <Compile Include="MainUI\PETrialUpgradeForm.cs" />
+    <Compile Include="MainUI\PipelineAdvSearchDialog.cs" />
+    <Compile Include="MainUI\PipelineScreen.cs" />
+    <Compile Include="MainUI\LoanDeliveryFactory.cs" />
+    <Compile Include="MainUI\AIQValidationMessage.cs" />
+    <Compile Include="MainUI\SavePipelineViewDialog.cs" />
+    <Compile Include="MainUI\SelectLinkedLoanDialog.cs" />
+    <Compile Include="MainUI\SplashScreen.cs" />
+    <Compile Include="MainUI\TeamMemberListForm.cs" />
+    <Compile Include="MainUI\TrialExpiredForm.cs" />
+    <Compile Include="MainUI\TrialUpgradeForm.cs" />
+    <Compile Include="MainUI\UpdateEmailDialog.cs" />
+    <Compile Include="MainUI\Notifications.cs" />
+    <Compile Include="MainUI\TPONotificationQueue.cs" />
+    <Compile Include="MainUI\ThinThick\BrowserBase.cs" />
+    <Compile Include="MainUI\ThinThick\PipelineBrowser.cs" />
+    <Compile Include="MainUI\ThinThick\TradingBrowser.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\Contracts.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\CorrespondentMasterEditor.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\CorrespondentMasters.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\CorrespondentTradeEditor.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\CorrespondentTrades.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\GSECommitmentEditor.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\GSECommitments.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\MbsPoolEditor.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\MbsPools.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\Search.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\SecurityTradeEditor.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\SecurityTrades.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\TradeEditor.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\Trades.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\Interfaces\ITradingEditor.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\Interfaces\ITradingList.cs" />
+    <Compile Include="MainUI\ThinThick\TradingScreens\Interfaces\ITradingScreen.cs" />
+    <Compile Include="MainUI\DataAndDocs\InvestorsPage.cs" />
+    <Compile Include="ThinThick\OperationLocationInitializer.cs" />
+    <Compile Include="ThinThick\Operations\OpBusinessRuleFindFieldDialog.cs" />
+    <Compile Include="ThinThick\Operations\OpCommon.cs" />
+    <Compile Include="ThinThick\Operations\OpFieldSearchRuleEditor.cs" />
+    <Compile Include="ThinThick\Operations\OpHelp.cs" />
+    <Compile Include="ThinThick\Operations\OpLogging.cs" />
+    <Compile Include="ThinThick\Operations\OpPipeline.cs" />
+    <Compile Include="ThinThick\Operations\OpSessionManager.cs" />
+    <Compile Include="ThinThick\Operations\OpTrading.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="StatusOnline\OTPSendEmailDialogCC.cs" />
+    <Compile Include="StatusOnline\OTPStatusOnlineClientCC.cs" />
+    <Compile Include="StatusOnline\SendEmailDialog.cs" />
+    <Compile Include="StatusOnline\SendEmailDialogCC.cs" />
+    <Compile Include="StatusOnline\StatusOnlineClientCC.cs" />
+    <Compile Include="StatusOnline\StatusOnlineClient.cs" />
+    <Compile Include="StatusOnline\StatusOnlineDialog.cs" />
+    <Compile Include="StatusOnline\StatusOnlineManager.cs" />
+    <Compile Include="StatusOnline\StatusOnlineMessage.cs" />
+    <Compile Include="Log\AddLogDialog.cs" />
+    <Compile Include="Log\AlertDialogPanel.cs" />
+    <Compile Include="Log\AlertPanel.cs" />
+    <Compile Include="Log\AlertPanelBase.cs" />
+    <Compile Include="Log\AlertPanels.cs" />
+    <Compile Include="Log\AlertPanelWithDataCompletionFields.cs" />
+    <Compile Include="Log\AUSDataDiscrepencyAlertPanel.cs" />
+    <Compile Include="Log\AUSDataDiscrepancyResolutionDialog.cs" />
+    <Compile Include="Log\ChangedCircumstancesAlertPanel.cs" />
+    <Compile Include="Log\ClosingDateViolationAlertPanel.cs" />
+    <Compile Include="Log\eSignConsentAlertPanel.cs" />
+    <Compile Include="Log\GoodFaithFeeVarianceViolationAlertFeeDetailPanel.cs" />
+    <Compile Include="Log\GoodFaithFeeVarianceViolationAlertPanel.cs" />
+    <Compile Include="Log\CustomAlertPanel.cs" />
+    <Compile Include="Log\GoodFaithViolationResolutionDialog.cs" />
+    <Compile Include="Log\HUDToleranceResolutionDialog.cs" />
+    <Compile Include="Log\HUDToleranceViolationAlertPanel.cs" />
+    <Compile Include="Log\InitialDisclosureAlertPanel.cs" />
+    <Compile Include="Log\RediscloseTILAlertPanel.cs" />
+    <Compile Include="Log\RegulationAlertDialog.cs" />
+    <Compile Include="Log\ThreeDayDisclosureRequirementsAlertPanel.cs" />
+    <Compile Include="Log\VADiscountChargeViolationAlertPanel.cs" />
+    <Compile Include="Log\LogAlertChangedEventHandler.cs" />
+    <Compile Include="Log\LogAlertCreatedEventHandler.cs" />
+    <Compile Include="Log\LogAlertEditControl.cs" />
+    <Compile Include="Log\LogAlertEventArgs.cs" />
+    <Compile Include="Log\ConversationContainer.cs" />
+    <Compile Include="Log\LogLockEventHandler.cs" />
+    <Compile Include="Log\EditMode.cs" />
+    <Compile Include="Log\ConversationDialog.cs" />
+    <Compile Include="Log\LogLockEventArgs.cs" />
+    <Compile Include="Log\ConversationRecWS.cs" />
+    <Compile Include="Log\ConversationWS.cs" />
+    <Compile Include="Log\AdHocDisclosure2015.cs" />
+    <Compile Include="Log\DisclosureDetailsDialog2015.cs" />
+    <Compile Include="Log\DisclosureTracking2015WS.cs" />
+    <Compile Include="Log\ESignLO.cs" />
+    <Compile Include="Log\DisclosureDetailsDialogEnhanced.cs" />
+    <Compile Include="Log\IDisclosureManager.cs" />
+    <Compile Include="Log\DisclosureManager.cs" />
+    <Compile Include="Log\LogSummary.cs" />
+    <Compile Include="Log\ExportLogWS.cs" />
+    <Compile Include="Log\DataTracLogControl.cs" />
+    <Compile Include="Log\AdHocDisclosure.cs" />
+    <Compile Include="Log\DisclosureDetailsDialog.cs" />
+    <Compile Include="Log\DisclosureSnapshot.cs" />
+    <Compile Include="Log\DisclosureTrackingWS.cs" />
+    <Compile Include="Log\eDisclosureDetails.cs" />
+    <Compile Include="Log\ManualFulfillmentDialog.cs" />
+    <Compile Include="Log\DocOrderLogWS.cs" />
+    <Compile Include="Log\EDMLogControl.cs" />
+    <Compile Include="Log\EmailTriggerLogWS.cs" />
+    <Compile Include="Log\GoodFaithFeeVarianceCureLogWS.cs" />
+    <Compile Include="Log\HtmlEmailLogWS.cs" />
+    <Compile Include="Log\ServicingPrintWS.cs" />
+    <Compile Include="Log\AddCommentForm.cs" />
+    <Compile Include="Log\BuySellForm.cs" />
+    <Compile Include="Log\LockVoidWS.cs" />
+    <Compile Include="Log\LockCancellationWS.cs" />
+    <Compile Include="Log\CurrentLockForm.cs" />
+    <Compile Include="Log\DenialCommentsForm.cs" />
+    <Compile Include="Log\EditConcessionDialog.cs" />
+    <Compile Include="Log\LoanLockTool.cs" />
+    <Compile Include="Log\LoanSnapshotForm.cs" />
+    <Compile Include="Log\LockDenialWS.cs" />
+    <Compile Include="Log\LockForm.cs" />
+    <Compile Include="Log\LockRemovedWS.cs" />
+    <Compile Include="Log\LockRequestWS.cs" />
+    <Compile Include="Log\LockSnapshotCompareForm.cs" />
+    <Compile Include="Log\RegistrationLogWS.cs" />
+    <Compile Include="Log\RequestSnapshotForm.cs" />
+    <Compile Include="Log\WorstCasePricingCache.cs" />
+    <Compile Include="Log\WorstCasePricingSubmitDialog.cs" />
+    <Compile Include="Log\WorstCasePricingColumn.cs" />
+    <Compile Include="Log\WorstCasePricingTool.cs" />
+    <Compile Include="Log\LogViewer.cs" />
+    <Compile Include="Log\LogEntryWS.cs" />
+    <Compile Include="Log\MiCenterInfoForm.cs" />
+    <Compile Include="Log\MiCenterService.cs" />
+    <Compile Include="Log\MiCenterUiMetaInfo.cs" />
+    <Compile Include="Log\AddContactForm.cs" />
+    <Compile Include="Log\MilestoneTaskListContainer.cs" />
+    <Compile Include="Log\MilestoneTaskWorksheetContainer.cs" />
+    <Compile Include="Log\SelectTaskForm.cs" />
+    <Compile Include="Log\TaskLabel.cs" />
+    <Compile Include="Log\DocumentLabel.cs" />
+    <Compile Include="Log\MilestoneHeader.cs" />
+    <Compile Include="Log\MilestoneHistoryChangeSheet.cs" />
+    <Compile Include="Log\MilestoneWS.cs" />
+    <Compile Include="Log\RequiredDocumentsControl.cs" />
+    <Compile Include="Log\RequiredTasksControl.cs" />
+    <Compile Include="Log\PrintIndexLogWS.cs" />
+    <Compile Include="Log\PrintLogWS.cs" />
+    <Compile Include="Log\RequiredFieldsControl.cs" />
+    <Compile Include="Log\SelectionDialog.cs" />
+    <Compile Include="Log\StatusOnlineLogWS.cs" />
+    <Compile Include="Log\SystemLogWS.cs" />
+    <Compile Include="Log\MilestoneTaskListControl.cs" />
+    <Compile Include="Log\MilestoneTaskWorksheet.cs" />
+    <Compile Include="Log\LoanActionLogControl.cs" />
+    <Compile Include="Log\LoanActionLogDialog.cs" />
+    <Compile Include="Log\TQLServices.cs" />
+    <Compile Include="Log\DisclosureTracking2015\eSignConsent.cs" />
+    <Compile Include="Log\AuditTrail\AuditTrail.cs" />
+    <Compile Include="Log\Alerts\AtAppDisclosureRequirementsAlertPanel.cs" />
+    <Compile Include="Log\Alerts\AtLockDisclosureRequirementsAlertPanel.cs" />
+    <Compile Include="Log\Alerts\ChangedCircumstanceDisclosureRequirementsAlertPane.cs" />
+    <Compile Include="SCAppMgrEnc\SCAppMgrEncRO.cs" />
+    <Compile Include="EncSCAppMgr\EncSCAppMgrRO.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CenterwiseLOSelectionDialog.resx" />
+    <EmbeddedResource Include="Log\AddCommentForm.resx" />
+    <EmbeddedResource Include="Log\AddContactForm.resx" />
+    <EmbeddedResource Include="Log\AddLogDialog.resx" />
+    <EmbeddedResource Include="Log\AdHocDisclosure.resx" />
+    <EmbeddedResource Include="Log\AdHocDisclosure2015.resx" />
+    <EmbeddedResource Include="Log\AlertDialogPanel.resx" />
+    <EmbeddedResource Include="Log\AlertPanel.resx" />
+    <EmbeddedResource Include="Log\AlertPanelBase.resx" />
+    <EmbeddedResource Include="Log\AlertPanelWithDataCompletionFields.resx" />
+    <EmbeddedResource Include="Log\Alerts\AtAppDisclosureRequirementsAlertPanel.resx" />
+    <EmbeddedResource Include="Log\AUSDataDiscrepancyResolutionDialog.resx" />
+    <EmbeddedResource Include="Log\AUSDataDiscrepencyAlertPanel.resx" />
+    <EmbeddedResource Include="Log\BuySellForm.resx" />
+    <EmbeddedResource Include="Log\ChangedCircumstancesAlertPanel.resx" />
+    <EmbeddedResource Include="Log\ClosingDateViolationAlertPanel.resx" />
+    <EmbeddedResource Include="Log\ConversationContainer.resx" />
+    <EmbeddedResource Include="Log\ConversationDialog.resx" />
+    <EmbeddedResource Include="Log\ConversationRecWS.resx" />
+    <EmbeddedResource Include="Log\ConversationWS.resx" />
+    <EmbeddedResource Include="Log\CurrentLockForm.resx" />
+    <EmbeddedResource Include="Log\CustomAlertPanel.resx" />
+    <EmbeddedResource Include="Log\DataTracLogControl.resx" />
+    <EmbeddedResource Include="Log\DenialCommentsForm.resx" />
+    <EmbeddedResource Include="Log\DisclosureDetailsDialog.resx" />
+    <EmbeddedResource Include="Log\DisclosureDetailsDialog2015.resx" />
+    <EmbeddedResource Include="Log\DisclosureDetailsDialogEnhanced.resx" />
+    <EmbeddedResource Include="Log\DisclosureSnapshot.resx" />
+    <EmbeddedResource Include="Log\DisclosureTracking2015\eSignConsent.resx" />
+    <EmbeddedResource Include="Log\DisclosureTracking2015WS.resx" />
+    <EmbeddedResource Include="Log\DisclosureTrackingWS.resx" />
+    <EmbeddedResource Include="Log\DocOrderLogWS.resx" />
+    <EmbeddedResource Include="Log\DocumentLabel.resx" />
+    <EmbeddedResource Include="Log\eDisclosureDetails.resx" />
+    <EmbeddedResource Include="Log\EditConcessionDialog.resx" />
+    <EmbeddedResource Include="Log\EDMLogControl.resx" />
+    <EmbeddedResource Include="Log\EmailTriggerLogWS.resx" />
+    <EmbeddedResource Include="Log\eSignConsentAlertPanel.resx" />
+    <EmbeddedResource Include="Log\ExportLogWS.resx" />
+    <EmbeddedResource Include="Log\GoodFaithFeeVarianceCureLogWS.resx" />
+    <EmbeddedResource Include="Log\GoodFaithFeeVarianceViolationAlertFeeDetailPanel.resx" />
+    <EmbeddedResource Include="Log\GoodFaithFeeVarianceViolationAlertPanel.resx" />
+    <EmbeddedResource Include="Log\GoodFaithViolationResolutionDialog.resx" />
+    <EmbeddedResource Include="Log\HtmlEmailLogWS.resx" />
+    <EmbeddedResource Include="Log\HUDToleranceResolutionDialog.resx" />
+    <EmbeddedResource Include="Log\HUDToleranceViolationAlertPanel.resx" />
+    <EmbeddedResource Include="Log\InitialDisclosureAlertPanel.resx" />
+    <EmbeddedResource Include="Log\LoanActionLogControl.resx" />
+    <EmbeddedResource Include="Log\LoanActionLogDialog.resx" />
+    <EmbeddedResource Include="Log\LoanLockTool.resx" />
+    <EmbeddedResource Include="Log\LoanSnapshotForm.resx" />
+    <EmbeddedResource Include="Log\LockCancellationWS.resx" />
+    <EmbeddedResource Include="Log\LockDenialWS.resx" />
+    <EmbeddedResource Include="Log\LockForm.resx" />
+    <EmbeddedResource Include="Log\LockRemovedWS.resx" />
+    <EmbeddedResource Include="Log\LockRequestWS.resx" />
+    <EmbeddedResource Include="Log\LockSnapshotCompareForm.resx" />
+    <EmbeddedResource Include="Log\LockVoidWS.resx" />
+    <EmbeddedResource Include="Log\LogAlertEditControl.resx" />
+    <EmbeddedResource Include="Log\LogEntryWS.resx" />
+    <EmbeddedResource Include="Log\LogViewer.resx" />
+    <EmbeddedResource Include="Log\ManualFulfillmentDialog.resx" />
+    <EmbeddedResource Include="Log\MiCenterInfoForm.resx" />
+    <EmbeddedResource Include="Log\MilestoneHistoryChangeSheet.resx" />
+    <EmbeddedResource Include="Log\MilestoneTaskListContainer.resx" />
+    <EmbeddedResource Include="Log\MilestoneTaskListControl.resx" />
+    <EmbeddedResource Include="Log\MilestoneTaskWorksheet.resx" />
+    <EmbeddedResource Include="Log\MilestoneTaskWorksheetContainer.resx" />
+    <EmbeddedResource Include="Log\MilestoneWS.resx" />
+    <EmbeddedResource Include="Log\PrintIndexLogWS.resx" />
+    <EmbeddedResource Include="Log\PrintLogWS.resx" />
+    <EmbeddedResource Include="Log\RediscloseTILAlertPanel.resx" />
+    <EmbeddedResource Include="Log\RegistrationLogWS.resx" />
+    <EmbeddedResource Include="Log\RegulationAlertDialog.resx" />
+    <EmbeddedResource Include="Log\RequestSnapshotForm.resx" />
+    <EmbeddedResource Include="Log\RequiredDocumentsControl.resx" />
+    <EmbeddedResource Include="Log\RequiredFieldsControl.resx" />
+    <EmbeddedResource Include="Log\RequiredTasksControl.resx" />
+    <EmbeddedResource Include="Log\SelectionDialog.resx" />
+    <EmbeddedResource Include="Log\SelectTaskForm.resx" />
+    <EmbeddedResource Include="Log\ServicingPrintWS.resx" />
+    <EmbeddedResource Include="Log\StatusOnlineLogWS.resx" />
+    <EmbeddedResource Include="Log\SystemLogWS.resx" />
+    <EmbeddedResource Include="Log\TaskLabel.resx" />
+    <EmbeddedResource Include="Log\ThreeDayDisclosureRequirementsAlertPanel.resx" />
+    <EmbeddedResource Include="Log\TQLServices.resx" />
+    <EmbeddedResource Include="Log\VADiscountChargeViolationAlertPanel.resx" />
+    <EmbeddedResource Include="Log\WorstCasePricingColumn.resx" />
+    <EmbeddedResource Include="Log\WorstCasePricingSubmitDialog.resx" />
+    <EmbeddedResource Include="Log\WorstCasePricingTool.resx" />
+    <EmbeddedResource Include="MainUI\AboutPage.resx" />
+    <EmbeddedResource Include="MainUI\AuditTrail.resx" />
+    <EmbeddedResource Include="MainUI\CenterwiseActivationDialog.resx" />
+    <EmbeddedResource Include="MainUI\CEOpenLoanForm.resx" />
+    <EmbeddedResource Include="MainUI\CRMToolPrompt.resx" />
+    <EmbeddedResource Include="MainUI\DataAndDocs\InvestorsPage.resx" />
+    <EmbeddedResource Include="MainUI\DataDocsSubmissionStatus.resx" />
+    <EmbeddedResource Include="MainUI\DataServicesConfig.resx" />
+    <EmbeddedResource Include="MainUI\DebugModeConfirmationDialog.resx" />
+    <EmbeddedResource Include="MainUI\DeliveryStatusForm.resx" />
+    <EmbeddedResource Include="MainUI\DuplicateLoanDialog.resx" />
+    <EmbeddedResource Include="MainUI\EmailCheckDialog.resx" />
+    <EmbeddedResource Include="MainUI\EMMessage.resx" />
+    <EmbeddedResource Include="MainUI\ExportToLocal.resx" />
+    <EmbeddedResource Include="MainUI\FieldGoToDialog.resx" />
+    <EmbeddedResource Include="MainUI\FindAuditTrailField.resx" />
+    <EmbeddedResource Include="MainUI\InvestorExportDialog.resx" />
+    <EmbeddedResource Include="MainUI\LicenseDialog.resx" />
+    <EmbeddedResource Include="MainUI\LoanFolderSelectionDialog.resx" />
+    <EmbeddedResource Include="MainUI\LoanHeader.resx" />
+    <EmbeddedResource Include="MainUI\LoanMetricsDialog.resx" />
+    <EmbeddedResource Include="MainUI\LoanPage.resx" />
+    <EmbeddedResource Include="MainUI\LoginScreen.resx" />
+    <EmbeddedResource Include="MainUI\LogoutDialog.resx" />
+    <EmbeddedResource Include="MainUI\MainForm.resx" />
+    <EmbeddedResource Include="MainUI\MainScreen.resx" />
+    <EmbeddedResource Include="MainUI\MessageScreen.resx" />
+    <EmbeddedResource Include="MainUI\MoveDialog.resx" />
+    <EmbeddedResource Include="MainUI\NotificationForm.resx" />
+    <EmbeddedResource Include="MainUI\PETrialUpgradeForm.resx" />
+    <EmbeddedResource Include="MainUI\PipelineAdvSearchDialog.resx" />
+    <EmbeddedResource Include="MainUI\PipelineScreen.resx" />
+    <EmbeddedResource Include="MainUI\RediscloseTILAlertDialog.resx" />
+    <EmbeddedResource Include="MainUI\SavePipelineViewDialog.resx" />
+    <EmbeddedResource Include="MainUI\SelectLinkedLoanDialog.resx" />
+    <EmbeddedResource Include="MainUI\SplashScreen.resx" />
+    <EmbeddedResource Include="MainUI\TeamMemberListForm.resx" />
+    <EmbeddedResource Include="MainUI\ThinThick\BrowserBase.resx" />
+    <EmbeddedResource Include="MainUI\ThinThick\PipelineBrowser.resx" />
+    <EmbeddedResource Include="MainUI\ThinThick\TradingBrowser.resx" />
+    <EmbeddedResource Include="MainUI\TrialExpiredForm.resx" />
+    <EmbeddedResource Include="MainUI\TrialUpgradeForm.resx" />
+    <EmbeddedResource Include="MainUI\ULDDExportDialog.resx" />
+    <EmbeddedResource Include="MainUI\UpdateEmailDialog.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="StatusOnline\OTPSendEmailDialogCC.resx" />
+    <EmbeddedResource Include="StatusOnline\SendEmailDialog.resx" />
+    <EmbeddedResource Include="StatusOnline\SendEmailDialogCC.resx" />
+    <EmbeddedResource Include="StatusOnline\StatusOnlineClient.resx" />
+    <EmbeddedResource Include="StatusOnline\StatusOnlineClientCC.resx" />
+    <EmbeddedResource Include="StatusOnline\StatusOnlineDialog.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

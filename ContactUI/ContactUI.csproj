@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\ContactUI.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B769B353-09A8-4282-963D-9D9F04929220}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>ContactUI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>24.3.0.5</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EllieMae.EMLite.ContactUI</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Calendar">
+      <HintPath>lib\Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientCommon">
+      <HintPath>lib\ClientCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientSession">
+      <HintPath>lib\ClientSession.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="EMInput">
+      <HintPath>lib\EMInput.dll</HintPath>
+    </Reference>
+    <Reference Include="EMLoanUtils15">
+      <HintPath>lib\EMLoanUtils15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMePass">
+      <HintPath>lib\EMePass.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Metrics">
+      <HintPath>lib\Elli.Metrics.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="HelpAPI">
+      <HintPath>lib\HelpAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v7.1">
+      <HintPath>lib\Infragistics2.Shared.v7.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v7.1">
+      <HintPath>lib\Infragistics2.Win.UltraWinSchedule.v7.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v7.1">
+      <HintPath>lib\Infragistics2.Win.UltraWinTree.v7.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v7.1">
+      <HintPath>lib\Infragistics2.Win.v7.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MAPI">
+      <HintPath>lib\Interop.MAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Outlook">
+      <HintPath>lib\Interop.Outlook.dll</HintPath>
+    </Reference>
+    <Reference Include="JedScriptEngine">
+      <HintPath>lib\JedScriptEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="LoanServices">
+      <HintPath>lib\LoanServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Reporting">
+      <HintPath>lib\Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Synchronization">
+      <HintPath>lib\Synchronization.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIElements">
+      <HintPath>lib\UIElements.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BizPartnerHistoryForm.cs" />
+    <Compile Include="BizPartnerSummaryChangeEventHandler.cs" />
+    <Compile Include="BizPartnerInfo1Form.cs" />
+    <Compile Include="BizPartnerInfo2Form.cs" />
+    <Compile Include="BizPartnerListForm.cs" />
+    <Compile Include="BizPartnerLoansForm.cs" />
+    <Compile Include="BizPartnerNotesForm.cs" />
+    <Compile Include="BizPartnerTabForm.cs" />
+    <Compile Include="BorrowerContactPickList.cs" />
+    <Compile Include="BorrowerHistoryForm.cs" />
+    <Compile Include="BorrowerInfo1Form.cs" />
+    <Compile Include="BorrowerSummaryChangedEventHandler.cs" />
+    <Compile Include="BorrowerInfo2Form.cs" />
+    <Compile Include="BorrowerListForm.cs" />
+    <Compile Include="ContactListState.cs" />
+    <Compile Include="BorrowerLoansForm.cs" />
+    <Compile Include="BorrowerNotesForm.cs" />
+    <Compile Include="BorrowerTabForm.cs" />
+    <Compile Include="CalendarSearchControl.cs" />
+    <Compile Include="CDOHelpDialog.cs" />
+    <Compile Include="CDOHelpStepDialog.cs" />
+    <Compile Include="CloseLoanQueryForm.cs" />
+    <Compile Include="CommentFieldEditorForm.cs" />
+    <Compile Include="ContactAdvSearchDialog.cs" />
+    <Compile Include="ContactAppointmentsPage.cs" />
+    <Compile Include="ContactGroupsPage.cs" />
+    <Compile Include="BizPartnerGroupListController.cs" />
+    <Compile Include="BizPartnerPublicGroupListController.cs" />
+    <Compile Include="BorrowerGroupListController.cs" />
+    <Compile Include="ContactGroupListController.cs" />
+    <Compile Include="ContactGroupSelectionDlg.cs" />
+    <Compile Include="ContactGroupSetupDlg.cs" />
+    <Compile Include="GroupNameDuplicate.cs" />
+    <Compile Include="NewGroupDlg.cs" />
+    <Compile Include="ContactLoanCRMSearch.cs" />
+    <Compile Include="ContactMainForm.cs" />
+    <Compile Include="ContactNotesForm.cs" />
+    <Compile Include="ContactPrintDialog.cs" />
+    <Compile Include="ContactsEmailSelection.cs" />
+    <Compile Include="ContactsWithNoEmailForm.cs" />
+    <Compile Include="ContactTabForm.cs" />
+    <Compile Include="CreditReportParser.cs" />
+    <Compile Include="CustomFieldsControl.cs" />
+    <Compile Include="EditPublicBizContactGroup.cs" />
+    <Compile Include="EditPublicBizContactGroupMembers.cs" />
+    <Compile Include="EmailInfoForm.cs" />
+    <Compile Include="LoanFolderSelectionForm.cs" />
+    <Compile Include="LoanOriginationDlg.cs" />
+    <Compile Include="MailMergeForm.cs" />
+    <Compile Include="MatchedLoansForm.cs" />
+    <Compile Include="NotePhrasesForm.cs" />
+    <Compile Include="OpportunityForm.cs" />
+    <Compile Include="OrderCreditDlg.cs" />
+    <Compile Include="OrderCreditMissingInfoDlg.cs" />
+    <Compile Include="PhraseSelectedEventArg.cs" />
+    <Compile Include="PublicBizContactGroup.cs" />
+    <Compile Include="Import\ContactExportWizard.cs" />
+    <Compile Include="Import\CsvExportFileSelectionPanel.cs" />
+    <Compile Include="Import\BizContactGroupSelectionPanel.cs" />
+    <Compile Include="Import\ContactAccessPanel.cs" />
+    <Compile Include="Import\ContactExportedEventHandler.cs" />
+    <Compile Include="Import\ImportMethod.cs" />
+    <Compile Include="Import\ContactImportParameters.cs" />
+    <Compile Include="Import\ContactImportedEventHandler.cs" />
+    <Compile Include="Import\ContactImportWizard.cs" />
+    <Compile Include="Import\ContactImportWizardItem.cs" />
+    <Compile Include="Import\CsvColumnSelectionPanel.cs" />
+    <Compile Include="Import\CsvFileSelectionPanel.cs" />
+    <Compile Include="Import\CsvImportColumn.cs" />
+    <Compile Include="Import\CsvListValuedImportColumn.cs" />
+    <Compile Include="Import\CsvMappedImportColumn.cs" />
+    <Compile Include="Import\CvsCustomFieldImportColumn.cs" />
+    <Compile Include="Import\CvsCategoryFieldImportColumn.cs" />
+    <Compile Include="Import\CsvImportParameters.cs" />
+    <Compile Include="Import\CsvParser.cs" />
+    <Compile Include="Import\CsvParserForDdm.cs" />
+    <Compile Include="Import\CsvParsingPanel.cs" />
+    <Compile Include="Import\ImportContact.cs" />
+    <Compile Include="Import\ImportSourcePanel.cs" />
+    <Compile Include="Import\OutlookImportPanel.cs" />
+    <Compile Include="Import\PointFolderSelectionPanel.cs" />
+    <Compile Include="Import\PointImportOptions.cs" />
+    <Compile Include="Import\TPOInvalidRecordListForm.cs" />
+    <Compile Include="WebServices\LoanCenterServiceProxy.cs" />
+    <Compile Include="WebServices\StatusOnlineProxy.cs" />
+    <Compile Include="WebServices\SendEmailCompletedEventHandler.cs" />
+    <Compile Include="WebServices\GetSecurityFieldListCompletedEventHandler.cs" />
+    <Compile Include="WebServices\GetSecurityFieldListCompletedEventArgs.cs" />
+    <Compile Include="WebServices\RegisterRequestCompletedEventHandler.cs" />
+    <Compile Include="WebServices\RegisterRequestCompletedEventArgs.cs" />
+    <Compile Include="WebServices\RegisterStatusOnlineRequestCompletedEventHandler.cs" />
+    <Compile Include="WebServices\RegisterStatusOnlineRequestCompletedEventArgs.cs" />
+    <Compile Include="WebServices\UploadStatusCompletedEventHandler.cs" />
+    <Compile Include="WebServices\SendLoanStatusEmailCompletedEventHandler.cs" />
+    <Compile Include="WebServices\GetLoanStatusPreviewCompletedEventHandler.cs" />
+    <Compile Include="WebServices\GetLoanStatusPreviewCompletedEventArgs.cs" />
+    <Compile Include="WebServices\UploadAttachmentCompletedEventHandler.cs" />
+    <Compile Include="WebServices\ProcessRequestCompletedEventHandler.cs" />
+    <Compile Include="WebServices\GetDisclosureTrackingDetailsCompletedEventHandler.cs" />
+    <Compile Include="WebServices\GetDisclosureTrackingDetailsCompletedEventArgs.cs" />
+    <Compile Include="TaskList\TaskDetailsForm.cs" />
+    <Compile Include="TaskList\TaskListForm.cs" />
+    <Compile Include="TaskList\TaskPrintOption.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="LoanServices\CustomerLoyaltyDialog.cs" />
+    <Compile Include="Leads\LeadCenterDialog.cs" />
+    <Compile Include="Leads\ViewLeadsDialog.cs" />
+    <Compile Include="CampaignUI\CampaignContactsTab.cs" />
+    <Compile Include="CampaignUI\CampaignDashboardForm.cs" />
+    <Compile Include="CampaignUI\ActivityUpdatedEventHandler.cs" />
+    <Compile Include="CampaignUI\CampaignDataChangedEventHandler.cs" />
+    <Compile Include="CampaignUI\TasksDueChangedEventHandler.cs" />
+    <Compile Include="CampaignUI\CampaignData.cs" />
+    <Compile Include="CampaignUI\TasksDueEventArgs.cs" />
+    <Compile Include="CampaignUI\DisplayListEventHandler.cs" />
+    <Compile Include="CampaignUI\PrevCampaignEventHandler.cs" />
+    <Compile Include="CampaignUI\NextCampaignEventHandler.cs" />
+    <Compile Include="CampaignUI\CampaignDetailForm.cs" />
+    <Compile Include="CampaignUI\CampaignExplorerDialog.cs" />
+    <Compile Include="CampaignUI\CampaignIFSExplorer.cs" />
+    <Compile Include="CampaignUI\SelectedFileEventArgs.cs" />
+    <Compile Include="CampaignUI\SelectedFileListEventArgs.cs" />
+    <Compile Include="CampaignUI\CustomLetterDialog.cs" />
+    <Compile Include="CampaignUI\DeployUserSelectionDialog.cs" />
+    <Compile Include="CampaignUI\DuplicateFileNameDialog.cs" />
+    <Compile Include="CampaignUI\ExportCampaignDialog.cs" />
+    <Compile Include="CampaignUI\ImportCampaignDialog.cs" />
+    <Compile Include="CampaignUI\CampaignHistoryTab.cs" />
+    <Compile Include="CampaignUI\DisplayDetailEventHandler.cs" />
+    <Compile Include="CampaignUI\CampaignActionRequestEventHandler.cs" />
+    <Compile Include="CampaignUI\CampaignListForm.cs" />
+    <Compile Include="CampaignUI\CampaignActionRequestEventArgs.cs" />
+    <Compile Include="CampaignUI\ProcessEmailLetterEventHandler.cs" />
+    <Compile Include="CampaignUI\UpdateActivityStatusEventHandler.cs" />
+    <Compile Include="CampaignUI\ActivitySelectedEventHandler.cs" />
+    <Compile Include="CampaignUI\CampaignStepsTab.cs" />
+    <Compile Include="CampaignUI\ActivityContactInfo.cs" />
+    <Compile Include="CampaignUI\ActivitySelectedEventArgs.cs" />
+    <Compile Include="CampaignUI\ProcessEmailLetterEventArgs.cs" />
+    <Compile Include="CampaignUI\WizardQueryControl.cs" />
+    <Compile Include="CampaignUI\ActivityValidationDialog.cs" />
+    <Compile Include="CampaignUI\CampaignAddContactsDlg.cs" />
+    <Compile Include="CampaignUI\CampaignGroupControl.cs" />
+    <Compile Include="CampaignUI\CampaignQueryControl.cs" />
+    <Compile Include="CampaignUI\CampaignQueryDialog.cs" />
+    <Compile Include="CampaignUI\CampaignStartDialog.cs" />
+    <Compile Include="CampaignUI\ConfirmReinsertDialog.cs" />
+    <Compile Include="CampaignUI\ContactNotesDialog.cs" />
+    <Compile Include="CampaignUI\CopyCampaignDialog.cs" />
+    <Compile Include="CampaignUI\DuplicateCampaignNameDialog.cs" />
+    <Compile Include="CampaignUI\ViewContactGroupControl.cs" />
+    <Compile Include="CampaignUI\ViewContactGroupDialog.cs" />
+    <Compile Include="CampaignUI\CompleteTasksDialog.cs" />
+    <Compile Include="CampaignUI\DocumentExplorerDialog.cs" />
+    <Compile Include="CampaignUI\ActivityNoteDialog.cs" />
+    <Compile Include="CampaignUI\MaintainQueriesDialog.cs" />
+    <Compile Include="CampaignUI\CampaignWizard\CampaignContactsPanel.cs" />
+    <Compile Include="CampaignUI\CampaignWizard\CampaignDetailsPanel.cs" />
+    <Compile Include="CampaignUI\CampaignWizard\ManageContactsPanel.cs" />
+    <Compile Include="CampaignUI\CampaignWizard\CampaignQueryPanel.cs" />
+    <Compile Include="CampaignUI\CampaignWizard\CampaignStepDialog.cs" />
+    <Compile Include="CampaignUI\CampaignWizard\CampaignStepsPanel.cs" />
+    <Compile Include="CampaignUI\CampaignWizard\CampaignSummaryPanel.cs" />
+    <Compile Include="CampaignUI\CampaignWizard\CampaignWizardForm.cs" />
+    <Compile Include="CampaignUI\CampaignWizard\CampaignWizardItem.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BizPartnerHistoryForm.resx" />
+    <EmbeddedResource Include="BizPartnerInfo1Form.resx" />
+    <EmbeddedResource Include="BizPartnerInfo2Form.resx" />
+    <EmbeddedResource Include="BizPartnerListForm.resx" />
+    <EmbeddedResource Include="BizPartnerLoansForm.resx" />
+    <EmbeddedResource Include="BizPartnerNotesForm.resx" />
+    <EmbeddedResource Include="BizPartnerTabForm.resx" />
+    <EmbeddedResource Include="BorrowerContactPickList.resx" />
+    <EmbeddedResource Include="BorrowerHistoryForm.resx" />
+    <EmbeddedResource Include="BorrowerInfo1Form.resx" />
+    <EmbeddedResource Include="BorrowerInfo2Form.resx" />
+    <EmbeddedResource Include="BorrowerListForm.resx" />
+    <EmbeddedResource Include="BorrowerLoansForm.resx" />
+    <EmbeddedResource Include="BorrowerNotesForm.resx" />
+    <EmbeddedResource Include="BorrowerTabForm.resx" />
+    <EmbeddedResource Include="CalendarSearchControl.resx" />
+    <EmbeddedResource Include="CampaignUI\ActivityNoteDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\ActivityValidationDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignAddContactsDlg.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignContactsTab.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignDashboardForm.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignDetailForm.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignExplorerDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignGroupControl.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignHistoryTab.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignListForm.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignQueryControl.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignQueryDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignStartDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignStepsTab.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignWizard\CampaignContactsPanel.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignWizard\CampaignDetailsPanel.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignWizard\CampaignQueryPanel.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignWizard\CampaignStepDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignWizard\CampaignStepsPanel.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignWizard\CampaignSummaryPanel.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignWizard\CampaignWizardForm.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignWizard\CampaignWizardItem.resx" />
+    <EmbeddedResource Include="CampaignUI\CampaignWizard\ManageContactsPanel.resx" />
+    <EmbeddedResource Include="CampaignUI\CompleteTasksDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\ConfirmReinsertDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\ContactNotesDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\CopyCampaignDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\CustomLetterDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\DeployUserSelectionDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\DocumentExplorerDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\DuplicateCampaignNameDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\DuplicateFileNameDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\ExportCampaignDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\ImportCampaignDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\MaintainQueriesDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\ViewContactGroupControl.resx" />
+    <EmbeddedResource Include="CampaignUI\ViewContactGroupDialog.resx" />
+    <EmbeddedResource Include="CampaignUI\WizardQueryControl.resx" />
+    <EmbeddedResource Include="CDOHelpDialog.resx" />
+    <EmbeddedResource Include="CDOHelpStepDialog.resx" />
+    <EmbeddedResource Include="CloseLoanQueryForm.resx" />
+    <EmbeddedResource Include="CommentFieldEditorForm.resx" />
+    <EmbeddedResource Include="ContactAdvSearchDialog.resx" />
+    <EmbeddedResource Include="ContactAppointmentsPage.resx" />
+    <EmbeddedResource Include="ContactGroupSelectionDlg.resx" />
+    <EmbeddedResource Include="ContactGroupSetupDlg.resx" />
+    <EmbeddedResource Include="ContactGroupsPage.resx" />
+    <EmbeddedResource Include="ContactLoanCRMSearch.resx" />
+    <EmbeddedResource Include="ContactMainForm.resx" />
+    <EmbeddedResource Include="ContactNotesForm.resx" />
+    <EmbeddedResource Include="ContactPrintDialog.resx" />
+    <EmbeddedResource Include="ContactsEmailSelection.resx" />
+    <EmbeddedResource Include="ContactsWithNoEmailForm.resx" />
+    <EmbeddedResource Include="ContactTabForm.resx" />
+    <EmbeddedResource Include="CustomFieldsControl.resx" />
+    <EmbeddedResource Include="EditPublicBizContactGroup.resx" />
+    <EmbeddedResource Include="EditPublicBizContactGroupMembers.resx" />
+    <EmbeddedResource Include="EmailInfoForm.resx" />
+    <EmbeddedResource Include="GroupNameDuplicate.resx" />
+    <EmbeddedResource Include="Import\BizContactGroupSelectionPanel.resx" />
+    <EmbeddedResource Include="Import\ContactAccessPanel.resx" />
+    <EmbeddedResource Include="Import\ContactExportWizard.resx" />
+    <EmbeddedResource Include="Import\ContactImportWizard.resx" />
+    <EmbeddedResource Include="Import\ContactImportWizardItem.resx" />
+    <EmbeddedResource Include="Import\CsvColumnSelectionPanel.resx" />
+    <EmbeddedResource Include="Import\CsvExportFileSelectionPanel.resx" />
+    <EmbeddedResource Include="Import\CsvFileSelectionPanel.resx" />
+    <EmbeddedResource Include="Import\CsvParsingPanel.resx" />
+    <EmbeddedResource Include="Import\ImportSourcePanel.resx" />
+    <EmbeddedResource Include="Import\OutlookImportPanel.resx" />
+    <EmbeddedResource Include="Import\PointFolderSelectionPanel.resx" />
+    <EmbeddedResource Include="Import\TPOInvalidRecordListForm.resx" />
+    <EmbeddedResource Include="Leads\LeadCenterDialog.resx" />
+    <EmbeddedResource Include="Leads\ViewLeadsDialog.resx" />
+    <EmbeddedResource Include="LoanFolderSelectionForm.resx" />
+    <EmbeddedResource Include="LoanOriginationDlg.resx" />
+    <EmbeddedResource Include="LoanServices\CustomerLoyaltyDialog.resx" />
+    <EmbeddedResource Include="MailMergeForm.resx" />
+    <EmbeddedResource Include="MatchedLoansForm.resx" />
+    <EmbeddedResource Include="NewGroupDlg.resx" />
+    <EmbeddedResource Include="NotePhrasesForm.resx" />
+    <EmbeddedResource Include="OpportunityForm.resx" />
+    <EmbeddedResource Include="OrderCreditDlg.resx" />
+    <EmbeddedResource Include="OrderCreditMissingInfoDlg.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="PublicBizContactGroup.resx" />
+    <EmbeddedResource Include="TaskList\TaskDetailsForm.resx" />
+    <EmbeddedResource Include="TaskList\TaskListForm.resx" />
+    <EmbeddedResource Include="TaskList\TaskPrintOption.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

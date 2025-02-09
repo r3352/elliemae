@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LoanStatusEmailTemplate" xml:space="preserve">
+    <value>ℼ佄呃偙⁅呈䱍倠䉕䥌⁃ⴢ⼯㍗⽃䐯䑔䠠䵔⁌⸴‰牔湡楳楴湯污⼯久㸢਍䠼䵔㹌਍䠼䅅㹄਍†匼奔䕌ാ †⸠敨摡牥笠潣潬㩲䔣㥂〱㬳映湯⵴敷杩瑨戺汯㭤映湯⵴瑳汹㩥瑩污捩※潦瑮昭浡汩㩹牁慩㭬映湯⵴楳敺›㈱瑰紻਍††渮牯慭⁬捻汯牯〺〰※潦瑮眭楥桧㩴潮浲污※潦瑮昭浡汩㩹牁慩㭬映湯⵴楳敺ㄺ瀰㭴ൽ †⸠潮浲污浳笠潣潬㩲〰㬰映湯⵴敷杩瑨渺牯慭㭬映湯⵴慦業祬䄺楲污※潦瑮猭穩㩥瀷㭴ൽ †䄠氺湩⁫捻汯牯⌺〰〰䙆昻湯⵴敷杩瑨渺牯慭㭬潦瑮昭浡汩㩹牁慩㭬潦瑮猭穩㩥〱瑰琻硥⵴敤潣慲楴湯›湵敤汲湩㭥ൽ †䄠瘺獩瑩摥笠潣潬㩲〣〰䘰㭆潦瑮眭楥桧㩴潮浲污昻湯⵴慦業祬䄺楲污昻湯⵴楳敺ㄺ瀰㭴整瑸搭捥牯瑡潩㩮甠摮牥楬敮紻਍††㩁捡楴敶笠潣潬㩲〣㔰㤵㬵潦瑮眭楥桧㩴潮浲污昻湯⵴慦業祬䄺楲污昻湯⵴楳敺ㄺ瀰㭴整瑸搭捥牯瑡潩㩮甠摮牥楬敮紻਍††㩁潨敶⁲捻汯牯›䔣㥂〱㬳潦瑮眭楥桧㩴潮浲污昻湯⵴慦業祬䄺楲污昻湯⵴楳敺ㄺ瀰㭴整瑸搭捥牯瑡潩㩮甠摮牥楬敮紻਍††氮湩卫⁭捻汯牯⌺〰㔵㔹昻湯⵴敷杩瑨渺牯慭㭬潦瑮昭浡汩㩹牁慩㭬潦瑮猭穩㩥瀸㭴ൽ †䄠氮湩卫㩭楬歮笠潣潬㩲〣㔰㤵㬵潦瑮眭楥桧㩴潮浲污昻湯⵴慦業祬䄺楲污昻湯⵴楳敺㠺瑰琻硥⵴敤潣慲楴湯›湵敤汲湩㭥ൽ †䄠氮湩卫㩭楶楳整⁤捻汯牯⌺〰㔵㔹昻湯⵴敷杩瑨渺牯慭㭬潦瑮昭浡汩㩹牁慩㭬潦瑮猭穩㩥瀸㭴整瑸搭捥牯瑡潩㩮甠摮牥楬敮紻਍††⹁楬歮浓愺瑣癩⁥捻汯牯⌺〰㔵㔹昻湯⵴敷杩瑨渺牯慭㭬潦瑮昭浡汩㩹牁慩㭬潦瑮猭穩㩥瀸㭴整瑸搭捥牯瑡潩㩮甠摮牥楬敮紻਍††⹁楬歮浓栺癯牥笠潣潬㩲⌠䉅ㄹ㌰昻湯⵴敷杩瑨渺牯慭㭬潦瑮昭浡汩㩹牁慩㭬潦瑮猭穩㩥瀸㭴整瑸搭捥牯瑡潩㩮甠摮牥楬敮紻਍††挮灯特杩瑨笠潣潬㩲㤣㤹㤹㬹潦瑮眭楥桧㩴潮浲污昻湯⵴慦業祬䄺楲污昻湯⵴楳敺㠺瑰紻਍††⹁潣祰楲桧㩴楬歮笠潣潬㩲㤣㤹㤹㬹潦瑮眭楥桧㩴潮浲污昻湯⵴慦業祬䄺楲污昻湯⵴楳敺㠺瑰琻硥⵴敤潣慲楴湯›湵敤汲湩㭥ൽ †䄠挮灯特杩瑨瘺獩瑩摥笠潣潬㩲㤣㤹㤹㬹潦瑮眭楥桧㩴潮浲污昻湯⵴慦業祬䄺楲污昻湯⵴楳敺㠺瑰琻硥⵴敤潣慲楴湯›湵敤汲湩㭥ൽ †䄠挮灯特杩瑨愺瑣癩⁥捻汯牯⌺㤹㤹㤹昻湯⵴敷杩瑨渺牯慭㭬潦瑮昭浡汩㩹牁慩㭬潦瑮猭穩㩥瀸㭴整瑸搭捥牯瑡潩㩮甠摮牥楬敮紻਍††⹁潣祰楲桧㩴潨敶⁲捻汯牯›䔣㥂〱㬳潦瑮眭楥桧㩴潮浲污昻湯⵴慦業祬䄺楲污昻湯⵴楳敺㠺瑰琻硥⵴敤潣慲楴湯›湵敤汲湩㭥ൽ 㰠匯奔䕌ാ㰊䠯䅅㹄਍䈼䑏⁙敬瑦慍杲湩〽琠灯慍杲湩〽洠牡楧睮摩桴∽∰洠牡楧桮楥桧㵴〢㸢਍吼䉁䕌挠汥卬慰楣杮〽挠汥偬摡楤杮〽眠摩桴㘽〰戠牯敤㵲㸰਍†吼㹒਍††吼⁄楷瑤㵨㐱☾扮灳㰻启㹄਍††吼⁄楷瑤㵨㠵㸶䈼㹒਍†††䐼噉挠慬獳渽牯慭㹬桔♥扮灳㰻䅌䕂⁌潣瑮湥䕴楤慴汢㵥慦獬⁥਍†††瑳汹㵥䈢䍁䝋佒乕ⵄ佃佌㩒朠楡獮潢潲•浥摩∽〴㈰㸢匼剔乏㹇氦㭴氦㭴〴㈰ഠ ††䈠牯潲敷⁲慌瑳丠浡♥瑧☻瑧㰻匯剔乏㹇⼼䅌䕂㹌氠慯⁮灡汰捩瑡潩⁮獩愠慶汩扡敬ഠ ††琠⁯楶睥漠⁮祭眠扥楳整‮瑉椠⁳⁡敳畣敲‬慰獳潷摲瀭潲整瑣摥眠扥楳整琠慨⁴਍†††牰癯摩獥㈠ⴴ潨牵愠捣獥⁳潴琠敨猠慴畴⁳湡⁤敤慴汩⁳景琠敨愠灰楬慣楴湯‮潙⁵਍†††慣⁮污潳瘠敩ⱷ猠杩Ɱ愠摮爠瑥牵⁮敲畱物摥搠捯浵湥獴‮汐慥敳映汯潬⁷桴⁥਍†††湩瑳畲瑣潩獮戠汥睯‮⼼䥄㹖䈼㹒਍††⼼䑔ാ 㰠启㹒਍†吼㹒਍††吼⁄楷瑤㵨㐱☾扮灳㰻启㹄਍††吼⁄楷瑤㵨㠵㸶䈼㹒਍†††䐼噉挠慬獳渽牯慭㹬孛畃瑳浯潂祤嵝⼼䥄㹖䈼㹒਍††⼼䑔ാ 㰠启㹒਍†吼㹒਍††吼⁄楷瑤㵨㐱☾扮灳㰻启㹄਍††吼⁄楷瑤㵨㠵㸶䈼㹒਍†††䐼噉挠慬獳渽牯慭㹬䄼栠敲㵦栢瑴獰⼺眯扥散瑮牥∯琠牡敧㵴扟慬歮䌾楬正栠牥⁥潴瘠獩瑩琠敨ഠ ††眠扥楳整⼼㹁愠摮挠敨正琠敨氠慯⁮瑳瑡獵㰮䐯噉㰾剂ാ †㰠启㹄਍†⼼剔ാ 㰠剔ാ †㰠䑔眠摩桴ㄽ㸴渦獢㭰⼼䑔ാ †㰠䑔挠汯灓湡㈽ാ ††㰠剈挠汯牯⌽㤹㤹㤹渠卯慨敤匠婉㵅㸱਍††⼼䑔ാ 㰠启㹒਍†吼㹒਍††吼⁄楷瑤㵨㐱☾扮灳㰻启㹄਍††吼⁄楷瑤㵨㠵㸶䈼㹒਍†††䐼噉挠慬獳渽牯慭㹬晉礠畯攠灸牥敩据⁥牰扯敬獭漠数楮杮琠敨氠湩Ⱬ挠灯⁹湡⁤਍†††慰瑳⁥桴⁥剕⁌敢潬⁷湩潴礠畯⁲敗⁢牢睯敳⹲䈼㹒剕㩌䈼㹒瑨灴㩳⼯敷换湥整⽲ഠ ††㰠䐯噉㰾剂ാ †㰠启㹄਍†⼼剔ാ㰊启䉁䕌ാ㰊䈯䑏㹙਍⼼呈䱍ാ</value>
+  </data>
+  <data name="Consent" xml:space="preserve">
+    <value>&lt;html&gt;
+   &lt;head&gt;
+      &lt;title&gt;Loan Consent - Originator&lt;/title&gt;
+      &lt;style type="text/css"&gt;
+          .header {
+              color: 000;
+              font-weight: bold;
+              font-family: "Times New Roman";
+              font-size: 18px;
+              text-align: center;
+              text-decoration: underline;
+          }
+      &lt;/style&gt;
+   &lt;/head&gt;
+   &lt;body class="paddingleft15 paddingtop5 paddingbottom10"&gt;
+       &lt;StyleRun font-family="Times New Roman"&gt;
+           &lt;StyleRun fontsize="13"&gt;
+               &lt;p class="normal"&gt;&lt;span style="font-size: 14px;"&gt;&lt;b&gt;EFFECTIVE DATE: &lt;/b&gt;&lt;/span&gt;This E-Consent Agreement is Effective as of [EFFECTIVE_DATE].&lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   &lt;span style="font-size: 14px;"&gt;&lt;b&gt;GENERAL&lt;/b&gt;&lt;/span&gt;&lt;br /&gt;
+                   You have indicated that you wish to receive and sign the documents relating to your mortgage loan application, closing disclosures
+                   and other mortgage-related communications electronically using the online electronic record delivery software ("eDelivery
+                   Platform") and the integrated electronic signature software ("eSign Platform") that we make available to you (collectively, the
+                   "&lt;b&gt;Platform&lt;/b&gt;"). We are required by law to give you certain information "in writing" - which means that you are entitled to receive it
+                   on paper. However, with your consent, we may instead provide this information to you electronically. This Electronic Consent
+                   Agreement (this "&lt;b&gt;E-Consent&lt;/b&gt;") sets forth important information about conducting business electronically, electronic delivery of
+                   information, and signing documents electronically. By providing your consent below, you are agreeing that you have reviewed this
+                   E-Consent and you agree to transact business with us using electronic communications. Your consent also permits the general use of
+                   electronic records and electronic signatures in lieu of paper documents.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   You are not required to receive or sign documents electronically and you acknowledge and agree that electronic signatures are
+                   equivalent and equally binding as traditional signatures. If you do not consent to the use of electronic records and signatures, you
+                   will be unable to proceed electronically. You will need to contact the person who sent you the invitation to review and/or sign
+                   electronically and arrange to complete the transaction using paper documents, or you may not be able to proceed with the
+                   transaction at all. If permitted to complete the transaction on paper, you may be required to pay a reasonable fee. If you are a notary
+                   using the eSign Platform to notarize Communications signed by others, this fee shall not apply to you.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   In this E-Consent, the words "we," "us," and "our" refer to the entity whose representative invited you to electronically receive,
+                   review and/or sign documents using the Platform, and may consist of the applicable mortgage broker(s), loan processor(s) or
+                   mortgage banker(s) with whom you are transacting business for one or more loans. The words "you" and "your" means the person
+                   giving consent. We recommend you read this E-Consent in its entirety to ensure you are fully informed. After you have read this
+                   E-Consent in its entirety, if you agree to the general use of electronic records and electronic signatures in connection with use of the
+                   Platform, please click on the "Agree" button below.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   &lt;span style="font-size: 14px;"&gt;&lt;b&gt;SCOPE OF CONSENT&lt;/b&gt;&lt;/span&gt;&lt;br /&gt;
+                   By clicking on "Agree" below, you are agreeing to receive via electronic means all disclosures, notices, agreements, undertakings,
+                   records, documents and other information that we provide to you or that you sign, submit, or agree to at our request on the Platform
+                   (each a "Communication").  You agree that the Communications may be in electronic form. We may also use electronic signatures
+                   and initials and obtain them from you on any Communication, as well as use other functionality to obtain information from you
+                   for any Communication. You agree that all actions taken and information provided by you with respect to Communications
+                   displayed on the Platform will constitute your agreement, acceptance or acknowledgement of the applicable terms of the
+                   Communication to which such actions are applied.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   Actions taken by you on the Platform may consist of, for example, the application of your electronic signature or initials, or
+                   selections made or information provided by you through use of electronic functionality (such as a checkbox, dropdown menu,
+                   textbox or radio button). All such actions have the same legal effect as if you had taken such actions and provided such information
+                   using pen and ink on paper.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   All Communications that we deliver to you in electronic form will be delivered either (1) via email; (2) via the eDelivery Platform;
+                   or (3) by your accessing a Platform website link that we will designate in an email, text message, or other electronic notice we send
+                   to you at the time the information is available. We will establish security procedures that you will have to follow to access the
+                   Platform and the Platform website.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   We may always, in our sole discretion, provide you with any Communications on paper, even if you have authorized electronic
+                   delivery. Sometimes the law, or our agreement with you, requires you to give us a written notice. You must still provide these
+                   notices to us on paper, unless we tell you how to deliver the notice to us electronically.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   &lt;span style="font-size: 14px;"&gt;&lt;b&gt;TERMINATION/CHANGES TO E-CONSENT&lt;/b&gt;&lt;/span&gt;&lt;br /&gt;
+                   We reserve the right, in our sole discretion, to discontinue the provision of electronic Communications, or to terminate or change
+                   the terms and conditions on which we provide electronic Communications. We will provide you with notice of any such termination
+                   or change as required by law.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   &lt;span style="font-size: 14px;"&gt;&lt;b&gt;REQUESTING PAPER COPIES&lt;/b&gt;&lt;/span&gt;&lt;br /&gt;
+                   If a Communication required for your loan transaction is not available in electronic form, a paper copy will be provided to you free
+                   of charge. You will also have the opportunity to download, print out and retain a copy of all electronic Communications you
+                   receive, review and/or sign using the Platform. You may access the eDelivery Platform to print and/or download a copy of the
+                   Communications you received, reviewed and/or signed. Also, when new Communications are available on the eDelivery Platform,
+                   and when you review and/or sign electronic Communications using the eSign Platform, we will send to you, at the email address
+                   you previously provided to us, a secure link that will enable you to access a copy of the Communications.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   Except as described above, we will not send you a paper copy of electronic Communications unless you request it. You can obtain
+                   a paper copy of any Communication we provide to you electronically by downloading it yourself from the eDelivery Platform or
+                   by requesting that we mail you a paper copy. Request for paper copies must be made within a reasonable time after we first provided
+                   the electronic Communication to you. To request a paper copy, contact us at:
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   [ORIGINATOR_CONTACT]
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   &lt;br /&gt;[ORIGINATOR_FULFILLMENT_FEE_RECEIVE_PAPER_COPY_TEXT]
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   If you are a notary using the eSign Platform to notarize Communications signed by others, this section ("Requesting Paper Copies")
+                   shall not apply to you.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   &lt;span style="font-size: 14px;"&gt;&lt;b&gt;RETAINING COPIES&lt;/b&gt;&lt;/span&gt;&lt;br /&gt;
+                   We encourage you to print or download for your records a copy of all electronic Communications, as well as this E-Consent
+                   disclosure and any other document that is important to you.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   &lt;span style="font-size: 14px;"&gt;&lt;b&gt;HOW TO WITHDRAW CONSENT&lt;/b&gt;&lt;/span&gt;&lt;br /&gt;
+                   You may withdraw your consent to receive Communications electronically at any time.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   In order to withdraw your consent while you are on the eDelivery Platform, you must click the Tasks tab, then click
+                   "Change Electronic Consent" and click "Don't Agree."
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   Alternatively, you may notify us that you wish to withdraw your consent by:
+                   &lt;br /&gt;[ORIGINATOR_CONTACT]
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   Withdrawing your consent may delay your transactions with us. If you withdraw your consent before all Communications are reviewed and/or
+                   signed, you will be unable to proceed electronically using the Platform. You may be required to review and/or execute Communications via
+                   paper, or you may be unable to complete the transaction at all. You may also be required to pay a reasonable fee to complete your transaction
+                   on paper. If you are a notary using the eSign Platform to notarize Communications signed by others, this fee shall not apply to you.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   All actions taken by you before withdrawing your consent, including the signing of Communications via electronic means, will remain valid and
+                   fully enforceable.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   Your withdrawal of consent with respect to the electronic Communications does not affect any other consent you have given us at any other time
+                   to use electronic records and signatures. A withdrawal of your consent to receive electronic Communications will be effective only after we
+                   have had a reasonable period of time to process your withdrawal.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   &lt;span style="font-size: 14px;"&gt;&lt;b&gt;UPDATING YOUR CONTACT INFORMATION&lt;/b&gt;&lt;/span&gt;&lt;br /&gt;
+                   It is your responsibility to provide us with an accurate and complete email address and other contact information, and to maintain and update
+                   promptly any changes in this information. You can update your contact information at any time by contacting our representative that invited
+                   you to review Communications on the Platform or by contacting us at:
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   [ORIGINATOR_CONTACT]
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   We are not liable for your failure to receive notification of the availability of electronic Communications if your email address on file is
+                   invalid; your email or Internet service provider filters the notification as "spam" or "junk mail;" there is a malfunction in your computer,
+                   browser, Internet service and/or software; or for other reasons beyond our control.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   &lt;span style="font-size: 14px;"&gt;&lt;b&gt;REQUIRED HARDWARE/SOFTWARE&lt;/b&gt;&lt;/span&gt;&lt;br /&gt;
+                   To create and receive electronic Communications using the Platform, you must have access to:
+                   &lt;ul&gt;
+                       &lt;li&gt;A Current Version (defined below) of an Internet browser we support;&lt;/li&gt;
+                       &lt;li&gt;A connection to the Internet;&lt;/li&gt;
+                       &lt;li&gt;A Current Version of a program that accurately reads and displays PDF files;&lt;/li&gt;
+                       &lt;li&gt;A Current Version of an email management program;&lt;/li&gt;
+                       &lt;li&gt;A device (e.g., a computer, tablet, laptop, etc.) and an operating system capable of supporting all of the above; and&lt;/li&gt;
+                       &lt;li&gt;If you are participating in a remote notarization session, you must have, and your device and operating system must support, a web
+                           camera, microphone and speakers.&lt;/li&gt;
+                   &lt;/ul&gt;
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   You will also need a printer if you wish to print out and retain records on paper, and electronic storage if you wish to retain records in
+                   electronic form.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   You must also have an active email address and an alternate means of second factor authentication.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   By "Current Version," we mean a version of the software that is stable and is currently supported by its publisher. From time to time, we may
+                   offer services or features that require your internet browser be configured in a particular way, such as permitting the use of JavaScript or
+                   cookies. If we detect that your internet browser is not properly configured, we may provide you with a notice and advice on how to update your
+                   configuration. We reserve the right to discontinue support of a Current Version of software if, in our sole opinion, it suffers from a security
+                   flaw or other flaw that makes it unsuitable for use with the Platform.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   If the hardware or software requirements for the Platform change, and that change would create a material risk that you would not be able to
+                   access or retain electronic Communications, the changes will be described in an updated version of this E-Consent which will be made available
+                   to you when you next access the Platform. You may then elect to consent to such updated E-Consent and the revised requirements specified
+                   therein before receiving, viewing and/or executing any other Communications using the Platform. If you choose to withdraw your consent upon
+                   notification of the change, you will be able to do so without penalty and paper copies of such Communications will be mailed to you.
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;
+                   &lt;span style="font-size: 14px;"&gt;&lt;b&gt;AGREEMENT&lt;/b&gt;&lt;/span&gt;&lt;br /&gt;
+                   By clicking "Agree" you are agreeing to this E-Consent and consenting to the use of electronic records and signatures in connection with the
+                   Communications and your use of the Platform, and you are also confirming that:
+                   &lt;ul&gt;
+                       &lt;li&gt;you can access and read this E-Consent and you understand this E-Consent;&lt;/li&gt;
+                       &lt;li&gt;you have the hardware and software described above;&lt;/li&gt;
+                       &lt;li&gt;you are able to receive and review electronic records;&lt;/li&gt;
+                       &lt;li&gt;you have an active email account and a cellphone number for SMS messaging, each of which you have disclosed to us;&lt;/li&gt;
+                       &lt;li&gt;you have the ability to access and view PDF files; and&lt;/li&gt;
+                       &lt;li&gt;
+                           you acknowledge that electronic signatures and records will be used in place of written documents and handwritten signatures with
+                           respect to the electronic Communications and your use of the Platform.
+                       &lt;/li&gt;
+                   &lt;/ul&gt;
+               &lt;/p&gt;
+               &lt;p class="normal"&gt;[ACCEPT_DECLINE]&lt;/p&gt;
+           &lt;/StyleRun&gt;
+           &lt;StyleRun fontsize="13"&gt;&lt;Font color="red"&gt;&lt;i&gt;[CONSENT_INFO]&lt;/i&gt;&lt;/Font&gt;&lt;/StyleRun&gt;
+       &lt;/StyleRun&gt;
+   &lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="BlankLoan" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;LOAN_APPLICATION xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="EMXML.xsd"&gt;
+  &lt;BORROWER BorrowerID="_borrower1" JointAssetBorrowerID="_coborrower1" _FirstName="" _LastName="" _PrintPositionType="Borrower" _SSN=""&gt;
+  &lt;/BORROWER&gt;
+  &lt;BORROWER BorrowerID="_coborrower1" JointAssetBorrowerID="_borrower1" _FirstName="" _LastName="" _PrintPositionType="CoBorrower" _SSN=""&gt;
+  &lt;/BORROWER&gt;
+&lt;EllieMae LoanNumber=""&gt;&lt;/EllieMae&gt;&lt;/LOAN_APPLICATION&gt;
+
+</value>
+  </data>
+</root>

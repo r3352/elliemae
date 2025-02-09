@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="LoanActionLog" extends="LogRecord" dynamic-update="true" discriminator-value="31">
+    <join table="ElliLoanActionLog">
+      <key column="ElliLogRecordId" />
+      <property name="TriggeredBy" />
+      <property name="LoanActionType"/>
+    </join>
+  </subclass>
+</hibernate-mapping>

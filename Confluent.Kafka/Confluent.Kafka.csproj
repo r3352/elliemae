@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Confluent.Kafka.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F85A6371-A74D-4CA7-A81C-EABD1C20C6E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Confluent.Kafka</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.4.3.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Confluent.Kafka</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory">
+      <HintPath>lib\System.Memory.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminClient.cs" />
+    <Compile Include="AdminClientBuilder.cs" />
+    <Compile Include="BrokerMetadata.cs" />
+    <Compile Include="CommittedOffsets.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="ConfigPropertyNames.cs" />
+    <Compile Include="Partitioner.cs" />
+    <Compile Include="AutoOffsetReset.cs" />
+    <Compile Include="BrokerAddressFamily.cs" />
+    <Compile Include="SecurityProtocol.cs" />
+    <Compile Include="SslEndpointIdentificationAlgorithm.cs" />
+    <Compile Include="PartitionAssignmentStrategy.cs" />
+    <Compile Include="IsolationLevel.cs" />
+    <Compile Include="CompressionType.cs" />
+    <Compile Include="SaslMechanism.cs" />
+    <Compile Include="Acks.cs" />
+    <Compile Include="ClientConfig.cs" />
+    <Compile Include="AdminClientConfig.cs" />
+    <Compile Include="ProducerConfig.cs" />
+    <Compile Include="ConsumerConfig.cs" />
+    <Compile Include="ConsumeException.cs" />
+    <Compile Include="Consumer`2.cs" />
+    <Compile Include="ConsumerBuilder`2.cs" />
+    <Compile Include="ConsumeResult`2.cs" />
+    <Compile Include="IConsumerGroupMetadata.cs" />
+    <Compile Include="ConsumerGroupMetadata.cs" />
+    <Compile Include="DeliveryReport`2.cs" />
+    <Compile Include="DeliveryResult`2.cs" />
+    <Compile Include="DependentAdminClientBuilder.cs" />
+    <Compile Include="DependentProducerBuilder`2.cs" />
+    <Compile Include="Deserializers.cs" />
+    <Compile Include="Error.cs" />
+    <Compile Include="ErrorCode.cs" />
+    <Compile Include="ErrorCodeExtensions.cs" />
+    <Compile Include="MessageNullException.cs" />
+    <Compile Include="TopicPartitionException.cs" />
+    <Compile Include="TopicPartitionOffsetException.cs" />
+    <Compile Include="GroupInfo.cs" />
+    <Compile Include="GroupMemberInfo.cs" />
+    <Compile Include="Handle.cs" />
+    <Compile Include="Header.cs" />
+    <Compile Include="Headers.cs" />
+    <Compile Include="IAdminClient.cs" />
+    <Compile Include="IAsyncDeserializer`1.cs" />
+    <Compile Include="IAsyncSerializer`1.cs" />
+    <Compile Include="IClient.cs" />
+    <Compile Include="IConsumer`2.cs" />
+    <Compile Include="IDeliveryHandler.cs" />
+    <Compile Include="IDeserializer`1.cs" />
+    <Compile Include="Ignore.cs" />
+    <Compile Include="IHeader.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="TimeSpanExtensions.cs" />
+    <Compile Include="IProducer`2.cs" />
+    <Compile Include="ISerializer`1.cs" />
+    <Compile Include="KafkaException.cs" />
+    <Compile Include="KafkaRetriableException.cs" />
+    <Compile Include="KafkaTxnRequiresAbortException.cs" />
+    <Compile Include="Library.cs" />
+    <Compile Include="Loggers.cs" />
+    <Compile Include="LogLevelType.cs" />
+    <Compile Include="LogMessage.cs" />
+    <Compile Include="Message`2.cs" />
+    <Compile Include="MessageComponentType.cs" />
+    <Compile Include="MessageMetadata.cs" />
+    <Compile Include="Metadata.cs" />
+    <Compile Include="Null.cs" />
+    <Compile Include="Offset.cs" />
+    <Compile Include="Partition.cs" />
+    <Compile Include="PartitionMetadata.cs" />
+    <Compile Include="PersistenceStatus.cs" />
+    <Compile Include="ProduceException`2.cs" />
+    <Compile Include="Producer`2.cs" />
+    <Compile Include="ProducerBuilder`2.cs" />
+    <Compile Include="SerializationContext.cs" />
+    <Compile Include="Serializers.cs" />
+    <Compile Include="SyslogLevel.cs" />
+    <Compile Include="Timestamp.cs" />
+    <Compile Include="TimestampType.cs" />
+    <Compile Include="TopicMetadata.cs" />
+    <Compile Include="TopicPartition.cs" />
+    <Compile Include="TopicPartitionError.cs" />
+    <Compile Include="TopicPartitionOffset.cs" />
+    <Compile Include="TopicPartitionOffsetError.cs" />
+    <Compile Include="TopicPartitionTimestamp.cs" />
+    <Compile Include="WatermarkOffsets.cs" />
+    <Compile Include="SyncOverAsync\SyncOverAsyncDeserializer`1.cs" />
+    <Compile Include="SyncOverAsync\SyncOverAsyncDeserializerExtensionMethods.cs" />
+    <Compile Include="SyncOverAsync\SyncOverAsyncSerializer`1.cs" />
+    <Compile Include="SyncOverAsync\SyncOverAsyncSerializerExtensionMethods.cs" />
+    <Compile Include="Internal\Util.cs" />
+    <Compile Include="Impl\Librdkafka.cs" />
+    <Compile Include="Impl\rd_kafka_metadata_broker.cs" />
+    <Compile Include="Impl\rd_kafka_metadata_partition.cs" />
+    <Compile Include="Impl\rd_kafka_metadata_topic.cs" />
+    <Compile Include="Impl\rd_kafka_metadata.cs" />
+    <Compile Include="Impl\rd_kafka_group_member_info.cs" />
+    <Compile Include="Impl\rd_kafka_group_info.cs" />
+    <Compile Include="Impl\rd_kafka_group_list.cs" />
+    <Compile Include="Impl\ConfRes.cs" />
+    <Compile Include="Impl\SafeConfigHandle.cs" />
+    <Compile Include="Impl\SafeHandleZeroIsInvalid.cs" />
+    <Compile Include="Impl\RdKafkaType.cs" />
+    <Compile Include="Impl\rd_kafka_message.cs" />
+    <Compile Include="Impl\rd_kafka_topic_partition.cs" />
+    <Compile Include="Impl\rd_kafka_topic_partition_list.cs" />
+    <Compile Include="Impl\SafeKafkaHandle.cs" />
+    <Compile Include="Impl\SafeTopicConfigHandle.cs" />
+    <Compile Include="Impl\MsgFlags.cs" />
+    <Compile Include="Impl\SafeTopicHandle.cs" />
+    <Compile Include="Impl\NativeMethods\NativeMethods.cs" />
+    <Compile Include="Impl\NativeMethods\NativeMethods_Alpine.cs" />
+    <Compile Include="Impl\NativeMethods\NativeMethods_Centos7.cs" />
+    <Compile Include="Impl\NativeMethods\NativeMethods_Debian9.cs" />
+    <Compile Include="Admin\AlterConfigsException.cs" />
+    <Compile Include="Admin\AlterConfigsOptions.cs" />
+    <Compile Include="Admin\AlterConfigsReport.cs" />
+    <Compile Include="Admin\ConfigEntry.cs" />
+    <Compile Include="Admin\ConfigEntryResult.cs" />
+    <Compile Include="Admin\ConfigResource.cs" />
+    <Compile Include="Admin\ConfigSource.cs" />
+    <Compile Include="Admin\ConfigSynonym.cs" />
+    <Compile Include="Admin\CreatePartitionsException.cs" />
+    <Compile Include="Admin\CreatePartitionsOptions.cs" />
+    <Compile Include="Admin\CreatePartitionsReport.cs" />
+    <Compile Include="Admin\CreateTopicReport.cs" />
+    <Compile Include="Admin\CreateTopicsException.cs" />
+    <Compile Include="Admin\CreateTopicsOptions.cs" />
+    <Compile Include="Admin\DeleteTopicReport.cs" />
+    <Compile Include="Admin\DeleteTopicsException.cs" />
+    <Compile Include="Admin\DeleteTopicsOptions.cs" />
+    <Compile Include="Admin\DescribeConfigsException.cs" />
+    <Compile Include="Admin\DescribeConfigsOptions.cs" />
+    <Compile Include="Admin\DescribeConfigsReport.cs" />
+    <Compile Include="Admin\DescribeConfigsResult.cs" />
+    <Compile Include="Admin\PartitionsSpecification.cs" />
+    <Compile Include="Admin\ResourceType.cs" />
+    <Compile Include="Admin\TopicSpecification.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Web.Host.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BD18398-86C9-4123-9A99-D812BB3D556D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Elli.Web.Host</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.1.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Elli.Web.Host</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClientCommon">
+      <HintPath>lib\ClientCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>lib\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientSession">
+      <HintPath>lib\ClientSession.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser">
+      <HintPath>lib\DotNetBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Core">
+      <HintPath>lib\DotNetBrowser.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Logging">
+      <HintPath>lib\DotNetBrowser.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.WinForms">
+      <HintPath>lib\DotNetBrowser.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>lib\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>lib\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="EMLoanUtils15">
+      <HintPath>lib\EMLoanUtils15.dll</HintPath>
+    </Reference>
+    <Reference Include="EllieMae.Encompass.AsmResolver">
+      <HintPath>lib\EllieMae.Encompass.AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Encompass.Security">
+      <HintPath>lib\Encompass.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="HelpAPI">
+      <HintPath>lib\HelpAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml">
+      <HintPath>lib\Microsoft.mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIElements">
+      <HintPath>lib\UIElements.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrowserEngine.cs" />
+    <Compile Include="Paths.cs" />
+    <Compile Include="DirectoryHelper.cs" />
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="CookieBuilder.cs" />
+    <Compile Include="EncWebBrowserCookie.cs" />
+    <Compile Include="PrintPaperSize.cs" />
+    <Compile Include="PrintPrintDocumentType.cs" />
+    <Compile Include="MessageLevel.cs" />
+    <Compile Include="NetErrorCode.cs" />
+    <Compile Include="ConsoleMessageEventArgs.cs" />
+    <Compile Include="EncCustomPopUpHandler.cs" />
+    <Compile Include="FinishedLoadingEventArgs.cs" />
+    <Compile Include="HtmlEditorEventArgs.cs" />
+    <Compile Include="HtmlEditorKeyDownEventArgs.cs" />
+    <Compile Include="MouseReleasedEventArgs.cs" />
+    <Compile Include="StartLoadingEventArgs.cs" />
+    <Compile Include="PrintPageRange.cs" />
+    <Compile Include="PrintJobEventArgs.cs" />
+    <Compile Include="PrintSettings.cs" />
+    <Compile Include="ModuleParameters.cs" />
+    <Compile Include="ModuleUser.cs" />
+    <Compile Include="BeforeNavigationEventArgs.cs" />
+    <Compile Include="JsFunctionCallback.cs" />
+    <Compile Include="JavascriptFunctionCallback`1.cs" />
+    <Compile Include="LoadWebPageControl.cs" />
+    <Compile Include="LoadWebPageForm.cs" />
+    <Compile Include="SkyDriveViewerControl.cs" />
+    <Compile Include="CookieFileHelper.cs" />
+    <Compile Include="PostMessageHandler.cs" />
+    <Compile Include="AuditWindowHandler.cs" />
+    <Compile Include="UpdateTemplateWindowHandler.cs" />
+    <Compile Include="WebHost.cs" />
+    <Compile Include="SSF\UI\SSFConsole.cs" />
+    <Compile Include="SSF\UI\SSFControl.cs" />
+    <Compile Include="SSF\UI\SSFDialog.cs" />
+    <Compile Include="SSF\Context\SSFHostType.cs" />
+    <Compile Include="SSF\Context\SSFContext.cs" />
+    <Compile Include="SSF\Context\IRaiseEventHandler.cs" />
+    <Compile Include="SSF\Context\SSFEventArgs.cs" />
+    <Compile Include="SSF\Context\SSFEventArgs`1.cs" />
+    <Compile Include="SSF\Context\SSFGuestFrameHandler.cs" />
+    <Compile Include="SSF\Context\SSFGuestRegistry.cs" />
+    <Compile Include="SSF\Context\SSFGuest.cs" />
+    <Compile Include="SSF\Context\SSFGuestRegistryError.cs" />
+    <Compile Include="SSF\Bridges\ApplicationBridge.cs" />
+    <Compile Include="SSF\Bridges\AuthBridge.cs" />
+    <Compile Include="SSF\Bridges\Bridge.cs" />
+    <Compile Include="SSF\Bridges\LoanBridge.cs" />
+    <Compile Include="SSF\Bridges\ModuleBridge.cs" />
+    <Compile Include="SSF\Bridges\ServiceBridge.cs" />
+    <Compile Include="Login\LoginThinThickForm.cs" />
+    <Compile Include="Login\WebLoginUtil.cs" />
+    <Compile Include="Interface\PageCompleteEventHandler.cs" />
+    <Compile Include="Interface\IWebFormBrowser.cs" />
+    <Compile Include="Adapter\ExecuteCompleteEventArgs.cs" />
+    <Compile Include="Adapter\InvokeHelpBrowserEventArgs.cs" />
+    <Compile Include="Adapter\HostContext.cs" />
+    <Compile Include="EventObjects\BrowserPreferences.cs" />
+    <Compile Include="EventObjects\EncCustomPrintHandler.cs" />
+    <Compile Include="EventObjects\LoginCompletedEventArgs.cs" />
+    <Compile Include="EventObjects\NavigationCompletedEventArgs.cs" />
+    <Compile Include="EventObjects\TitleChangeEventArgs.cs" />
+    <Compile Include="BrowserControls\BrowserFactory.cs" />
+    <Compile Include="BrowserControls\EncWebBrowser.cs" />
+    <Compile Include="BrowserControls\EncWebFormBrowserControl.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dotnetbrowser.license" />
+    <EmbeddedResource Include="LoadWebPageControl.resx" />
+    <EmbeddedResource Include="LoadWebPageForm.resx" />
+    <EmbeddedResource Include="Login\LoginThinThickForm.resx" />
+    <EmbeddedResource Include="SkyDriveViewerControl.resx" />
+    <EmbeddedResource Include="SSF\UI\SSFConsole.resx" />
+    <EmbeddedResource Include="SSF\UI\SSFControl.resx" />
+    <EmbeddedResource Include="SSF\UI\SSFDialog.resx" />
+    <EmbeddedResource Include="WebHost.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

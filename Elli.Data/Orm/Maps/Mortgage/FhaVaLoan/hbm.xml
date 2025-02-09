@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="FhaVaLoan" table="ElliFhaVaLoan" dynamic-update="true">
+    <id name="Id" column="ElliLoanId">
+      <generator class="foreign">
+        <param name="property">Loan</param>
+      </generator>
+    </id>
+    <version name="Version" />
+    <one-to-one name="Loan" class="Loan" />
+    <property name="AdditionalCondition1" />
+    <property name="AdditionalCondition2" />
+    <property name="AdditionalCondition3" />
+    <property name="AdditionalCondition4" />
+    <property name="AdditionalCondition5" />
+    <property name="AdditionalCondition6" />
+    <property name="AdditionalCondition7" />
+    <property name="AdditionalCondition8" />
+    <property name="AdditionalCondition9" />
+    <property name="ClosingDate" />
+    <property name="FreddieMacCounselType" />
+    <property name="DateApprovalExpires" />
+    <property name="DateMortgageApproved" />
+    <property name="DetailForOther" />
+    <property name="DiscountPoints" />
+    <property name="EnergyEfficientMortgageAmount" />
+    <property name="ExcessContributionAmount" />
+    <property name="ExistingDebtAmount" />
+    <property name="FHAMaxLoanAmount" />
+    <property name="FundingFeePaidInCash" />
+    <property name="GiftFundsAmount" />
+    <property name="HUD1003AddendumApproved" />
+    <property name="MinimumDownPayment" />
+    <property name="ModifiedInterestRate" />
+    <property name="ModifiedLoanAmount" />
+    <property name="ModifiedMonthlyPayment" />
+    <property name="ModifiedMonthlyPremium" />
+    <property name="ModifiedProposedMaturityMonth" />
+    <property name="ModifiedProposedMaturityYear" />
+    <property name="ModifiedTermAnnualPremium" />
+    <property name="ModifiedUpfrontPremium" />
+    <property name="MortgageeRepresentative" />
+    <property name="NonRealtyAndOtherItems" />
+    <property name="OtherLiabilitiesMonthlyPayment" />
+    <property name="OtherLiabilitiesUnpaidBalance" />
+    <property name="OtherMonthlyShelterExpense" />
+    <property name="OtherTitleDescription" />
+    <property name="PaidAmount" />
+    <property name="PremiumMonths" />
+    <property name="PrepaidExpenses" />
+    <property name="ProposedMaturityMonths" />
+    <property name="ProposedMaturityYears" />
+    <property name="SecondMortgageAmount" />
+    <property name="SellerPaidClosingCost" />
+    <property name="SpecialAssessments" />
+    <property name="SponsorID" />
+    <property name="TitleVestedIn" />
+    <property name="TotalClosingCost" />
+    <property name="UtilityIncluded" />
+    <property name="AllConditionsSatisfied" />
+    <property name="PiwAcceptedIndicator" />
+    <property name="PiwAcceptedDate" />
+    <!-- FHA_VA_LOANS/ADDENDUM -->
+    <property name="AddendumType" />
+    <property name="BeenInformed" />
+    <property name="DulyAgentAddress" />
+    <property name="DulyAgentCity" />
+    <property name="DulyAgentState" />
+    <property name="DulyAgentFunction1" />
+    <property name="DulyAgentFunction2" />
+    <property name="DulyAgentName" />
+    <property name="DulyAuthAgentName2" />
+    <property name="DulyAuthAgentAddress2" />
+    <property name="DulyAuthAgentCity2" />
+    <property name="DulyAuthAgentState2" />
+    <property name="DulyAuthAgentName3" />
+    <property name="DulyAuthAgentAddress3" />
+    <property name="DulyAuthAgentCity3" />
+    <property name="DulyAuthAgentState3" />
+    <property name="DulyAuthAgentFunction3" />
+    <property name="DulyAuthAgentName4" />
+    <property name="DulyAuthAgentAddress4" />
+    <property name="DulyAuthAgentCity4" />
+    <property name="DulyAuthAgentState4" />
+    <property name="DulyAuthAgentFunction4" />
+    <property name="DulyAuthAgentName5" />
+    <property name="DulyAuthAgentAddress5" />
+    <property name="DulyAuthAgentCity5" />
+    <property name="DulyAuthAgentState5" />
+    <property name="DulyAuthAgentFunction5" />
+    <property name="DwellingCoveredBy" />
+    <property name="EverHadVAHomeLoan" />
+    <property name="HaveReceivedLeadPaintPoisoningInfo" />
+    <property name="LenderRepresentativeName" />
+    <property name="LenderRepresentativePhone" />
+    <property name="LenderRepresentativeTitle" />
+    <property name="MortgageFinancialInterest" />
+    <property name="Occupancy" />
+    <property name="OriginalMortgageAmount" />
+    <property name="OwnMoreThanFourDwellings" />
+    <property name="OwnOrSoldOtherRealEstate" />
+    <property name="PurposeOfLoan" />
+    <property name="SalesPrice" />
+    <property name="ToBeSold" />
+    <property name="Valuation" />
+    <property name="BorrowerCertificationAddress" />
+    <property name="BorrowerCertificationCity" />
+    <property name="BorrowerCertificationPostalCode" />
+    <property name="BorrowerCertificationState" />
+    <property name="IsEntityActingAsAgent" />
+    <!-- FHA_VA_LOANS/EEM -->
+    <component name="Eem" class="EnergyEfficientMortgage">
+      <property name="AppraisedValue" column="EemAppraisedValue" />
+      <property name="AuditCost" column="EemAuditCost" />
+      <property name="BackRatio" column="EemBackRatio" />
+      <property name="BaseLoanAmtFromTsum" column="EemBaseLoanAmtFromTsum" />
+      <property name="CostEffectiveEnergyPackage" column="EemCostEffectiveEnergyPackage" />
+      <property name="EeCostMaximumAmount" column="EemEeCostMaximumAmount" />
+      <property name="EeImprovementsInstalledCost" column="EemEeImprovementsInstalledCost" />
+      <property name="EnergyCost" column="EemEnergyCost" />
+      <property name="EnergySavings" column="EemEnergySavings" />
+      <property name="Hoa" column="EemHoa" />
+      <property name="ImprovementCostExceed2000" column="EemImprovementCostExceed2000" />
+      <property name="InspectionCost" column="EemInspectionCost" />
+      <property name="LesserC1ORC2" column="EemLesserC1ORC2" />
+      <property name="MonthlyHousingPayment" column="EemMonthlyHousingPayment" />
+      <property name="MonthlyMI" column="EemMonthlyMI" />
+      <property name="MortgageAmountUsedForQualifyingRate" column="EemMortgageAmountUsedForQualifyingRate" />
+      <property name="MortgageAmountUsedForQualifyingRateD1" column="EemMortgageAmountUsedForQualifyingRateD1" />
+      <property name="NewOrExisting" column="EemNewOrExisting" />
+      <property name="OriginalSalesPriceIfLess12Months" column="EemOriginalSalesPriceIfLess12Months" />
+      <property name="OtherHousingPayment" column="EemOtherHousingPayment" />
+      <property name="SolarNotIncluded" column="EemSolarNotIncluded" />
+      <property name="SolarSystemCostAllowance" column="EemSolarSystemCostAllowance" />
+      <property name="TotalActualAmount" column="EemTotalActualAmount" />
+      <property name="TotalAllowedAmount" column="EemTotalAllowedAmount" />
+      <property name="TotalBaseEemLoanAmount" column="EemTotalBaseEemLoanAmount" />
+      <property name="TotalCombinedLoanAmount" column="EemTotalCombinedLoanAmount" />
+      <property name="TotalMonthlyHousingPayment" column="EemTotalMonthlyHousingPayment" />
+      <property name="TotalMonthlyObligations" column="EemTotalMonthlyObligations" />
+      <property name="UfmipBasedOn" column="EemUfmipBasedOn" />
+      <property name="UfmipFactor" column="EemUfmipFactor" />
+    </component>
+    <!-- FHA_VA_LOANS/FHASolution -->
+    <property name="AddressValidatedBy" />
+    <property name="AddressValidationMessage" type="StringClob" />
+    <property name="AppraisalLoggedDate" />
+    <property name="AppraisalLookupBy" />
+    <property name="CAIVRSObtainedBy" />
+    <property name="CaseBinderShippedBy" />
+    <property name="CaseBinderShippedDate" />
+    <property name="CondoPudID" />
+    <property name="CondoPudLookupBy" />
+    <property name="CondoPudLookupDate" />
+    <property name="FHAManagementCounselType" />
+    <property name="FHACaseOrderedBy" />
+    <property name="ForeclosedProperty" />
+    <property name="LastRefiDate" />
+    <property name="LDPGSASearchDate" />
+    <property name="LDPGSASearchedBy" />
+    <property name="MIAppliedBy" />
+    <property name="MIAppliedDate" />
+    <property name="MICRetrivedDate" />
+    <property name="MIP1stDueDate" />
+    <property name="MIP1stToInvestor" />
+    <property name="MIPRemittedDate" />
+    <property name="MIRejectedDate" />
+    <property name="ObtainCAIVRSDate" />
+    <property name="OldAgencyCaseIdentifier" />
+    <property name="PreviousPurchaseDate" />
+    <property name="PriorEndorsementDate" />
+    <property name="RefiAuthorizationBy" />
+    <property name="RefiAuthorizationDate" />
+    <property name="ServingTransferedDate" />
+    <property name="TotalScorecardBy" />
+    <property name="TotalScorecardDate" />
+    <property name="UFMIPRemittanceDueDate" />
+    <property name="UFMIPRemittedAmount" />
+    <property name="UFMIPRemittedBy" />
+    <property name="UFMIPRemittedDate" />
+    <property name="UFMIPVerificationCode" />
+    <property name="ValidateAddressDate" />
+    <property name="LoanScoreID" />
+    <property name="EligibilityAssessment" />
+    <!-- FHA_VA_LOANS/Lender -->
+    <property name="UseDefaultLenderInfo" />
+    <property name="LenderAddress" />
+    <property name="LenderCity" />
+    <property name="LenderName" />
+    <property name="LenderPostalCode" />
+    <property name="LenderState" />
+    <property name="LenderNMLS" />
+    <property name="LenderTaxID" />
+    <!-- FHA_VA_LOANS/SponsorAgent -->
+    <property name="SponsorAgentAddress" />
+    <property name="SponsorAgentCity" />
+    <property name="SponsorAgentName" />
+    <property name="SponsorAgentPostalCode" />
+    <property name="SponsorAgentState" />
+    <property name="SponsorAgentNMLS" />
+    <property name="SponsorAgentTaxID" />
+    <!-- FHA_VA_LOANS/SponsoredOriginations -->
+    <property name="SponsoredOriginationsName" />
+    <property name="SponsoredOriginationsNMLS" />
+    <property name="SponsoredOriginationsTaxID" />
+    <!-- FHA_VA_LOANS/Informed Consumer Choice Disclosure -->
+    <property name="FHASalesPrice" />
+    <property name="FHAMortgageAmount" />
+    <property name="FHAMortgageAmountUMIP" />
+    <property name="FHAClosingCost" />
+    <property name="FHADownPayment" />
+    <property name="FHAInterestRate" />
+    <property name="FHALoanTerm" />
+    <property name="FHAMonthlyPayment" />
+    <property name="FHALTV" />
+    <property name="FHAMMI" />
+    <property name="FHAYearsMonthlyInsurance" />
+    <property name="FHAUMIP" />
+    <property name="ConventionalSalesPrice" />
+    <property name="ConventionalMortgageAmount" />
+    <property name="ConventionalClosingCost" />
+    <property name="ConventionalDownPayment" />
+    <property name="ConventionalInterestRate" />
+    <property name="ConventionalLoanTerm" />
+    <property name="ConventionalMonthlyPayment" />
+    <property name="ConventionalLTV" />
+    <property name="ConventionalMMI" />
+    <property name="ConventionalMaxYearsMI" />
+    <property name="ConventionalUMIP" />
+    
+    <!-- EnergyEfficientMortgageItems-->
+    <bag name="energyEfficientMortgageItems" cascade="all-delete-orphan" inverse="true" access="field">
+      <key column="ElliFhaVaLoanId" />
+      <one-to-many class="EnergyEfficientMortgageItem"/>
+    </bag>
+  </class>
+</hibernate-mapping>

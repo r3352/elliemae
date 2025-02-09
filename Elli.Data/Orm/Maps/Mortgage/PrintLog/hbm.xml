@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <subclass name="PrintLog" extends="LogRecord" dynamic-update="true" discriminator-value="19">
+    <join table="ElliPrintLog">
+      <key column="ElliLogRecordId" />
+      <property name="PrintedBy" column="PrintedBy" />
+      <property name="PrintedByFullName" column="PrintedByFullName" />
+      <property name="Action" column="Action" />
+      <property name="FormsXml" column="FormsXml" type="StringClob" />
+    </join>
+  </subclass>
+</hibernate-mapping>

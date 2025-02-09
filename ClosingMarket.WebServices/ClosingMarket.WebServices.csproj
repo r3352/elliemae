@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\ClosingMarket.WebServices.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0459CB7-116C-4683-B506-3E578914E18E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>ClosingMarket.WebServices</AssemblyName>
+    <ApplicationVersion>1.0.2749.29102</ApplicationVersion>
+    <RootNamespace>ClosingMarket.WebServices</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Services2" />
+    <Reference Include="System" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChunkHandler.cs" />
+    <Compile Include="ChunkHandlerEventArgs.cs" />
+    <Compile Include="CMInterface.cs" />
+    <Compile Include="ClosingMarketConstants.cs" />
+    <Compile Include="EnterpriseDetailFlag.cs" />
+    <Compile Include="SerializableObject.cs" />
+    <Compile Include="OrderTaskUpdateData.cs" />
+    <Compile Include="OrderTaskAction.cs" />
+    <Compile Include="OrderTaskData.cs" />
+    <Compile Include="OrderHistoryData.cs" />
+    <Compile Include="OrderSummaryData.cs" />
+    <Compile Include="OrderStatus.cs" />
+    <Compile Include="SubmitOrderResult.cs" />
+    <Compile Include="ClosingMarketResult.cs" />
+    <Compile Include="CommitmentData.cs" />
+    <Compile Include="NoteData.cs" />
+    <Compile Include="TaxData.cs" />
+    <Compile Include="AgentData.cs" />
+    <Compile Include="NameData.cs" />
+    <Compile Include="Ten99Data.cs" />
+    <Compile Include="BuySellData.cs" />
+    <Compile Include="NameRelation.cs" />
+    <Compile Include="EscrowBankData.cs" />
+    <Compile Include="LoanData.cs" />
+    <Compile Include="ContactData.cs" />
+    <Compile Include="TitleCompanyData.cs" />
+    <Compile Include="UserFieldData.cs" />
+    <Compile Include="UserFieldDataArray.cs" />
+    <Compile Include="DocumentData.cs" />
+    <Compile Include="PropertyData.cs" />
+    <Compile Include="OrderData.cs" />
+    <Compile Include="OrderService.cs" />
+    <Compile Include="StateData.cs" />
+    <Compile Include="ProductData.cs" />
+    <Compile Include="EnterpriseServiceUITabListItemVisibleControlData.cs" />
+    <Compile Include="EnterpriseServiceUITabListItemData.cs" />
+    <Compile Include="EnterpriseServiceUITabListItemChildData.cs" />
+    <Compile Include="EnterpriseServiceUITabEntryData.cs" />
+    <Compile Include="ServiceUIControlType.cs" />
+    <Compile Include="ServiceUIReturnType.cs" />
+    <Compile Include="DataValueType.cs" />
+    <Compile Include="DataValueField.cs" />
+    <Compile Include="EnterpriseServiceUITabEntryChildData.cs" />
+    <Compile Include="EnterpriseServiceUITabData.cs" />
+    <Compile Include="ServiceUITabType.cs" />
+    <Compile Include="EnterpriseServiceUITabChildData.cs" />
+    <Compile Include="EnterpriseServiceUIDefinitionData.cs" />
+    <Compile Include="EnterpriseServiceUIDefinitionChildData.cs" />
+    <Compile Include="EnterpriseData.cs" />
+    <Compile Include="EnterpriseType.cs" />
+    <Compile Include="EnterpriseStatus.cs" />
+    <Compile Include="EnterpriseDetailData.cs" />
+    <Compile Include="UsersData.cs" />
+    <Compile Include="UserGroup.cs" />
+    <Compile Include="UserType.cs" />
+    <Compile Include="ContactMethod.cs" />
+    <Compile Include="EnterpriseAddressData.cs" />
+    <Compile Include="EnterpriseServiceData.cs" />
+    <Compile Include="EnterpriseServiceCategory.cs" />
+    <Compile Include="EnterpriseServiceInterfaceType.cs" />
+    <Compile Include="EnterpriseStateData.cs" />
+    <Compile Include="AgentContext.cs" />
+    <Compile Include="AgentType.cs" />
+    <Compile Include="ProductCategory.cs" />
+    <Compile Include="OrderDataFormat.cs" />
+    <Compile Include="OrderIDType.cs" />
+    <Compile Include="CustomWebRequest.cs" />
+    <Compile Include="CustomWebResponse.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

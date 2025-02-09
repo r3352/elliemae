@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Elli.Domain" namespace="Elli.Domain.Mortgage">
+  <class name="FeeVariance" table="ElliFeeVariance" dynamic-update="true">
+    <id name="Id" column="ElliFeeVarianceId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid.comb" />
+    </id>
+    <many-to-one name="ClosingCost" column="ElliLoanId" />
+    <property name="FeeVarianceFeeType" />
+    <property name="FeeVarianceChargeIndex" />
+    <property name="InitialLE" />
+    <property name="LE" />
+    <property name="CD" />
+    <property name="Itemization" />
+    <property name="Description" />
+    <property name="Line" />
+  </class>
+</hibernate-mapping>
